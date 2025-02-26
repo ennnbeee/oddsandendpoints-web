@@ -42,3 +42,4 @@ I currently work as a Technical Consultant in the Cloud Endpoint practice at [Ph
 Beyond working with Microsoft Intune, I am passionate about PowerBI Reporting and PowerShell scripting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, harnessing PowerBI for insightful data reporting or crafting PowerShell scripts to automate complex tasks day-to-day, I’m normally geeking out somewhere.
 
 Outside of tech, I am a father, motorcyclist, petrol head and a big football & music fan.
+
