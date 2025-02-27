@@ -1,6 +1,10 @@
 # Lower-Touch Defender for Endpoint Onboarding for Android Devices
 
 
+{{< admonition type=note >}}
+This post has been updated to include configuration settings for Motorola devices.
+{{< /admonition >}}
+
 Onboarding corporate mobile devices managed by Intune into Defender for Endpoint shouldn't require your end users to do *anything*, and with supervised iOS/iPadOS devices this is exactly the case with Microsoft providing [great documentation](https://learn.microsoft.com/en-us/defender-endpoint/ios-install) on the process and corresponding configuration profiles to support silent onboarding.
 
 The same however can't be said for Android Enterprise devices, even with the feature for [low-touch onboarding](https://learn.microsoft.com/en-us/defender-endpoint/android-intune#configure-low-touch-onboarding) ~currently in preview~ now [Generally Available](https://learn.microsoft.com/en-us/defender-endpoint/android-whatsnew#android-low-touch-onboarding-is-now-ga).
@@ -128,7 +132,7 @@ What started me on this journey was a post about the changes to the [Shared Devi
 
 Surely we can do the same for Defender on our supported Samsung devices?
 
-### Knox Service Plugin
+### Knox Service Plugin OEMConfig
 
 Before we dive into attempting to configure these additional permissions for our users, we need an OEMConfig App available in Intune. So go an approve the Knox Service Plugin from the Managed Google Play Store.
 
@@ -143,8 +147,6 @@ Use a [Device Filter](https://learn.microsoft.com/en-us/mem/intune/fundamentals/
 ```
 
 Once the app has installed, we can now move onto configuring a profile.
-
-### OEMConfig
 
 From my experience with [OEMConfig profiles](https://learn.microsoft.com/en-us/mem/intune/configuration/android-oem-configuration-overview) there [can be only one](https://www.youtube.com/watch?v=sqcLjcSloXs) assigned per Samsung device ([Zebra devices are different](https://learn.microsoft.com/en-us/mem/intune/configuration/oemconfig-zebra-android-devices)), so if you're already applying a Knox Service Plugin based profile, you're going to have to amend that one instead of creating a new one.
 
@@ -190,17 +192,68 @@ We're setting **Debug Mode** to true for now, as we want to see the outcome of t
 For reference to how to configure these additional special permissions, the [Knox documentation](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/kbas/kba-1261-grant-special-permissions-for-an-app/) covers it in more detail.
 {{< /admonition >}}
 
-What we have here is a new profile that should help our users on their way to onboarding their devices to Defender, without having to faff about setting up the additional requested permissions that Defender needs.
+### Moto OEMConfig
+
+Thanks to [deweez](https://github.com/deweez) in the comments, it looks as though the settings created for Samsung Knox devices, also work with the Motorola devices supported by [Moto OEMConfig](https://en-gb.support.motorola.com/app/answers/detail/a_id/160503/~/moto-oemconfig-guide).
+
+After adding the Moto OEMConfig app to your Intune tenant using Managed Google Play:
+
+- Navigate to the Microsoft Intune admin center and select **Configuration** under **Manage devices**, create a new policy for the **Android Enterprise** platform of type **OEMConfig**.
+  - Give the profile a suitable name and a description if you'd like e.g., `ODD-AND-AE-D-CO-MOTO-Defender`
+  - Select `Moto OEMConfig` as the OEMConfig app
+  - Select **Next** to continue to the configuration page
+- Under **Moto OEMConfig** select **Configure** for **Debug tools policies**
+  - Under Debug tools policies select **Configure** for **Debug mode**
+    - Under Debug mode set **Allow debug mode** to `true` to enable it.
+    - Select **Configure** for **Application management policies**
+- Under **Moto OEMConfig** select **Configure** for **System policies**
+  - Under System policies select **Configure** for **Battery non-optimized apps**
+    - Under Battery non-optimized apps set **Allow non-battery optimized applications** to `true` to enable it.
+    - In **Non-battery optimized application list** enter in `com.microsoft.scmx`
+  - Under System policies select **Configure** for **Display over the other apps settings**
+    - Under Display over the other apps settings set **Enable display over the other apps** to `true` to enable it.
+    - In **Display Over The Other Apps list** select **Configure**
+    - Select the **ellipsis (...)** that's next to **Display Over The Other Apps list** and select **Add Setting**
+    - Under **Applications that require permission to display over the other apps** in **App package name** enter in `com.microsoft.scmx`
+  - Under System policies select **Configure** for **All Files Access**
+    - Under All Files Access set **Enable All Files policy** to `true` to enable it.
+    - In **All Files apps list** select **Configure**
+    - Select the **ellipsis (...)** that's next to **All Files apps list** and select **Add Setting**
+    - Under **Applications that require All Files permission** in **App package name** enter in `com.microsoft.scmx`
+
+{{< admonition type=info >}}
+There is a setting under **Applications that require All Files permission** for **App certificate** asking for *Provide the SHA256 fingerprint certificate used to sign the app. Certificate format is XX:XX:XX:XX and is 95 characters long, counting colon symbols.* but how you get this for the Defender app easily is beyond me, something about using [apksigner](https://developer.android.com/tools/apksigner#usage-verify)
+{{< /admonition >}}
+
+These settings in Intune should be something like the below:
+
+![Moto OEMConfig Settings in Intune](img/amde-moto.png "Moto OEMConfig Defender for Endpoint settings in Intune.")
+
+The settings look like the this, which is a little easier to read:
+
+| Category | Setting | Value |
+| :- | :- | :- |
+| Debug tools policies > Debug mode | Allow debug mode | `true` |
+| System policies > Battery non-optimized apps | Allow non-battery optimized applications | `true` |
+| System policies > Battery non-optimized apps | Non-battery optimized application list | `com.microsoft.scmx` |
+| System policies > Display over the other apps settings | Enable display over the other apps | `true` |
+| System policies > Display over the other apps settings > Display Over The Other Apps list | App package name | `com.microsoft.scmx` |
+| System policies > All Files Access | Enable All Files policy | `true` |
+| System policies > All Files Access > All Files apps list | App package name | `com.microsoft.scmx` |
+
+### Defender Experience
+
+What we have here are new profiles that should help our users on their way to onboarding their devices to Defender, without having to faff about setting up the additional requested permissions that Defender needs.
 
 So when a user now opens the Defender app, they are only presented with one permission for Accessibility to configure:
 
 ![Defender for Endpoint App Permissions](img/amde-lowertouch.png "Defender app on Android Enterprise requesting permissions.")
 
-I haven't worked out a way to implement this using Intune or the Knox Service Plugin, so you're end users will still have to do something to finish the onboarding process, sorry 🫠.
+I haven't worked out a way to implement this using Intune or the Knox Service Plugin or Moto OEMConfig, so you're end users will still have to do something to finish the onboarding process, sorry 🫠.
 
 ## Defender Features
 
-Now that you've got your Android Enterprise, and/or Samsung devices onboarded to Defender for Endpoint, it's worth covering off some additional [settings and features](https://learn.microsoft.com/en-us/defender-endpoint/android-configure) to ensure that the app is not either misused, or to just be definite with some default settings.
+Now that you've got your Android Enterprise, and/or Samsung or Motorola devices onboarded to Defender for Endpoint, it's worth covering off some additional [settings and features](https://learn.microsoft.com/en-us/defender-endpoint/android-configure) to ensure that the app is not either misused, or to just be definite with some default settings.
 
 So back to your [App Configuration](https://learn.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-overview) policy we go, to add in some or all of the below settings:
 
@@ -216,7 +269,7 @@ Obviously these can be amended based on your needs after reading through the ass
 
 ## Summary
 
-Even with the additional configuration implemented for supported Samsung devices, it's still not as seamless as the zero-touch onboarding available for iOS devices. Whether this is down to Android being ~~fussy~~ more particular with permissions and privacy settings than iOS or otherwise, users *should not* have to actively onboard their devices to a security service.
+Even with the additional configuration implemented for supported Samsung and now Motorola devices, it's still not as seamless as the zero-touch onboarding available for iOS devices. Whether this is down to Android being ~~fussy~~ more particular with permissions and privacy settings than iOS or otherwise, users *should not* have to actively onboard their devices to a security service.
 
 At least we've made the whole process a little easier for the Android users, and fixed some gaps with the Microsoft documentation.
 

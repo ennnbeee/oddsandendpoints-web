@@ -11,8 +11,8 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-12-10T11:12:55+00:00">
-    <meta property="article:modified_time" content="2024-12-10T11:12:55+00:00">
+    <meta property="article:published_time" content="2025-02-27T09:43:55+00:00">
+    <meta property="article:modified_time" content="2025-02-27T09:43:55+00:00">
     <meta property="article:tag" content="Intune">
     <meta property="article:tag" content="Microsoft Defender">
     <meta property="article:tag" content="Security">
@@ -30,7 +30,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ea580c">
 
-<link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/" /><link rel="next" href="https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/" />
+<link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/android-enterprise-enrolment-customisation/" />
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
         "headline": "Lower-Touch Defender for Endpoint Onboarding for Android Devices",
         "inLanguage": "en",
@@ -42,8 +42,8 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["samsung knox service plugin","Android Enterprise Defender onboarding","Microsoft Defender for Endpoint","Intune Android onboarding"],"wordcount":  1805 ,
-        "url": "https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/","datePublished": "2024-12-10T11:12:55+00:00","dateModified": "2024-12-10T11:12:55+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords":["samsung knox service plugin","Android Enterprise Defender onboarding","Microsoft Defender for Endpoint","Intune Android onboarding"],"wordcount":  2317 ,
+        "url": "https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/","datePublished": "2025-02-27T09:43:55+00:00","dateModified": "2025-02-27T09:43:55+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
                         "@type": "Person",
@@ -184,8 +184,9 @@
     </li>
     <li><a href="#lower-touch-onboarding">Lower-Touch Onboarding</a>
       <ul>
-        <li><a href="#knox-service-plugin">Knox Service Plugin</a></li>
-        <li><a href="#oemconfig">OEMConfig</a></li>
+        <li><a href="#knox-service-plugin-oemconfig">Knox Service Plugin OEMConfig</a></li>
+        <li><a href="#moto-oemconfig">Moto OEMConfig</a></li>
+        <li><a href="#defender-experience">Defender Experience</a></li>
       </ul>
     </li>
     <li><a href="#defender-features">Defender Features</a></li>
@@ -212,8 +213,9 @@
     </li>
     <li><a href="#lower-touch-onboarding">Lower-Touch Onboarding</a>
       <ul>
-        <li><a href="#knox-service-plugin">Knox Service Plugin</a></li>
-        <li><a href="#oemconfig">OEMConfig</a></li>
+        <li><a href="#knox-service-plugin-oemconfig">Knox Service Plugin OEMConfig</a></li>
+        <li><a href="#moto-oemconfig">Moto OEMConfig</a></li>
+        <li><a href="#defender-experience">Defender Experience</a></li>
       </ul>
     </li>
     <li><a href="#defender-features">Defender Features</a></li>
@@ -221,14 +223,14 @@
   </ul>
 </nav></div>
         </div>
-    </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:10 December 2024" data-pagefind-body>Lower-Touch Defender for Endpoint Onboarding for Android Devices</h1><div class="post-meta">
+    </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:27 February 2025" data-pagefind-body>Lower-Touch Defender for Endpoint Onboarding for Android Devices</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'>
         <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src=/img/ennbee.png   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>
                 </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/android/"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Android</a></span></div>
             <div class="post-meta-line"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="10 December 2024">10 December 2024</time>&nbsp;</div>
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="27 February 2025">27 February 2025</time>&nbsp;</div>
         </div><div class="featured-image"><img  loading="eager" src=/posts/android-enterprise-defender-onboarding/featured.png   alt="Using Intune and OEMConfig for Samsung Knox Android Enterprise devices to improve the onboarding of devices to Defender for Endpoint." height="500" width="1000"></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -252,15 +254,24 @@
     </li>
     <li><a href="#lower-touch-onboarding">Lower-Touch Onboarding</a>
       <ul>
-        <li><a href="#knox-service-plugin">Knox Service Plugin</a></li>
-        <li><a href="#oemconfig">OEMConfig</a></li>
+        <li><a href="#knox-service-plugin-oemconfig">Knox Service Plugin OEMConfig</a></li>
+        <li><a href="#moto-oemconfig">Moto OEMConfig</a></li>
+        <li><a href="#defender-experience">Defender Experience</a></li>
       </ul>
     </li>
     <li><a href="#defender-features">Defender Features</a></li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>Onboarding corporate mobile devices managed by Intune into Defender for Endpoint shouldn&rsquo;t require your end users to do <em>anything</em>, and with supervised iOS/iPadOS devices this is exactly the case with Microsoft providing <a href="https://learn.microsoft.com/en-us/defender-endpoint/ios-install" target="_blank" rel="noopener noreferrer">great documentation</a> on the process and corresponding configuration profiles to support silent onboarding.</p>
+            </div><div class="content" id="content" data-pagefind-body><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">This post has been updated to include configuration settings for Motorola devices.</div></div></div>
+<p>Onboarding corporate mobile devices managed by Intune into Defender for Endpoint shouldn&rsquo;t require your end users to do <em>anything</em>, and with supervised iOS/iPadOS devices this is exactly the case with Microsoft providing <a href="https://learn.microsoft.com/en-us/defender-endpoint/ios-install" target="_blank" rel="noopener noreferrer">great documentation</a> on the process and corresponding configuration profiles to support silent onboarding.</p>
 <p>The same however can&rsquo;t be said for Android Enterprise devices, even with the feature for <a href="https://learn.microsoft.com/en-us/defender-endpoint/android-intune#configure-low-touch-onboarding" target="_blank" rel="noopener noreferrer">low-touch onboarding</a> <del>currently in preview</del> now <a href="https://learn.microsoft.com/en-us/defender-endpoint/android-whatsnew#android-low-touch-onboarding-is-now-ga" target="_blank" rel="noopener noreferrer">Generally Available</a>.</p>
 <p>Although low-touch onboarding reduces the amount of hoops a user has to jump through, it doesn&rsquo;t remove them all.</p>
 <p>Can we help with that?</p>
@@ -469,8 +480,8 @@
 
 </blockquote><p>What started me on this journey was a post about the changes to the <a href="https://techcommunity.microsoft.com/blog/microsoftendpointmanagerblog/frontline-workers-get-a-better-experience-from-microsoft-and-samsung/4078801" target="_blank" rel="noopener noreferrer">Shared Device mode for Android Enterprise on Samsung devices</a> detailing how to use the <a href="https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/" target="_blank" rel="noopener noreferrer">Knox Service Plugin</a> and an <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/android-oem-configuration-overview" target="_blank" rel="noopener noreferrer">OEMConfig profile</a> in Intune to give Microsoft Launcher overlay, or display over other app permissions on-behalf of a user.</p>
 <p>Surely we can do the same for Defender on our supported Samsung devices?</p>
-<h3 id="knox-service-plugin" class="headerLink">
-    <a href="#knox-service-plugin" class="header-mark"></a>3.1 Knox Service Plugin</h3><p>Before we dive into attempting to configure these additional permissions for our users, we need an OEMConfig App available in Intune. So go an approve the Knox Service Plugin from the Managed Google Play Store.</p>
+<h3 id="knox-service-plugin-oemconfig" class="headerLink">
+    <a href="#knox-service-plugin-oemconfig" class="header-mark"></a>3.1 Knox Service Plugin OEMConfig</h3><p>Before we dive into attempting to configure these additional permissions for our users, we need an OEMConfig App available in Intune. So go an approve the Knox Service Plugin from the Managed Google Play Store.</p>
 <p><figure><a class="lightgallery" href="/posts/android-enterprise-defender-onboarding/img/amde-ksp_hu_25d4e5f7ec38121b.png" title="Knox Service Plugin App" data-thumbnail="/posts/android-enterprise-defender-onboarding/img/amde-ksp_hu_25d4e5f7ec38121b.png" data-sub-html="<h2>Knox Service Plugin app in the Managed Google Play Store.</h2><p>Knox Service Plugin App</p>"><img  loading="lazy" src=/posts/android-enterprise-defender-onboarding/img/amde-ksp_hu_25d4e5f7ec38121b.png   alt="Knox Service Plugin App"  ></a><figcaption class="image-caption">Knox Service Plugin app in the Managed Google Play Store.</figcaption>
 </figure>
 
@@ -574,8 +585,7 @@
       "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="py">deviceOwnership</span> <span class="o">-eq</span> <span class="s2">&#34;Corporate&#34;</span><span class="p">)</span> <span class="n">and</span> <span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="py">manufacturer</span> <span class="o">-eq</span> <span class="s2">&#34;samsung&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
 <p>Once the app has installed, we can now move onto configuring a profile.</p>
-<h3 id="oemconfig" class="headerLink">
-    <a href="#oemconfig" class="header-mark"></a>3.2 OEMConfig</h3><p>From my experience with <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/android-oem-configuration-overview" target="_blank" rel="noopener noreferrer">OEMConfig profiles</a> there <a href="https://www.youtube.com/watch?v=sqcLjcSloXs" target="_blank" rel="noopener noreferrer">can be only one</a> assigned per Samsung device (<a href="https://learn.microsoft.com/en-us/mem/intune/configuration/oemconfig-zebra-android-devices" target="_blank" rel="noopener noreferrer">Zebra devices are different</a>), so if you&rsquo;re already applying a Knox Service Plugin based profile, you&rsquo;re going to have to amend that one instead of creating a new one.</p>
+<p>From my experience with <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/android-oem-configuration-overview" target="_blank" rel="noopener noreferrer">OEMConfig profiles</a> there <a href="https://www.youtube.com/watch?v=sqcLjcSloXs" target="_blank" rel="noopener noreferrer">can be only one</a> assigned per Samsung device (<a href="https://learn.microsoft.com/en-us/mem/intune/configuration/oemconfig-zebra-android-devices" target="_blank" rel="noopener noreferrer">Zebra devices are different</a>), so if you&rsquo;re already applying a Knox Service Plugin based profile, you&rsquo;re going to have to amend that one instead of creating a new one.</p>
 <p>Either way, to setup the Android Enterprise profile, if you need to create a new one, and to configure the required Defender for Endpoint settings:</p>
 <ul>
 <li>Navigate to the Microsoft Intune admin center and select <strong>Configuration</strong> under <strong>Manage devices</strong>, create a new policy for the <strong>Android Enterprise</strong> platform of type <strong>OEMConfig</strong>.
@@ -679,15 +689,127 @@
     </div>
     <div class="details-content">
         <div class="admonition-content">For reference to how to configure these additional special permissions, the <a href="https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/kbas/kba-1261-grant-special-permissions-for-an-app/" target="_blank" rel="noopener noreferrer">Knox documentation</a> covers it in more detail.</div></div></div>
-<p>What we have here is a new profile that should help our users on their way to onboarding their devices to Defender, without having to faff about setting up the additional requested permissions that Defender needs.</p>
+<h3 id="moto-oemconfig" class="headerLink">
+    <a href="#moto-oemconfig" class="header-mark"></a>3.2 Moto OEMConfig</h3><p>Thanks to <a href="https://github.com/deweez" target="_blank" rel="noopener noreferrer">deweez</a> in the comments, it looks as though the settings created for Samsung Knox devices, also work with the Motorola devices supported by <a href="https://en-gb.support.motorola.com/app/answers/detail/a_id/160503/~/moto-oemconfig-guide" target="_blank" rel="noopener noreferrer">Moto OEMConfig</a>.</p>
+<p>After adding the Moto OEMConfig app to your Intune tenant using Managed Google Play:</p>
+<ul>
+<li>Navigate to the Microsoft Intune admin center and select <strong>Configuration</strong> under <strong>Manage devices</strong>, create a new policy for the <strong>Android Enterprise</strong> platform of type <strong>OEMConfig</strong>.
+<ul>
+<li>Give the profile a suitable name and a description if you&rsquo;d like e.g., <code>ODD-AND-AE-D-CO-MOTO-Defender</code></li>
+<li>Select <code>Moto OEMConfig</code> as the OEMConfig app</li>
+<li>Select <strong>Next</strong> to continue to the configuration page</li>
+</ul>
+</li>
+<li>Under <strong>Moto OEMConfig</strong> select <strong>Configure</strong> for <strong>Debug tools policies</strong>
+<ul>
+<li>Under Debug tools policies select <strong>Configure</strong> for <strong>Debug mode</strong>
+<ul>
+<li>Under Debug mode set <strong>Allow debug mode</strong> to <code>true</code> to enable it.</li>
+<li>Select <strong>Configure</strong> for <strong>Application management policies</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Under <strong>Moto OEMConfig</strong> select <strong>Configure</strong> for <strong>System policies</strong>
+<ul>
+<li>Under System policies select <strong>Configure</strong> for <strong>Battery non-optimized apps</strong>
+<ul>
+<li>Under Battery non-optimized apps set <strong>Allow non-battery optimized applications</strong> to <code>true</code> to enable it.</li>
+<li>In <strong>Non-battery optimized application list</strong> enter in <code>com.microsoft.scmx</code></li>
+</ul>
+</li>
+<li>Under System policies select <strong>Configure</strong> for <strong>Display over the other apps settings</strong>
+<ul>
+<li>Under Display over the other apps settings set <strong>Enable display over the other apps</strong> to <code>true</code> to enable it.</li>
+<li>In <strong>Display Over The Other Apps list</strong> select <strong>Configure</strong></li>
+<li>Select the <strong>ellipsis (&hellip;)</strong> that&rsquo;s next to <strong>Display Over The Other Apps list</strong> and select <strong>Add Setting</strong></li>
+<li>Under <strong>Applications that require permission to display over the other apps</strong> in <strong>App package name</strong> enter in <code>com.microsoft.scmx</code></li>
+</ul>
+</li>
+<li>Under System policies select <strong>Configure</strong> for <strong>All Files Access</strong>
+<ul>
+<li>Under All Files Access set <strong>Enable All Files policy</strong> to <code>true</code> to enable it.</li>
+<li>In <strong>All Files apps list</strong> select <strong>Configure</strong></li>
+<li>Select the <strong>ellipsis (&hellip;)</strong> that&rsquo;s next to <strong>All Files apps list</strong> and select <strong>Add Setting</strong></li>
+<li>Under <strong>Applications that require All Files permission</strong> in <strong>App package name</strong> enter in <code>com.microsoft.scmx</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="details admonition info open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg></span>Info<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">There is a setting under <strong>Applications that require All Files permission</strong> for <strong>App certificate</strong> asking for <em>Provide the SHA256 fingerprint certificate used to sign the app. Certificate format is XX:XX:XX:XX and is 95 characters long, counting colon symbols.</em> but how you get this for the Defender app easily is beyond me, something about using <a href="https://developer.android.com/tools/apksigner#usage-verify" target="_blank" rel="noopener noreferrer">apksigner</a></div></div></div>
+<p>These settings in Intune should be something like the below:</p>
+<p><figure><a class="lightgallery" href="/posts/android-enterprise-defender-onboarding/img/amde-moto_hu_14ec80e78970aab5.png" title="Moto OEMConfig Settings in Intune" data-thumbnail="/posts/android-enterprise-defender-onboarding/img/amde-moto_hu_14ec80e78970aab5.png" data-sub-html="<h2>Moto OEMConfig Defender for Endpoint settings in Intune.</h2><p>Moto OEMConfig Settings in Intune</p>"><img  loading="lazy" src=/posts/android-enterprise-defender-onboarding/img/amde-moto_hu_14ec80e78970aab5.png   alt="Moto OEMConfig Settings in Intune"  ></a><figcaption class="image-caption">Moto OEMConfig Defender for Endpoint settings in Intune.</figcaption>
+</figure>
+
+</p>
+<p>The settings look like the this, which is a little easier to read:</p>
+
+<div class="table-wrapper">
+  <table>
+    <thead>
+        <tr>
+            <th style="text-align: left">Category</th>
+            <th style="text-align: left">Setting</th>
+            <th style="text-align: left">Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="text-align: left">Debug tools policies &gt; Debug mode</td>
+            <td style="text-align: left">Allow debug mode</td>
+            <td style="text-align: left"><code>true</code></td>
+        </tr>
+        <tr>
+            <td style="text-align: left">System policies &gt; Battery non-optimized apps</td>
+            <td style="text-align: left">Allow non-battery optimized applications</td>
+            <td style="text-align: left"><code>true</code></td>
+        </tr>
+        <tr>
+            <td style="text-align: left">System policies &gt; Battery non-optimized apps</td>
+            <td style="text-align: left">Non-battery optimized application list</td>
+            <td style="text-align: left"><code>com.microsoft.scmx</code></td>
+        </tr>
+        <tr>
+            <td style="text-align: left">System policies &gt; Display over the other apps settings</td>
+            <td style="text-align: left">Enable display over the other apps</td>
+            <td style="text-align: left"><code>true</code></td>
+        </tr>
+        <tr>
+            <td style="text-align: left">System policies &gt; Display over the other apps settings &gt; Display Over The Other Apps list</td>
+            <td style="text-align: left">App package name</td>
+            <td style="text-align: left"><code>com.microsoft.scmx</code></td>
+        </tr>
+        <tr>
+            <td style="text-align: left">System policies &gt; All Files Access</td>
+            <td style="text-align: left">Enable All Files policy</td>
+            <td style="text-align: left"><code>true</code></td>
+        </tr>
+        <tr>
+            <td style="text-align: left">System policies &gt; All Files Access &gt; All Files apps list</td>
+            <td style="text-align: left">App package name</td>
+            <td style="text-align: left"><code>com.microsoft.scmx</code></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<h3 id="defender-experience" class="headerLink">
+    <a href="#defender-experience" class="header-mark"></a>3.3 Defender Experience</h3><p>What we have here are new profiles that should help our users on their way to onboarding their devices to Defender, without having to faff about setting up the additional requested permissions that Defender needs.</p>
 <p>So when a user now opens the Defender app, they are only presented with one permission for Accessibility to configure:</p>
 <p><figure><a class="lightgallery" href="/posts/android-enterprise-defender-onboarding/img/amde-lowertouch_hu_691a758e6058c2bc.png" title="Defender for Endpoint App Permissions" data-thumbnail="/posts/android-enterprise-defender-onboarding/img/amde-lowertouch_hu_691a758e6058c2bc.png" data-sub-html="<h2>Defender app on Android Enterprise requesting permissions.</h2><p>Defender for Endpoint App Permissions</p>"><img  loading="lazy" src=/posts/android-enterprise-defender-onboarding/img/amde-lowertouch_hu_691a758e6058c2bc.png   alt="Defender for Endpoint App Permissions"  ></a><figcaption class="image-caption">Defender app on Android Enterprise requesting permissions.</figcaption>
 </figure>
 
 </p>
-<p>I haven&rsquo;t worked out a way to implement this using Intune or the Knox Service Plugin, so you&rsquo;re end users will still have to do something to finish the onboarding process, sorry 🫠.</p>
+<p>I haven&rsquo;t worked out a way to implement this using Intune or the Knox Service Plugin or Moto OEMConfig, so you&rsquo;re end users will still have to do something to finish the onboarding process, sorry 🫠.</p>
 <h2 id="defender-features" class="headerLink">
-    <a href="#defender-features" class="header-mark"></a>4 Defender Features</h2><p>Now that you&rsquo;ve got your Android Enterprise, and/or Samsung devices onboarded to Defender for Endpoint, it&rsquo;s worth covering off some additional <a href="https://learn.microsoft.com/en-us/defender-endpoint/android-configure" target="_blank" rel="noopener noreferrer">settings and features</a> to ensure that the app is not either misused, or to just be definite with some default settings.</p>
+    <a href="#defender-features" class="header-mark"></a>4 Defender Features</h2><p>Now that you&rsquo;ve got your Android Enterprise, and/or Samsung or Motorola devices onboarded to Defender for Endpoint, it&rsquo;s worth covering off some additional <a href="https://learn.microsoft.com/en-us/defender-endpoint/android-configure" target="_blank" rel="noopener noreferrer">settings and features</a> to ensure that the app is not either misused, or to just be definite with some default settings.</p>
 <p>So back to your <a href="https://learn.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-overview" target="_blank" rel="noopener noreferrer">App Configuration</a> policy we go, to add in some or all of the below settings:</p>
 
 <div class="table-wrapper">
@@ -736,7 +858,7 @@
 </div>
 <p>Obviously these can be amended based on your needs after reading through the associated documentation, and if you&rsquo;ve got the bankroll to use Global Secure Access then can I borrow some money? 🤑.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>5 Summary</h2><p>Even with the additional configuration implemented for supported Samsung devices, it&rsquo;s still not as seamless as the zero-touch onboarding available for iOS devices. Whether this is down to Android being <del>fussy</del> more particular with permissions and privacy settings than iOS or otherwise, users <em>should not</em> have to actively onboard their devices to a security service.</p>
+    <a href="#summary" class="header-mark"></a>5 Summary</h2><p>Even with the additional configuration implemented for supported Samsung and now Motorola devices, it&rsquo;s still not as seamless as the zero-touch onboarding available for iOS devices. Whether this is down to Android being <del>fussy</del> more particular with permissions and privacy settings than iOS or otherwise, users <em>should not</em> have to actively onboard their devices to a security service.</p>
 <p>At least we&rsquo;ve made the whole process a little easier for the Android users, and fixed some gaps with the Microsoft documentation.</p>
 </div>
 
@@ -744,7 +866,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 10 December 2024</span>
+                <span>Updated on 27 February 2025</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -768,10 +890,8 @@
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/windows-11-risk-based-deployment-part5/" class="prev" rel="prev" title="Risk Based Windows 11 Feature Update Deployment - Improvements"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Risk Based Windows 11 Feature Update Deployment - Improvements</a>
-            <a href="/posts/bitlocker-key-rotation-requirements/" class="next" rel="next" title="BitLocker Recovery Key Rotation Requirements in Intune">BitLocker Recovery Key Rotation Requirements in Intune<svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
+    <div class="post-nav print:tw-hidden"><a href="/posts/android-enterprise-enrolment-customisation/" class="prev" rel="prev" title="Improving the Android Enterprise Enrolment Experience"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Improving the Android Enterprise Enrolment Experience</a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
