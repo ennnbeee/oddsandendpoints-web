@@ -27,19 +27,9 @@ Please note that we use Google Analytics, which places cookies on your computer,
 
 You block cookies by activating the setting on your browser that allows you to refuse the setting of all or some cookies or by choosing to deny Cookies when prompted, then no information will be collected whatsoever.
 
-## Authors
-
-### Nick Benton
+## Author
 
 I'm Nick Benton, an end-user computing specialist with over a decade of experience in consulting, architecture, design, and implementation of modern device management, and enterprise mobility solutions. I currently have the role of Principal Cloud Endpoint Consultant at [Phoenix Software Ltd](https://www.phoenixs.co.uk/) who were the Global Microsoft Partner of the Year for Modern Endpoint Management 2023, where my main focus is assisting customers in their road to a modern workplace cloud first approach, using Microsoft Intune, with a focus on migration, security and zero touch deployments.
 
 I use this website as a platform to share content with the community, based on solutions I find, to problems encountered in real world scenarios.
-
-### Jonathan Fallis
-
-I currently work as a Technical Consultant in the Cloud Endpoint practice at [Phoenix Software Ltd](https://www.phoenixs.co.uk/) (who, in recognition for outstanding achievements, have been awarded Microsoft Partner of the Year for 2023), specialising in the deployment and management of Microsoft Intune, a pivotal tool for modern device management and application deployment.
-
-Beyond working with Microsoft Intune, I am passionate about PowerBI Reporting and PowerShell scripting. This interest extends beyond professional obligation, reflecting a genuine enthusiasm for the products and trying to apply them to everyday life. Whether supporting clients on their cloud journey, harnessing PowerBI for insightful data reporting or crafting PowerShell scripts to automate complex tasks day-to-day, I’m normally geeking out somewhere.
-
-Outside of tech, I am a father, motorcyclist, petrol head and a big football & music fan.
 

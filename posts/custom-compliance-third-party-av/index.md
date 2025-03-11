@@ -86,7 +86,7 @@ The six-digit value for 'productState' can be broken down into three pairs of tw
 - 3rd Pair: Definition Status
 
 {{< admonition type=info >}}
-The 2nd and 3rd pair may report differently depending on your Antivirus product, as detailed in [this post](https://social.msdn.microsoft.com/Forums/en-US/6501b87e-dda4-4838-93c3-244daa355d7c/wmisecuritycenter2-productstate?forum=vblanguage), so you will have to check this on a device with up-to-date definitions as well as real time protection enabled to be sure.
+The 2nd and 3rd pair may report differently depending on your Antivirus product, as detailed in [this post](https://web.archive.org/web/20210707143004/https://social.msdn.microsoft.com/Forums/en-US/6501b87e-dda4-4838-93c3-244daa355d7c/wmisecuritycenter2-productstate?forum=vblanguage), so you will have to check this on a device with up-to-date definitions as well as real time protection enabled to be sure.
 {{< /admonition >}}
 
 The values for each of these pairs for Sophos Antivirus can be seen below:

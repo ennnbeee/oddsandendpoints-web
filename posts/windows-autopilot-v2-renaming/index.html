@@ -197,12 +197,12 @@
     </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:2 July 2024" data-pagefind-body>Renaming Windows Autopilot v2 Devices</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'>
-        <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src=/img/ennbee.png   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>
+        <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src='/img/ennbee.png'   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>
                 </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/windows/"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Windows</a></span></div>
             <div class="post-meta-line"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2 July 2024">2 July 2024</time>&nbsp;</div>
-        </div><div class="featured-image"><img  loading="eager" src=/posts/windows-autopilot-v2-renaming/featured.png   alt="Using Microsoft Intune to rename Autopilot Device Preparation devices, or Autopilot v2 devices in three different ways." height="500" width="1000"></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+        </div><div class="featured-image"><img  loading="eager" src='/posts/windows-autopilot-v2-renaming/featured.png'   alt="Using Microsoft Intune to rename Autopilot Device Preparation devices, or Autopilot v2 devices in three different ways." height="500" width="1000"></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span class="details-icon"><svg class="icon"
@@ -226,7 +226,7 @@
 <p>Guess what? There are.</p>
 <h2 id="renaming-devices" class="headerLink">
     <a href="#renaming-devices" class="header-mark"></a>1 Renaming Devices</h2><p>I&rsquo;ll be frank, this method is misaligned to good practice (which is nice way of saying, <em>&ldquo;janky&rdquo;</em>), but until there is a way to do this in Microsoft Intune within the device preparation policy itself, and you still care about naming your devices and not just leaving users to decide their device names on Windows Pro devices at least&hellip;</p>
-<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-nameprompt_hu_1cb0ba351b200a2a.png" title="User based device naming" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-nameprompt_hu_1cb0ba351b200a2a.png" data-sub-html="<h2>Windows Autopilot Device Name prompt.</h2><p>User based device naming</p>"><img  loading="lazy" src=/posts/windows-autopilot-v2-renaming/img/apv2-nameprompt_hu_1cb0ba351b200a2a.png   alt="User based device naming"  ></a><figcaption class="image-caption">Windows Autopilot Device Name prompt.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-nameprompt_hu_1cb0ba351b200a2a.png" title="User based device naming" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-nameprompt_hu_1cb0ba351b200a2a.png" data-sub-html="<h2>Windows Autopilot Device Name prompt.</h2><p>User based device naming</p>"><img  loading="lazy" src='/posts/windows-autopilot-v2-renaming/img/apv2-nameprompt_hu_1cb0ba351b200a2a.png'   alt="User based device naming"  ></a><figcaption class="image-caption">Windows Autopilot Device Name prompt.</figcaption>
 </figure>
 
 </p>
@@ -243,7 +243,7 @@
   <p>We recommend using <code>%SERIAL%</code> or <code>%RAND:x%</code> with a high character limit to reduce the chance of name collision when generating a random name. This feature doesn&rsquo;t check if a particular name is already present in the environment.</p>
 
 </blockquote><p>So when configuring our device name, we can utilise a prefix and a variable such as <strong>ENB-%SERIAL%</strong> to hope there are no device name clashes:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-dnscomputername_hu_e4a02cd52a9243f6.png" title="DNSComputerName Settings" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-dnscomputername_hu_e4a02cd52a9243f6.png" data-sub-html="<h2>Setting the device name using DNSComputerName in Microsoft Intune.</h2><p>DNSComputerName Settings</p>"><img  loading="lazy" src=/posts/windows-autopilot-v2-renaming/img/apv2-dnscomputername_hu_e4a02cd52a9243f6.png   alt="DNSComputerName Settings"  ></a><figcaption class="image-caption">Setting the device name using DNSComputerName in Microsoft Intune.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-dnscomputername_hu_e4a02cd52a9243f6.png" title="DNSComputerName Settings" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-dnscomputername_hu_e4a02cd52a9243f6.png" data-sub-html="<h2>Setting the device name using DNSComputerName in Microsoft Intune.</h2><p>DNSComputerName Settings</p>"><img  loading="lazy" src='/posts/windows-autopilot-v2-renaming/img/apv2-dnscomputername_hu_e4a02cd52a9243f6.png'   alt="DNSComputerName Settings"  ></a><figcaption class="image-caption">Setting the device name using DNSComputerName in Microsoft Intune.</figcaption>
 </figure>
 
 </p>
@@ -276,7 +276,7 @@
 
 <div class="showcase-box column-2">
     <div class="showcase-image">
-        <a href=/posts/windows-cis-patching-gaps-part2/><img   src=/posts/windows-cis-patching-gaps-part2/featured.png   alt="Patching Gaps in the CIS Windows 11 Benchmark - Level 1 Windows Autopilot" height="200" width="400"></a>
+        <a href=/posts/windows-cis-patching-gaps-part2/><img   src='/posts/windows-cis-patching-gaps-part2/featured.png'   alt="Patching Gaps in the CIS Windows 11 Benchmark - Level 1 Windows Autopilot" height="200" width="400"></a>
     </div>
     <h2 class="showcase-title">
         <a href=/posts/windows-cis-patching-gaps-part2/>Patching Gaps in the CIS Windows 11 Benchmark - Level 1 Windows Autopilot</a>
@@ -326,12 +326,12 @@
     <div class="details-content">
         <div class="admonition-content">I picked <a href="https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceguard#enablevirtualizationbasedsecurity" target="_blank" rel="noopener noreferrer">EnableVirtualizationBasedSecurity</a> but you can select any in the document, they all cause some type of restart during OOBE.</div></div></div>
 <p>Making sure to assign this new profile to the same <a href="https://learn.microsoft.com/en-us/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group" target="_blank" rel="noopener noreferrer">group of devices</a> used in your APDP (<em>is this really any better than APv2?</em>) policy:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-apdpgroup_hu_3bfff96ad3423a16.png" title="APDP Policy Group" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-apdpgroup_hu_3bfff96ad3423a16.png" data-sub-html="<h2>Windows Autopilot Device Preparation Policy device group assignment.</h2><p>APDP Policy Group</p>"><img  loading="lazy" src=/posts/windows-autopilot-v2-renaming/img/apv2-apdpgroup_hu_3bfff96ad3423a16.png   alt="APDP Policy Group"  ></a><figcaption class="image-caption">Windows Autopilot Device Preparation Policy device group assignment.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-apdpgroup_hu_3bfff96ad3423a16.png" title="APDP Policy Group" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-apdpgroup_hu_3bfff96ad3423a16.png" data-sub-html="<h2>Windows Autopilot Device Preparation Policy device group assignment.</h2><p>APDP Policy Group</p>"><img  loading="lazy" src='/posts/windows-autopilot-v2-renaming/img/apv2-apdpgroup_hu_3bfff96ad3423a16.png'   alt="APDP Policy Group"  ></a><figcaption class="image-caption">Windows Autopilot Device Preparation Policy device group assignment.</figcaption>
 </figure>
 
 </p>
 <p>If you like screenshots of Microsoft Intune, here&rsquo;s another one for you, this time of the Custom Profile:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-apdpcustom_hu_57f740a83147c913.png" title="APDP Custom Profile" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-apdpcustom_hu_57f740a83147c913.png" data-sub-html="<h2>Windows Autopilot Device Preparation rename policy assignment.</h2><p>APDP Custom Profile</p>"><img  loading="lazy" src=/posts/windows-autopilot-v2-renaming/img/apv2-apdpcustom_hu_57f740a83147c913.png   alt="APDP Custom Profile"  ></a><figcaption class="image-caption">Windows Autopilot Device Preparation rename policy assignment.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-apdpcustom_hu_57f740a83147c913.png" title="APDP Custom Profile" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-apdpcustom_hu_57f740a83147c913.png" data-sub-html="<h2>Windows Autopilot Device Preparation rename policy assignment.</h2><p>APDP Custom Profile</p>"><img  loading="lazy" src='/posts/windows-autopilot-v2-renaming/img/apv2-apdpcustom_hu_57f740a83147c913.png'   alt="APDP Custom Profile"  ></a><figcaption class="image-caption">Windows Autopilot Device Preparation rename policy assignment.</figcaption>
 </figure>
 
 </p>
@@ -342,7 +342,7 @@
       <span></span>
     </video>
 <p>Although the device itself is now happily renamed, Microsoft Intune is being a little whinge about the assignment of the profile:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-dnsnameerror_hu_bb699d63223cdbbc.png" title="DNSComputerName Error" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-dnsnameerror_hu_bb699d63223cdbbc.png" data-sub-html="<h2>Profile assignment errors in Microsoft Intune for DNSComputerName.</h2><p>DNSComputerName Error</p>"><img  loading="lazy" src=/posts/windows-autopilot-v2-renaming/img/apv2-dnsnameerror_hu_bb699d63223cdbbc.png   alt="DNSComputerName Error"  ></a><figcaption class="image-caption">Profile assignment errors in Microsoft Intune for DNSComputerName.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-autopilot-v2-renaming/img/apv2-dnsnameerror_hu_bb699d63223cdbbc.png" title="DNSComputerName Error" data-thumbnail="/posts/windows-autopilot-v2-renaming/img/apv2-dnsnameerror_hu_bb699d63223cdbbc.png" data-sub-html="<h2>Profile assignment errors in Microsoft Intune for DNSComputerName.</h2><p>DNSComputerName Error</p>"><img  loading="lazy" src='/posts/windows-autopilot-v2-renaming/img/apv2-dnsnameerror_hu_bb699d63223cdbbc.png'   alt="DNSComputerName Error"  ></a><figcaption class="image-caption">Profile assignment errors in Microsoft Intune for DNSComputerName.</figcaption>
 </figure>
 
 </p>
