@@ -2,30 +2,34 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.oddsandendpoints.co.uk/</loc><lastmod>2025-03-01T20:11:47&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/posts/</loc><lastmod>2025-03-01T20:11:47&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/authors/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/categories/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/firewall/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/intune/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/authors/nick-benton/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/posts/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/powershell/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/remediations/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/security/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/categories/windows/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tags/windows-autopilot/</loc><lastmod>2025-05-06T18:53:56&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/categories/android/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/authors/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/categories/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/tags/intune/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/defender/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/authors/nick-benton/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/oemconfig/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/tags/security/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/tags/</loc><lastmod>2025-02-27T09:43:55&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/device-enrolment/</loc><lastmod>2025-02-12T11:40:20&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/android-enterprise-enrolment-customisation/</loc><lastmod>2025-02-12T11:40:20&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/bitlocker/</loc><lastmod>2025-01-30T16:04:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</loc><lastmod>2025-01-21T16:39:24&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/endpoint-security/</loc><lastmod>2025-01-30T16:04:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/settings-catalog/</loc><lastmod>2025-01-30T16:04:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/categories/windows/</loc><lastmod>2025-01-30T16:04:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/automation/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/dynamic-groups/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/feature-updates/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/graph/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/tags/powershell/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/series/risk-based-windows-11-feature-update-deployment/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</loc><lastmod>2024-12-03T18:12:49&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/series/</loc><lastmod>2025-01-30T16:04:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
@@ -52,12 +56,10 @@
             <loc>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part4/</loc><lastmod>2024-08-12T21:26:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/powerautomate-out-of-office/</loc><lastmod>2024-07-26T12:54:24&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/categories/power-automate/</loc><lastmod>2024-07-26T12:54:24&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/tags/firewall/</loc><lastmod>2024-07-22T21:14:28&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/categories/intune/</loc><lastmod>2024-07-22T21:14:28&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/</loc><lastmod>2024-07-22T21:14:28&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</loc><lastmod>2024-07-15T11:26:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-v2-renaming/</loc><lastmod>2024-07-02T21:25:20&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/tags/windows-autopilot/</loc><lastmod>2024-10-13T21:03:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/windows-autopilot-v2/</loc><lastmod>2024-07-02T21:25:20&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part2/</loc><lastmod>2024-06-23T21:26:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/windows-hello/</loc><lastmod>2024-06-23T21:26:37&#43;01:00</lastmod><changefreq>weekly</changefreq></url><url>
