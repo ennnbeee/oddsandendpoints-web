@@ -1,17 +1,17 @@
 # Updating Windows Network Profile Locations with PowerShell
 
 
-Oh I how love the Windows Firewall, and all the restrictions it brings. This time in the world of customers with aggressive firewall policies, we have Group Policy and Microsoft Intune applied firewall rules, only allowing inbound and outbound network traffic when on private and domain networks.
+Oh I how love the ~Windows~ ~Defender~ Windows Firewall, and all the restrictions it brings. This time in the world of customers with aggressive firewall policies, we have Group Policy and Microsoft Intune applied firewall rules, only allowing inbound and outbound network traffic when on Private and Domain networks.
 
 This you think shouldn't be such an issue, but it is in general and particularly during Windows Autopilot deployments.
 
-What happens when a user doesn't select 'Yes' to the below notification prompt, or just plain ignores it?
+What happens when a user doesn't select **'Yes'** to the below notification prompt, or just plain ignores it?
 
 ![Network Notification](img/nwpro-notification.png "Network location user notification.")
 
-That's right, the network they've connected to gets marked as public, how fun.
+That's right, the network they've connected to gets marked as *Public*, how fun.
 
-What about VPN profiles that don't work out that they are technically on a domain network? Yeah that's a thing as well.
+What about VPN profiles that don't work out that they are technically on a Domain network? Yeah that's a thing as well.
 
 ## Network Profiles
 
@@ -29,7 +29,7 @@ You'll see a whole host of network profiles stored under GUIDs, just like the be
 
 ![Network Profile Registry](img/network-regpub.png "Registry settings for Network Profiles.")
 
-What you might notice is that each of the profiles has a category associated with it, in the above example it's **0**, which based on a quick Google search and changing the values and watching the status of the network profile flip, correspond to the below settings.
+What you might notice is that each of the profiles has a category associated with it, in the above example it's **0**, which based on a quick ~Google~ Bing search and changing the values and watching the status of the network profile flip, correspond to the below settings.
 
 | Category Value | Associated Network Profile |
 | :- | :- |
@@ -41,7 +41,7 @@ Well that's pretty handy.
 
 Go try it yourself, update the value and watch the associated Network Profile switch...I'll wait.
 
-Welcome back, so we have a way to tell a network what profile it should have, now we need a way to identify which networks should be domain and which should be private.
+Welcome back 🤚, so we have a way to tell a network what profile it should have, now we need a way to identify which networks should be Domain and which should be Private.
 
 ### Targeting Network Profiles
 
@@ -52,7 +52,7 @@ $registryKey = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\P
 $regNetworkProfiles = Get-ItemProperty -Path $registryKey\* -ErrorAction Stop
 ```
 
-And foreach-ing our way through the `$regNetworkProfiles` variable, we can go and change the value of **category** to either private (**1**), or domain (**2**) with something like the below:
+And foreach-ing our way through the `$regNetworkProfiles` variable, we can go and change the value of **category** to either Private (**1**), or Domain (**2**) with something like the below:
 
 ```PowerShell
 foreach ($regNetworkProfile in $regNetworkProfiles) {
@@ -62,7 +62,7 @@ foreach ($regNetworkProfile in $regNetworkProfiles) {
 
 Great, easy bit sorted.
 
-We however, need to identify which profiles should be domain, and which should be private. I'm taking the stance that named profiles, well at least ones that we know about, so domain based and corporate wireless networks are probably going to be domain profiles, and all else will be private.
+We however, need to identify which profiles should be Domain, and which should be Private. I'm taking the stance that named profiles, well at least ones that we know about, so Domain based and corporate wireless networks are probably going to be Domain profiles, and all else will be Private.
 
 With each of the network profiles having a **ProfileName** we can use this to target the assignment of the correct profile type.
 
@@ -70,7 +70,7 @@ Bare with me on this one, as it isn't pretty.
 
 ### Network Profile Logic
 
-Because our selection of should be domain based profiles have wonderful names like **odds.lan** and **odds.lan 2**, as well as all flavours of **Always On VPN User Tunnel** and **Always On VPN Device Tunnel**, and corporate wireless networks like **Corp-WiFi2G** and **Corp-WiFi5G** we need a way to target those with a domain profile setting.
+Because our selection of should be Domain based profiles have wonderful names like **odds.lan** and **odds.lan 2**, as well as all flavours of **Always On VPN User Tunnel** and **Always On VPN Device Tunnel**, and corporate wireless networks like **Corp-WiFi2G** and **Corp-WiFi5G** we need a way to target those with a Domain profile setting.
 
 So we're going to use wildcards in an array variable `$profileNames`, please don't come for me.
 
@@ -110,21 +110,21 @@ foreach ($regNetworkProfile in $regNetworkProfiles) {
 }
 ```
 
-Which now gives us the ability to set domain profiles that match items in `$profileNames` with the domain profile, and all others with the private profile.
+Which now gives us the ability to set Domain profiles that match items in `$profileNames` with the Domain profile, and all others with the Private profile.
 
 Good, but how do we deploy this.
 
 ## Microsoft Intune Remediations
 
-Good question earlier me, despite my {{< reftab href="/posts/bitlocker-dma-exceptions" title="previous post" >}} using [Platform Scripts](https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension) to blindly configure settings, this one we're going to utilise [Remediations](https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations), so we need a way to capture and detect whether the existing profiles are correctly configured.
+Good question earlier me ⏰, despite a {{< reftab href="/posts/bitlocker-dma-exceptions" title="previous post" >}} using [Platform Scripts](https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension) to blindly configure settings, this one we're going to utilise [Remediations](https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations), so we need a way to capture and detect whether the existing profiles are correctly configured.
 
 ### Detection Script
 
-With that in mind, may I present to you a much less janky detection method, with any network profile not configured to be either domain or private, being added to a new array variable `$issueNetworkProfiles` which at the end, we're just going to see if it contains anything.
+With that in mind, may I present to you a much less janky detection method, with any network profile not configured to be either Domain or Private, being added to a new array variable `$issueNetworkProfiles` which at the end, we're just going to see if it contains anything.
 
 {{< codeimporter title="NetworkProfile_Detection.ps1" url="https://github.com/ennnbeee/oddsandendpoints-scripts/raw/main/Intune/Remediation/NetworkProfileLocation/NetworkProfile_Detection.ps1" type="PowerShell" >}}
 
-If the outcome of `$issueNetworkProfiles.count -eq 0` is true, then we're all good and can end the process there, otherwise we'll though an `Exit 1` to tell Microsoft Intune to run a remediation script.
+If the outcome of `$issueNetworkProfiles.count -eq 0` is true, then we're all good and can end the process there, otherwise we'll throw an `Exit 1` to tell Microsoft Intune to run a remediation script.
 
 ### Remediation Script
 
@@ -140,7 +140,7 @@ Before we deploy these scripts using Microsoft Intune, we can look at the networ
 
 ![Network Public](img/network-regpub.png "Screenshot of the registry settings for a public network profile.")
 
-![Network Private](img/network-regpriv.png "Screenshot of the registry settings for a private network profile.")
+![Network Private](img/network-regpriv.png "Screenshot of the registry settings for a Private network profile.")
 
 ![Network VPN](img/network-regvpn.png "Screenshot of the registry settings for a VPN network profile.")
 
@@ -156,15 +156,15 @@ After a while, you should start seeing devices check in and remediate:
 
 Looking back on our sample device in the registry, we can see that the networks have updated to the correct locations:
 
-![Network Domain](img/network-reffixdom.png "Screenshot of the updated registry settings for a domain network profile.")
+![Network Domain](img/network-reffixdom.png "Screenshot of the updated registry settings for a Domain network profile.")
 
-![Network Private](img/network-regfixpriv.png "Screenshot of the updated registry settings for a private network profile.")
+![Network Private](img/network-regfixpriv.png "Screenshot of the updated registry settings for a Private network profile.")
 
 ![Network VPN](img/network-regfixvpn.png "Screenshot of the updated registry settings for a VPN network profile.")
 
-With the profiles with names in our `$profileNames` variable now updated to be domain profiles, and all others set to private. Now our devices can actually process the correct firewall rules, and get access to the required endpoints.
+With the profiles with names in our `$profileNames` variable now updated to be Domain profiles, and all others set to Private. Now our devices can actually process the correct firewall rules, and get access to the required endpoints.
 
 ## Summary
 
-Yes this might not be the best way to go about configuring these network profiles, and the [remediation scripts](https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/Remediation/NetworkProfileLocation) could be updated to only apply the domain profile settings to the nominated profiles, but in the real world, users don't click things they should, so to mitigate this, the assignment of a private profile to all other networks makes a lot of sense, especially when traffic is only allowed through VPN tunnels and corporate proxies.
+Yes this might not be the best way to go about configuring these network profiles, and the [remediation scripts](https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/Remediation/NetworkProfileLocation) could be updated to only apply the Domain profile settings to the nominated profiles, but in the real world, users don't click things they should, so to mitigate this, the assignment of a Private profile to all other networks makes a lot of sense, especially when traffic is only allowed through VPN tunnels and corporate proxies.
 
