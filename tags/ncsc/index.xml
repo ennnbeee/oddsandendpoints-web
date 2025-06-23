@@ -3,7 +3,15 @@
         <title>National Cyber Security Centre (NCSC) - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/ncsc/</link>
         <description>National Cyber Security Centre (NCSC) - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 Apr 2024 20:05:09 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/ncsc/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/ncsc/" rel="self" type="application/rss+xml" /><item>
+    <title>Intune Custom Compliance for Cyber Essentials</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
+    <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
+            </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
+</item><item>
     <title>Software Update Deployment Rings for Managed macOS Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-updates-phased-deployment/</link>
     <pubDate>Sat, 06 Apr 2024 20:05:09 &#43;0100</pubDate><author>

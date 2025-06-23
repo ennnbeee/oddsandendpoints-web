@@ -3,9 +3,17 @@
         <title>odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/</link>
         <description>A collection of solutions, ideas, and insights into problems you probably didn&#39;t know existed with Modern Endpoint Management products.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 06 May 2025 18:53:56 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate>
             <atom:link href="https://www.oddsandendpoints.co.uk/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Intune Custom Compliance for Cyber Essentials</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
+    <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
+            </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
+</item><item>
     <title>Updating Windows Network Profile Locations with PowerShell</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</link>
     <pubDate>Tue, 06 May 2025 18:53:56 &#43;0000</pubDate><author>
@@ -77,13 +85,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
             </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
-</item><item>
-    <title>Installing the Configuration Manager Client on Orphaned Internet Devices</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</link>
-    <pubDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/configmgr-client-install-cmg/featured.png" referrerpolicy="no-referrer">
-            </div>You&rsquo;ve just implemented a Cloud Management Gateway to help your hybrid joined Windows devices communicate to Configuration Manager over the internet, but what if they&rsquo;re orphaned and unable to communicate to Configuration Manager to get the new Client Settings?]]></description>
 </item></channel>
 </rss>

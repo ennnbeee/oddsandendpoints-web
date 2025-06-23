@@ -3,7 +3,15 @@
         <title>Security - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/security/</link>
         <description>Security - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 06 May 2025 18:53:56 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/security/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/security/" rel="self" type="application/rss+xml" /><item>
+    <title>Intune Custom Compliance for Cyber Essentials</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
+    <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
+            </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
+</item><item>
     <title>Updating Windows Network Profile Locations with PowerShell</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</link>
     <pubDate>Tue, 06 May 2025 18:53:56 &#43;0000</pubDate><author>
@@ -76,13 +84,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/firewall-rule-policy-conversion/featured.png" referrerpolicy="no-referrer">
             </div>When did Microsoft go all covert ops (maybe don&rsquo;t answer that question) and start making changes to your very own Firewall Rule policies in Microsoft Intune without letting anyone know? Or did they?]]></description>
-</item><item>
-    <title>Patching Gaps in the CIS Windows 11 Benchmark - Level 1 Windows 11</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</link>
-    <pubDate>Mon, 15 Jul 2024 11:26:37 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-cis-patching-gaps-part3/featured.png" referrerpolicy="no-referrer">
-            </div>The impact of the CIS settings on BitLocker and Windows Autopilot now done and dusted, we should broaden our horizons and start to look at what other problems the CIS level 1 benchmark brings to Windows 11 as a whole. Are there any? Will it be smooth sailing? Yeah, no.]]></description>
 </item></channel>
 </rss>

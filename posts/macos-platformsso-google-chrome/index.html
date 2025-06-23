@@ -55,7 +55,7 @@
     }</script></head>
 
 
-<body data-instant-intensity="viewport" class="tw-flex tw-min-h-screen tw-flex-col"><script type="text/javascript">
+<body data-instant-intensity="viewport" class="tw-flex tw-min-h-screen tw-flex-col"><script>
     function setTheme(theme) {
       document.body.setAttribute('theme', theme); 
       document.documentElement.className = theme;
@@ -259,13 +259,11 @@
 <p>The bit we&rsquo;re interested in is the supported browsers, and <em>shock</em>, both Microsoft Edge and Safari are supported out the box already (ish). Google Chrome however needs a little more convincing, as it does on Windows, to work with Single Sign On configurations.</p>
 <blockquote>
   <p>Platform SSO requires you install and enable the Windows Accounts extension. You can add the app to Intune, and assign it to the devices that use Google Chrome.</p>
-
 </blockquote><p>That last line is interesting though Microsoft, as deploying Google Chrome extensions isn&rsquo;t as easy as <strong>click</strong> <strong>click</strong> <strong>next</strong> <strong>OK</strong>.</p>
 <p>Luckily though, Microsoft have provided links to <a href="https://support.google.com/chrome/a/answer/7550274" target="_blank" rel="noopener noreferrer">setting up Google Chrome on macOS</a> and how to configure the <a href="https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist" target="_blank" rel="noopener noreferrer">forced installation of extensions</a> which we&rsquo;ll be utilising to make Google Chrome and Platform SSO play nicely.</p>
 <p>Configuring this extension will not only improve the users sign-in experience, but allow for the use of <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-conditions#supported-browsers" target="_blank" rel="noopener noreferrer">Conditional Access Policies</a> when using Google Chrome:</p>
 <blockquote>
   <p>macOS devices using the Enterprise SSO plugin require the Microsoft Single Sign On extension to support SSO and device-based Conditional Access in Google Chrome.</p>
-
 </blockquote><h2 id="platform-sso-configuration" class="headerLink">
     <a href="#platform-sso-configuration" class="header-mark"></a>2 Platform SSO Configuration</h2><p>Yes, I did say I wasn&rsquo;t going to dig into the Platform SSO configuration, but without actually configuring it we&rsquo;re not going to be able to utilise the authentication method into Google Chrome, so if you cba following the <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/platform-sso-macos#step-2---create-the-platform-sso-policy-in-intune" target="_blank" rel="noopener noreferrer">Microsoft Learn article</a> have a look at the below, and the exported <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Configuration/macOS/PlatformSSO/SSOPlatformSettings.json" target="_blank" rel="noopener noreferrer">JSON</a> which you can <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/settings-catalog?tabs=sc-search-filter%2Csc-reporting#import-and-export-a-profile" target="_blank" rel="noopener noreferrer">import</a> into your own Microsoft Intune tenant if you&rsquo;re <del>lazy</del> productive with your time.</p>
 
@@ -581,7 +579,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-34" 
+    id="codeblock-id-39" 
     class="
       chroma 
       !tw-block 
@@ -788,7 +786,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
             </noscript></div></article></main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.142.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.147.8">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
                 </div><div class="footer-line"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2025<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></div>
@@ -844,7 +842,7 @@
     
       defer
     
-  ></script><script type="text/javascript">
+  ></script><script>
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'G-EM0CM5PL0C', { 'anonymize_ip': true });
         </script><script

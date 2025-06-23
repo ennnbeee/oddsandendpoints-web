@@ -62,7 +62,7 @@
     }</script></head>
 
 
-<body data-instant-intensity="viewport" class="tw-flex tw-min-h-screen tw-flex-col"><script type="text/javascript">
+<body data-instant-intensity="viewport" class="tw-flex tw-min-h-screen tw-flex-col"><script>
     function setTheme(theme) {
       document.body.setAttribute('theme', theme); 
       document.documentElement.className = theme;
@@ -281,7 +281,14 @@
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>This is the final part in this series, covering the <del>final boss</del> CIS Level 2 settings; I&rsquo;ve brought back <a href="https://www.youtube.com/watch?v=WDpipB4yehk" target="_blank" rel="noopener noreferrer">Jonathan</a> to share the pain again.</p>
+            </div><div class="content" id="content" data-pagefind-body><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2024-08-12T21:26:37" title="August 12, 2024">12 August 2024</span>, the content may be out of date.</div></div></div><p>This is the final part in this series, covering the <del>final boss</del> CIS Level 2 settings; I&rsquo;ve brought back <a href="https://www.youtube.com/watch?v=WDpipB4yehk" target="_blank" rel="noopener noreferrer">Jonathan</a> to share the pain again.</p>
 <p>After the weeks reviewing and working on the benchmark, we can both happily say that we&rsquo;re very glad to not have to look at CIS benchmarks for a while&hellip;until they release a new one for you know iOS 18 or something (foreshadowing).</p>
 <p>The settings in the CIS Level 2 benchmark are for the hardcore security fans out there, high security environments, or for when you just plain hate your end-users and just want to stop them from using their Windows 11 devices in normal ways.</p>
 <p>Let&rsquo;s start on a positive note though, and look into some of the settings in the CIS build kit that just weren&rsquo;t put together with logical though processes.</p>
@@ -504,7 +511,6 @@
 <p>Microsoft Intune deployed Store Win32 Apps, such as Adobe Reader, are safe though, which does align with the CIS benchmark documents reasoning:</p>
 <blockquote>
   <p>The Store service is a retail outlet built into Windows, primarily for consumer use. In an enterprise managed environment, the IT department should be managing the installation of all applications to reduce the risk of the installation of vulnerable software.</p>
-
 </blockquote><p>Did someone not tell CIS that we <em>are</em> managing the installation of apps, they just happen to be store apps now?</p>
 <div class="details admonition info open">
     <div class="details-summary admonition-title">
@@ -518,7 +524,6 @@
     <a href="#blocking-app-updates" class="header-mark"></a>2.2 Blocking App Updates</h3><p>It&rsquo;s not enough that the Store originated apps are gone, but also the ability to allow them to update.</p>
 <blockquote>
   <p>Disable turns off the launch of all apps from the Microsoft Store that came pre-installed or were downloaded. Apps will not be updated. Your Store will also be disabled.</p>
-
 </blockquote><p>So that leave&rsquo;s us with outdated unpatched applications, which doesn&rsquo;t make any sense from a security stand point.</p>
 <p>Even if you can&rsquo;t actually use the applications, you&rsquo;re stopping them from being updated? Surely this is a bad move CIS?</p>
 <p>Either way, you can force them to update using a <a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations" target="_blank" rel="noopener noreferrer">Remediation</a> script, as has been covered before:</p>
@@ -563,7 +568,6 @@
 <p>This doesn&rsquo;t just block the ability synchronise files locally from OneDrive or SharePoint Online, but removes OneDrive from File Explorer, and any integration into applications as well.</p>
 <blockquote>
   <p>Enabling this setting prevents users from accidentally (or intentionally) uploading confidential or sensitive corporate information to the OneDrive cloud service using the Next Generation Sync Client.</p>
-
 </blockquote><p>Where on earth are users meant to upload corporate information if not to OneDrive ffs 🧐.</p>
 <p>No working around this one, leaving your end-users only able to access files in OneDrive from the web, and pretty much breaking any option to utilise <a href="https://learn.microsoft.com/en-us/sharepoint/redirect-known-folders" target="_blank" rel="noopener noreferrer">known folder move</a> across Windows devices.</p>
 <h3 id="cloud-search" class="headerLink">
@@ -592,7 +596,6 @@
 <p>Do CIS hate Microsoft integrations? Or do they love the Microsoft Edge homepage integration with OneDrive and SharePoint, and are just forcing uses to access this to find their recently worked on documents, or collaborations?</p>
 <blockquote>
   <p>Due to privacy concerns, data should never be sent to any third-party since this data could contain sensitive information.</p>
-
 </blockquote><p>Do they realise that these Windows 11 devices are already sharing quite a lot of information with Microsoft, what&rsquo;s a few extra documents going to hurt?</p>
 <h3 id="remote-desktop" class="headerLink">
     <a href="#remote-desktop" class="header-mark"></a>2.5 Remote Desktop</h3><p>It just keeps getting better. No remote desktop access, even for those users explicitly given permission to remote desktop.</p>
@@ -620,7 +623,6 @@
 <p>Surely there must be a bit of wriggle room with this one based upon the rationale in the CIS Benchmark document?</p>
 <blockquote>
   <p>Any account with the <code>Allow log on through Remote Desktop Services</code> user right can log on to the remote console of the computer. If you do not restrict access to legitimate users who need to log on to the console of the computer, unauthorized users could download and execute malicious code to elevate their privileges.</p>
-
 </blockquote><p>It looks like you might be able to get away with not disabling this, <em>if</em> you&rsquo;re controlling the <strong>Allow log on through Remote Desktop Services</strong>, which we actually are, in the Level 1 profile <strong>CIS (L1) User Rights Global - Windows 11 Intune 3.0.1</strong>.</p>
 <h3 id="locating-devices" class="headerLink">
     <a href="#locating-devices" class="header-mark"></a>2.6 Locating Devices</h3><p>You might not have any interest in using the <a href="https://learn.microsoft.com/en-us/mem/intune/remote-actions/device-locate" target="_blank" rel="noopener noreferrer">locate device</a> functionality within Microsoft Intune, to legitimately find lost or stolen Windows devices (and not to be nosey and abuse privileges), but some people do.</p>
@@ -655,7 +657,6 @@
 <p>Turns out though, if you have a legitimate reason, you might be able to change this setting, and maybe some others&hellip;</p>
 <blockquote>
   <p>This setting affects the location feature (e.g. GPS or other location tracking). From a security perspective, it’s not a good idea to reveal your location to software in most cases, but there are legitimate uses, such as mapping software. However, they should not be used in high security environments.</p>
-
 </blockquote><p>&hellip;and allow location services to find <del>out if your dad really went to get milk</del> your lost and stolen devices.</p>
 <h3 id="organisational-messages" class="headerLink">
     <a href="#organisational-messages" class="header-mark"></a>2.7 Organisational Messages</h3><p>Whoever is using these in Microsoft Intune, please let us know 😂.</p>
@@ -932,7 +933,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-21" 
+    id="codeblock-id-23" 
     class="
       chroma 
       !tw-block 
@@ -1099,7 +1100,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-22" 
+    id="codeblock-id-25" 
     class="
       chroma 
       !tw-block 
@@ -1227,7 +1228,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
             </noscript></div></article></main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.142.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.147.8">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
                 </div><div class="footer-line"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2025<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></div>
@@ -1283,7 +1284,7 @@
     
       defer
     
-  ></script><script type="text/javascript">
+  ></script><script>
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'G-EM0CM5PL0C', { 'anonymize_ip': true });
         </script><script

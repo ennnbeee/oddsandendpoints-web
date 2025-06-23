@@ -1,6 +1,10 @@
 # Microsoft Intune and the Curious Case of the Converting Firewall Rule Policy
 
 
+{{< admonition type=info >}}
+I've created a PowerShell script to automatically capture and upload Windows Firewall rules to Microsoft Intune, which is available [here](https://github.com/ennnbeee/IntuneFirewallMigration)
+{{< /admonition >}}
+
 What do you do when someone reaches out on [GitHub](https://github.com/ennnbeee/oddsandendpoints-scripts/issues/1) about one of your scripts no longer working as expected?
 
 Well it's obvious that you just assume that they're doing something wrong...
