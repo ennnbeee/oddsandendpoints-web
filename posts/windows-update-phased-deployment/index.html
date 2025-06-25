@@ -316,7 +316,7 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">You may have noticed that we&rsquo;re working within a 14-day window here, because we all love <a href="/posts/macOS-NCSC-Revisited" rel="noopener" target="_blank">NCSC Guidelines</a>.</div></div></div>
+        <div class="admonition-content">You may have noticed that we&rsquo;re working within a 14-day window here, because we all love <a href="/posts/macos-ncsc-revisited" rel="noopener" target="_blank">NCSC Guidelines</a>.</div></div></div>
 <p>So with the Update Rings configured, we now need to look at how these are assigned to Users and Devices.</p>
 <h3 id="users-versus-devices-assignment" class="headerLink">
     <a href="#users-versus-devices-assignment" class="header-mark"></a>1.2 Users versus Devices Assignment</h3><p>Now assignment of Update Rings is no different to any other assignment in Microsoft Intune, and by that I mean that you cannot mix assignment target identities within Include and Exclude targets. We do also need to consider not just the individual Update Ring assignment, but how they all interact together. What we don&rsquo;t want is a device meant to be in the Final Production ring, getting a 0-day deferral because the user is in the Testing Ring.</p>

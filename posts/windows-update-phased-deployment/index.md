@@ -32,7 +32,7 @@ So we can use settings similar to those in the below table to ensure that one ph
 | Final Production Ring | `10 days` | `2 days` | `1 day` | `13 days` |
 
 {{< admonition type=info >}}
-You may have noticed that we're working within a 14-day window here, because we all love {{< reftab href="/posts/macOS-NCSC-Revisited" title="NCSC Guidelines" >}}.
+You may have noticed that we're working within a 14-day window here, because we all love {{< reftab href="/posts/macos-ncsc-revisited" title="NCSC Guidelines" >}}.
 {{< /admonition >}}
 
 So with the Update Rings configured, we now need to look at how these are assigned to Users and Devices.
