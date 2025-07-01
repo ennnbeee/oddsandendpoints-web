@@ -2,7 +2,7 @@
 
 
 {{< admonition type=info >}}
-I've created a PowerShell script to automatically capture and upload Windows Firewall rules to Microsoft Intune, which is available [here](https://github.com/ennnbeee/IntuneFirewallMigration)
+I've created a PowerShell script to automatically capture and upload Windows Firewall rules to Microsoft Intune, which is available in this [GitHub repo](https://github.com/ennnbeee/IntuneFirewallMigration)
 {{< /admonition >}}
 
 What do you do when someone reaches out on [GitHub](https://github.com/ennnbeee/oddsandendpoints-scripts/issues/1) about one of your scripts no longer working as expected?

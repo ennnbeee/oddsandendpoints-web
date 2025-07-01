@@ -65,6 +65,10 @@ Device Name is how we're going to split our device estate, whether these are you
 
 Either way, we should be able use Dynamic Device Groups to capture half of the device estate.
 
+{{< admonition type=info >}}
+There's a better way to do this for {{< reftab  href="/posts/flexible-update-deployments" title="Windows devices" >}} and even {{< reftab  href="/posts/macos-updates-phased-deployment/" title="macOS devices" >}} if that's your thing.
+{{< /admonition >}}
+
 ### Start of Device Name Matching
 
 Before we look at how we capture the devices let's look at some device name examples starting with a list of devices with a mixture of device names.
