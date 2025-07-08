@@ -19,7 +19,7 @@ Well probably a few things, but let's sadly look at the settings in the CIS Leve
 
 It looks like when configuring [User Rights](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment) in the Microsoft Intune benchmark, CIS "did a Microsoft", and forgot that languages other than English are used across the vanilla Windows 11 operating system, just like the initial release of the [Security Baseline for Windows 11 23H2](https://learn.microsoft.com/en-us/mem/intune/protect/security-baseline-settings-mdm-all?pivots=mdm-23h2) identified by [James Robinson](https://www.linkedin.com/in/skiptotheendpoint/):
 
-{{< twitter user="SkipToEndpoint" id="1776643614354927723" >}}
+{{< x user="SkipToEndpoint" id="1776643614354927723" >}}
 
 In short, the CIS policy uses english language names, instead of the [well-known SIDs](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers) across all of the User Rights settings, meaning operating systems in a non-english language will hit some issues, mainly with users actually being able to logon to the device.
 
