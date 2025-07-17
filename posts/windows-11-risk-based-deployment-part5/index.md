@@ -122,7 +122,7 @@ Silent nice.
 I'd forgotten about these if I'm honest, so now I've included the option to select a [Scope Tag](https://learn.microsoft.com/en-us/mem/intune/fundamentals/scope-tags), so with the change to the authentication method also included a new Graph permission of `DeviceManagementRBAC.Read.All`, to allow us to read the existing Scope Tags and make sure the one selected exists.
 
 ```PowerShell
-.\Invoke-Windows11AcceleratorUpdate.ps1 -scopeTag MVE -tenantId $tenantId -target device -featureUpdateBuild 24H2 -extensionAttribute 11
+.\Invoke-Windows11AcceleratorUpdate.ps1 -scopeTag ODDS -tenantId $tenantId -target device -featureUpdateBuild 24H2 -extensionAttribute 11
 ```
 
 Don't say I didn't think about the more advanced users of Intune.

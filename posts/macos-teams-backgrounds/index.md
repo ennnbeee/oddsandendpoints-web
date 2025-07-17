@@ -74,7 +74,7 @@ I already know there's a working method to deploy a [Desktop Background](https:/
 The original script used a single variable `wallpaperurl` to capture the desktop wallpaper URL, which is nice and all, and obviously fits the Desktop Background purpose, but we'd like to give our users options of Teams Backgrounds, so we'll use an [array](https://www.freecodecamp.org/news/bash-array-how-to-declare-an-array-of-strings-in-a-bash-script/) to hold our list of URLs to the background files (see I am learning).
 
 ```Bash {hl_lines=["6-7"]}
-backgroundurls=("https://memv.ennbee.uk/bgr.png" "https://memv.ennbee.uk/wp-lt.png" "https://memv.ennbee.uk/wp.png")
+backgroundurls=("https://www.oddsandendpoints.co.uk/bgr.png" "https://www.oddsandendpoints.co.uk/wp-lt.png" "https://www.oddsandendpoints.co.uk/wp.png")
 ```
 
 For any additional URLs, you can add a new line to the array.

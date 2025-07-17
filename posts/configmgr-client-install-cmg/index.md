@@ -70,7 +70,7 @@ DeviceCertificateValidity : [ 2023-10-31 13:36:52.000 UTC -- 2033-10-31 14:06:52
 KeyProvider               : Microsoft Platform Crypto Provider
 TpmProtected              : YES
 DeviceAuthStatus          : SUCCESS
-TenantName                : MEM v ENNBEE
+TenantName                : oddsandendpoints.co.uk
 ```
 
 With the area we care about being the `AzureAdJoined` state, which can be referenced with `$dsRegOutput.AzureAdJoined` in the PowerShell script. Sticking with the `Ready` output here as well, we now have something we can confirm as part of the requirements for the application installation.
@@ -109,7 +109,7 @@ So with all these switches now available, time to put them to good use and creat
 As I don't like to repeat myself, we can create one PowerShell script for both authentication types, using a switch parameter to control which of the command line settings are used for the installation, and passing though the details of the below mandatory parameters for both installation types:
 
 - `ccmSiteCode` - ConfigMgr Site Code, so something like `"ENB"`.
-- `ccmMP` - The URL of the internal ConfigMgr Management Point such as `"https://configmgrmp.ennbee.local"`.
+- `ccmMP` - The URL of the internal ConfigMgr Management Point such as `"https://configmgrmp.odds.local"`.
 - `cmgAddress` - The address of the Cloud Management Gateway (without the 'https://' bit, as we're building that for the required parameter), so `"CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500"`
 
 For the parameters required for the PKI authentication:
@@ -135,13 +135,13 @@ To allow us to detect whether the installation of the app has happened, and to a
 To give you an example of the what the commands look like for PKI authentication it should look something like the below:
 
 ```PowerShell
-.\Install-ConfigMgrClientCMG.ps1 -PKI -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.ennbee.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500"
+.\Install-ConfigMgrClientCMG.ps1 -PKI -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.odds.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500"
 ```
 
 And for Entra authentication it'll look like this, making sure to pass through the additional parameters for `$tenantId`, `$clientAppId` , and `$clientAppURL`:
 
 ```PowerShell
-.\Install-ConfigMgrClientCMG.ps1 -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.ennbee.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500" -tenantId "daf4a1c2-3a0c-401b-966f-0b855d3abd1a" -clientAppId "7506ee10-f7ec-415a-b415-cd3d58790d97" -clientAppURL "https://localhost"
+.\Install-ConfigMgrClientCMG.ps1 -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.odds.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500" -tenantId "daf4a1c2-3a0c-401b-966f-0b855d3abd1a" -clientAppId "7506ee10-f7ec-415a-b415-cd3d58790d97" -clientAppURL "https://localhost"
 ```
 
 Script done, time to package it up and punt it out to clients.
@@ -194,7 +194,7 @@ I haven't bothered configuring an app logo, as Microsoft don't 👀.
 When configuring the PKI authentication application, our installation command and requirements need to reflect this authentication type, so for our install command we need something like the below:
 
 ```PowerShell
-"%systemroot%\sysnative\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File Install-ConfigMgrClientCMG.ps1 -PKI -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.ennbee.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500"
+"%systemroot%\sysnative\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File Install-ConfigMgrClientCMG.ps1 -PKI -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.odds.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500"
 ```
 
 The uninstall command is just removing the **.tag** file we create during the installation script:
@@ -228,7 +228,7 @@ This process is going to look very familiar, but there some key differences, but
 For the Program page, we need to amend our install command to the below passing in the required parameters we covered earlier:
 
 ```PowerShell
-"%systemroot%\sysnative\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File Install-ConfigMgrClientCMG.ps1 -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.ennbee.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500" -tenantId "daf4a1c2-3a0c-401b-966f-0b855d3abd1a" -clientAppId "7506ee10-f7ec-415a-b415-cd3d58790d97" -clientAppURL "https://localhost"
+"%systemroot%\sysnative\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -ExecutionPolicy Bypass -File Install-ConfigMgrClientCMG.ps1 -ccmSiteCode "ENB" -ccmMP "https://configmgrmp.odds.local" -cmgAddress "CONFIGMGRCMG.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500" -tenantId "daf4a1c2-3a0c-401b-966f-0b855d3abd1a" -clientAppId "7506ee10-f7ec-415a-b415-cd3d58790d97" -clientAppURL "https://localhost"
 ```
 
 The uninstall command remains the same however:

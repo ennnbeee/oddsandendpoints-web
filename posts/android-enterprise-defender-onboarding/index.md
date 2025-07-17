@@ -153,7 +153,7 @@ From my experience with [OEMConfig profiles](https://learn.microsoft.com/en-us/m
 Either way, to setup the Android Enterprise profile, if you need to create a new one, and to configure the required Defender for Endpoint settings:
 
 - Navigate to the Microsoft Intune admin center and select **Configuration** under **Manage devices**, create a new policy for the **Android Enterprise** platform of type **OEMConfig**.
-  - Give the profile a suitable name and a description if you'd like e.g., `MVE-AND-AE-D-CO-KSP-Defender`
+  - Give the profile a suitable name and a description if you'd like e.g., `PRD-AND-AE-D-CO-KSP-Defender`
   - Select `Knox Service Plugin` as the OEMConfig app
   - Select **Next** to continue to the configuration page
 - Under **Knox Service Plugin** enter in a name for the Knox profile i.e., `DefenderforEndpoint(1.0)`

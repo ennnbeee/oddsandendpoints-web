@@ -207,7 +207,7 @@ To create the config file to configure Defender with the following settings:
 #### Example 1 - Intune
 
 ```PowerShell
-.\New-macOSDefenderScanProfile.ps1 -mdm Intune -organisation 'MEM v ENNBEE' -weeklyScan $true -weeklyScanType full -weeklyScanDay wed -weeklyScanHour 11 -weeklyScanMinute 30 -dailyScan $true -dailyScanHour 14 -dailyScanMinute 15 -regularScanInterval 0 -checkForDefinitionsUpdate $true
+.\New-macOSDefenderScanProfile.ps1 -mdm Intune -organisation 'odds+endpoints' -weeklyScan $true -weeklyScanType full -weeklyScanDay wed -weeklyScanHour 11 -weeklyScanMinute 30 -dailyScan $true -dailyScanHour 14 -dailyScanMinute 15 -regularScanInterval 0 -checkForDefinitionsUpdate $true
 ```
 
 {{< fa-icon brands microsoft >}} *example1.com.microsoft.wdav.mobileconfig*
@@ -238,7 +238,7 @@ To create the config file to configure Defender with the following settings:
 #### Example 2 - Intune
 
 ```PowerShell
-.\New-macOSDefenderScanProfile.ps1 -mdm Intune -organisation 'MEM v ENNBEE' -weeklyScan $false -dailyScan $true -dailyScanHour 11 -dailyScanMinute 20 -regularScanInterval 12 -checkForDefinitionsUpdate $true -lowPriorityScheduledScan $true -randomizeScanStartTime 2
+.\New-macOSDefenderScanProfile.ps1 -mdm Intune -organisation 'odds+endpoints' -weeklyScan $false -dailyScan $true -dailyScanHour 11 -dailyScanMinute 20 -regularScanInterval 12 -checkForDefinitionsUpdate $true -lowPriorityScheduledScan $true -randomizeScanStartTime 2
 ```
 
 {{< fa-icon brands microsoft >}} *example2.com.microsoft.wdav.mobileconfig*
@@ -270,7 +270,7 @@ To create the config file to configure Defender with the following settings:
 #### Example 3 - Intune
 
 ```PowerShell
-.\New-macOSDefenderScanProfile.ps1 -mdm Intune -organisation 'MEM v ENNBEE' -weeklyScan $true -weeklyScanType quick -weeklyScanDay all -weeklyScanHour 9 -weeklyScanMinute 15 -dailyScan $false -regularScanInterval 0 -checkForDefinitionsUpdate $true -lowPriorityScheduledScan $false -runScanWhenIdle $true -ignoreExclusions $true
+.\New-macOSDefenderScanProfile.ps1 -mdm Intune -organisation 'odds+endpoints' -weeklyScan $true -weeklyScanType quick -weeklyScanDay all -weeklyScanHour 9 -weeklyScanMinute 15 -dailyScan $false -regularScanInterval 0 -checkForDefinitionsUpdate $true -lowPriorityScheduledScan $false -runScanWhenIdle $true -ignoreExclusions $true
 ```
 
 {{< fa-icon brands microsoft >}} *example3.com.microsoft.wdav.mobileconfig*

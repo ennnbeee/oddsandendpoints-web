@@ -48,7 +48,7 @@ This function gives us the below output, and the necessary `id` we can use to ca
 
 ```txt
 id                                  : 17793d6e-e12d-4a04-b209-73d302b9a563
-appleIdentifier                     : memv@ennbee.uk
+appleIdentifier                     : nick@oddsandendpoints.co.uk
 tokenExpirationDateTime             : 16/05/2023 14:40:28
 lastModifiedDateTime                : 16/05/2022 14:40:52
 lastSuccessfulSyncDateTime          : 22/01/2023 12:30:03
@@ -56,7 +56,7 @@ lastSyncTriggeredDateTime           : 18/01/2023 14:45:26
 shareTokenWithSchoolDataSyncService : False
 lastSyncErrorCode                   : 0
 tokenType                           : dep
-tokenName                           : MEMVENNBEE Intune
+tokenName                           : odds+endpoints Intune
 syncedDeviceCount                   : 4
 dataSharingConsentGranted           : True
 roleScopeTagIds                     : {0}

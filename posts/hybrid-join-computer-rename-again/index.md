@@ -22,7 +22,7 @@ As the Simple Certificate Enrolment Protocol (SCEP) profile [supports various de
 CN=L-{{SerialNumber}}
 DNS={{FullyQualifiedDomainName}}
 DNS={{DeviceName}}
-DNS=L-{{SerialNumber}}.ennbee.local
+DNS=L-{{SerialNumber}}.odds.local
 ```
 
 This sorts out our certificate issue, as the device will have one that has all possible device names, the initial one assigned by the Domain Join profile, and the new one after the device has been renamed. This doesn't solve our Domain trust issue though.
@@ -50,7 +50,7 @@ With the information about the device name in place with the detection, now we n
 We only want this script to run when the device can actually talk to a Domain, otherwise we're in for a bad time of mistrust again. So updating the `$domain` variable with the name of the domain, we can confirm that we can talk to a Domain Controller, otherwise we exit the script with an error.
 
 ```PowerShell
-$domain = 'ennbee.local'
+$domain = 'odds.local'
 $dcInfo = [ADSI]"LDAP://$domain"
 if ($null -eq $dcInfo.Path) {
     Write-Error "No connectivity to $domain"

@@ -42,7 +42,7 @@ We at least have experience dealing with building the JSON structure required fo
             "settingDefinitionId": "vendor_msft_firewall_mdmstore_dynamickeywords_addresses_{id}_keyword",
             "simpleSettingValue": {
               "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue",
-              "value": "memv.ennbee.uk"
+              "value": "oddsandendpoints.co.uk"
             }
           }
         ]

@@ -36,7 +36,7 @@ Yes, I did say I wasn't going to dig into the Platform SSO configuration, but wi
 | Authentication | Extension Identifier | `com.microsoft.CompanyPortalMac.ssoextension` |
 | Authentication | Type | `Redirect` |
 | Authentication | URLs | `https://login.microsoftonline.com`<br>`https://login.microsoft.com`<br>`https://sts.windows.net`<br>`https://login-us.microsoftonline.com`<br>`https://login.microsoftonline.us` |
-| Authentication > Platform SSO | Account Display Name | `MEM v ENNBEE Account` |
+| Authentication > Platform SSO | Account Display Name | `odds+endpoints Account` |
 | Authentication > Platform SSO | Authentication Method | `UserSecureEnclaveKey` |
 | Authentication > Platform SSO | Enable Authorization | `Enabled` |
 | Authentication > Platform SSO | Enable Create User At Login | `Enabled` |

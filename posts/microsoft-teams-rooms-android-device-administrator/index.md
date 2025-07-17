@@ -64,7 +64,7 @@ So as it turns out, the above services are part of a hundred other license optio
 
 I thought long and hard (about 5 minutes tbh) and came up with the below; basically making sure the above assigned licenses exist, but the user account doesn't have any Exchange Online or SharePoint Online license assigned and enabled, hopefully filtering out any other users or user types from the group.
 
-We're actually using the Service Name captured from the `Get-AzureADUser -User 'MTR-Room1@ennbee.uk' | Select -ExpandProperty AssignedPlans` PowerShell command here, to cover off all plan types under the service, as there are so many Exchange Online plan types and I want to make this as clean as possible without having to list all the Exchange Online or SharePoint Online service plan Ids.
+We're actually using the Service Name captured from the `Get-AzureADUser -User 'MTR-Room1@oddsandendpoints.co.uk' | Select -ExpandProperty AssignedPlans` PowerShell command here, to cover off all plan types under the service, as there are so many Exchange Online plan types and I want to make this as clean as possible without having to list all the Exchange Online or SharePoint Online service plan Ids.
 
 So here's the logic we're using to find only the MTR accounts using a Dynamic Group.
 

@@ -109,7 +109,7 @@ After successful testing, you're now ready to deploy this as a Platform Script i
 | Item | Detail |
 | :- | :- |
 | Name | `BitLocker DMA Exceptions` |
-| Description | `https://memv.ennbee.uk/posts/bitlocker-dma-exceptions/` |
+| Description | `https://www.oddsandendpoints.co.uk/posts/bitlocker-dma-exceptions/` |
 | PowerShell script | `Set-BitLockerDMAExceptions.ps1` |
 | Run this script using the logged on credentials | `No` |
 | Enforce script signature check | `No`  |
