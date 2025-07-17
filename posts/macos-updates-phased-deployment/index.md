@@ -56,7 +56,7 @@ As we've got the Dynamic Groups ring-fencing devices based on `device.deviceId`,
 To alleviate that conflict, we need to ensure that all our update ring assignments are excluding this group:
 
 | Update Ring | Included Groups | Excluded Groups |
-| :- | :- | :- | :- |
+| :- | :- | :- |
 | Pilot | Pilot Group | - |
 | Pre-Production | Pre-Production Group | Pilot Group |
 | Initial Production | Initial Production Group | Pilot Group |
