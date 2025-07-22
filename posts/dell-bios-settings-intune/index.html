@@ -293,7 +293,7 @@
     <div class="details-content">
         <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2022-07-10T20:34:37" title="July 10, 2022">10 July 2022</span>, the content may be out of date.</div></div></div><p>What if you&rsquo;ve only got Microsoft Intune to configure your Dell BIOS settings and not the glory that is Configuration Manager? How much do you like PowerShell, Win32 Apps and passwords in plain text?</p>
 <p>Well you&rsquo;re in luck, I&rsquo;ve thrown together something that can help you out based on a need to ensure that Secure Boot is configured for Dell laptops when it was discovered via the <a href="https://docs.microsoft.com/en-us/windows-server/security/device-health-attestation" target="_blank" rel="noopener noreferrer">Windows health attestation report</a> that around 80% of the Windows devices had it turned off.</p>
-<p>(Don&rsquo;t worry, I checked that the devices had <a href="https://www.dell.com/support/kbdoc/en-uk/000133480/uefi-and-secure-boot-faqs" target="_blank" rel="noopener noreferrer">GPT partitions</a> before I just launched a PowerShell script at them.)</p>
+<p>(Don&rsquo;t worry, I checked that the devices had <a href="https://www.dell.com/support/kbdoc/en-uk/000190116/how-to-enable-secure-boot-on-your-dell-device" target="_blank" rel="noopener noreferrer">GPT partitions</a> before I just launched a PowerShell script at them.)</p>
 <h2 id="dell-powershell-provider" class="headerLink">
     <a href="#dell-powershell-provider" class="header-mark"></a>1 Dell PowerShell Provider</h2><p>There are several posts kicking around the internet about using Microsoft Intune to not only change or set Dell BIOS passwords, but also using CSV files to configure BIOS settings using the <a href="https://www.dell.com/support/kbdoc/en-uk/000177240/dell-command-powershell-provider" target="_blank" rel="noopener noreferrer">Dell Command | PowerShell Provider</a>, the below are the ones I&rsquo;ve found and borrowed from:</p>
 <ul>
@@ -1337,7 +1337,7 @@
 </p>
 <p>Now that you&rsquo;ve got the Application, time to upload it to Microsoft Intune and configure some settings.</p>
 <h3 id="app-installation" class="headerLink">
-    <a href="#app-installation" class="header-mark"></a>3.3 App Installation</h3><p>Navigate to the <a href="https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/AppsWindowsMenu/windowsApps" target="_blank" rel="noopener noreferrer">Windows Apps</a> section of Microsoft Intune and time to create a new app, making sure you select &lsquo;Windows app (Win32)&rsquo; as the App type.</p>
+    <a href="#app-installation" class="header-mark"></a>3.3 App Installation</h3><p>Navigate to the <a href="https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/AppsWindowsMenu/windowsApps" target="_blank" rel="noopener noreferrer">Windows Apps</a> section of Microsoft Intune and time to create a new app, making sure you select &lsquo;Windows app (Win32)&rsquo; as the App type.</p>
 <p>After uploading the <code>.intunewin</code> file make sure to use <code>sysnative</code> in the path of the install command, we also need to pass through the variables for the <code>Settings</code> and <code>Values</code> as well as <code>Password</code> for the BIOS Admin password:</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
@@ -1625,7 +1625,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Configuring Dell BIOS settings using application in Microsoft Intune with PowerShell. Optimize your Dell devices with the right BIOS settings. Our guide on integrating Dell BIOS settings with Microsoft Intune ensures seamless device management." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -1675,7 +1675,7 @@
 
     <div class="post-nav print:tw-hidden"><a href="/posts/windows-os-compliance-updates/" class="prev" rel="prev" title="Windows Operating System Compliance Updates"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Windows Operating System Compliance Updates</a>
-            <a href="/posts/configmgr-converting-direct-member-collections/" class="next" rel="next" title="Converting Configuration Manager Direct Membership Collections">Converting Configuration Manager Direct Membership Collections<svg class="icon"
+            <a href="/posts/configmgr-converting-direct-member-collections/" class="next" rel="next" title="Converting ConfigMgr Direct Membership Collections">Converting ConfigMgr Direct Membership Collections<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

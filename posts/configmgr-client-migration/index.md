@@ -1,4 +1,4 @@
-# Reinstalling the Configuration Manager Client on Migrated Devices
+# Reinstalling ConfigMgr Clients on Migrated Devices
 
 
 Have you ever had the pleasure of migrating Configuration Manager clients from one domain to another, or maybe between Configuration Manager environments? Tired of manually reinstalling the client from the Console? Wanting a quick and easy way to keep on top of migrated devices? You're in luck.

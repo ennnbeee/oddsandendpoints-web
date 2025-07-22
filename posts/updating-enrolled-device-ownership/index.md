@@ -33,7 +33,7 @@ DeviceName,SerialNumber
 ENB-564d71,VMware-564d710031a992c6-ca795244c03a8322
 ```
 
-If you don't have these serials to hand, you could probably export all data from the [Microsoft Intune All Devices blade](https://endpoint.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/mDMDevicesPreview), and then filter the data to show devices with unknown or personal ownership and review them. Good luck.
+If you don't have these serials to hand, you could probably export all data from the [Microsoft Intune All Devices blade](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/mDMDevicesPreview), and then filter the data to show devices with unknown or personal ownership and review them. Good luck.
 
 For the group, let's make use of [Azure AD Dynamic Groups](https://docs.microsoft.com/en-us/azure/active-directory/enterprise-users/groups-dynamic-membership),and find a suitable way to use the query to capture the corporate devices. This could be display name, or device make and model, or device ownership not equals corporate, or a combination of all three, really you can be creative here to fit your environment.
 

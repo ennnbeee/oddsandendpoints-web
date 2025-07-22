@@ -1,13 +1,13 @@
 # A Flexible Approach to Microsoft Update Deployments
 
 
-So this isn't the {{< reftab href="/posts/windows-update-phased-deployment" title="first time" >}} we've looked at improving the management of updates using Microsoft Intune, and probably won't be the last time either, especially with [declarative device management](https://learn.microsoft.com/en-us/mem/intune/protect/managed-software-updates-ios-macos) looming, for Apple and hopefully Windows devices, covering configuration of software updates.
+So this isn't the {{< reftab href="/posts/windows-update-phased-deployment/" title="first time" >}} we've looked at improving the management of updates using Microsoft Intune, and probably won't be the last time either, especially with [declarative device management](https://learn.microsoft.com/en-us/mem/intune/protect/managed-software-updates-ios-macos) looming, for Apple and hopefully Windows devices, covering configuration of software updates.
 
 But with the introduction of the [Windows Autopatch](https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) service, and getting hands on with it recently, it prompted me to revisit my previous approach to phased update delivery, so I thought I'd share my findings, this time across not just Windows Updates.
 
 ## Deployment Approach
 
-Previously, we configured a set of {{< reftab href="/posts/windows-update-phased-deployment/#windows-update-for-business-rings" title="four Update Rings" >}}, but now we'll include an early adopters ring as a pre-production release, kind of a fail safe prior to your production deployment of updates; that final catch before you target the entire device estate:
+Previously, we configured a set of {{< reftab href="/posts/windows-update-phased-deployment/#windows-update-for-business-rings/" title="four Update Rings" >}}, but now we'll include an early adopters ring as a pre-production release, kind of a fail safe prior to your production deployment of updates; that final catch before you target the entire device estate:
 
 - **Test** - This should be devices that are dedicated for testing, ~1% of your device estate.
 - **Pilot** - This should be a stratified sample of either users or devices, ~5% of your device estate.
@@ -19,7 +19,7 @@ The aim is tht the above groupings are reusable and can be used across not just 
 
 ## Deployment Groups
 
-Despite [Microsoft](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-improving-the-efficiency-of-dynamic-group-processing/ba-p/4049394) recommending to stop using the `match` operators in favour of `startsWith` there are times when you might have to ignore them, this could be one of those times when we look at how we split a device estate into the phased breakdowns we're looking to achieve.
+Despite [Microsoft](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-improving-the-efficiency-of-dynamic-group-processing-with-microsoft-/4049394) recommending to stop using the `match` operators in favour of `startsWith` there are times when you might have to ignore them, this could be one of those times when we look at how we split a device estate into the phased breakdowns we're looking to achieve.
 
 {{< admonition type=note >}}
 After testing this in the real world, with reset Autopilot Hybrid join devices, you end up with a little bit of conflict on group membership due to there being two computer objects in Entra.

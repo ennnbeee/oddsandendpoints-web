@@ -21,7 +21,7 @@ I'm going to avoid numbers 1 and 2, and although this goes against my love of al
 
 ## Deployment Approach
 
-As with our previous look at update deployment across {{< reftab href="/posts/flexible-update-deployments" title="Windows devices" >}}, we're going to split our macOS device estate into key deployment groups, this time we're back with four, I'll explain why later.
+As with our previous look at update deployment across {{< reftab href="/posts/flexible-update-deployments/" title="Windows devices" >}}, we're going to split our macOS device estate into key deployment groups, this time we're back with four, I'll explain why later.
 
 Sticking with the Pilot, Pre-production, and production deployment approach, we end up with something like the below:
 
@@ -34,7 +34,7 @@ These groups can be used not just for macOS software updates, but also with some
 
 ### Deployment Groups
 
-As we like to please Microsoft, we're going to use what are referred to as [efficient groups](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-improving-the-efficiency-of-dynamic-group-processing/ba-p/4049394), stopping the use operators like `match`, in the hope that they reinstate Microsoft Developer Intune subscriptions for free.
+As we like to please Microsoft, we're going to use what are referred to as [efficient groups](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-improving-the-efficiency-of-dynamic-group-processing-with-microsoft-/4049394), stopping the use operators like `match`, in the hope that they reinstate Microsoft Developer Intune subscriptions for free.
 
 | Group | Type | Membership |
 | :- | :- | :- |

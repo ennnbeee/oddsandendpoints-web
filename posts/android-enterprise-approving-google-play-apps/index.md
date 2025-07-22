@@ -174,7 +174,7 @@ Running the script gives us the following output:
 
 ![Script Output](img/googleplayapps-script.png "PowerShell script output.")
 
-After a little while, we'll see the Mobile Apps in the [Microsoft Intune Android Apps Portal](https://endpoint.microsoft.com/#view/Microsoft_Intune_DeviceSettings/AppsAndroidMenu/~/androidApps):
+After a little while, we'll see the Mobile Apps in the [Microsoft Intune Android Apps Portal](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/AppsAndroidMenu/~/androidApps):
 
 ![Mobile Apps](img/googleplayapps-apps.png "Microsoft Intune approved android apps.")
 

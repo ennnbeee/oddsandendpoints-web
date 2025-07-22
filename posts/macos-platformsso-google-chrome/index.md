@@ -1,7 +1,7 @@
-# Configuring Google Chrome on macOS for Platform Single Sign-On
+# macOS Google Chrome Platform Single Sign-On
 
 
-So it's finally here, after all the [coming soon](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/coming-soon-platform-sso-for-macos/ba-p/3902280) announcements, and the promise that we can use Entra ID authentication methods on macOS devices, we now have [Platform SSO](https://learn.microsoft.com/en-us/mem/intune/configuration/platform-sso-macos) at our disposal in Microsoft Intune, well at least in [Public Preview](https://learn.microsoft.com/en-us/mem/intune/fundamentals/public-preview).
+So it's finally here, after all the [coming soon](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/coming-soon-%E2%80%93-platform-sso-for-macos/3902280) announcements, and the promise that we can use Entra ID authentication methods on macOS devices, we now have [Platform SSO](https://learn.microsoft.com/en-us/mem/intune/configuration/platform-sso-macos) at our disposal in Microsoft Intune, well at least in [Public Preview](https://learn.microsoft.com/en-us/mem/intune/fundamentals/public-preview).
 
 I'm not going to deep dive into configuring Platform SSO as I'll assume you've either already had a go yourself, or found [someone else](https://www.intuneirl.com/implementing-platform-sso-for-macos-a-deep-dive-into-configuration-troubleshooting/) who has, as honestly it's now a massive selling point of moving macOS devices into Microsoft Intune away from other MDM solutions.
 
@@ -47,7 +47,7 @@ Yes, I did say I wasn't going to dig into the Platform SSO configuration, but wi
 
 This settings catalog profile is configured to use `UserSecureEnclaveKey` for [Passwordless authentication](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passwordless#platform-credential-for-macos), but feel free to amend any other settings in the [Microsoft Learn article](https://learn.microsoft.com/en-us/mem/intune/configuration/platform-sso-macos#step-2---create-the-platform-sso-policy-in-intune) as you see fit.
 
-Assigning this to a group of test devices, yes I do actually test things, you should get the glorious device registration and [sign-in experience](https://aka.ms/IntuneForMac) with Entra ID credentials we've all been after.
+Assigning this to a group of test devices, yes I do actually test things, you should get the glorious device registration and [sign-in experience](https://techcommunity.microsoft.com/blog/microsoftintuneblog/microsoft-intune-provides-key-advantages-for-macos-management/4398108) with Entra ID credentials we've all been after.
 
 {{< admonition type=info >}}
 If you encounter issues with the Entra Join and registration, have a look at the [troubleshooting guide](https://learn.microsoft.com/en-us/entra/identity/devices/troubleshoot-macos-platform-single-sign-on-extension?tabs=macOS14#insufficient-permissions) for Platform SSO, specifically the Entra Join permissions.

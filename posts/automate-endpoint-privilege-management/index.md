@@ -1,4 +1,4 @@
-# Automating Endpoint Privilege Management Policies with PowerShell
+# Automating Endpoint Privilege Management Policies
 
 
 So you're interested in [Endpoint Privilege Management](https://learn.microsoft.com/en-us/mem/intune/protect/epm-overview) in Microsoft Intune, you've found, begged for, borrowed or stolen the money for shiny new [Intune Suite or EPM licenses](https://learn.microsoft.com/en-us/mem/intune/protect/epm-overview#licensing), and in you're excitement you've gone and deployed a new policy to audit using the [Reporting Scope](https://learn.microsoft.com/en-us/mem/intune/protect/epm-policies#about-windows-elevation-settings-policy) options, all elevations across your managed Windows 10 and later devices. Now what?

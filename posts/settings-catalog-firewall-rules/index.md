@@ -337,7 +337,7 @@ We now have the information from the existing rules to create new ones. Now to t
 
 ## Creating Settings Catalog Policies
 
-Luckily we have {{< reftab href="/posts/automate-endpoint-privilege-management" title="experience" >}} creating Settings Catalog policies, and have a good grasp of the JSON formatting required not just for the policy itself, but also for the settings contained within, with the first setting having differing JSON formatting structure and data compared with all subsequent settings. So I had at least an idea on how to build the JSON data to throw it at Microsoft Intune.
+Luckily we have {{< reftab href="/posts/automate-endpoint-privilege-management/" title="experience" >}} creating Settings Catalog policies, and have a good grasp of the JSON formatting required not just for the policy itself, but also for the settings contained within, with the first setting having differing JSON formatting structure and data compared with all subsequent settings. So I had at least an idea on how to build the JSON data to throw it at Microsoft Intune.
 
 ### Building the Policy
 

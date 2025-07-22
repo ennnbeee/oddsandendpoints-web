@@ -152,7 +152,7 @@ Now we've got the bones of the script, we can put it all together and deploy it 
 
 ### Deployment
 
-Save the above script and create a new PowerShell script deployment in [Microsoft Intune](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesWindowsMenu/powershell) using the following configuration settings, then deploy to a test group of devices.
+Save the above script and create a new PowerShell script deployment in [Microsoft Intune](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesWindowsMenu/powershell) using the following configuration settings, then deploy to a test group of devices.
 
 ![Language Deployment](img/autopilot-lang-deploy.webp "Platform script in Microsoft Intune.")
 

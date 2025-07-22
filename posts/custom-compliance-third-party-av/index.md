@@ -156,7 +156,7 @@ Updated to include improved presentation to the end user of the issues as displa
 
 We've now got both a PowerShell script and JSON file, so the last steps are to throw these into Microsoft Intune.
 
-First off we need to add the PowerShell script in the [Compliance Scripts](https://endpoint.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesComplianceMenu/~/customComplianceScripts) section.
+First off we need to add the PowerShell script in the [Compliance Scripts](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesComplianceMenu/~/customComplianceScripts) section.
 
 ![Compliance Script](img/avcomp-script.png "Compliance Policy script in Microsoft Intune.")
 

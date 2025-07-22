@@ -1,4 +1,4 @@
-# Patching Gaps in the CIS Windows 11 Benchmark - BitLocker
+# Patching CIS Windows 11 Benchmark Gaps - BitLocker
 
 
 With the release of the [CIS](https://www.cisecurity.org/) (Center for Internet Security) [Windows 11 Benchmark 3.0.1](https://www.cisecurity.org/benchmark/intune), the corresponding release of the Microsoft Intune build kit, and my colleague [Jonathan Fallis](https://www.linkedin.com/in/jonathan-fallis) covering the CIS [community version](https://www.everything365.online/2023/09/18/cis-microsoft-intune-for-windows-11-benchmark-in-settings-catalog-json/) of the benchmark (and the limitations) on his [website](https://deploymentshare.com/articles/bp-cis/), we both thought it would be best to share our combined experience when working with the newly available CIS build kit; focussing on BitLocker security settings in the initial part of this series.
@@ -161,7 +161,7 @@ The [CIS (BL) BitLocker TPMandPIN - Windows 11 Intune 3.0.1.ps1](https://github.
 
 ### Thunderbolt DMA Protection
 
-We've looked at {{< reftab  href="/posts/bitlocker-dma-exceptions" title="DMA (Direct Memory Access)" >}} settings previously, but looking at exceptions to security hardening not the implementation of them, but we're familiar with what they are at least.
+We've looked at {{< reftab  href="/posts/bitlocker-dma-exceptions/" title="DMA (Direct Memory Access)" >}} settings previously, but looking at exceptions to security hardening not the implementation of them, but we're familiar with what they are at least.
 
 The settings in the CIS profile basically reduce [two threat types to BitLocker](https://support.microsoft.com/en-gb/topic/blocking-the-sbp-2-driver-and-thunderbolt-controllers-to-reduce-1394-dma-and-thunderbolt-dma-threats-to-bitlocker-bf0ef10b-f563-5cfc-9740-8340b1d86a0c); what it actually does from an end user experience perspective, is stop peripherals connected to a dock using a Thunderbolt port connection to a Windows device from being used prior to logon.
 

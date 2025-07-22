@@ -28,7 +28,7 @@
                 <img src="/posts/macos-windows-autopilot-utm/featured.png" referrerpolicy="no-referrer">
             </div>With all this chat about macOS device management in Microsoft Intune, I wonder how many people are macOS users but still need to test Microsoft Intune settings on Windows devices? Well fear not, there is a way to deploy a Windows Autopilot Virtual machine on your macOS device for testing.]]></description>
 </item><item>
-    <title>Configuring Google Chrome on macOS for Platform Single Sign-On</title>
+    <title>macOS Google Chrome Platform Single Sign-On</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-platformsso-google-chrome/</link>
     <pubDate>Wed, 08 May 2024 22:49:39 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-platformsso-google-chrome/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/macos-updates-phased-deployment/featured.png" referrerpolicy="no-referrer">
             </div>So you&rsquo;ve pulled the trigger on managing macOS devices in Microsoft Intune, and with this year being the year of macOS for Microsoft (this seems like an oxymoron), you should probably look at how to handle software updates.]]></description>
 </item><item>
-    <title>Custom Backgrounds for macOS New and Classic Microsoft Teams Apps</title>
+    <title>Custom Backgrounds New Teams on macOS</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-teams-new-backgrounds/</link>
     <pubDate>Wed, 14 Feb 2024 21:39:58 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-teams-new-backgrounds/</guid>
@@ -52,7 +52,7 @@
                 <img src="/posts/macos-teams-new-backgrounds/featured.png" referrerpolicy="no-referrer">
             </div>With the availability of the new Microsoft Teams client for macOS, we should build upon an existing script to deploy backgrounds, and update it to support not just the new version but the classic version as well.]]></description>
 </item><item>
-    <title>Revisiting macOS National Cyber Security Centre Security Settings</title>
+    <title>Revisiting macOS NCSC Security Settings</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-ncsc-revisited/</link>
     <pubDate>Tue, 11 Jul 2023 13:22:07 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-ncsc-revisited/</guid>
@@ -76,7 +76,7 @@
                 <img src="/posts/apple-os-updating-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Apple devices shouldn&rsquo;t be exempt from Operating System compliance policies, and these policies should share the same fate as Windows ones, and be updated monthly in line with update release cycles.]]></description>
 </item><item>
-    <title>Device Migration and Automated Device Enrolment Profile Assignment</title>
+    <title>Device Migration and ADE Profile Assignment</title>
     <link>https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/</link>
     <pubDate>Fri, 20 Jan 2023 19:57:07 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/</guid>

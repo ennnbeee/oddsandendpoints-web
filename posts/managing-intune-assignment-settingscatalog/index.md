@@ -1,7 +1,7 @@
-# Managing Settings Catalog Profile Assignments in Microsoft Intune
+# Settings Catalog Profile Assignments in Intune
 
 
-Fresh off the back of a trawl of a Modern Endpoint Management LinkedIn group, someone wanted the ability to assign existing Settings Catalog profiles in Microsoft Intune to additional Groups...this sounded like a quick win if you fancy manually doing it, but no one wants that, and as I had experience of dealing with the logic when {{< reftab href="/posts/assigning-intune-applications" title="assigning apps" >}}, I thought I'd give it a go.
+Fresh off the back of a trawl of a Modern Endpoint Management LinkedIn group, someone wanted the ability to assign existing Settings Catalog profiles in Microsoft Intune to additional Groups...this sounded like a quick win if you fancy manually doing it, but no one wants that, and as I had experience of dealing with the logic when {{< reftab href="/posts/assigning-intune-applications/" title="assigning apps" >}}, I thought I'd give it a go.
 
 {{< admonition type=note >}}
 The functions, authentication, and script have now been updated to support the use of the Graph PowerShell SDK.
@@ -338,7 +338,7 @@ We're onto something here, time to look at the logic around adding new assignmen
 
 Now that we can capture existing assignment, we need to deal with the logic when trying to add new assignments to the Settings Catalog profile. This will not be fun.
 
-Let's go through each of the {{< reftab href="/posts/assigning-intune-applications#assignment-no-nos" title="assignment non-nos" >}} we've already covered in this post.
+Let's go through each of the {{< reftab href="/posts/assigning-intune-applications#assignment-no-nos/" title="assignment non-nos" >}} we've already covered in this post.
 
 #### Include Assignments
 

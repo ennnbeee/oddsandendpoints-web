@@ -12,7 +12,7 @@
                 <img src="/posts/windows-feature-updates-assessment/featured.png" referrerpolicy="no-referrer">
             </div>As a migration to Windows 11 is fast upon us, I thought I&rsquo;d help your devices on their way into understanding whether they will support Windows 11 and what risks you may encounter with the update, by forcing devices to evaluate their readiness states.]]></description>
 </item><item>
-    <title>Patching Gaps in the CIS Windows 11 Benchmark - Level 2 Windows 11</title>
+    <title>Patching CIS Windows 11 Benchmark Gaps - Level 2 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part4/</link>
     <pubDate>Mon, 12 Aug 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
@@ -21,7 +21,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part4/featured.png" referrerpolicy="no-referrer">
             </div>This is the last part in the series around the CIS (Center for Internet Security) benchmark for Windows 11, and we&rsquo;d like to say that we&rsquo;ve saved the best post for last, but we&rsquo;d be lying. Surely the Level 2 settings can&rsquo;t be worse than the Level 1?]]></description>
 </item><item>
-    <title>Patching Gaps in the CIS Windows 11 Benchmark - Level 1 Windows 11</title>
+    <title>Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</link>
     <pubDate>Mon, 15 Jul 2024 11:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</guid>
@@ -37,7 +37,7 @@
                 <img src="/posts/windows-updating-store-apps/featured.png" referrerpolicy="no-referrer">
             </div><p>So we&rsquo;re all onboard with the <a href="https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft" target="_blank" rel="noopener noreferrer">New Microsoft Store</a>, and deploying both UWP and Win32 apps from Microsoft Intune is an absolute breeze, and reduces the effort of deploying applications to a click click next OK exercise. What about the UWP apps that are already installed on a Windows Autopilot device, shouldn&rsquo;t we give them a bit of love? If you care at all about users and security you should.</p>]]></description>
 </item><item>
-    <title>Automatically Resizing the WinRE Partition for Windows Update KB5034441</title>
+    <title>Automatically Resizing the WinRE Partition</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-winre-partition-resize-kb5034441/</link>
     <pubDate>Wed, 31 Jan 2024 20:54:12 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-winre-partition-resize-kb5034441/</guid>

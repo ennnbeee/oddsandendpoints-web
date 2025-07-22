@@ -60,7 +60,7 @@ When you update a Compliance Policy, it will trigger the devices the policy is a
 
 So what does any good Consultant do in this situation? They write some PowerShell to do the work for them, even if writing the PowerShell script probably took longer than just updating the Compliance Policy.
 
-I've already demonstrated my coffee fuelled scripting in {{< reftab href="/posts/windows-autopilot-retrofitting-group-tags" title="previous posts" >}} and this one isn't going to be much different.
+I've already demonstrated my coffee fuelled scripting in {{< reftab href="/posts/windows-autopilot-retrofitting-group-tags/" title="previous posts" >}} and this one isn't going to be much different.
 
 ### Functions are your Friends
 

@@ -1,4 +1,4 @@
-# Installing the Configuration Manager Client on Orphaned Internet Devices
+# ConfigMgr Client Installation on Orphaned Devices
 
 
 You've just implemented a Cloud Management Gateway to help your hybrid joined Windows devices communicate to Configuration Manager over the internet, but what if they're orphaned and unable to communicate to Configuration Manager to get the new Client Settings?
@@ -19,7 +19,7 @@ This won't work for devices that don't currently talk to Configuration Manager, 
 
 Strangely, Microsoft actually recommended just re-installing the ConfigMgr Client on these devices, which isn't a bad shout, so that's at least the start of the process; with the devices hybrid joined and co-managed for at least the [Client Apps](https://learn.microsoft.com/en-us/mem/configmgr/comanage/workloads#client-apps) workload, we can just package up the latest ConfigMgr client from the Primary Site server and punt it to the device estate.
 
-*"Oh, but what about using native tooling, isn't there a way to get Microsoft Intune to do this for you?"*, I hear you cry. Well [yes](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500), but also [no](https://learn.microsoft.com/en-us/mem/configmgr/comanage/autopilot-enrollment#limitations).
+*"Oh, but what about using native tooling, isn't there a way to get Microsoft Intune to do this for you?"*, I hear you cry. Well [yes](https://techcommunity.microsoft.com/blog/microsoftintuneblog/co-management-settings-windows-autopilot-with-co-management/3638500), but also [no](https://learn.microsoft.com/en-us/mem/configmgr/comanage/autopilot-enrollment#limitations).
 
 > Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
 
@@ -27,7 +27,7 @@ and...
 
 > Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see Plan for CMG client authentication: Microsoft Entra ID.
 
-The co-management authority setting in Microsoft Intune is great, for your **Entra only** Autopilot devices, and as covered {{< reftab href="/posts/configmgr-client-hybrid-autopilot" title="previously" >}}, but just doesn't work for the hybrid joined world, so a Win32 app it is, but what else do we need to consider?
+The co-management authority setting in Microsoft Intune is great, for your **Entra only** Autopilot devices, and as covered {{< reftab href="/posts/configmgr-client-hybrid-autopilot/" title="previously" >}}, but just doesn't work for the hybrid joined world, so a Win32 app it is, but what else do we need to consider?
 
 ## Client Authentication
 

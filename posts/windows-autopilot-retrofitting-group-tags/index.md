@@ -1,9 +1,9 @@
 # Retrofitting Windows Autopilot Group Tags
 
 
-Now I don't think I promised that I'd cover off bulk tagging Autopilot devices in a {{< reftab href="/posts/autopilot-power-of-group-tags" title="previous post" >}}, but you know, I was running low on things to write about. So here we are.
+Now I don't think I promised that I'd cover off bulk tagging Autopilot devices in a {{< reftab href="/posts/autopilot-power-of-group-tags/" title="previous post" >}}, but you know, I was running low on things to write about. So here we are.
 
-As I like to practice what I preach, I'd left myself the task of updating 1000's of Autopilot devices with a new [Group Tag](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-group-tags-to-import-devices-into-intune-with/ba-p/815336) after a successful Proof-of-Concept implementation of a suitable convention and syntax. Thanks past me.
+As I like to practice what I preach, I'd left myself the task of updating 1000's of Autopilot devices with a new [Group Tag](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-using-group-tags-to-import-devices-into-intune-with-autopilot/815336) after a successful Proof-of-Concept implementation of a suitable convention and syntax. Thanks past me.
 
 So what does any good consultant do? ~~Run away?~~ ~~Come up with a janky script that you'll only ever run once, that contains nested 'foreach' loops?~~ Write a perfectly reusable and digestible PowerShell script using Graph API to update existing Autopilot devices...
 
@@ -247,5 +247,5 @@ For new devices, I recommend that you work with your supplier/OEM and get them t
 
 Also, you can run this many times, so if you do want to re-tag devices, you can use the CSV method to do so.
 
-Also also, you should look at {{< reftab href="/posts/autopilot-power-of-group-tags" title="this post" >}} about using dynamic groups to ring fence your newly tagged devices.
+Also also, you should look at {{< reftab href="/posts/autopilot-power-of-group-tags/" title="this post" >}} about using dynamic groups to ring fence your newly tagged devices.
 

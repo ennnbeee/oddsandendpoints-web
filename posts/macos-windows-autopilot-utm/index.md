@@ -3,7 +3,7 @@
 
 I don't usually write "how-to" guides, let alone write topics that aren't deeply embedded with Microsoft Intune or PowerShell, but I recently hit an issue when trying to setup a [Windows Autopilot](https://learn.microsoft.com/en-us/autopilot/windows-autopilot) ARM based virtual machine using [UTM](https://mac.getutm.app/) on my Apple Silicon (humble brag) based macOS device.
 
-With the recent announcement of the [next generation of Windows Autopilot](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169) and [Windows Autopilot device preparation](https://learn.microsoft.com/en-us/autopilot/device-preparation/overview) now being official, I imagine there are now more and more people that are using macOS devices but need to test Windows Autopilot in a Virtual Machine, and thought, ~~here's an easy on trend blog post~~, that I should share the solution to the issue I encountered.
+With the recent announcement of the [next generation of Windows Autopilot](https://techcommunity.microsoft.com/blog/microsoftintuneblog/windows-deployment-with-the-next-generation-of-windows-autopilot/4148169) and [Windows Autopilot device preparation](https://learn.microsoft.com/en-us/autopilot/device-preparation/overview) now being official, I imagine there are now more and more people that are using macOS devices but need to test Windows Autopilot in a Virtual Machine, and thought, ~~here's an easy on trend blog post~~, that I should share the solution to the issue I encountered.
 
 As always though, before you go and jump to how I [fixed](#adding-a-serial-number) the problem, you should probably read the entire post to get a full picture of the scenario.
 

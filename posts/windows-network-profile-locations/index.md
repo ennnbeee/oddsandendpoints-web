@@ -116,7 +116,7 @@ Good, but how do we deploy this.
 
 ## Microsoft Intune Remediations
 
-Good question earlier me ⏰, despite a {{< reftab href="/posts/bitlocker-dma-exceptions" title="previous post" >}} using [Platform Scripts](https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension) to blindly configure settings, this one we're going to utilise [Remediations](https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations), so we need a way to capture and detect whether the existing profiles are correctly configured.
+Good question earlier me ⏰, despite a {{< reftab href="/posts/bitlocker-dma-exceptions/" title="previous post" >}} using [Platform Scripts](https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension) to blindly configure settings, this one we're going to utilise [Remediations](https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations), so we need a way to capture and detect whether the existing profiles are correctly configured.
 
 ### Detection Script
 

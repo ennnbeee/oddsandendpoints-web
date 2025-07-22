@@ -345,7 +345,7 @@
     <a href="#updating-compliance" class="header-mark"></a>2 Updating Compliance</h2><p>When you update a Compliance Policy, it will trigger the devices the policy is assigned to, to re-evaluate the conditions and follow the actions for non-compliance if necessary. So you <strong>should</strong> be updating the Operating System Compliance Policy every month, which, although it isn&rsquo;t a painful task, it is a repeatable one.</p>
 <h3 id="needless-automation-to-the-rescue" class="headerLink">
     <a href="#needless-automation-to-the-rescue" class="header-mark"></a>2.1 Needless Automation to the Rescue</h3><p>So what does any good Consultant do in this situation? They write some PowerShell to do the work for them, even if writing the PowerShell script probably took longer than just updating the Compliance Policy.</p>
-<p>I&rsquo;ve already demonstrated my coffee fuelled scripting in <a href="/posts/windows-autopilot-retrofitting-group-tags" rel="noopener" target="_blank">previous posts</a> and this one isn&rsquo;t going to be much different.</p>
+<p>I&rsquo;ve already demonstrated my coffee fuelled scripting in <a href="/posts/windows-autopilot-retrofitting-group-tags/" rel="noopener" target="_blank">previous posts</a> and this one isn&rsquo;t going to be much different.</p>
 <h3 id="functions-are-your-friends" class="headerLink">
     <a href="#functions-are-your-friends" class="header-mark"></a>2.2 Functions are your Friends</h3><p>We&rsquo;ll need a few functions for this, some grabbed from the <a href="https://github.com/microsoftgraph/powershell-intune-samples" target="_blank" rel="noopener noreferrer">Intune PowerShell Samples</a> GitHub repo, and some thrown together based on the samples.</p>
 <p>We&rsquo;ll be authenticating to Graph, grabbing the Windows Compliance Policies that have the Valid Operating System Build setting, getting the latest OS Build version from the <a href="https://support.microsoft.com/en-us/rss-feed-picker" target="_blank" rel="noopener noreferrer">Microsoft Atom Feeds</a> and then updating the Compliance Policy. <em>This sounded easier in my head if I&rsquo;m honest.</em></p>
@@ -1417,7 +1417,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Automatically updating Microsoft Windows 10 and 11 Microsoft Intune device compliance policies using PowerShell and Graph API." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -1431,7 +1431,7 @@
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Automatically updating Microsoft Windows 10 and 11 Microsoft Intune device compliance policies using PowerShell and Graph API." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     

@@ -56,11 +56,11 @@ Write-Host "Initiating a restart in $waitime minutes"
 
 ### The Whole Thing
 
-The full script can be found [here](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/PlatformScripts/PowerShell/HDJDeviceRename/Invoke-ComputerRename-HDJ.ps1), I would **strongly** advise testing this prior to pushing it out via Microsoft Intune.
+The full script can be found [on GitHub](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/PlatformScripts/PowerShell/HDJDeviceRename/Invoke-ComputerRename-HDJ.ps1), I would **strongly** advise testing this prior to pushing it out via Microsoft Intune.
 
 ## Deployment
 
-Save the above script and create a new PowerShell script deployment in [Microsoft Intune](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesWindowsMenu/powershell) using the following configuration settings, then deploy to a test group of devices:
+Save the above script and create a new PowerShell script deployment in [Microsoft Intune](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesWindowsMenu/powershell) using the following configuration settings, then deploy to a test group of devices:
 
 ![PowerShell Script](img/computer-name-script.webp "Platform script in Microsoft Intune.")
 

@@ -1,4 +1,4 @@
-# Patching Gaps in the CIS Windows 11 Benchmark - Level 2 Windows 11
+# Patching CIS Windows 11 Benchmark Gaps - Level 2 Windows 11
 
 
 This is the final part in this series, covering the ~~final boss~~ CIS Level 2 settings; I've brought back [Jonathan](https://www.youtube.com/watch?v=WDpipB4yehk) to share the pain again.

@@ -258,7 +258,7 @@
     </div>
     <div class="details-content">
         <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2024-06-03T18:20:55" title="June 3, 2024">3 June 2024</span>, the content may be out of date.</div></div></div><p>I don&rsquo;t usually write &ldquo;how-to&rdquo; guides, let alone write topics that aren&rsquo;t deeply embedded with Microsoft Intune or PowerShell, but I recently hit an issue when trying to setup a <a href="https://learn.microsoft.com/en-us/autopilot/windows-autopilot" target="_blank" rel="noopener noreferrer">Windows Autopilot</a> ARM based virtual machine using <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer">UTM</a> on my Apple Silicon (humble brag) based macOS device.</p>
-<p>With the recent announcement of the <a href="https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169" target="_blank" rel="noopener noreferrer">next generation of Windows Autopilot</a> and <a href="https://learn.microsoft.com/en-us/autopilot/device-preparation/overview" target="_blank" rel="noopener noreferrer">Windows Autopilot device preparation</a> now being official, I imagine there are now more and more people that are using macOS devices but need to test Windows Autopilot in a Virtual Machine, and thought, <del>here&rsquo;s an easy on trend blog post</del>, that I should share the solution to the issue I encountered.</p>
+<p>With the recent announcement of the <a href="https://techcommunity.microsoft.com/blog/microsoftintuneblog/windows-deployment-with-the-next-generation-of-windows-autopilot/4148169" target="_blank" rel="noopener noreferrer">next generation of Windows Autopilot</a> and <a href="https://learn.microsoft.com/en-us/autopilot/device-preparation/overview" target="_blank" rel="noopener noreferrer">Windows Autopilot device preparation</a> now being official, I imagine there are now more and more people that are using macOS devices but need to test Windows Autopilot in a Virtual Machine, and thought, <del>here&rsquo;s an easy on trend blog post</del>, that I should share the solution to the issue I encountered.</p>
 <p>As always though, before you go and jump to how I <a href="#adding-a-serial-number" rel="">fixed</a> the problem, you should probably read the entire post to get a full picture of the scenario.</p>
 <h2 id="windows-virtualisation" class="headerLink">
     <a href="#windows-virtualisation" class="header-mark"></a>1 Windows Virtualisation</h2><p>As I spent all my pocket money on a MacBook Air M1, I&rsquo;ve got none left to pay for virtualisation apps, so I use <a href="https://mac.getutm.app/" target="_blank" rel="noopener noreferrer">UTM</a>; I mean, it&rsquo;s also a lot better to use than others out there, and supports virtualising many operating systems natively without emulation, including Windows 11 ARM versions.</p>
@@ -1092,7 +1092,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Using UTM on macOS to build, configure and deploy a Windows 11 Autopilot Virtual Machine using Microsoft Intune." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -1113,7 +1113,7 @@
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Using UTM on macOS to build, configure and deploy a Windows 11 Autopilot Virtual Machine using Microsoft Intune." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     
@@ -1147,9 +1147,9 @@
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/windows-11-risk-based-deployment-part4/" class="prev" rel="prev" title="Risk Based Windows 11 Feature Update Deployment - Automation"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Risk Based Windows 11 Feature Update Deployment - Automation</a>
-            <a href="/posts/windows-cis-patching-gaps-part1/" class="next" rel="next" title="Patching Gaps in the CIS Windows 11 Benchmark - BitLocker">Patching Gaps in the CIS Windows 11 Benchmark - BitLocker<svg class="icon"
+    <div class="post-nav print:tw-hidden"><a href="/posts/windows-11-risk-based-deployment-part4/" class="prev" rel="prev" title="Risk Based Windows 11 Deployment - Automation"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Risk Based Windows 11 Deployment - Automation</a>
+            <a href="/posts/windows-cis-patching-gaps-part1/" class="next" rel="next" title="Patching CIS Windows 11 Benchmark Gaps - BitLocker">Patching CIS Windows 11 Benchmark Gaps - BitLocker<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

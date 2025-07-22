@@ -1,4 +1,4 @@
-# Creating Reusable Groups of Firewall Settings for Microsoft Online Services
+# Reusable Firewall Settings for Microsoft Online Services
 
 
 If you've been living under a rock, or you don't have to deal with firewall and proxy requirements for accessing Microsoft Online services, you probably won't be aware that Microsoft publish their URLs and IP addresses for their services using a [web service](https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide).
@@ -9,13 +9,13 @@ Now because I'm desperate to write PowerShell scripts there is no way I'm going 
 
 ## Reusable Settings Groups
 
-So here we are, back looking at ~~Defender~~ Windows firewall rules in Microsoft Intune again, and after moving legacy firewall rules to the {{< reftab href="/posts/settings-catalog-firewall-rules" title="Settings Catalog" >}} versions previously, to make use of [Reusable Settings Groups](https://learn.microsoft.com/en-us/mem/intune/protect/reusable-settings-groups), we're now heavily leaning into these reusable options, to ensure that all Windows 10 and later devices can communicate successfully to the Microsoft Online endpoints.
+So here we are, back looking at ~~Defender~~ Windows firewall rules in Microsoft Intune again, and after moving legacy firewall rules to the {{< reftab href="/posts/settings-catalog-firewall-rules/" title="Settings Catalog" >}} versions previously, to make use of [Reusable Settings Groups](https://learn.microsoft.com/en-us/mem/intune/protect/reusable-settings-groups), we're now heavily leaning into these reusable options, to ensure that all Windows 10 and later devices can communicate successfully to the Microsoft Online endpoints.
 
-Before we look at how to deal with the data available in the Microsoft web service, we should look at how we can create these reusable settings groups in Microsoft Intune using Graph, and make use of the option to [auto resolve](https://techcommunity.microsoft.com/t5/intune-customer-success/announcing-enhanced-control-for-configuring-firewall-rules-with/ba-p/3664744) URLs, which should make life a little bit easier for the ever changing internet landscape.
+Before we look at how to deal with the data available in the Microsoft web service, we should look at how we can create these reusable settings groups in Microsoft Intune using Graph, and make use of the option to [auto resolve](https://techcommunity.microsoft.com/blog/intunecustomersuccess/announcing-enhanced-control-for-configuring-firewall-rules-with-windows-defender/3664744) URLs, which should make life a little bit easier for the ever changing internet landscape.
 
 ### JSON Formatting
 
-We at least have experience dealing with building the JSON structure required for {{< reftab href="/posts/settings-catalog-firewall-rules/#creating-settings-catalog-policies" title="Settings Catalog profiles previously" >}}, and it wasn't particularly straight forward, so after a hesitant dig with Developer Tools we can see that when you create a new reusable setting in Microsoft Intune, we're sending a `POST` call to the [`deviceManagement/reusablePolicySettings`](https://learn.microsoft.com/en-us/graph/api/intune-deviceconfigv2-devicemanagementreusablepolicysetting-create?view=graph-rest-beta) endpoint, with JSON similar to the below.
+We at least have experience dealing with building the JSON structure required for {{< reftab href="/posts/settings-catalog-firewall-rules/#creating-settings-catalog-policies/" title="Settings Catalog profiles previously" >}}, and it wasn't particularly straight forward, so after a hesitant dig with Developer Tools we can see that when you create a new reusable setting in Microsoft Intune, we're sending a `POST` call to the [`deviceManagement/reusablePolicySettings`](https://learn.microsoft.com/en-us/graph/api/intune-deviceconfigv2-devicemanagementreusablepolicysetting-create?view=graph-rest-beta) endpoint, with JSON similar to the below.
 
 ```JSON
 {

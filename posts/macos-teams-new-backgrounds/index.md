@@ -1,7 +1,7 @@
-# Custom Backgrounds for macOS New and Classic Microsoft Teams Apps
+# Custom Backgrounds New Teams on macOS
 
 
-This isn't the first time we've looked at deploying {{< reftab href="/posts/macos-teams-backgrounds" title="backgrounds" >}} for Microsoft Teams on macOS, but it's been a while since we answered an internet strangers question, and hopefully my scripting has come on a little way since then (spoiler: it hasn't).
+This isn't the first time we've looked at deploying {{< reftab href="/posts/macos-teams-backgrounds/" title="backgrounds" >}} for Microsoft Teams on macOS, but it's been a while since we answered an internet strangers question, and hopefully my scripting has come on a little way since then (spoiler: it hasn't).
 
 Now that the 'New' Microsoft Teams app is the de facto version available to download from Microsoft replacing the 'Classic' one, we should at least look at how it handles uploaded backgrounds and if required update our existing script to support not only the 'Classic' version, but the 'New' version too.
 
@@ -37,7 +37,7 @@ OK, so we'll need a way to generate a UUID whilst we're at it. The 'Classic' app
 
 ## Background Deployment Script
 
-Let's start at least with the {{< reftab href="/posts/macos-teams-backgrounds/#teams-background-script" title="existing script" >}} and amend or update it to take into consideration the following:
+Let's start at least with the {{< reftab href="/posts/macos-teams-backgrounds/#teams-background-script/" title="existing script" >}} and amend or update it to take into consideration the following:
 
 - Detection of whether a Teams app is installed.
 - Detection of which of the 'Classic' or 'New' apps is installed.

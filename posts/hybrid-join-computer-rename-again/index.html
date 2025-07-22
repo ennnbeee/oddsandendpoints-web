@@ -251,7 +251,7 @@
     </div>
     <div class="details-content">
         <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2023-01-12T20:10:32" title="January 12, 2023">12 January 2023</span>, the content may be out of date.</div></div></div><p>Nothing has really changed in the Hybrid Join Autopilot space when it comes to device names, and we&rsquo;re still stuck with useless naming conventions for these devices; sometimes a prefix and random characters just isn&rsquo;t a good enough identification method for Windows devices.</p>
-<p>So now that it&rsquo;s 2023 it was time to look at this problem once again, mainly because my <a href="/posts/hybrid-join-computer-rename" rel="noopener" target="_blank">old solution</a>
+<p>So now that it&rsquo;s 2023 it was time to look at this problem once again, mainly because my <a href="/posts/hybrid-join-computer-rename/" rel="noopener" target="_blank">old solution</a>
 broke device certificates and an Always On VPN connection that relied on them as part of the Autopilot process.</p>
 <h2 id="name-problems" class="headerLink">
     <a href="#name-problems" class="header-mark"></a>1 Name Problems</h2><p>The trouble with the old method, a PowerShell script disguised as a <a href="https://learn.microsoft.com/en-us/mem/intune/apps/apps-win32-app-management" target="_blank" rel="noopener noreferrer">Win32 App</a>, is that it will happily rename and reboot the device during the Autopilot OOBE process, is that the device will already have a device certificate with it&rsquo;s old jumbled name, and it needs this for both the VPN connection and some level of trust to the domain.</p>
@@ -958,13 +958,13 @@ broke device certificates and an Always On VPN connection that relied on them as
 
 
 <h3 id="deployment-in-intune" class="headerLink">
-    <a href="#deployment-in-intune" class="header-mark"></a>2.3 Deployment in Intune</h3><p>Throwing ourselves into the safe space that is Intune, go and find the <a href="https://endpoint.microsoft.com/#view/Microsoft_Intune_Enrollment/UXAnalyticsMenu/~/proactiveRemediations" target="_blank" rel="noopener noreferrer">Proactive Remediation</a> section, I&rsquo;ll give you a hint, it&rsquo;s under Reports &gt; Endpoint Analytics.</p>
+    <a href="#deployment-in-intune" class="header-mark"></a>2.3 Deployment in Intune</h3><p>Throwing ourselves into the safe space that is Intune, go and find the <a href="https://intune.microsoft.com/#view/Microsoft_Intune_Enrollment/UXAnalyticsMenu/~/proactiveRemediations" target="_blank" rel="noopener noreferrer">Proactive Remediation</a> section, I&rsquo;ll give you a hint, it&rsquo;s under Reports &gt; Endpoint Analytics.</p>
 <p>Create a new Script Package, selecting and uploading both the detection and remediation scripts as you go, you can get these from <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/Remediation/HDJDeviceRename" target="_blank" rel="noopener noreferrer">GitHub</a>. Make sure you select &lsquo;Run script in 64-bit PowerShell&rsquo; as I couldn&rsquo;t be bothered scripting a check if PowerShell was running in the 64-bit context.</p>
 <p><figure><a class="lightgallery" href="/posts/hybrid-join-computer-rename-again/img/computer-rename-pa_hu_209c198d00c1f656.webp" title="Proactive Remediation" data-thumbnail="/posts/hybrid-join-computer-rename-again/img/computer-rename-pa_hu_209c198d00c1f656.webp" data-sub-html="<h2>Remediation script in Microsoft Intune.</h2><p>Proactive Remediation</p>"><img  loading="lazy" src='/posts/hybrid-join-computer-rename-again/img/computer-rename-pa_hu_209c198d00c1f656.webp'   alt="Proactive Remediation"  ></a><figcaption class="image-caption">Remediation script in Microsoft Intune.</figcaption>
 </figure>
 
 </p>
-<p>Go ahead and assign this to a test group of devices, or if you&rsquo;re brave or don&rsquo;t care about testing, all devices with a <a href="/posts/endpoint-manager-device-filters" rel="noopener" target="_blank">Device Filter</a>, giving the assignment a schedule; I&rsquo;ve gone with daily repeating every day, but amend this to your environment requirements:</p>
+<p>Go ahead and assign this to a test group of devices, or if you&rsquo;re brave or don&rsquo;t care about testing, all devices with a <a href="/posts/endpoint-manager-device-filters/" rel="noopener" target="_blank">Device Filter</a>, giving the assignment a schedule; I&rsquo;ve gone with daily repeating every day, but amend this to your environment requirements:</p>
 <p><figure><a class="lightgallery" href="/posts/hybrid-join-computer-rename-again/img/computer-rename-paschedule_hu_e5c13bc6d8c90f69.webp" title="Proactive Remediation Schedule" data-thumbnail="/posts/hybrid-join-computer-rename-again/img/computer-rename-paschedule_hu_e5c13bc6d8c90f69.webp" data-sub-html="<h2>Remediation schedule in Microsoft Intune.</h2><p>Proactive Remediation Schedule</p>"><img  loading="lazy" src='/posts/hybrid-join-computer-rename-again/img/computer-rename-paschedule_hu_e5c13bc6d8c90f69.webp'   alt="Proactive Remediation Schedule"  ></a><figcaption class="image-caption">Remediation schedule in Microsoft Intune.</figcaption>
 </figure>
 
@@ -1004,7 +1004,7 @@ broke device certificates and an Always On VPN connection that relied on them as
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Updating Windows Autopilot hybrid join device names based on serial numbers updating device certificates using Proactive remediation PowerShell scripts." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -1052,9 +1052,9 @@ broke device certificates and an Always On VPN connection that relied on them as
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/configmgr-client-migration/" class="prev" rel="prev" title="Reinstalling the Configuration Manager Client on Migrated Devices"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Reinstalling the Configuration Manager Client on Migrated Devices</a>
-            <a href="/posts/apple-ade-profile-assignment/" class="next" rel="next" title="Device Migration and Automated Device Enrolment Profile Assignment">Device Migration and Automated Device Enrolment Profile Assignment<svg class="icon"
+    <div class="post-nav print:tw-hidden"><a href="/posts/configmgr-client-migration/" class="prev" rel="prev" title="Reinstalling ConfigMgr Clients on Migrated Devices"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Reinstalling ConfigMgr Clients on Migrated Devices</a>
+            <a href="/posts/apple-ade-profile-assignment/" class="next" rel="next" title="Device Migration and ADE Profile Assignment">Device Migration and ADE Profile Assignment<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

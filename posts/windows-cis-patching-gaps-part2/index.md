@@ -1,7 +1,7 @@
-# Patching Gaps in the CIS Windows 11 Benchmark - Level 1 Windows Autopilot
+# Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows Autopilot
 
 
-We started with the {{< reftab  href="/posts/windows-cis-patching-gaps-part1" title="BitLocker and DMA (Direct Memory Access)" >}} settings in the first post in this [Windows 11 CIS benchmark](https://www.cisecurity.org/benchmark/intune) based series, now is the time we dig deeper into the broader Level 1 settings, this time looking at the impact to Windows Autopilot cloud native deployments.
+We started with the {{< reftab  href="/posts/windows-cis-patching-gaps-part1/" title="BitLocker and DMA (Direct Memory Access)" >}} settings in the first post in this [Windows 11 CIS benchmark](https://www.cisecurity.org/benchmark/intune) based series, now is the time we dig deeper into the broader Level 1 settings, this time looking at the impact to Windows Autopilot cloud native deployments.
 
 Jonathan has more than enough experience with testing these policies and the impact to Windows Autopilot, as I ~~made~~ asked him to help me review the impact of them following his [initial run in](https://deploymentshare.com/articles/bp-cis/) with the community version of the CIS Microsoft Intune templates.
 
@@ -101,7 +101,7 @@ You can import [CIS (L1) Section 45.10-45.11 - Windows 11 Intune 3.0.1](https://
 
 ### Virtualization Based Security
 
-We'd encountered a rogue device restart during Windows Autopilot when configuring a {{< reftab  href="/posts/windows-cis-patching-gaps-part1/#bitlocker-pin" title="BitLocker PIN" >}}, which did actually work to our advantage, but what caused them?
+We'd encountered a rogue device restart during Windows Autopilot when configuring a {{< reftab  href="/posts/windows-cis-patching-gaps-part1/#bitlocker-pin/" title="BitLocker PIN" >}}, which did actually work to our advantage, but what caused them?
 
 {{< fa-icon brands windows >}} *CIS (L1) Virtualization Based Technology - Windows 11 Intune 3.0.1*
 
@@ -146,7 +146,7 @@ Saving changing this across all devices, as it only impacts Windows Autopilot de
 | :- | :- | :- |
 | Administrative Templates > System > Logon | Do not display network selection UI | `Disabled` |
 
-Then assign it to your corporate devices, excluding Dynamic Security Groups containing Windows Autopilot Devices where their profile allows the use of pre-provisioning as in the [Interactive Logon Messages](/posts/windows-cis-patching-gaps-part2/#interactive-logon-messages) section.
+Then assign it to your corporate devices, excluding Dynamic Security Groups containing Windows Autopilot Devices where their profile allows the use of pre-provisioning as in the [Interactive Logon Messages](/posts/windows-cis-patching-gaps-part2/#interactive-logon-messages/) section.
 
 This will enable these devices, and these only, to select a new network not previously connected to, before logging onto their device, which if they've been deployed somewhere other than the current location, means they can actually sign in 😆.
 
@@ -227,7 +227,7 @@ If you don't want to force the setup of Windows Hello for Business, you can disa
 
 ## Summary
 
-We {{< reftab  href="/posts/windows-cis-patching-gaps-part1/#summary" title="did say" >}} that the impact of the CIS Level 1 settings on Windows Autopilot was going to be a little difficult to deal with, but we got there, with some creative assignments, mild exclusions, and a little bit of common sense.
+We {{< reftab  href="/posts/windows-cis-patching-gaps-part1/#summary/" title="did say" >}} that the impact of the CIS Level 1 settings on Windows Autopilot was going to be a little difficult to deal with, but we got there, with some creative assignments, mild exclusions, and a little bit of common sense.
 
 Security and end-user experience don't tend to wander off hand in hand into the distance to live happily ever after, but there is now a way to deal with these issues using Microsoft Intune native tooling, and a good understanding of the application of the CIS benchmark.
 

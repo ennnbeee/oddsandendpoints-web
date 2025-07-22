@@ -20,7 +20,7 @@ With Apple having different build versions per Operating System, whether this is
 
 ### Device Filters
 
-Now we all know where I stand on {{< reftab href="/posts/endpoint-manager-device-filters" title="Device Filters" >}} and they come to the rescue once again, as we need separate Compliance Policies and the ability to target these to the correct devices.
+Now we all know where I stand on {{< reftab href="/posts/endpoint-manager-device-filters/" title="Device Filters" >}} and they come to the rescue once again, as we need separate Compliance Policies and the ability to target these to the correct devices.
 
 We can create filters for each of the current supported (at time of writing) iOS/iPadOS and macOS operating systems:
 

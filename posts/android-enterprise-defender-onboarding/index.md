@@ -1,4 +1,4 @@
-# Lower-Touch Defender for Endpoint Onboarding for Android Devices
+# Lower-Touch Defender Onboarding for Android Devices
 
 
 {{< admonition type=note >}}

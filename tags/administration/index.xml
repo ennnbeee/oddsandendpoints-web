@@ -12,7 +12,7 @@
                 <img src="/posts/assigning-intune-applications/featured.png" referrerpolicy="no-referrer">
             </div>No one, and I mean no one, really wants to manually and individually assign Mobile Apps to Users or Devices in Intune in their 100&rsquo;s, so we should find a solution for this bulk assignment approach.]]></description>
 </item><item>
-    <title>Reinstalling the Configuration Manager Client on Migrated Devices</title>
+    <title>Reinstalling ConfigMgr Clients on Migrated Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</link>
     <pubDate>Thu, 15 Dec 2022 22:16:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/updating-enrolled-device-ownership/featured.jpg" referrerpolicy="no-referrer">
             </div>What happens if you&rsquo;ve allowed Windows, iOS, Android, and macOS devices to enrol into Microsoft Microsoft Intune in all kinds of ways, and now you&rsquo;re in a situation where devices that should be marked as corporate are marked as personal or unknown?]]></description>
 </item><item>
-    <title>Converting Configuration Manager Direct Membership Collections</title>
+    <title>Converting ConfigMgr Direct Membership Collections</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-converting-direct-member-collections/</link>
     <pubDate>Thu, 28 Jul 2022 08:22:08 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-converting-direct-member-collections/</guid>

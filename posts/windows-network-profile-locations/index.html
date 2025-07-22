@@ -795,7 +795,7 @@
 <p>Which now gives us the ability to set Domain profiles that match items in <code>$profileNames</code> with the Domain profile, and all others with the Private profile.</p>
 <p>Good, but how do we deploy this.</p>
 <h2 id="microsoft-intune-remediations" class="headerLink">
-    <a href="#microsoft-intune-remediations" class="header-mark"></a>2 Microsoft Intune Remediations</h2><p>Good question earlier me ⏰, despite a <a href="/posts/bitlocker-dma-exceptions" rel="noopener" target="_blank">previous post</a> using <a href="https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension" target="_blank" rel="noopener noreferrer">Platform Scripts</a> to blindly configure settings, this one we&rsquo;re going to utilise <a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations" target="_blank" rel="noopener noreferrer">Remediations</a>, so we need a way to capture and detect whether the existing profiles are correctly configured.</p>
+    <a href="#microsoft-intune-remediations" class="header-mark"></a>2 Microsoft Intune Remediations</h2><p>Good question earlier me ⏰, despite a <a href="/posts/bitlocker-dma-exceptions/" rel="noopener" target="_blank">previous post</a> using <a href="https://learn.microsoft.com/en-us/mem/intune/apps/intune-management-extension" target="_blank" rel="noopener noreferrer">Platform Scripts</a> to blindly configure settings, this one we&rsquo;re going to utilise <a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/remediations" target="_blank" rel="noopener noreferrer">Remediations</a>, so we need a way to capture and detect whether the existing profiles are correctly configured.</p>
 <h3 id="detection-script" class="headerLink">
     <a href="#detection-script" class="header-mark"></a>2.1 Detection Script</h3><p>With that in mind, may I present to you a much less janky detection method, with any network profile not configured to be either Domain or Private, being added to a new array variable <code>$issueNetworkProfiles</code> which at the end, we&rsquo;re just going to see if it contains anything.</p>
 
@@ -1171,7 +1171,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Using Microsoft Intune remediation powershell scripts to set deployed network profiles to the correct location for windows firewall." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -1192,7 +1192,7 @@
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Using Microsoft Intune remediation powershell scripts to set deployed network profiles to the correct location for windows firewall." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     
@@ -1226,8 +1226,8 @@
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/android-enterprise-defender-onboarding/" class="prev" rel="prev" title="Lower-Touch Defender for Endpoint Onboarding for Android Devices"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+    <div class="post-nav print:tw-hidden"><a href="/posts/android-enterprise-defender-onboarding/" class="prev" rel="prev" title="Lower-Touch Defender Onboarding for Android Devices"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Lower-Touch Defender Onboarding for Android Devices</a>
             <a href="/posts/windows-cyber-essentials-compliance/" class="next" rel="next" title="Intune Custom Compliance for Cyber Essentials">Intune Custom Compliance for Cyber Essentials<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>

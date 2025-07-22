@@ -24,7 +24,7 @@ There are additional settings within the Cyber Essentials Requirements, that can
 
 ## Compliance Policies
 
-So you might be thinking, _"Well I'm using Windows Firewall, and Defender Antivirus, I'll just use the native compliance checks and I'll be on my way"_, well bully for you, not everyone has jumped to Microsoft for everything. As we've seen with {{< reftab href="/posts/custom-compliance-third-party-av" title="custom compliance" >}} for antivirus previously, there is merit to getting additional information out of installed security products on Windows devices.
+So you might be thinking, _"Well I'm using Windows Firewall, and Defender Antivirus, I'll just use the native compliance checks and I'll be on my way"_, well bully for you, not everyone has jumped to Microsoft for everything. As we've seen with {{< reftab href="/posts/custom-compliance-third-party-av/" title="custom compliance" >}} for antivirus previously, there is merit to getting additional information out of installed security products on Windows devices.
 
 This in conjunction with the other Cyber Essentials requirements which don't have a nice interface to configure a Compliance Policy, means we have to lean into [Custom Compliance](https://learn.microsoft.com/en-us/mem/intune/protect/compliance-use-custom-settings) to retrieve the information we care about, and check it against our known good policy check.
 
@@ -95,7 +95,7 @@ I should probably speak with whoever manages my Windows device at this point ðŸ‘
 
 ### Antivirus Discovery
 
-We're no stranger to dealing with {{< reftab href="/posts/custom-compliance-third-party-av" title="third-party" >}} antivirus compliance, so I've stolen from my own scripts, which makes a change, and updated it a little to just look at the realtime protection status, and the definition update status.
+We're no stranger to dealing with {{< reftab href="/posts/custom-compliance-third-party-av/" title="third-party" >}} antivirus compliance, so I've stolen from my own scripts, which makes a change, and updated it a little to just look at the realtime protection status, and the definition update status.
 
 If you are using a third-party antivirus solution, you need to update the `$avClient` variable with the name of the client, which can be captured by running the below on a target machine:
 

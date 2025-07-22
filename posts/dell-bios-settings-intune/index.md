@@ -5,7 +5,7 @@ What if you've only got Microsoft Intune to configure your Dell BIOS settings an
 
 Well you're in luck, I've thrown together something that can help you out based on a need to ensure that Secure Boot is configured for Dell laptops when it was discovered via the [Windows health attestation report](https://docs.microsoft.com/en-us/windows-server/security/device-health-attestation) that around 80% of the Windows devices had it turned off.
 
-(Don't worry, I checked that the devices had [GPT partitions](https://www.dell.com/support/kbdoc/en-uk/000133480/uefi-and-secure-boot-faqs) before I just launched a PowerShell script at them.)
+(Don't worry, I checked that the devices had [GPT partitions](https://www.dell.com/support/kbdoc/en-uk/000190116/how-to-enable-secure-boot-on-your-dell-device) before I just launched a PowerShell script at them.)
 
 ## Dell PowerShell Provider
 
@@ -205,7 +205,7 @@ Now that you've got the Application, time to upload it to Microsoft Intune and c
 
 ### App Installation
 
-Navigate to the [Windows Apps](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/AppsWindowsMenu/windowsApps) section of Microsoft Intune and time to create a new app, making sure you select 'Windows app (Win32)' as the App type.
+Navigate to the [Windows Apps](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/AppsWindowsMenu/windowsApps) section of Microsoft Intune and time to create a new app, making sure you select 'Windows app (Win32)' as the App type.
 
 After uploading the `.intunewin` file make sure to use `sysnative` in the path of the install command, we also need to pass through the variables for the `Settings` and `Values` as well as `Password` for the BIOS Admin password:
 

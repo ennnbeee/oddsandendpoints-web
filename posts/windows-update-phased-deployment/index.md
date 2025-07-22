@@ -32,7 +32,7 @@ So we can use settings similar to those in the below table to ensure that one ph
 | Final Production Ring | `10 days` | `2 days` | `1 day` | `13 days` |
 
 {{< admonition type=info >}}
-You may have noticed that we're working within a 14-day window here, because we all love {{< reftab href="/posts/macos-ncsc-revisited" title="NCSC Guidelines" >}}.
+You may have noticed that we're working within a 14-day window here, because we all love {{< reftab href="/posts/macos-ncsc-revisited/" title="NCSC Guidelines" >}}.
 {{< /admonition >}}
 
 So with the Update Rings configured, we now need to look at how these are assigned to Users and Devices.
@@ -59,14 +59,14 @@ With both the Testing and Pilot ring being specifically designated devices, we c
 
 ### Dynamic Groups
 
-Now I know I love [Device Filters](https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters), and do not fear, we'll need one of these later, but as covered {{< reftab href="/posts/endpoint-manager-device-filters" title="previously" >}} Dynamic Groups are more powerful, and for this use case will perfectly fit our need to split our Windows device estate in half-ish.
+Now I know I love [Device Filters](https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters), and do not fear, we'll need one of these later, but as covered {{< reftab href="/posts/endpoint-manager-device-filters/" title="previously" >}} Dynamic Groups are more powerful, and for this use case will perfectly fit our need to split our Windows device estate in half-ish.
 
 Device Name is how we're going to split our device estate, whether these are you old-school naming conventions on-premises based on asset tag, serial number or otherwise, Autopilot ~~Azure AD Join~~ MEID Join (*really?*) devices with a prefix and a serial, or god forbid Autopilot Hybrid Joined devices with a prefix and random numbers.
 
 Either way, we should be able use Dynamic Device Groups to capture half of the device estate.
 
 {{< admonition type=info >}}
-There's a better way to do this for {{< reftab  href="/posts/flexible-update-deployments" title="Windows devices" >}} and even {{< reftab  href="/posts/macos-updates-phased-deployment/" title="macOS devices" >}} if that's your thing.
+There's a better way to do this for {{< reftab  href="/posts/flexible-update-deployments/" title="Windows devices" >}} and even {{< reftab  href="/posts/macos-updates-phased-deployment/" title="macOS devices" >}} if that's your thing.
 {{< /admonition >}}
 
 ### Start of Device Name Matching

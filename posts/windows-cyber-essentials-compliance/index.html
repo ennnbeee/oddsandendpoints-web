@@ -297,7 +297,7 @@
 </ul>
 <p>There are additional settings within the Cyber Essentials Requirements, that can be achieved using <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-create" target="_blank" rel="noopener noreferrer">Configuration Profiles</a> in Microsoft Intune, but our focus is using Device Compliance and <a href="https://learn.microsoft.com/en-us/mem/intune/protect/conditional-access" target="_blank" rel="noopener noreferrer">Conditional Access</a> to stop devices from accessing Entra authenticated services if they do not meet the above requirements.</p>
 <h2 id="compliance-policies" class="headerLink">
-    <a href="#compliance-policies" class="header-mark"></a>2 Compliance Policies</h2><p>So you might be thinking, <em>&ldquo;Well I&rsquo;m using Windows Firewall, and Defender Antivirus, I&rsquo;ll just use the native compliance checks and I&rsquo;ll be on my way&rdquo;</em>, well bully for you, not everyone has jumped to Microsoft for everything. As we&rsquo;ve seen with <a href="/posts/custom-compliance-third-party-av" rel="noopener" target="_blank">custom compliance</a> for antivirus previously, there is merit to getting additional information out of installed security products on Windows devices.</p>
+    <a href="#compliance-policies" class="header-mark"></a>2 Compliance Policies</h2><p>So you might be thinking, <em>&ldquo;Well I&rsquo;m using Windows Firewall, and Defender Antivirus, I&rsquo;ll just use the native compliance checks and I&rsquo;ll be on my way&rdquo;</em>, well bully for you, not everyone has jumped to Microsoft for everything. As we&rsquo;ve seen with <a href="/posts/custom-compliance-third-party-av/" rel="noopener" target="_blank">custom compliance</a> for antivirus previously, there is merit to getting additional information out of installed security products on Windows devices.</p>
 <p>This in conjunction with the other Cyber Essentials requirements which don&rsquo;t have a nice interface to configure a Compliance Policy, means we have to lean into <a href="https://learn.microsoft.com/en-us/mem/intune/protect/compliance-use-custom-settings" target="_blank" rel="noopener noreferrer">Custom Compliance</a> to retrieve the information we care about, and check it against our known good policy check.</p>
 <p>It&rsquo;s worthwhile casting your eyes of the <a href="https://learn.microsoft.com/en-us/mem/intune/protect/compliance-use-custom-settings#prerequisites" target="_blank" rel="noopener noreferrer">pre-requisites</a> for Custom Compliance, as they&rsquo;re not a one-size fits all setup, due to the need for an Entra Joined device, which is why we&rsquo;re only focussing on corporate owned devices as part of this post.</p>
 <p>Pre-requisites aside, let&rsquo;s build ourselves a custom policy.</p>
@@ -786,7 +786,7 @@
 </div>
 <p>I should probably speak with whoever manages my Windows device at this point 👀.</p>
 <h3 id="antivirus-discovery" class="headerLink">
-    <a href="#antivirus-discovery" class="header-mark"></a>3.3 Antivirus Discovery</h3><p>We&rsquo;re no stranger to dealing with <a href="/posts/custom-compliance-third-party-av" rel="noopener" target="_blank">third-party</a> antivirus compliance, so I&rsquo;ve stolen from my own scripts, which makes a change, and updated it a little to just look at the realtime protection status, and the definition update status.</p>
+    <a href="#antivirus-discovery" class="header-mark"></a>3.3 Antivirus Discovery</h3><p>We&rsquo;re no stranger to dealing with <a href="/posts/custom-compliance-third-party-av/" rel="noopener" target="_blank">third-party</a> antivirus compliance, so I&rsquo;ve stolen from my own scripts, which makes a change, and updated it a little to just look at the realtime protection status, and the definition update status.</p>
 <p>If you are using a third-party antivirus solution, you need to update the <code>$avClient</code> variable with the name of the client, which can be captured by running the below on a target machine:</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
@@ -2516,7 +2516,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Using Microsoft Intune custom device compliance on managed Windows devices to detect Cyber Essentials Plus security settings to ensure device security." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -2530,7 +2530,7 @@
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Using Microsoft Intune custom device compliance on managed Windows devices to detect Cyber Essentials Plus security settings to ensure device security." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     <div class="related-item-container">

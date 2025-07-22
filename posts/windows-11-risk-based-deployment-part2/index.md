@@ -1,4 +1,4 @@
-# Risk Based Windows 11 Feature Update Deployment - Device Attributes
+# Risk Based Windows 11 Deployment - Device Attributes
 
 
 I'd strongly suggest, if you haven't already, skimming over the first part of this series as this will give you a good understanding of where we started, and hopefully where we're trying to get to with putting the [Feature Update Readiness Reports](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-compatibility-reports#use-the-windows-feature-update-device-readiness-report) in Microsoft Intune to good use allowing for a risk based deployment approach of Windows 11 23H2.
@@ -9,7 +9,7 @@ With our precious data in hand, we can move onto how we group devices based on t
 
 ## Device Attributes
 
-Those with a keen pair of eyes, may have spotted a {{< reftab  href="/posts/device-attributes-cap" title="previous post" >}} allowing the tagging of a device using [device attributes](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters) for exceptions to Conditional Access Policies, and I may have hinted at the time that these attributes may have other uses. Well guess what, they do.
+Those with a keen pair of eyes, may have spotted a {{< reftab  href="/posts/device-attributes-cap/" title="previous post" >}} allowing the tagging of a device using [device attributes](https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-condition-filters-for-devices#supported-operators-and-device-properties-for-filters) for exceptions to Conditional Access Policies, and I may have hinted at the time that these attributes may have other uses. Well guess what, they do.
 
 We can take the data from the Readiness Report, that we formatted and updated with both a string representation of the risk state, and the Entra ID computer ObjectId of the device, and use this information to tag devices with their risk state for the Windows 11 Feature Update they were assessed against. Clever eh?
 
@@ -17,7 +17,7 @@ We can take the data from the Readiness Report, that we formatted and updated wi
 
 We've already got a function to update device attributes on device objects, and I say update, as the call to Graph is using `PATCH` which means that it will overwrite the existing value for the attribute we want to update.
 
-This is both good, as it means we don't need to worry about changes to the devices Feature Update risk state, and bad, because we should probably check that our chosen attribute is not already used for something else, like for {{< reftab href="/posts/device-attributes-cap" title="Conditional Access Policies exclusions" >}}.
+This is both good, as it means we don't need to worry about changes to the devices Feature Update risk state, and bad, because we should probably check that our chosen attribute is not already used for something else, like for {{< reftab href="/posts/device-attributes-cap/" title="Conditional Access Policies exclusions" >}}.
 
 So can we find a way to pull back all devices where our device attribute of choice, this time `extensionAttribute15`, is not empty? Sure why not.
 
@@ -106,7 +106,7 @@ Function Add-DeviceAttribute() {
 }
 ```
 
-Using the above and the data we have {{< reftab href="/posts/windows-11-risk-based-deployment-part1/#processing-feature-update-report-data" title="previously captured" >}} in part one in the `$reportArray` variable:
+Using the above and the data we have {{< reftab href="/posts/windows-11-risk-based-deployment-part1/#processing-feature-update-report-data/" title="previously captured" >}} in part one in the `$reportArray` variable:
 
 ![Feature Update Readiness Report Array Updates](img/w11risk-report-arrayup.webp "Updated Readiness report data array.")
 
@@ -187,7 +187,7 @@ We should do something sensible with these tags on the devices now.
 
 ## Dynamic Security Groups
 
-Ah my love affair between {{< reftab href="/posts/endpoint-manager-device-filters" title="Dynamic Security Groups and Device Filters" >}} rears it's head again, and despite the recommendations to stop using [certain](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-more-efficient) operators, there are still times when Dynamic Groups are going to win out over Device Filters.
+Ah my love affair between {{< reftab href="/posts/endpoint-manager-device-filters/" title="Dynamic Security Groups and Device Filters" >}} rears it's head again, and despite the recommendations to stop using [certain](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-more-efficient) operators, there are still times when Dynamic Groups are going to win out over Device Filters.
 
 With Feature Update deployments in Microsoft Intune not supporting the use of Device Filters, and as we've tagged the Entra ID object of the device, and not the Microsoft Intune object, we don't have any say in the matter, so we have to use groups this time.
 

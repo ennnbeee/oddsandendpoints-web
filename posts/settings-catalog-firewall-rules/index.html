@@ -1562,7 +1562,7 @@
 </div>
 <p>We now have the information from the existing rules to create new ones. Now to the fun part of JSON formatting.</p>
 <h2 id="creating-settings-catalog-policies" class="headerLink">
-    <a href="#creating-settings-catalog-policies" class="header-mark"></a>3 Creating Settings Catalog Policies</h2><p>Luckily we have <a href="/posts/automate-endpoint-privilege-management" rel="noopener" target="_blank">experience</a> creating Settings Catalog policies, and have a good grasp of the JSON formatting required not just for the policy itself, but also for the settings contained within, with the first setting having differing JSON formatting structure and data compared with all subsequent settings. So I had at least an idea on how to build the JSON data to throw it at Microsoft Intune.</p>
+    <a href="#creating-settings-catalog-policies" class="header-mark"></a>3 Creating Settings Catalog Policies</h2><p>Luckily we have <a href="/posts/automate-endpoint-privilege-management/" rel="noopener" target="_blank">experience</a> creating Settings Catalog policies, and have a good grasp of the JSON formatting required not just for the policy itself, but also for the settings contained within, with the first setting having differing JSON formatting structure and data compared with all subsequent settings. So I had at least an idea on how to build the JSON data to throw it at Microsoft Intune.</p>
 <h3 id="building-the-policy" class="headerLink">
     <a href="#building-the-policy" class="header-mark"></a>3.1 Building the Policy</h3><p>With the rules in neat little groups, and with all the  variables in place, we can loop through each of them to create individual Settings Catalog policies, we need to make sure that each policy has a unique name, so we can just take an existing <code>$PolicyName</code> variable and append the group name to it, as these are sequential numbers, giving us something like <code>COPE_FW_RulesMigrated-0, COPE_FW_RulesMigrated-1, COPE_FW_RulesMigrated-2, COPE_FW_RulesMigrated-3, COPE_FW_RulesMigrated-4</code> for the five groups we have in our example.</p>
 <p>Each Settings Catalog Policy starts and ends with the same JSON data structure, so we can top and tail each policy with these new variables <code>$JSONPolicyStart</code> and <code>$JSONPolicyEnd</code>, passing in the <code>$NewPolicyName</code> and <code>$PolicyDescription</code>.</p>
@@ -3074,7 +3074,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Migrating existing Microsoft Intune Windows firewall rules to settings catalog profiles using PowerShell and Graph API." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -3088,7 +3088,7 @@
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Migrating existing Microsoft Intune Windows firewall rules to settings catalog profiles using PowerShell and Graph API." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     
@@ -3124,7 +3124,7 @@
 
     <div class="post-nav print:tw-hidden"><a href="/posts/windows-update-phased-deployment/" class="prev" rel="prev" title="Intelligent Phased Windows Update for Business Deployments"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Intelligent Phased Windows Update for Business Deployments</a>
-            <a href="/posts/device-attributes-cap/" class="next" rel="next" title="Using Entra ID Device Attributes for Conditional Access Exceptions">Using Entra ID Device Attributes for Conditional Access Exceptions<svg class="icon"
+            <a href="/posts/device-attributes-cap/" class="next" rel="next" title="Device Attributes for Conditional Access Exceptions">Device Attributes for Conditional Access Exceptions<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

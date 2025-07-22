@@ -57,7 +57,7 @@ However, a lot of crucial areas do, including Compliance, Configuration and Wind
 
 ### Fewer Properties
 
-Device Filters have fewer [attribute properties](https://docs.microsoft.com/en-us/mem/intune/fundamentals/filters-device-properties#device-properties) to work with compared with Dynamic Groups, so any advanced filtering like with {{< reftab href="/posts/autopilot-power-of-group-tags" title="Autopilot Group Tags" >}} will still need to be done using Dynamic Groups.
+Device Filters have fewer [attribute properties](https://docs.microsoft.com/en-us/mem/intune/fundamentals/filters-device-properties#device-properties) to work with compared with Dynamic Groups, so any advanced filtering like with {{< reftab href="/posts/autopilot-power-of-group-tags/" title="Autopilot Group Tags" >}} will still need to be done using Dynamic Groups.
 
 **Device Filters**
 ![Device Filters](img/filtervgroup-filter-properties.webp "Device Filter properties in Microsoft Intune.")
@@ -69,7 +69,7 @@ Device Filters have fewer [attribute properties](https://docs.microsoft.com/en-u
 
 ### Fewer Operators
 
-Device Filters do not support advanced logic with the operators such as 'Match', so turbo advanced filtering such as in {{< reftab href="/posts/windows-update-phased-deployment" title="Intelligent Phased Windows Update for Business Deployments" >}} need to be handled with groups still.
+Device Filters do not support advanced logic with the operators such as 'Match', so turbo advanced filtering such as in {{< reftab href="/posts/windows-update-phased-deployment/" title="Intelligent Phased Windows Update for Business Deployments" >}} need to be handled with groups still.
 
 **Device Filters**
 ![Device Filters](img/filtervgroup-filter-operators.webp "Device Filter operators in Microsoft Intune.")

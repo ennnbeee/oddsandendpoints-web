@@ -1,7 +1,7 @@
 # Self-Service Software Update Deployments
 
 
-We've looked at {{< reftab href="/posts/windows-update-phased-deployment" title="phasing" >}} the deployment of Windows Updates in a smart way with Dynamic Security Groups, we've looked at allowing VIP users to {{< reftab href="/posts/flexible-update-deployments" title="opt out" >}} of phased Windows update installation, we've even looked at how we deliver {{< reftab href="/posts/macos-updates-phased-deployment" title="macOS" >}} operating system and software updates just like we do with Windows, what else is there to do now?
+We've looked at {{< reftab href="/posts/windows-update-phased-deployment/" title="phasing" >}} the deployment of Windows Updates in a smart way with Dynamic Security Groups, we've looked at allowing VIP users to {{< reftab href="/posts/flexible-update-deployments/" title="opt out" >}} of phased Windows update installation, we've even looked at how we deliver {{< reftab href="/posts/macos-updates-phased-deployment/" title="macOS" >}} operating system and software updates just like we do with Windows, what else is there to do now?
 
 Allowing an end user to choose what day they get their updates? Am I OK? Probably not, but if you're wanting to empower your users to select when they get their updates, this might be an interesting read, especially when I explain how we're going to achieve this.
 
@@ -98,13 +98,13 @@ Well with a couple of additional Dynamic Security Groups, we can have two update
 | Initial Production | SG_MDM_Devices_Updates_A | `(device.deviceManagementAppId -ne null) and ((device.deviceId -startsWith "1") or (device.deviceId -startsWith "3") or (device.deviceId -startsWith "5") or (device.deviceId -startsWith "7") or (device.deviceId -startsWith "9") or (device.deviceId -startsWith "a") or (device.deviceId -startsWith "c") or (device.deviceId -startsWith "e"))` |
 | Final Production | SG_MDM_Devices_Updates_B | `(device.deviceManagementAppId -ne null) and ((device.deviceId -startsWith "0") or (device.deviceId -startsWith "2") or (device.deviceId -startsWith "4") or (device.deviceId -startsWith "6") or (device.deviceId -startsWith "8") or (device.deviceId -startsWith "b") or (device.deviceId -startsWith "d") or (device.deviceId -startsWith "f"))` |
 
-We've seen these types of groups {{< reftab href="/posts/flexible-update-deployments/#efficient-dynamic-groups" title="before" >}} so they shouldn't be too much of a surprise to you, but in short, we're splitting all the devices into ~50% groups using the UUID associated with each deviceId object in Entra.
+We've seen these types of groups {{< reftab href="/posts/flexible-update-deployments/#efficient-dynamic-groups/" title="before" >}} so they shouldn't be too much of a surprise to you, but in short, we're splitting all the devices into ~50% groups using the UUID associated with each deviceId object in Entra.
 
 We can then use these groups when creating our [Windows Update rings](https://learn.microsoft.com/en-us/mem/intune/protect/windows-10-update-rings) for our weekday specific updates.
 
 ## Software Update Profiles
 
-In the case where we get users who do not select a Device Category for whatever reason, we can build out update profiles in our usual way, whether this be a {{< reftab href="/posts/windows-update-phased-deployment" title="phased" >}} approach or otherwise, but we need to ensure that these policies only apply to devices without a selected update day.
+In the case where we get users who do not select a Device Category for whatever reason, we can build out update profiles in our usual way, whether this be a {{< reftab href="/posts/windows-update-phased-deployment/" title="phased" >}} approach or otherwise, but we need to ensure that these policies only apply to devices without a selected update day.
 
 To achieve this, we can just [exclude](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-policy-assignment) our created Device Category dynamic security groups from our existing update policies.
 
@@ -118,7 +118,7 @@ Now on to the weekday specific policies.
 
 This one requires a little more brain power than the other update policies, all to cope with the idea that you want to split devices across differing weeks, but on the same days.
 
-As maths isn't my strong point, we're going to leverage the option to [install updates at a scheduled time](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-settings#:~:text=Auto%20install%20and%20restart%20at%20scheduled%20time%20%2D); this has it's downsides relating to whether a device is actually active during that time of day, but is easier to work out than using {{< reftab href="/posts/flexible-update-deployments/#windows-update-rings" title="deferral and deadline settings" >}} that I've covered previously.
+As maths isn't my strong point, we're going to leverage the option to [install updates at a scheduled time](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-settings#:~:text=Auto%20install%20and%20restart%20at%20scheduled%20time%20%2D); this has it's downsides relating to whether a device is actually active during that time of day, but is easier to work out than using {{< reftab href="/posts/flexible-update-deployments/#windows-update-rings/" title="deferral and deadline settings" >}} that I've covered previously.
 
 With the idea we need to create two update rings for each day to help spread the load, we can create one for Thursday on the first week of the month:
 

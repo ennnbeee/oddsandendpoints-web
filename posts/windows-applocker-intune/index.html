@@ -242,7 +242,14 @@
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>There are <a href="https://www.google.com/search?q=applocker&#43;in&#43;intune" target="_blank" rel="noopener noreferrer">many posts</a> about how to configure <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview" target="_blank" rel="noopener noreferrer">AppLocker</a> in Intune, most of which I&rsquo;ve used and looked at some point in my time, so why are we here (writing a post about it I mean, not an existential crisis thing) looking at it?</p>
+            </div><div class="content" id="content" data-pagefind-body><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2024-10-22T11:13:46" title="October 22, 2024">22 October 2024</span>, the content may be out of date.</div></div></div><p>There are <a href="https://www.google.com/search?q=applocker&#43;in&#43;intune" target="_blank" rel="noopener noreferrer">many posts</a> about how to configure <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview" target="_blank" rel="noopener noreferrer">AppLocker</a> in Intune, most of which I&rsquo;ve used and looked at some point in my time, so why are we here (writing a post about it I mean, not an existential crisis thing) looking at it?</p>
 <p>Well I had the pleasure of using <a href="https://github.com/microsoft/AaronLocker" target="_blank" rel="noopener noreferrer">AaronLocker</a> in anger, with a customer who had five distinct device use cases, and consequently five distinct AppLocker policy groupings, and I honestly cba manually creating the policies in Intune.</p>
 <p>So I didn&rsquo;t.</p>
 <h2 id="applocker-policies" class="headerLink">
@@ -1671,7 +1678,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Using exported AppLocker XML policies to create our AppLocker deployment in Microsoft Intune using PowerShell and Graph API" height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">

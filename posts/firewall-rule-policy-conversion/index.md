@@ -1,4 +1,4 @@
-# Microsoft Intune and the Curious Case of the Converting Firewall Rule Policy
+# Intune and the Curious Case of the Converting Firewall Rules
 
 
 {{< admonition type=info >}}

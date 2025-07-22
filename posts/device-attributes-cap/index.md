@@ -1,4 +1,4 @@
-# Using Entra ID Device Attributes for Conditional Access Exceptions
+# Device Attributes for Conditional Access Exceptions
 
 
 Imagine you've spent time getting your Windows devices enrolled into Intune, they're all getting [Device Compliance](https://learn.microsoft.com/en-us/mem/intune/protect/device-compliance-get-started) policies, and you've finally pulled the trigger on your shiny new [Conditional Access Policy](https://learn.microsoft.com/en-us/mem/intune/protect/conditional-access) that require device compliance for all your users across Windows devices, and low and behold, you've broken access to Microsoft 365 authenticated services from your Remote Desktop service environment, or even VDI environments.
@@ -81,7 +81,7 @@ Or if we want to be clever and capture devices where where `extensionAttribute1`
 
 ![Conditional Access Filter Ends](img/dacap-capfil02.webp "Conditional Access Policy filter using the ends with operator.")
 
-So there is value in coming up with {{< reftab href="/posts/autopilot-power-of-group-tags" title="good naming conventions" >}} across all areas of Entra ID and Microsoft Intune, who knew?
+So there is value in coming up with {{< reftab href="/posts/autopilot-power-of-group-tags/" title="good naming conventions" >}} across all areas of Entra ID and Microsoft Intune, who knew?
 
 ### Filtering in Action
 

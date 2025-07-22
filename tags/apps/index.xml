@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/apps/</link>
         <description>Apps - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/apps/" rel="self" type="application/rss+xml" /><item>
-    <title>Installing the Configuration Manager Client on Orphaned Internet Devices</title>
+    <title>ConfigMgr Client Installation on Orphaned Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</link>
     <pubDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/configmgr-client-install-cmg/featured.png" referrerpolicy="no-referrer">
             </div>You&rsquo;ve just implemented a Cloud Management Gateway to help your hybrid joined Windows devices communicate to Configuration Manager over the internet, but what if they&rsquo;re orphaned and unable to communicate to Configuration Manager to get the new Client Settings?]]></description>
 </item><item>
-    <title>Custom Backgrounds for macOS New and Classic Microsoft Teams Apps</title>
+    <title>Custom Backgrounds New Teams on macOS</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-teams-new-backgrounds/</link>
     <pubDate>Wed, 14 Feb 2024 21:39:58 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-teams-new-backgrounds/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/assigning-intune-applications/featured.png" referrerpolicy="no-referrer">
             </div>No one, and I mean no one, really wants to manually and individually assign Mobile Apps to Users or Devices in Intune in their 100&rsquo;s, so we should find a solution for this bulk assignment approach.]]></description>
 </item><item>
-    <title>Reinstalling the Configuration Manager Client on Migrated Devices</title>
+    <title>Reinstalling ConfigMgr Clients on Migrated Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</link>
     <pubDate>Thu, 15 Dec 2022 22:16:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</guid>

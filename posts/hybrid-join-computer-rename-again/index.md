@@ -3,7 +3,7 @@
 
 Nothing has really changed in the Hybrid Join Autopilot space when it comes to device names, and we're still stuck with useless naming conventions for these devices; sometimes a prefix and random characters just isn't a good enough identification method for Windows devices.
 
-So now that it's 2023 it was time to look at this problem once again, mainly because my {{< reftab href="/posts/hybrid-join-computer-rename" title="old solution" >}}
+So now that it's 2023 it was time to look at this problem once again, mainly because my {{< reftab href="/posts/hybrid-join-computer-rename/" title="old solution" >}}
  broke device certificates and an Always On VPN connection that relied on them as part of the Autopilot process.
 
 ## Name Problems
@@ -96,13 +96,13 @@ All components now in place, we have the full script wrapped in the needed Try/C
 
 ### Deployment in Intune
 
-Throwing ourselves into the safe space that is Intune, go and find the [Proactive Remediation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Enrollment/UXAnalyticsMenu/~/proactiveRemediations) section, I'll give you a hint, it's under Reports > Endpoint Analytics.
+Throwing ourselves into the safe space that is Intune, go and find the [Proactive Remediation](https://intune.microsoft.com/#view/Microsoft_Intune_Enrollment/UXAnalyticsMenu/~/proactiveRemediations) section, I'll give you a hint, it's under Reports > Endpoint Analytics.
 
 Create a new Script Package, selecting and uploading both the detection and remediation scripts as you go, you can get these from [GitHub](https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/Remediation/HDJDeviceRename). Make sure you select 'Run script in 64-bit PowerShell' as I couldn't be bothered scripting a check if PowerShell was running in the 64-bit context.
 
 ![Proactive Remediation](img/computer-rename-pa.webp "Remediation script in Microsoft Intune.")
 
-Go ahead and assign this to a test group of devices, or if you're brave or don't care about testing, all devices with a {{< reftab href="/posts/endpoint-manager-device-filters" title="Device Filter" >}}, giving the assignment a schedule; I've gone with daily repeating every day, but amend this to your environment requirements:
+Go ahead and assign this to a test group of devices, or if you're brave or don't care about testing, all devices with a {{< reftab href="/posts/endpoint-manager-device-filters/" title="Device Filter" >}}, giving the assignment a schedule; I've gone with daily repeating every day, but amend this to your environment requirements:
 
 ![Proactive Remediation Schedule](img/computer-rename-paschedule.webp "Remediation schedule in Microsoft Intune.")
 

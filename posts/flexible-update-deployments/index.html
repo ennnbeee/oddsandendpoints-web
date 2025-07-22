@@ -271,10 +271,10 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2024-02-19T20:07:23" title="February 19, 2024">19 February 2024</span>, the content may be out of date.</div></div></div><p>So this isn&rsquo;t the <a href="/posts/windows-update-phased-deployment" rel="noopener" target="_blank">first time</a> we&rsquo;ve looked at improving the management of updates using Microsoft Intune, and probably won&rsquo;t be the last time either, especially with <a href="https://learn.microsoft.com/en-us/mem/intune/protect/managed-software-updates-ios-macos" target="_blank" rel="noopener noreferrer">declarative device management</a> looming, for Apple and hopefully Windows devices, covering configuration of software updates.</p>
+        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2024-02-19T20:07:23" title="February 19, 2024">19 February 2024</span>, the content may be out of date.</div></div></div><p>So this isn&rsquo;t the <a href="/posts/windows-update-phased-deployment/" rel="noopener" target="_blank">first time</a> we&rsquo;ve looked at improving the management of updates using Microsoft Intune, and probably won&rsquo;t be the last time either, especially with <a href="https://learn.microsoft.com/en-us/mem/intune/protect/managed-software-updates-ios-macos" target="_blank" rel="noopener noreferrer">declarative device management</a> looming, for Apple and hopefully Windows devices, covering configuration of software updates.</p>
 <p>But with the introduction of the <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview" target="_blank" rel="noopener noreferrer">Windows Autopatch</a> service, and getting hands on with it recently, it prompted me to revisit my previous approach to phased update delivery, so I thought I&rsquo;d share my findings, this time across not just Windows Updates.</p>
 <h2 id="deployment-approach" class="headerLink">
-    <a href="#deployment-approach" class="header-mark"></a>1 Deployment Approach</h2><p>Previously, we configured a set of <a href="/posts/windows-update-phased-deployment/#windows-update-for-business-rings" rel="noopener" target="_blank">four Update Rings</a>, but now we&rsquo;ll include an early adopters ring as a pre-production release, kind of a fail safe prior to your production deployment of updates; that final catch before you target the entire device estate:</p>
+    <a href="#deployment-approach" class="header-mark"></a>1 Deployment Approach</h2><p>Previously, we configured a set of <a href="/posts/windows-update-phased-deployment/#windows-update-for-business-rings/" rel="noopener" target="_blank">four Update Rings</a>, but now we&rsquo;ll include an early adopters ring as a pre-production release, kind of a fail safe prior to your production deployment of updates; that final catch before you target the entire device estate:</p>
 <ul>
 <li><strong>Test</strong> - This should be devices that are dedicated for testing, ~1% of your device estate.</li>
 <li><strong>Pilot</strong> - This should be a stratified sample of either users or devices, ~5% of your device estate.</li>
@@ -284,7 +284,7 @@
 </ul>
 <p>The aim is tht the above groupings are reusable and can be used across not just Windows Updates, but Office Updates, and Driver updates too. Let&rsquo;s look at the membership of these groups.</p>
 <h2 id="deployment-groups" class="headerLink">
-    <a href="#deployment-groups" class="header-mark"></a>2 Deployment Groups</h2><p>Despite <a href="https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-improving-the-efficiency-of-dynamic-group-processing/ba-p/4049394" target="_blank" rel="noopener noreferrer">Microsoft</a> recommending to stop using the <code>match</code> operators in favour of <code>startsWith</code> there are times when you might have to ignore them, this could be one of those times when we look at how we split a device estate into the phased breakdowns we&rsquo;re looking to achieve.</p>
+    <a href="#deployment-groups" class="header-mark"></a>2 Deployment Groups</h2><p>Despite <a href="https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-improving-the-efficiency-of-dynamic-group-processing-with-microsoft-/4049394" target="_blank" rel="noopener noreferrer">Microsoft</a> recommending to stop using the <code>match</code> operators in favour of <code>startsWith</code> there are times when you might have to ignore them, this could be one of those times when we look at how we split a device estate into the phased breakdowns we&rsquo;re looking to achieve.</p>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -740,7 +740,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Deploying Windows Updates using dynamic security groups in a phased and controlled approach using Microsoft Intune and Entra ID." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -754,7 +754,7 @@
             <div class="related-image">
                 <a href="/posts/windows-11-risk-based-deployment-part5/"><img   src='/posts/windows-11-risk-based-deployment-part5/featured.jpg'   alt="Deploying Windows Updates using dynamic security groups in a phased and controlled approach using Microsoft Intune and Entra ID." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Feature Update Deployment - Improvements</a>
+                <a href="/posts/windows-11-risk-based-deployment-part5/">Risk Based Windows 11 Deployment - Improvements</a>
             </h2>
         </div>
     
@@ -788,9 +788,9 @@
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/macos-teams-new-backgrounds/" class="prev" rel="prev" title="Custom Backgrounds for macOS New and Classic Microsoft Teams Apps"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Custom Backgrounds for macOS New and Classic Microsoft Teams Apps</a>
-            <a href="/posts/resusable-firewall-settings-microsoft-online/" class="next" rel="next" title="Creating Reusable Groups of Firewall Settings for Microsoft Online Services">Creating Reusable Groups of Firewall Settings for Microsoft Online Services<svg class="icon"
+    <div class="post-nav print:tw-hidden"><a href="/posts/macos-teams-new-backgrounds/" class="prev" rel="prev" title="Custom Backgrounds New Teams on macOS"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Custom Backgrounds New Teams on macOS</a>
+            <a href="/posts/resusable-firewall-settings-microsoft-online/" class="next" rel="next" title="Reusable Firewall Settings for Microsoft Online Services">Reusable Firewall Settings for Microsoft Online Services<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

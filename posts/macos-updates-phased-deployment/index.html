@@ -285,7 +285,7 @@
 </ol>
 <p>I&rsquo;m going to avoid numbers 1 and 2, and although this goes against my love of all things latest and greatest, and leans on the user to install updates, it does give us the functionality of phased updates we require, and without reliance on specific versions of the operating system.</p>
 <h2 id="deployment-approach" class="headerLink">
-    <a href="#deployment-approach" class="header-mark"></a>2 Deployment Approach</h2><p>As with our previous look at update deployment across <a href="/posts/flexible-update-deployments" rel="noopener" target="_blank">Windows devices</a>, we&rsquo;re going to split our macOS device estate into key deployment groups, this time we&rsquo;re back with four, I&rsquo;ll explain why later.</p>
+    <a href="#deployment-approach" class="header-mark"></a>2 Deployment Approach</h2><p>As with our previous look at update deployment across <a href="/posts/flexible-update-deployments/" rel="noopener" target="_blank">Windows devices</a>, we&rsquo;re going to split our macOS device estate into key deployment groups, this time we&rsquo;re back with four, I&rsquo;ll explain why later.</p>
 <p>Sticking with the Pilot, Pre-production, and production deployment approach, we end up with something like the below:</p>
 <ul>
 <li><strong>Pilot</strong> - This should be a stratified sample of either users or devices, ~5% of your device estate.</li>
@@ -295,7 +295,7 @@
 </ul>
 <p>These groups can be used not just for macOS software updates, but also with some additional configuration, Microsoft Updates as well. What a world we live in.</p>
 <h3 id="deployment-groups" class="headerLink">
-    <a href="#deployment-groups" class="header-mark"></a>2.1 Deployment Groups</h3><p>As we like to please Microsoft, we&rsquo;re going to use what are referred to as <a href="https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-improving-the-efficiency-of-dynamic-group-processing/ba-p/4049394" target="_blank" rel="noopener noreferrer">efficient groups</a>, stopping the use operators like <code>match</code>, in the hope that they reinstate Microsoft Developer Intune subscriptions for free.</p>
+    <a href="#deployment-groups" class="header-mark"></a>2.1 Deployment Groups</h3><p>As we like to please Microsoft, we&rsquo;re going to use what are referred to as <a href="https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-improving-the-efficiency-of-dynamic-group-processing-with-microsoft-/4049394" target="_blank" rel="noopener noreferrer">efficient groups</a>, stopping the use operators like <code>match</code>, in the hope that they reinstate Microsoft Developer Intune subscriptions for free.</p>
 
 <div class="table-wrapper">
   <table>
@@ -662,7 +662,7 @@
             <div class="related-image">
                 <a href="/posts/android-enterprise-defender-onboarding/"><img   src='/posts/android-enterprise-defender-onboarding/featured.png'   alt="Using Microsoft Intune and Dynamic Security Groups in Entra ID to manage the deployment of security software updates to enrolled macOS Apple devices." height="200" width="400"></a>
             </div><h2 class="related-title">
-                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender for Endpoint Onboarding for Android Devices</a>
+                <a href="/posts/android-enterprise-defender-onboarding/">Lower-Touch Defender Onboarding for Android Devices</a>
             </h2>
         </div>
     <div class="related-item-container">
@@ -710,9 +710,9 @@
         </section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/windows-11-risk-based-deployment-part1/" class="prev" rel="prev" title="Risk Based Windows 11 Feature Update Deployment - Reporting"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Risk Based Windows 11 Feature Update Deployment - Reporting</a>
-            <a href="/posts/windows-11-risk-based-deployment-part2/" class="next" rel="next" title="Risk Based Windows 11 Feature Update Deployment - Device Attributes">Risk Based Windows 11 Feature Update Deployment - Device Attributes<svg class="icon"
+    <div class="post-nav print:tw-hidden"><a href="/posts/windows-11-risk-based-deployment-part1/" class="prev" rel="prev" title="Risk Based Windows 11 Deployment - Reporting"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Risk Based Windows 11 Deployment - Reporting</a>
+            <a href="/posts/windows-11-risk-based-deployment-part2/" class="next" rel="next" title="Risk Based Windows 11 Deployment - Device Attributes">Risk Based Windows 11 Deployment - Device Attributes<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

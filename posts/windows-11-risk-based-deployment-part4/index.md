@@ -1,4 +1,4 @@
-# Risk Based Windows 11 Feature Update Deployment - Automation
+# Risk Based Windows 11 Deployment - Automation
 
 
 Finally we're at the end of the series, where be bring all the components together from the previous three posts into one ~~sub par~~ suitable looking PowerShell script, allowing us to not only kick off the [Feature Update Readiness](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-compatibility-reports) report, but capture the risk state for each device, tag each device using [Extension Attributes](https://learn.microsoft.com/en-us/graph/extensibility-overview?tabs=http), and then automatically group these devices with [Dynamic Security Groups](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership) in order to deploy our Windows 11 23H2 Feature Update to low risk devices whilst we give our selves breathing space to fix the others.
@@ -90,7 +90,7 @@ I thought I'd colour code the output of this section, though it serves no purpos
 
 What it does show though, are devices being assigned to their respective risk rating where appropriate, and when a device has been updated to Windows 11 23H2, it will clear the `extensionAttribute`. If you've created the Dynamic Security Groups based on the rules provided by the script, they should now start slowly populating with devices.
 
-Leaping back to {{< reftab href="/posts/windows-11-risk-based-deployment-part3" title="part three" >}} in the series, you're now in a position to create your Feature Update profiles, allowing you to safely deploy the Windows 11 23H2 Feature Update to your devices categorised as low risk, whilst you assign someone else in your team to investigate the issues with the medium and high risk devices 😂.
+Leaping back to {{< reftab href="/posts/windows-11-risk-based-deployment-part3/" title="part three" >}} in the series, you're now in a position to create your Feature Update profiles, allowing you to safely deploy the Windows 11 23H2 Feature Update to your devices categorised as low risk, whilst you assign someone else in your team to investigate the issues with the medium and high risk devices 😂.
 
 {{< admonition type=info >}}
 Remember, this script is designed to run multiple times, so after your first run, you should probably set a reminder to run it again and again until either your number of 'unknown' devices is zero, or close enough that you're comfortable to move forward with the deployment of the Feature Update.

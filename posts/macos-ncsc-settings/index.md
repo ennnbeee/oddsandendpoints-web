@@ -1,4 +1,4 @@
-# macOS National Cyber Security Centre Security Settings in Intune
+# macOS NCSC Security Settings in Intune
 
 
 If you've ever had to implement baseline security settings, whether this be Centre for Internet Security (CIS), Cyber Security Essentials (CSE), or National Cyber Security Centre (NCSC), you'll probably have encountered some level of pain when it comes to non-Microsoft devices, as the guidance, is, well, *complicated*.
@@ -80,7 +80,7 @@ Anyway, here's the mobileconfig file setting the time servers to be `time.euro.a
 
 Now that we have the required mobileconfig files, and that you've saved them with that file extension (it's basically glorified XML to be honest), we can look at creating these Custom Configuration Profiles:
 
-Browse to the [macOS Configuration page](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMacOsMenu/configProfiles) and select **Create profile**:
+Browse to the [macOS Configuration page](https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMacOsMenu/configProfiles) and select **Create profile**:
 ![macOS Config Profile](img/ncsc-macos-config.webp "macOS Configuration profiles in Microsoft Intune.")
 
 Under **Profile type** select **Templates**, then select **Custom** and then select **Create**:

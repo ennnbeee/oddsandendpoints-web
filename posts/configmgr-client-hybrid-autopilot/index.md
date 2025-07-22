@@ -72,7 +72,7 @@ Allowing for a quick and easy detection of the required setup files on the devic
 
 ## Intune Only Mode
 
-If you're wanting Intune to manage all the workloads on the device, and not rely on Co-Managed Workloads at all, there is a solution for this, and one taken straight from Microsoft and their implementation of the [Co-Management Authority](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/co-management-settings-windows-autopilot-with-co-management/ba-p/3638500) in Intune.
+If you're wanting Intune to manage all the workloads on the device, and not rely on Co-Managed Workloads at all, there is a solution for this, and one taken straight from Microsoft and their implementation of the [Co-Management Authority](https://techcommunity.microsoft.com/blog/microsoftintuneblog/co-management-settings-windows-autopilot-with-co-management/3638500) in Intune.
 
 {{< admonition type=info >}}
 Your endpoints enrolled in Intune today have a concept of management authority. That authority tells the device what service owns the management of the workloads on that device. The authority owner can be tracked by a simple registry key and value.
@@ -97,7 +97,7 @@ Right, so if we really wanted to stick with Intune as the management authority h
 
 ### Proactive Remediation
 
-As I've mentioned {{< reftab href="/posts/hybrid-join-computer-rename-again/#proactive-remediation" title="previously" >}} if you're licensed to use Proactive Remediation Scripts, you should be using them, and in anger. We can throw together a script that looks for the registry key **HKLM:\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server\ConfigInfo**, create it if it doesn't exist, and set it to **1** telling the device to only deal with Intune.
+As I've mentioned {{< reftab href="/posts/hybrid-join-computer-rename-again/#proactive-remediation/" title="previously" >}} if you're licensed to use Proactive Remediation Scripts, you should be using them, and in anger. We can throw together a script that looks for the registry key **HKLM:\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server\ConfigInfo**, create it if it doesn't exist, and set it to **1** telling the device to only deal with Intune.
 
 #### Detection Script
 
@@ -113,7 +113,7 @@ If either the Key or the Data are not detected, we have a Remediation script tha
 
 ### Creating a Custom Script
 
-With the above [PowerShell scripts](https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/Remediation/Co-ManagementAuthority) saved, we can now create our own [Proactive Remediation Script](https://endpoint.microsoft.com/#view/Microsoft_Intune_Enrollment/UXAnalyticsMenu/~/proactiveRemediations) and deploy this to the devices we only want to be managed by Intune, in this case, the Hybrid Joined Autopilot devices:
+With the above [PowerShell scripts](https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/Remediation/Co-ManagementAuthority) saved, we can now create our own [Proactive Remediation Script](https://intune.microsoft.com/#view/Microsoft_Intune_Enrollment/UXAnalyticsMenu/~/proactiveRemediations) and deploy this to the devices we only want to be managed by Intune, in this case, the Hybrid Joined Autopilot devices:
 
 ![Proactive Remediation](img/cfg-ap-pa.png "Microsoft Intune remediation script.")
 

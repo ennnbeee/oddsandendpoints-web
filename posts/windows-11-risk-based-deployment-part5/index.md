@@ -1,4 +1,4 @@
-# Risk Based Windows 11 Feature Update Deployment - Improvements
+# Risk Based Windows 11 Deployment - Improvements
 
 
 Why are we here again, looking at the deployment of Windows 11 to your Microsoft Intune managed devices?

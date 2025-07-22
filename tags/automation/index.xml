@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/automation/</link>
         <description>Automation - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 03 Dec 2024 18:12:49 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/automation/" rel="self" type="application/rss+xml" /><item>
-    <title>Risk Based Windows 11 Feature Update Deployment - Improvements</title>
+    <title>Risk Based Windows 11 Deployment - Improvements</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</link>
     <pubDate>Tue, 03 Dec 2024 18:12:49 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part5/featured.jpg" referrerpolicy="no-referrer">
             </div>An unexpected update to the Windows 11 Feature Update deployment series, looking at how to tag users instead of devices, and an improved way to get the readiness report data, and other performance improvements. What a day.]]></description>
 </item><item>
-    <title>Automatically Setting an Out of Office Message with Power Automate</title>
+    <title>Setting your Out of Office with Power Automate</title>
     <link>https://www.oddsandendpoints.co.uk/posts/powerautomate-out-of-office/</link>
     <pubDate>Fri, 26 Jul 2024 12:54:24 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/powerautomate-out-of-office/</guid>
@@ -20,15 +20,15 @@
                 <img src="/posts/powerautomate-out-of-office/featured.png" referrerpolicy="no-referrer">
             </div>I&rsquo;m not sure what I&rsquo;m doing playing around with Power Automate, but here we are. Like many people, I have a habit of forgetting to set an Out of Office message when I&rsquo;m actually on holiday, or when I&rsquo;m working with customers. Let&rsquo;s see if we can make something do this for us.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Feature Update Deployment - Automation</title>
+    <title>Risk Based Windows 11 Deployment - Automation</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part4/</link>
     <pubDate>Sat, 18 May 2024 18:12:49 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part4/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/windows-11-risk-based-deployment-part4/featured.jpg" referrerpolicy="no-referrer">
-            </div>The final part in this series looks at how to bring everything together under a single, repeatable script, allowing for the capture of readiness state, the tagging of devices to support the distribution of Windows 11 23H2.]]></description>
+            </div>The final part in this series looks at how to bring everything together under a single, repeatable script, allowing for the capture of readiness state, the tagging of devices to support the distribution of Windows 11 24H2.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Feature Update Deployment - Device Attributes</title>
+    <title>Risk Based Windows 11 Deployment - Device Attributes</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part2/</link>
     <pubDate>Fri, 19 Apr 2024 23:11:03 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part2/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part2/featured.jpg" referrerpolicy="no-referrer">
             </div>Having looked into capturing the Feature Update Readiness data for Windows 11 23H2 for our Windows devices, we can now use this risk based data to tag them with their associated risk, grouping them together to allow for sensible Feature Update profile assignment.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Feature Update Deployment - Reporting</title>
+    <title>Risk Based Windows 11 Deployment - Reporting</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part1/</link>
     <pubDate>Mon, 25 Mar 2024 23:32:16 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part1/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part1/featured.png" referrerpolicy="no-referrer">
             </div>With Windows 10 support coming to an end sooner than you&rsquo;d expect, in the first part of this series we look at ways to capture Feature Update Readiness Report data using PowerShell and Graph to help with the rollout of the new Windows 11 operating system.]]></description>
 </item><item>
-    <title>Creating Reusable Groups of Firewall Settings for Microsoft Online Services</title>
+    <title>Reusable Firewall Settings for Microsoft Online Services</title>
     <link>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</link>
     <pubDate>Sat, 09 Mar 2024 21:12:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</guid>
@@ -52,7 +52,7 @@
                 <img src="/posts/resusable-firewall-settings-microsoft-online/featured.jpg" referrerpolicy="no-referrer">
             </div>It&rsquo;s time to remove another manual process, this time the creation of Microsoft 365 network endpoints for Windows Firewall Rules in Microsoft Intune, because nobody should be creating these manually.]]></description>
 </item><item>
-    <title>Using Entra ID Device Attributes for Conditional Access Exceptions</title>
+    <title>Device Attributes for Conditional Access Exceptions</title>
     <link>https://www.oddsandendpoints.co.uk/posts/device-attributes-cap/</link>
     <pubDate>Wed, 10 Jan 2024 20:08:21 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/device-attributes-cap/</guid>
@@ -68,7 +68,7 @@
                 <img src="/posts/settings-catalog-firewall-rules/featured.png" referrerpolicy="no-referrer">
             </div>If you&rsquo;ve ever experienced the joys of migrating Group Policy and in particular Windows Defender Firewall rules away from Group Policy to Microsoft Intune, you&rsquo;ve probably encountered the Rule Migration Tool, and for now this tool has worked well. So what&rsquo;s the catch?]]></description>
 </item><item>
-    <title>Managing Settings Catalog Profile Assignments in Microsoft Intune</title>
+    <title>Settings Catalog Profile Assignments in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/</link>
     <pubDate>Tue, 27 Jun 2023 19:17:02 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/</guid>
@@ -76,7 +76,7 @@
                 <img src="/posts/managing-intune-assignment-settingscatalog/featured.png" referrerpolicy="no-referrer">
             </div>Ever wanted to the ability to re-assign all of your Setting Catalog profiles in Intune to additional device and user groups without having to painstakingly go through each one manually? Well this post is for you.]]></description>
 </item><item>
-    <title>Automating Endpoint Privilege Management Policies with PowerShell</title>
+    <title>Automating Endpoint Privilege Management Policies</title>
     <link>https://www.oddsandendpoints.co.uk/posts/automate-endpoint-privilege-management/</link>
     <pubDate>Thu, 01 Jun 2023 18:58:40 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/automate-endpoint-privilege-management/</guid>
