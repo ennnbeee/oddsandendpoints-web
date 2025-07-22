@@ -1,7 +1,7 @@
 # Updating Defender Antivirus Compliance Settings
 
 
-So one of those rainy days is here, finally, and as I mentioned in a {{< reftab href="/posts/operating-system-compliance-updates" title="previous post" >}} many months ago, I said I'd look at ways to update other update based compliance policies periodically.
+So one of those rainy days is here, finally, and as I mentioned in a {{< reftab href="/posts/operating-system-compliance-updates/" title="previous post" >}} many months ago, I said I'd look at ways to update other update based compliance policies periodically.
 
 That time is now, and although we're not focussing on other Operating Systems, we're going to have a look at updating a Microsoft Defender compliance policy with the latest platform update version.
 
@@ -17,9 +17,9 @@ For the Defender settings, the one we're wanting to update is [Microsoft Defende
 
 As we have looked at this topic previously, we're going to re-use some of the existing functions in this script that we created previously:
 
-- {{< reftab href="/posts/operating-system-compliance-updates/#testing-json" title="Test-JSON" >}}
-- {{< reftab href="/posts/operating-system-compliance-updates/#getting-compliance-policies" title="Get-DeviceCompliancePolicy" >}}
-- {{< reftab href="/posts/operating-system-compliance-updates/#updating-compliance-policies" title="Update-DeviceCompliancePolicy" >}}
+- {{< reftab href="/posts/operating-system-compliance-updates/#testing-json/" title="Test-JSON" >}}
+- {{< reftab href="/posts/operating-system-compliance-updates/#getting-compliance-policies/" title="Get-DeviceCompliancePolicy" >}}
+- {{< reftab href="/posts/operating-system-compliance-updates/#updating-compliance-policies/" title="Update-DeviceCompliancePolicy" >}}
 
 We will also need to create a new one, to retrieve the latest Microsoft Defender Update using the [Microsoft Feed Picker](https://support.microsoft.com/en-us/rss-feed-picker) for Microsoft Defender Updates.
 

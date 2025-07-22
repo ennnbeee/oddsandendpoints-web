@@ -1511,7 +1511,7 @@
 <h3 id="entra-id-device-objects" class="headerLink">
     <a href="#entra-id-device-objects" class="header-mark"></a>3.2 Entra ID Device Objects</h3><p>Some of the avid readers of the blog, may have worked out why this next part is important, for those slower off the mark, hang tight, I&rsquo;ll do my best to talk you through it. If the end goal here is to tag a device with it&rsquo;s Feature Update risk status, making use of the information in the Feature Update Readiness Report, we need an object to tag.</p>
 <p>To get these objects, we&rsquo;re going to have to query Entra ID for all device objects, and get their information, allowing us to compare the <code>AadDeviceId</code> from the report data, to the associated <code>objectId</code> in Entra ID.</p>
-<p>Sadly the built-in functionality within the Graph PowerShell module is going to limit us to 999 devices, so we&rsquo;re leaning on an existing <a href="/posts/device-attributes-cap/#getting-devices" rel="noopener" target="_blank">function</a> to get more devices than the set device limit.</p>
+<p>Sadly the built-in functionality within the Graph PowerShell module is going to limit us to 999 devices, so we&rsquo;re leaning on an existing <a href="/posts/device-attributes-cap/#getting-devices/" rel="noopener" target="_blank">function</a> to get more devices than the set device limit.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     

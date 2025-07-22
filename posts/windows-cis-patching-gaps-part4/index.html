@@ -321,14 +321,14 @@
 </figure>
 
 </p>
-<p>So exactly like the <a href="/posts/windows-cis-patching-gaps-part3/#windows-edition-requirements" rel="noopener" target="_blank">previous post</a>, a quick PowerShell script <em>would</em> allow us to configure the <a href="https://admx.help/?Category=Windows_10_2016&amp;Policy=Microsoft.Policies.WindowsStore::DisableStoreApps" target="_blank" rel="noopener noreferrer">registry equivalent</a> setting.</p>
+<p>So exactly like the <a href="/posts/windows-cis-patching-gaps-part3/#windows-edition-requirements/" rel="noopener" target="_blank">previous post</a>, a quick PowerShell script <em>would</em> allow us to configure the <a href="https://admx.help/?Category=Windows_10_2016&amp;Policy=Microsoft.Policies.WindowsStore::DisableStoreApps" target="_blank" rel="noopener noreferrer">registry equivalent</a> setting.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-cis-patching-gaps-part4/img/cis-regwindowsstore_hu_c057f20be72d52f6.png" title="Windows Pro registry settings" data-thumbnail="/posts/windows-cis-patching-gaps-part4/img/cis-regwindowsstore_hu_c057f20be72d52f6.png" data-sub-html="<h2>Windows Pro registry settings under HKLM:\Software\Policies\Microsoft\WindowsStore.</h2><p>Windows Pro registry settings</p>"><img  loading="lazy" src='/posts/windows-cis-patching-gaps-part4/img/cis-regwindowsstore_hu_c057f20be72d52f6.png'   alt="Windows Pro registry settings"  ></a><figcaption class="image-caption">Windows Pro registry settings under HKLM:\Software\Policies\Microsoft\WindowsStore.</figcaption>
 </figure>
 
 </p>
 <p>Sadly though, this is a true Windows Enterprise/Education setting and will do absolutely nothing on any other Windows edition, so there&rsquo;s no point in building a PowerShell script to apply the registry setting to our Windows Professional or otherwise devices.</p>
 <h3 id="user-settings" class="headerLink">
-    <a href="#user-settings" class="header-mark"></a>1.2 User Settings</h3><p>We&rsquo;ve seen this <a href="/posts/windows-cis-patching-gaps-part3/#user-settings" rel="noopener" target="_blank">previously</a> so for the sake of completeness we should also break out the user specific settings into their own profiles, and assign these to <strong>users</strong> and not devices.</p>
+    <a href="#user-settings" class="header-mark"></a>1.2 User Settings</h3><p>We&rsquo;ve seen this <a href="/posts/windows-cis-patching-gaps-part3/#user-settings/" rel="noopener" target="_blank">previously</a> so for the sake of completeness we should also break out the user specific settings into their own profiles, and assign these to <strong>users</strong> and not devices.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-cis-patching-gaps-part4/img/cis-userna_hu_f0b3abbabe495cc1.png" title="User Settings Not Applicable" data-thumbnail="/posts/windows-cis-patching-gaps-part4/img/cis-userna_hu_f0b3abbabe495cc1.png" data-sub-html="<h2>User Only settings not applying to the device context in Microsoft Intune.</h2><p>User Settings Not Applicable</p>"><img  loading="lazy" src='/posts/windows-cis-patching-gaps-part4/img/cis-userna_hu_f0b3abbabe495cc1.png'   alt="User Settings Not Applicable"  ></a><figcaption class="image-caption">User Only settings not applying to the device context in Microsoft Intune.</figcaption>
 </figure>
 
@@ -692,7 +692,7 @@
 <p>So another bit of Microsoft Intune functionality is gone.</p>
 <p>Next.</p>
 <h3 id="windows-system-services" class="headerLink">
-    <a href="#windows-system-services" class="header-mark"></a>2.8 Windows System Services</h3><p>We&rsquo;ve seen something like this <a href="/posts/windows-cis-patching-gaps-part3/#windows-system-services" rel="noopener" target="_blank">somewhere</a> before, this time it&rsquo;s another whole set of system services up for the chop, with the impact of disabling these services detailed below.</p>
+    <a href="#windows-system-services" class="header-mark"></a>2.8 Windows System Services</h3><p>We&rsquo;ve seen something like this <a href="/posts/windows-cis-patching-gaps-part3/#windows-system-services/" rel="noopener" target="_blank">somewhere</a> before, this time it&rsquo;s another whole set of system services up for the chop, with the impact of disabling these services detailed below.</p>
 <p><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg> <em>CIS (L2) System Services - Windows 11 Intune 3.0.1</em></p>
 

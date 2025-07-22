@@ -51,7 +51,7 @@ For the group, let's make use of [Azure AD Dynamic Groups](https://docs.microsof
 
 With our list of devices, either CSV or Azure AD Group, we will need to use this data to get the Managed Device object in Microsoft Intune.
 
-To do this we will need to authenticate to Graph, and as you've seen this one a lot on this blog already in {{< reftab href="/posts/windows-autopilot-retrofitting-group-tags/#handshake-time" title="previous" >}} {{< reftab href="/posts/operating-system-compliance-updates/#authentication" title="posts" >}}, I won't put the functions here, but we're using the PowerShell Authentication Function from the [Intune PowerShell Samples](https://github.com/microsoftgraph/powershell-intune-samples) GitHub repo to allow us to connect to Graph.
+To do this we will need to authenticate to Graph, and as you've seen this one a lot on this blog already in {{< reftab href="/posts/windows-autopilot-retrofitting-group-tags/#handshake-time" title="previous" >}} {{< reftab href="/posts/operating-system-compliance-updates/#authentication/" title="posts" >}}, I won't put the functions here, but we're using the PowerShell Authentication Function from the [Intune PowerShell Samples](https://github.com/microsoftgraph/powershell-intune-samples) GitHub repo to allow us to connect to Graph.
 
 Once connected, we can now look at not only getting devices, but updating the device object, time for a function or two.
 

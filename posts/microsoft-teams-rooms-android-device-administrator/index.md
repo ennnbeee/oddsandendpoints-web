@@ -110,5 +110,5 @@ Now armed with the new group, we can use this as part of the restriction to allo
 
 You've seen here that with a bit of time and patience, you can leverage Dynamic Groups and some of the advanced rules to your advantage, even with an edge use case like allowing only Microsoft Teams Room system accounts the ability to enrol using Android Device Administrator.
 
-This is one of many applications of Dynamic Groups throughout Microsoft Intune, and although I {{< reftab href="/posts/endpoint-manager-device-filters" title="bad mouthed" >}} them in favour of Device Filters, they are still a necessity when you need a level of {{< reftab href="/posts/windows-update-phased-deployment/" title="advanced logic" >}} that the filters can't handle.
+This is one of many applications of Dynamic Groups throughout Microsoft Intune, and although I {{< reftab href="/posts/endpoint-manager-device-filters/" title="bad mouthed" >}} them in favour of Device Filters, they are still a necessity when you need a level of {{< reftab href="/posts/windows-update-phased-deployment/" title="advanced logic" >}} that the filters can't handle.
 

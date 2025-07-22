@@ -1,7 +1,7 @@
 # Revisiting macOS NCSC Security Settings
 
 
-We looked at some of the ways to secure macOS devices in Microsoft Intune, aligned with the [NCSC platform guidance](https://www.ncsc.gov.uk/collection/device-security-guidance/platform-guides/macos) in {{< reftab href="posts/macos-ncsc-settings/" title="macOS National Cyber Security Centre Security Settings in Intune" >}}, but this was when macOS device management in Intune was, at best, in beta.
+We looked at some of the ways to secure macOS devices in Microsoft Intune, aligned with the [NCSC platform guidance](https://www.ncsc.gov.uk/collection/device-security-guidance/platform-guides/macos) in {{< reftab href="/posts/macos-ncsc-settings/" title="macOS National Cyber Security Centre Security Settings in Intune" >}}, but this was when macOS device management in Intune was, at best, in beta.
 
 General hardening has been covered previously by [Hubert Maslowski](https://hmaslowski.com/home/f/macos-security-hardening-with-microsoft-intune) in their post that covers device compliance and configuration settings, but we're looking at ensuring that the macOS devices meet the National Cyber Security Centre settings, including [Cyber Essentials](https://www.ncsc.gov.uk/files/Cyber-Essentials-Requirements-for-Infrastructure-v3-1-January-2023.pdf) requirements.
 

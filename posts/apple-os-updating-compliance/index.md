@@ -1,7 +1,7 @@
 # Updating Apple Operating System Compliance Policies
 
 
-I'm not going to go over old ground in too much detail, as I've already covered the importance of keeping your {{< reftab href="/posts/operating-system-compliance-updates" title="Operating System Compliance Policies" >}} up to date in line with the release of new updates, as well as a way to update your compliance policies using Graph and PowerShell.
+I'm not going to go over old ground in too much detail, as I've already covered the importance of keeping your {{< reftab href="/posts/operating-system-compliance-updates/" title="Operating System Compliance Policies" >}} up to date in line with the release of new updates, as well as a way to update your compliance policies using Graph and PowerShell.
 
 What I am going to do is extend this automated Compliance Policy update functionality to Apple Updates as well, it's like I've been working with a customer that only has iOS/iPadOS devices in Intune or something.
 
@@ -174,7 +174,7 @@ Get-AppleUpdates -OS macOS -Version 13
 
 ## Updating Compliance
 
-We've already got functions from our last expedition into this topic for {{< reftab href="/posts/operating-system-compliance-updates/#getting-compliance-policies" title="getting" >}} and {{< reftab href="/posts/operating-system-compliance-updates/#updating-compliance-policies" title="updating" >}} Compliance Policies, checking for {{< reftab href="/posts/operating-system-compliance-updates/#testing-json" title="valid JSON" >}} as well as the usual suspect for authentication using `Connect-MgGraph`, so thank you to previous me for this.
+We've already got functions from our last expedition into this topic for {{< reftab href="/posts/operating-system-compliance-updates/#getting-compliance-policies/" title="getting" >}} and {{< reftab href="/posts/operating-system-compliance-updates/#updating-compliance-policies" title="updating" >}} Compliance Policies, checking for {{< reftab href="/posts/operating-system-compliance-updates/#testing-json" title="valid JSON" >}} as well as the usual suspect for authentication using `Connect-MgGraph`, so thank you to previous me for this.
 
 Armed with our new function for getting the latest Apple Build versions, we now need to build out the script to do our job for us.
 

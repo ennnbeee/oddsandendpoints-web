@@ -438,7 +438,7 @@ Some of the avid readers of the blog, may have worked out why this next part is 
 
 To get these objects, we're going to have to query Entra ID for all device objects, and get their information, allowing us to compare the `AadDeviceId` from the report data, to the associated `objectId` in Entra ID.
 
-Sadly the built-in functionality within the Graph PowerShell module is going to limit us to 999 devices, so we're leaning on an existing {{< reftab href="/posts/device-attributes-cap/#getting-devices" title="function" >}} to get more devices than the set device limit.
+Sadly the built-in functionality within the Graph PowerShell module is going to limit us to 999 devices, so we're leaning on an existing {{< reftab href="/posts/device-attributes-cap/#getting-devices/" title="function" >}} to get more devices than the set device limit.
 
 ```PowerShell
 Function Get-EntraIDDevice() {

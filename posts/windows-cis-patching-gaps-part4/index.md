@@ -29,7 +29,7 @@ Before we even look at the problems enabling the **DisableStoreOriginatedApps** 
 
 ![PolicyCSP Windows Edition Settings](img/cis-cspstoreed.png "PolicyCSP Edition settings for DisableStoreOriginatedApps")
 
-So exactly like the {{< reftab  href="/posts/windows-cis-patching-gaps-part3/#windows-edition-requirements" title="previous post" >}}, a quick PowerShell script *would* allow us to configure the [registry equivalent](https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.WindowsStore::DisableStoreApps) setting.
+So exactly like the {{< reftab  href="/posts/windows-cis-patching-gaps-part3/#windows-edition-requirements/" title="previous post" >}}, a quick PowerShell script *would* allow us to configure the [registry equivalent](https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.WindowsStore::DisableStoreApps) setting.
 
 ![Windows Pro registry settings](img/cis-regwindowsstore.png "Windows Pro registry settings under HKLM:\Software\Policies\Microsoft\WindowsStore.")
 
@@ -37,7 +37,7 @@ Sadly though, this is a true Windows Enterprise/Education setting and will do ab
 
 ### User Settings
 
-We've seen this {{< reftab  href="/posts/windows-cis-patching-gaps-part3/#user-settings" title="previously" >}} so for the sake of completeness we should also break out the user specific settings into their own profiles, and assign these to **users** and not devices.
+We've seen this {{< reftab  href="/posts/windows-cis-patching-gaps-part3/#user-settings/" title="previously" >}} so for the sake of completeness we should also break out the user specific settings into their own profiles, and assign these to **users** and not devices.
 
 ![User Settings Not Applicable](img/cis-userna.png "User Only settings not applying to the device context in Microsoft Intune.")
 
@@ -224,7 +224,7 @@ Next.
 
 ### Windows System Services
 
-We've seen something like this {{< reftab  href="/posts/windows-cis-patching-gaps-part3/#windows-system-services" title="somewhere" >}} before, this time it's another whole set of system services up for the chop, with the impact of disabling these services detailed below.
+We've seen something like this {{< reftab  href="/posts/windows-cis-patching-gaps-part3/#windows-system-services/" title="somewhere" >}} before, this time it's another whole set of system services up for the chop, with the impact of disabling these services detailed below.
 
 {{< fa-icon brands windows >}} *CIS (L2) System Services - Windows 11 Intune 3.0.1*
 

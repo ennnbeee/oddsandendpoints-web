@@ -1,4 +1,4 @@
-# Dynamic Groups vs Device Filters
+# Entra Dynamic Groups vs Intune Device Filters
 
 
 Now if you've ever spoken to me about Microsoft Intune and using Dynamic Groups for management of users and devices, I probably would have talked your ears off about the attribute usage, which attributes are suitable, and that moving away from assigned groups to dynamic is the only way forward for Modern Device Management.

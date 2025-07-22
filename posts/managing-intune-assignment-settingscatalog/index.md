@@ -338,7 +338,7 @@ We're onto something here, time to look at the logic around adding new assignmen
 
 Now that we can capture existing assignment, we need to deal with the logic when trying to add new assignments to the Settings Catalog profile. This will not be fun.
 
-Let's go through each of the {{< reftab href="/posts/assigning-intune-applications#assignment-no-nos/" title="assignment non-nos" >}} we've already covered in this post.
+Let's go through each of the {{< reftab href="/posts/assigning-intune-applications/#assignment-no-nos/" title="assignment non-nos" >}} we've already covered in this post.
 
 #### Include Assignments
 
