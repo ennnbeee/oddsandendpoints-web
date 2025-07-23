@@ -29,7 +29,7 @@ The fact that these reports actually advise where devices are subject to Safegua
 
 ### Safeguard ID Lookup
 
-What we actually need from these devices is the Safeguard Id, and a way to look this up, luckily we can use a tool provided by [Gark Blok](https://www.linkedin.com/in/garyblok/) author of [garytown.com](https://garytown.com/) and their wonderful [Windows SafeGuard Hold ID Lookup tool](https://html-preview.github.io/?url=https://github.com/gwblok/garytown/blob/master/Feature-Updates/SafeGuardHolds/SafeGuardHoldLookup.html) to get the details from the Safeguard Id.
+What we actually need from these devices is the Safeguard Id, and a way to look this up, luckily we can use a tool provided by [Gary Blok](https://www.linkedin.com/in/garyblok/) author of [garytown.com](https://garytown.com/) and their wonderful crowd sourced [Windows SafeGuard Hold ID Lookup tool](https://html-preview.github.io/?url=https://github.com/gwblok/garytown/blob/master/Feature-Updates/SafeGuardHolds/SafeGuardHoldLookup.html) to get the details from the provided Safeguard Id.
 
 ![Windows SafeGuard Hold ID Lookup tool](img/sg-tool-25178825.png "Windows SafeGuard Hold ID Lookup tool example for Id 25178825.")
 
