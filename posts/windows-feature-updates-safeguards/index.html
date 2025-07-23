@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["Windows 11 readiness assessment","Feature update readiness","Windows 11 upgrade","Intune readiness scripts","Windows 11 compatibility check","safeguard holds"],"wordcount":  890 ,
+                        }],"genre": "posts","keywords":["Windows 11 readiness assessment","Feature update readiness","Windows 11 upgrade","Windows 11 compatibility check","safeguard holds"],"wordcount":  877 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/","datePublished": "2025-07-23T10:22:32+01:00","dateModified": "2025-07-23T10:22:32+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -428,7 +428,6 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$registry</span> <span class="p">=</span> <span class="s2">&#34;HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\TargetVersionUpgradeExperienceIndicators\</span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="c"># Checks if the key exists and the last run of the App Compat</span>
 </span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$safeGuardId</span> <span class="p">=</span> <span class="nb">Get-ItemPropertyValue</span> <span class="n">-Path</span> <span class="nv">$registry</span> <span class="n">-Name</span> <span class="n">GatedBlockId</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$safeGuardReason</span> <span class="p">=</span> <span class="nb">Get-ItemPropertyValue</span> <span class="n">-Path</span> <span class="nv">$registry</span> <span class="n">-Name</span> <span class="n">GatedBlockReason</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
@@ -439,7 +438,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$safeGuardId</span> <span class="o">-ne</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;SafeGuard ID </span><span class="nv">$safeGuardId</span><span class="s2"> with </span><span class="nv">$safeGuardReason</span><span class="s2"> for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;SafeGuard ID </span><span class="nv">$safeGuardId</span><span class="s2"> with reason </span><span class="nv">$safeGuardReason</span><span class="s2"> for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;No SafeGuard ID found for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
