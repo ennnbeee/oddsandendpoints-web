@@ -3,7 +3,15 @@
         <title>Remediation Scripts - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/remediation/</link>
         <description>Remediation Scripts - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/remediation/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/remediation/" rel="self" type="application/rss+xml" /><item>
+    <title>Capturing Windows Feature Update Safeguard Holds</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</link>
+    <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-feature-updates-safeguards/featured.png" referrerpolicy="no-referrer">
+            </div>Using our best friend the remediation script in Intune to pull back Safeguard Hold information so we can why some devices aren&rsquo;t updating to Windows 11.]]></description>
+</item><item>
     <title>Forcing Windows 11 Feature Update Readiness Assessments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</link>
     <pubDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</pubDate><author>
