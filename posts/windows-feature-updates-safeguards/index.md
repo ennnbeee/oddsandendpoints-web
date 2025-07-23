@@ -83,6 +83,8 @@ Checking the Id of `52754008` the script captured, we can see the below reason b
 
 ![Windows SafeGuard Hold ID Lookup tool](img/sg-tool-52754008.png "Windows SafeGuard Hold ID Lookup tool for Id 52754008.")
 
+So we've now got something to actually work with to work around the safeguard hold, and let these devices update to Windows 11 24H2.
+
 ## Summary
 
 Come on now, there should be no excuse for sticking around on Windows 10, it's [not dead yet](https://www.youtube.com/watch?v=EfOW9QrLs0o) but it will be, so pull up your pants and start using as many methods as possible to update your devices.
