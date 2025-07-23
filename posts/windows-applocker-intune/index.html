@@ -37,7 +37,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ea580c">
 
-<link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" /><link rel="next" href="https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/" />
+<link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" /><link rel="next" href="https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/" />
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
         "headline": "Converting AppLocker Policies to Intune Profiles",
         "inLanguage": "en",
@@ -1292,7 +1292,7 @@
 </span></span><span class="line"><span class="cl"><span class="c">#endregion variables</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c">#region functions</span>
-</span></span><span class="line"><span class="cl"><span class="kd">Function</span><span class="w"> </span><span class="nb">Test-JSON</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Test-JSON</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">param</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$JSON</span>
@@ -1313,7 +1313,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kd">Function</span><span class="w"> </span><span class="nb">Connect-ToGraph</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Connect-ToGraph</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="cm">&lt;#
 </span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">SYNOPSIS</span><span class="cm">
 </span></span></span><span class="line"><span class="cl"><span class="cm">Authenticates to the Graph API via the Microsoft.Graph.Authentication module.
@@ -1346,7 +1346,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">Mandatory</span> <span class="p">=</span> <span class="vm">$false</span><span class="p">)]</span> <span class="p">[</span><span class="no">string[]</span><span class="p">]</span><span class="nv">$scopes</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">Process</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">process</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c">#Import-Module Microsoft.Graph.Authentication</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$version</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-Module</span> <span class="n">microsoft</span><span class="p">.</span><span class="py">graph</span><span class="p">.</span><span class="py">authentication</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">-ExpandProperty</span> <span class="n">Version</span><span class="p">).</span><span class="py">major</span>
 </span></span><span class="line"><span class="cl">
@@ -1386,7 +1386,7 @@
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kd">Function</span><span class="w"> </span><span class="nb">New-CustomProfile</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">New-CustomProfile</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">cmdletbinding</span><span class="p">()]</span>
 </span></span><span class="line"><span class="cl">
@@ -1415,7 +1415,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$graphModule</span> <span class="p">=</span> <span class="s1">&#39;Microsoft.Graph.Authentication&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;Checking for </span><span class="nv">$graphModule</span><span class="s2"> PowerShell module...&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">If</span> <span class="p">(!(</span><span class="nb">Find-Module</span> <span class="n">-Name</span> <span class="nv">$graphModule</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(!(</span><span class="nb">Find-Module</span> <span class="n">-Name</span> <span class="nv">$graphModule</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nv">$graphModule</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;PowerShell Module </span><span class="nv">$graphModule</span><span class="s2"> found.&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
@@ -1438,7 +1438,7 @@
 </span></span><span class="line"><span class="cl"><span class="nb">Connect-ToGraph</span> <span class="n">-tenantId</span> <span class="nv">$tenantId</span> <span class="n">-Scopes</span> <span class="nv">$existingScopes</span>
 </span></span><span class="line"><span class="cl"><span class="c">#endregion authentication</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">Try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(!(</span><span class="nb">Test-Path</span> <span class="n">-Path</span> <span class="nv">$xmlPath</span> <span class="n">-PathType</span> <span class="n">Leaf</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$xmlPath</span> <span class="p">=</span> <span class="nb">Read-Host</span> <span class="s1">&#39;Please enter the path to the AppLocker XML file&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -1450,7 +1450,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">([</span><span class="no">string</span><span class="p">]::</span><span class="n">IsNullOrWhiteSpace</span><span class="p">(</span><span class="nv">$xmlDoc</span><span class="p">.</span><span class="py">ChildNodes</span><span class="p">.</span><span class="n">RuleCollection</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">Write-Error</span> <span class="s2">&#34;Provided XML file </span><span class="nv">$xmlPath</span><span class="s2"> is not a valid AppLocker export.&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">Break</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">Write-Host</span> <span class="s2">&#34;Found AppLocker Rules in XML file </span><span class="nv">$xmlPath</span><span class="s2">&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
@@ -1507,12 +1507,12 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">Write-Host</span> <span class="s1">&#39;Provided AppLocker export does not contain Rule Collections&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Red</span>
-</span></span><span class="line"><span class="cl">        <span class="k">Break</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">Catch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">catch</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="nv">$Error</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="py">ErrorDetails</span><span class="p">.</span><span class="py">Message</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Exit</span> <span class="mf">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span> <span class="mf">1</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </div>
 
@@ -1662,6 +1662,13 @@
 <div class="related-container">
     <div class="related-item-container">
             <div class="related-image">
+                <a href="/posts/windows-feature-updates-assessment/"><img   src='/posts/windows-feature-updates-assessment/featured.png'   alt="Using exported AppLocker XML policies to create our AppLocker deployment in Microsoft Intune using PowerShell and Graph API" height="200" width="400"></a>
+            </div><h2 class="related-title">
+                <a href="/posts/windows-feature-updates-assessment/">Forcing Windows 11 Feature Update Readiness Assessments</a>
+            </h2>
+        </div>
+    <div class="related-item-container">
+            <div class="related-image">
                 <a href="/posts/windows-cyber-essentials-compliance/"><img   src='/posts/windows-cyber-essentials-compliance/featured.png'   alt="Using exported AppLocker XML policies to create our AppLocker deployment in Microsoft Intune using PowerShell and Graph API" height="200" width="400"></a>
             </div><h2 class="related-title">
                 <a href="/posts/windows-cyber-essentials-compliance/">Intune Custom Compliance for Cyber Essentials</a>
@@ -1686,13 +1693,6 @@
                 <a href="/posts/android-enterprise-enrolment-customisation/"><img   src='/posts/android-enterprise-enrolment-customisation/featured.png'   alt="Using exported AppLocker XML policies to create our AppLocker deployment in Microsoft Intune using PowerShell and Graph API" height="200" width="400"></a>
             </div><h2 class="related-title">
                 <a href="/posts/android-enterprise-enrolment-customisation/">Improving the Android Enterprise Enrolment Experience</a>
-            </h2>
-        </div>
-    <div class="related-item-container">
-            <div class="related-image">
-                <a href="/posts/bitlocker-key-rotation-requirements/"><img   src='/posts/bitlocker-key-rotation-requirements/featured.png'   alt="Using exported AppLocker XML policies to create our AppLocker deployment in Microsoft Intune using PowerShell and Graph API" height="200" width="400"></a>
-            </div><h2 class="related-title">
-                <a href="/posts/bitlocker-key-rotation-requirements/">BitLocker Recovery Key Rotation Requirements in Intune</a>
             </h2>
         </div>
     
@@ -1728,7 +1728,7 @@
 
     <div class="post-nav print:tw-hidden"><a href="/posts/macos-defender-scan-settings/" class="prev" rel="prev" title="Scheduling Defender for macOS Antivirus Scans in Intune"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Scheduling Defender for macOS Antivirus Scans in Intune</a>
-            <a href="/posts/windows-feature-updates-assessment/" class="next" rel="next" title="Forcing Windows 11 Feature Update Readiness Assessments">Forcing Windows 11 Feature Update Readiness Assessments<svg class="icon"
+            <a href="/posts/windows-11-risk-based-deployment-part5/" class="next" rel="next" title="Risk Based Windows 11 Deployment - Improvements">Risk Based Windows 11 Deployment - Improvements<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

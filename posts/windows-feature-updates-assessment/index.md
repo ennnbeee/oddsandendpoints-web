@@ -1,6 +1,10 @@
 # Forcing Windows 11 Feature Update Readiness Assessments
 
 
+{{< admonition type=note >}}
+This post has been updated to support Windows 11 25H2, surely you're already on Windows 11 24H2 by now 😄.
+{{< /admonition >}}
+
 I've spent far too much time digging into the [Windows Feature Update Readiness reports](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-compatibility-reports#use-the-windows-feature-update-device-readiness-report) available in Intune, having used them extensively in a previous series of posts:
 
 - {{< reftab  href="/posts/windows-11-risk-based-deployment-part1/" title="Risk Based Windows 11 Feature Update Deployment - Reporting" >}}
@@ -15,7 +19,7 @@ What happens to your devices that haven't sent their precious readiness data to 
 
 ![Feature Update Readiness Report](img/fu-report.png "Windows 11 Feature Update Readiness report.")
 
-Can we help the devices with missing or stale data especially now that the Windows 11 24H2 report is now available?
+Can we help the devices with missing or stale data especially now that the Windows 11 24H2 report is now available, and Windows 11 25H2 is just round the corner?
 
 Sure we can.
 
@@ -47,15 +51,17 @@ Specifically these ones:
 
 | Registry Key | Feature Update Version |
 | :- | :- |
+| `GE25H2` | Windows 11 25H2 |
 | `GE24H2` | Windows 11 24H2 |
 | `NI23H2` | Windows 11 23H2 |
 
 We can populate the `$featureUpdate` variable in the detection script with the corresponding Registry Key to check to see if data exists, and if it doesn't we'll exit in a way that Intune will start a remediation.
 
-So for Windows 11 24H2 it's `$featureUpdate = 'GE24H2'`, and for Windows 11 23H2 it would be `$featureUpdate = 'NI23H2'`.
+So for Windows 11 25H2 it's `$featureUpdate = 'GE25H2'`, and for Windows 11 24H2 it would be `$featureUpdate = 'GE24H2'`.
 
 ```PowerShell
-$featureUpdate = 'GE24H2' # Windows 11 24H2
+$featureUpdate = 'GE25H2' # Windows 11 25H2
+#$featureUpdate = 'GE24H2' # Windows 11 24H2
 #$featureUpdate = 'NI23H2' # Windows 11 23H2
 $registry = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\CompatMarkers\$featureUpdate"
 ```
@@ -63,7 +69,8 @@ $registry = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\C
 If the registry key does exist, we can then query the value of the string **TimestampEpochString** which is populated by the App Compatibility tool when it was last run successfully, and compare it to the date and time when the script runs, minus a set number of hours (in [Epoch](https://en.wikipedia.org/wiki/Unix_time) format), configured using the `$schedule` variable.
 
 ```PowerShell
-$featureUpdate = 'GE24H2' # Windows 11 24H2
+$featureUpdate = 'GE25H2' # Windows 11 25H2
+#$featureUpdate = 'GE24H2' # Windows 11 24H2
 #$featureUpdate = 'NI23H2' # Windows 11 23H2
 $registry = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\CompatMarkers\$featureUpdate"
 
@@ -96,7 +103,7 @@ The detection now sorted, we should test a concept of a remediation.
 Go and delete the following key in the registry from a test device, or your own if you feel like it:
 
 ```txt
-Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\CompatMarkers\GE24H2
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\CompatMarkers\GE25H2
 ```
 
 We'll bring the data in that key back, I promise, [truss mi daddi](https://www.youtube.com/watch?v=v5yYDKEVItE).

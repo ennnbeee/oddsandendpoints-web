@@ -3,7 +3,15 @@
         <title>Intune - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/intune/</link>
         <description>Intune - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 06 May 2025 18:53:56 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/intune/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/intune/" rel="self" type="application/rss+xml" /><item>
+    <title>Forcing Windows 11 Feature Update Readiness Assessments</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</link>
+    <pubDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-feature-updates-assessment/featured.png" referrerpolicy="no-referrer">
+            </div>As a migration to Windows 11 is fast upon us, I thought I&rsquo;d help your devices on their way into understanding whether they will support Windows 11 and what risks you may encounter with the update, by forcing devices to evaluate their readiness states.]]></description>
+</item><item>
     <title>Updating Windows Network Profile Locations with PowerShell</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</link>
     <pubDate>Tue, 06 May 2025 18:53:56 &#43;0000</pubDate><author>
@@ -43,14 +51,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/windows-11-risk-based-deployment-part5/featured.jpg" referrerpolicy="no-referrer">
             </div>An unexpected update to the Windows 11 Feature Update deployment series, looking at how to tag users instead of devices, and an improved way to get the readiness report data, and other performance improvements. What a day.]]></description>
-</item><item>
-    <title>Forcing Windows 11 Feature Update Readiness Assessments</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</link>
-    <pubDate>Tue, 19 Nov 2024 17:06:20 &#43;0000</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-feature-updates-assessment/featured.png" referrerpolicy="no-referrer">
-            </div>As a migration to Windows 11 is fast upon us, I thought I&rsquo;d help your devices on their way into understanding whether they will support Windows 11 and what risks you may encounter with the update, by forcing devices to evaluate their readiness states.]]></description>
 </item><item>
     <title>Converting AppLocker Policies to Intune Profiles</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</link>
