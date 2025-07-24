@@ -87,7 +87,7 @@ So we've now got something to actually work with to work around the Safeguard ho
 
 ## Summary
 
-Come on now, there should be no excuse for sticking around on Windows 10, it's [not dead yet](https://www.youtube.com/watch?v=EfOW9QrLs0o) but it will be, so pull up your pants and start using as many methods as possible to update your devices.
+Come on now there should be no excuse for sticking around on Windows 10, it's [not dead yet](https://www.youtube.com/watch?v=EfOW9QrLs0o) but it will be, so pull up your pants and start using as many methods as possible to update your devices.
 
 Off you go now.
 
