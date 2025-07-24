@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["Windows 11 readiness assessment","Feature update readiness","Windows 11 upgrade","Windows 11 compatibility check","safeguard holds"],"wordcount":  877 ,
+                        }],"genre": "posts","keywords":["Windows 11 readiness assessment","Feature update readiness","Windows 11 upgrade","Windows 11 compatibility check","safeguard holds"],"wordcount":  882 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/","datePublished": "2025-07-23T10:22:32+01:00","dateModified": "2025-07-23T10:22:32+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -437,13 +437,14 @@
 </span></span><span class="line"><span class="cl">        <span class="n">exit</span> <span class="mf">0</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$safeGuardId</span> <span class="o">-ne</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;SafeGuard ID </span><span class="nv">$safeGuardId</span><span class="s2"> with reason </span><span class="nv">$safeGuardReason</span><span class="s2"> for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$safeGuardId</span> <span class="o">-eq</span> <span class="s1">&#39;None&#39;</span> <span class="o">-or</span> <span class="vm">$null</span> <span class="o">-eq</span> <span class="nv">$safeGuardReason</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;No SafeGuard hold found for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exit</span> <span class="mf">0</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;No SafeGuard ID found for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Output</span> <span class="s2">&#34;SafeGuard ID </span><span class="nv">$safeGuardId</span><span class="s2"> with </span><span class="nv">$safeGuardReason</span><span class="s2"> for Windows 11 </span><span class="nv">$featureUpdate</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exit</span> <span class="mf">1</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="n">exit</span> <span class="mf">0</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">catch</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Exception</span>
@@ -476,7 +477,7 @@
 </figure>
 
 </p>
-<p>So we&rsquo;ve now got something to actually work with to work around the safeguard hold, and let these devices update to Windows 11 24H2.</p>
+<p>So we&rsquo;ve now got something to actually work with to work around the Safeguard hold, and let these devices update to Windows 11 24H2.</p>
 <h2 id="summary" class="headerLink">
     <a href="#summary" class="header-mark"></a>4 Summary</h2><p>Come on now, there should be no excuse for sticking around on Windows 10, it&rsquo;s <a href="https://www.youtube.com/watch?v=EfOW9QrLs0o" target="_blank" rel="noopener noreferrer">not dead yet</a> but it will be, so pull up your pants and start using as many methods as possible to update your devices.</p>
 <p>Off you go now.</p>
