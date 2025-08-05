@@ -249,7 +249,7 @@ So when a user now opens the Defender app, they are only presented with one perm
 
 ![Defender for Endpoint App Permissions](img/amde-lowertouch.png "Defender app on Android Enterprise requesting permissions.")
 
-I haven't worked out a way to implement this using Intune or the Knox Service Plugin or Moto OEMConfig, so you're end users will still have to do something to finish the onboarding process, sorry 🫠.
+I haven't worked out a way to implement this using Intune or the Knox Service Plugin or Moto OEMConfig, so your end users will still have to do something to finish the onboarding process, sorry 🫠.
 
 ## Defender Features
 
