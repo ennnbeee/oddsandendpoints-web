@@ -152,22 +152,22 @@ From my experience with [OEMConfig profiles](https://learn.microsoft.com/en-us/m
 
 Either way, to setup the Android Enterprise profile, if you need to create a new one, and to configure the required Defender for Endpoint settings:
 
-- Navigate to the Microsoft Intune admin center and select **Configuration** under **Manage devices**, create a new policy for the **Android Enterprise** platform of type **OEMConfig**.
-  - Give the profile a suitable name and a description if you'd like e.g., `PRD-AND-AE-D-CO-KSP-Defender`
-  - Select `Knox Service Plugin` as the OEMConfig app
-  - Select **Next** to continue to the configuration page
-- Under **Knox Service Plugin** enter in a name for the Knox profile i.e., `DefenderforEndpoint(1.0)`
-- Under **Knox Service Plugin** select **Configure** for **Device-wide policies (Selectively applicable to Fully Manage Device (DO) or Work Profile-on company owned devices (WP-C mode as noted)**
-  - Under Device-wide policies set **Enable device policy controls** to `true` to enable it.
-  - Select **Configure** for **Application management policies**
-    - Under Application management policies set **Enable application management controls** to `true` to enable it.
-    - In **Battery optimization allowlist** enter in `com.microsoft.scmx`
-    - Under Application management policies set **Enable permission controls** to `true` to enable it.
-- Under **Knox Service Plugin** select **Configure** for **Permission Controls**
-  - Select the **ellipsis (...)** that's next to **Permission Controls** and select **Add Setting**
-  - Under **Permission Configuration** select the **Permission Policy** dropdown
-    - Select **Appear on top** and **All files access**
-    - For **Package or Component Name**, add the Defender app package name `com.microsoft.scmx`
+1. Navigate to the Microsoft Intune admin center and select **Configuration** under **Manage devices**, create a new policy for the **Android Enterprise** platform of type **OEMConfig**.
+    - Give the profile a suitable name and a description if you'd like e.g., `PRD-AND-AE-D-CO-KSP-Defender`
+    - Select `Knox Service Plugin` as the OEMConfig app
+    - Select **Next** to continue to the configuration page
+2. Under **Knox Service Plugin** enter in a name for the Knox profile i.e., `DefenderforEndpoint(1.0)`
+3. Under **Knox Service Plugin** select **Configure** for **Device-wide policies (Selectively applicable to Fully Manage Device (DO) or Work Profile-on company owned devices (WP-C mode as noted)**
+    - Under Device-wide policies set **Enable device policy controls** to `true` to enable it.
+    - Select **Configure** for **Application management policies**
+      - Under Application management policies set **Enable application management controls** to `true` to enable it.
+      - In **Battery optimization allowlist** enter in `com.microsoft.scmx`
+      - Under Application management policies set **Enable permission controls** to `true` to enable it.
+4. Under **Knox Service Plugin** select **Configure** for **Permission Controls**
+    - Select the **ellipsis (...)** that's next to **Permission Controls** and select **Add Setting**
+    - Under **Permission Configuration** select the **Permission Policy** dropdown
+      - Select **Appear on top** and **All files access**
+      - For **Package or Component Name**, add the Defender app package name `com.microsoft.scmx`
 
 This process should look something like the below:
 
@@ -198,28 +198,28 @@ Thanks to [deweez](https://github.com/deweez) in the comments, it looks as thoug
 
 After adding the Moto OEMConfig app to your Intune tenant using Managed Google Play:
 
-- Navigate to the Microsoft Intune admin center and select **Configuration** under **Manage devices**, create a new policy for the **Android Enterprise** platform of type **OEMConfig**.
-  - Give the profile a suitable name and a description if you'd like e.g., `ODD-AND-AE-D-CO-MOTO-Defender`
-  - Select `Moto OEMConfig` as the OEMConfig app
-  - Select **Next** to continue to the configuration page
-- Under **Moto OEMConfig** select **Configure** for **Debug tools policies**
-  - Under Debug tools policies select **Configure** for **Debug mode**
-    - Under Debug mode set **Allow debug mode** to `true` to enable it.
-    - Select **Configure** for **Application management policies**
-- Under **Moto OEMConfig** select **Configure** for **System policies**
-  - Under System policies select **Configure** for **Battery non-optimized apps**
-    - Under Battery non-optimized apps set **Allow non-battery optimized applications** to `true` to enable it.
-    - In **Non-battery optimized application list** enter in `com.microsoft.scmx`
-  - Under System policies select **Configure** for **Display over the other apps settings**
-    - Under Display over the other apps settings set **Enable display over the other apps** to `true` to enable it.
-    - In **Display Over The Other Apps list** select **Configure**
-    - Select the **ellipsis (...)** that's next to **Display Over The Other Apps list** and select **Add Setting**
-    - Under **Applications that require permission to display over the other apps** in **App package name** enter in `com.microsoft.scmx`
-  - Under System policies select **Configure** for **All Files Access**
-    - Under All Files Access set **Enable All Files policy** to `true` to enable it.
-    - In **All Files apps list** select **Configure**
-    - Select the **ellipsis (...)** that's next to **All Files apps list** and select **Add Setting**
-    - Under **Applications that require All Files permission** in **App package name** enter in `com.microsoft.scmx`
+1. Navigate to the Microsoft Intune admin center and select **Configuration** under **Manage devices**, create a new policy for the **Android Enterprise** platform of type **OEMConfig**.
+    - Give the profile a suitable name and a description if you'd like e.g., `ODD-AND-AE-D-CO-MOTO-Defender`
+    - Select `Moto OEMConfig` as the OEMConfig app
+    - Select **Next** to continue to the configuration page
+2. Under **Moto OEMConfig** select **Configure** for **Debug tools policies**
+    - Under Debug tools policies select **Configure** for **Debug mode**
+      - Under Debug mode set **Allow debug mode** to `true` to enable it.
+      - Select **Configure** for **Application management policies**
+3. Under **Moto OEMConfig** select **Configure** for **System policies**
+    - Under System policies select **Configure** for **Battery non-optimized apps**
+      - Under Battery non-optimized apps set **Allow non-battery optimized applications** to `true` to enable it.
+      - In **Non-battery optimized application list** enter in `com.microsoft.scmx`
+    - Under System policies select **Configure** for **Display over the other apps settings**
+      - Under Display over the other apps settings set **Enable display over the other apps** to `true` to enable it.
+      - In **Display Over The Other Apps list** select **Configure**
+      - Select the **ellipsis (...)** that's next to **Display Over The Other Apps list** and select **Add Setting**
+      - Under **Applications that require permission to display over the other apps** in **App package name** enter in `com.microsoft.scmx`
+    - Under System policies select **Configure** for **All Files Access**
+      - Under All Files Access set **Enable All Files policy** to `true` to enable it.
+      - In **All Files apps list** select **Configure**
+      - Select the **ellipsis (...)** that's next to **All Files apps list** and select **Add Setting**
+      - Under **Applications that require All Files permission** in **App package name** enter in `com.microsoft.scmx`
 
 {{< admonition type=info >}}
 There is a setting under **Applications that require All Files permission** for **App certificate** asking for *Provide the SHA256 fingerprint certificate used to sign the app. Certificate format is XX:XX:XX:XX and is 95 characters long, counting colon symbols.* but how you get this for the Defender app easily is beyond me, something about using [apksigner](https://developer.android.com/tools/apksigner#usage-verify)
