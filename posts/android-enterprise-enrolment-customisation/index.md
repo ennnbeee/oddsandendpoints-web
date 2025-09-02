@@ -3,7 +3,7 @@
 
 Enrolling Android Enterprise devices in Intune is pretty straightforward, with the options to use either [Google Zero Touch](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch) or [QR Codes](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-a-qr-code) to ~make~ empower your end users to enrol their own devices.
 
-If you are using QR codes, we can improve the enrolment experience for your users, saving then either the need to connect to a wireless network to start the enrolment, or by pre-provisioning a wireless network for them so they don't have to smush their fingers on a keyboard to enter in wireless network details.
+If you are using QR codes, we can improve the enrolment experience for your users, saving then either the need to connect to a wireless network to start the enrolment, or by pre-provisioning a wireless network for them so they don't have to smash their fingers on a keyboard to enter in wireless network details.
 
 ## Enrolment Tokens
 

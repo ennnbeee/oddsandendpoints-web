@@ -250,7 +250,14 @@
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>So what happens when you&rsquo;re not using Windows Defender on your Windows 10 and later Microsoft Intune enrolled devices, and you&rsquo;re not happy with the basic compliance checks for Third-Party Antivirus products?</p>
+            </div><div class="content" id="content" data-pagefind-body><div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2024-12-02T21:03:00" title="December 2, 2024">2 December 2024</span>, the content may be out of date.</div></div></div><p>So what happens when you&rsquo;re not using Windows Defender on your Windows 10 and later Microsoft Intune enrolled devices, and you&rsquo;re not happy with the basic compliance checks for Third-Party Antivirus products?</p>
 <p>Microsoft have come to the rescue with their <a href="https://docs.microsoft.com/en-us/mem/intune/protect/compliance-use-custom-settings" target="_blank" rel="noopener noreferrer">Custom Compliance Settings</a>, so let&rsquo;s utilise this detect and check policy, and leverage it to detect and report on Non-Microsoft Antivirus products, their real time protection status, as well as whether the definitions are up to date.</p>
 <h2 id="custom-compliance-policies" class="headerLink">
     <a href="#custom-compliance-policies" class="header-mark"></a>1 Custom Compliance Policies</h2><p>As Custom Compliance isn&rsquo;t that new a feature of Microsoft Intune, I&rsquo;m not going to deep dive into the process, a number of other people have done that already:</p>
@@ -1306,9 +1313,6 @@
     <div class="post-info-more">
         <section class="post-tags"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/intune/">Intune</a>,&nbsp;<a href="/tags/compliance/">Compliance</a>,&nbsp;<a href="/tags/security/">Security</a>,&nbsp;<a href="/tags/antivirus/">Antivirus</a>,&nbsp;<a href="/tags/powershell/">PowerShell</a></section>
-        <section class="print:!tw-hidden">
-            <span><button class="tw-text-fgColor-link-muted hover:tw-text-fgColor-link-muted-hover" onclick="window.history.back();">Back</button></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
-        </section>
     </div>
 
     <div class="post-nav print:tw-hidden"><a href="/posts/automate-endpoint-privilege-management/" class="prev" rel="prev" title="Automating Endpoint Privilege Management Policies"><svg class="icon"
