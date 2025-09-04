@@ -87,7 +87,11 @@ Otherwise, stay tuned.
 
 ## PowerShell
 
-So I put together the following PowerShell [script](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/EndpointSecurity/AppLockerConversion/Convert-AppLockertoIntune.ps1) to do the hard work for me, and reduce human error obviously, not just because I'm lazy.
+So I put together the following PowerShell [script](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/EndpointSecurity/AppLockerConversion/Convert-AppLockertoIntune.ps1) to do the hard work for me, and reduce human error obviously, not *just* because I'm lazy.
+
+{{< admonition type=info >}}
+The script has been updated with a new method for authenticating to Graph.
+{{< /admonition >}}
 
 To give you an understanding of what it's doing before you blindly run it:
 

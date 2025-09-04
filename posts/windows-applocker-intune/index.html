@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["AppLocker policies","Intune profiles","AppLocker to Intune","Windows 10 security","Intune AppLocker configuration"],"wordcount":  4738 ,
+                        }],"genre": "posts","keywords":["AppLocker policies","Intune profiles","AppLocker to Intune","Windows 10 security","Intune AppLocker configuration"],"wordcount":  4858 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/","datePublished": "2024-10-22T11:13:46+01:00","dateModified": "2024-10-22T11:13:46+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -1103,7 +1103,15 @@
 <p>If you want to go ahead and do this manually, you just continue to the copy the <strong>RuleCollection</strong> sections from your exported XML, and use those to create your Custom Profile in Intune, oh and stop reading this post.</p>
 <p>Otherwise, stay tuned.</p>
 <h2 id="powershell" class="headerLink">
-    <a href="#powershell" class="header-mark"></a>2 PowerShell</h2><p>So I put together the following PowerShell <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/EndpointSecurity/AppLockerConversion/Convert-AppLockertoIntune.ps1" target="_blank" rel="noopener noreferrer">script</a> to do the hard work for me, and reduce human error obviously, not just because I&rsquo;m lazy.</p>
+    <a href="#powershell" class="header-mark"></a>2 PowerShell</h2><p>So I put together the following PowerShell <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/EndpointSecurity/AppLockerConversion/Convert-AppLockertoIntune.ps1" target="_blank" rel="noopener noreferrer">script</a> to do the hard work for me, and reduce human error obviously, not <em>just</em> because I&rsquo;m lazy.</p>
+<div class="details admonition info open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg></span>Info<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">The script has been updated with a new method for authenticating to Graph.</div></div></div>
 <p>To give you an understanding of what it&rsquo;s doing before you blindly run it:</p>
 <ul>
 <li>Captures each of the RuleCollections in the exported XML file</li>
@@ -1255,6 +1263,11 @@
 </span></span></span><span class="line"><span class="cl"><span class="cm">Create an Intune profile called WIN_COPE_AppLocker_Test for AppLocker settings set to Enforce, with a grouping of &#39;Development&#39;
 </span></span></span><span class="line"><span class="cl"><span class="cm">PS&gt; .\Convert-AppLockerToIntune.ps1 -tenantId &#39;36019fe7-a342-4d98-9126-1b6f94904ac7&#39; -xmlPath &#39;C:\Source\github\mve-scripts\Intune\EndpointSecurity\AppLockerConversion\AppLockerRules-Audit.xml&#39; -displayName &#39;WIN_COPE_AppLocker_Test&#39; -grouping &#39;Development&#39; -enforcement Enforce
 </span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">NOTES</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">Version:        0.2
+</span></span></span><span class="line"><span class="cl"><span class="cm">Author:         Nick Benton
+</span></span></span><span class="line"><span class="cl"><span class="cm">WWW:            oddsandendpoints.co.uk
+</span></span></span><span class="line"><span class="cl"><span class="cm">Creation Date:  04/09/2025
 </span></span></span><span class="line"><span class="cl"><span class="cm">#&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nb">CmdletBinding</span><span class="p">()]</span>
@@ -1317,7 +1330,8 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Connect-ToGraph</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="cm">&lt;#
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cm">&lt;#
 </span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">SYNOPSIS</span><span class="cm">
 </span></span></span><span class="line"><span class="cl"><span class="cm">Authenticates to the Graph API via the Microsoft.Graph.Authentication module.
 </span></span></span><span class="line"><span class="cl"><span class="cm">
@@ -1340,6 +1354,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="cm">Connect-ToGraph -tenantId $tenantId -appId $app -appSecret $secret
 </span></span></span><span class="line"><span class="cl"><span class="cm">
 </span></span></span><span class="line"><span class="cl"><span class="cm">-#&gt;</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">cmdletbinding</span><span class="p">()]</span>
 </span></span><span class="line"><span class="cl">    <span class="k">param</span>
 </span></span><span class="line"><span class="cl">    <span class="p">(</span>
@@ -1408,38 +1423,62 @@
 </span></span><span class="line"><span class="cl">        <span class="nb">Invoke-MgGraphRequest</span> <span class="n">-Uri</span> <span class="nv">$uri</span> <span class="n">-Method</span> <span class="n">Post</span> <span class="n">-Body</span> <span class="nv">$JSON</span> <span class="n">-ContentType</span> <span class="s1">&#39;application/json&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="k">catch</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">Write-Error</span> <span class="nv">$Error</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="py">ErrorDetails</span><span class="p">.</span><span class="py">Message</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Error</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Exception</span><span class="p">.</span><span class="py">Message</span>
 </span></span><span class="line"><span class="cl">        <span class="k">break</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="c">#endregion functions</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c">#region authentication</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$graphModule</span> <span class="p">=</span> <span class="s1">&#39;Microsoft.Graph.Authentication&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;Checking for </span><span class="nv">$graphModule</span><span class="s2"> PowerShell module...&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
+</span></span><span class="line"><span class="cl"><span class="c">#region module check</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$modules</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="s1">&#39;Microsoft.Graph.Authentication&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$module</span> <span class="k">in</span> <span class="nv">$modules</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s2">&#34;Checking for </span><span class="nv">$module</span><span class="s2"> PowerShell module...&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(!(</span><span class="nb">Get-Module</span> <span class="n">-Name</span> <span class="nv">$module</span> <span class="n">-ListAvailable</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$elevatedStatus</span> <span class="o">-eq</span> <span class="vm">$true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-Host</span> <span class="s2">&#34;PowerShell Module </span><span class="nv">$module</span><span class="s2"> not found, installing for all users.&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-Host</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nv">$module</span> <span class="n">-AllowClobber</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(!(</span><span class="nb">Find-Module</span> <span class="n">-Name</span> <span class="nv">$graphModule</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nv">$graphModule</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-Host</span> <span class="s2">&#34;PowerShell Module </span><span class="nv">$module</span><span class="s2"> not found, installing for current user.&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-Host</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nv">$module</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-AllowClobber</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s2">&#34;PowerShell Module </span><span class="nv">$module</span><span class="s2"> found.&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nv">$module</span> <span class="n">-Force</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s2">&#34;PowerShell Module </span><span class="nv">$graphModule</span><span class="s2"> found.&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
+</span></span><span class="line"><span class="cl"><span class="c">#endregion module check</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(!([</span><span class="no">System.AppDomain</span><span class="p">]::</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="py">GetAssemblies</span><span class="p">()</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">FullName</span> <span class="o">-Like</span> <span class="s2">&#34;*</span><span class="nv">$graphModule</span><span class="s2">*&#34;</span><span class="p">))</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nv">$graphModule</span> <span class="n">-Force</span>
+</span></span><span class="line"><span class="cl"><span class="c">#region app auth</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(!</span><span class="nv">$tenantId</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Write-Host</span> <span class="s1">&#39;Connecting using interactive authentication&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Connect-MgGraph</span> <span class="n">-Scopes</span> <span class="nv">$scopes</span> <span class="n">-NoWelcome</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">((!</span><span class="nv">$appId</span> <span class="o">-and</span> <span class="p">!</span><span class="nv">$appSecret</span><span class="p">)</span> <span class="o">-or</span> <span class="p">(</span><span class="nv">$appId</span> <span class="o">-and</span> <span class="p">!</span><span class="nv">$appSecret</span><span class="p">)</span> <span class="o">-or</span> <span class="p">(!</span><span class="nv">$appId</span> <span class="o">-and</span> <span class="nv">$appSecret</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-Host</span> <span class="s1">&#39;Missing App Details, connecting using user authentication&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Connect-ToGraph</span> <span class="n">-tenantId</span> <span class="nv">$tenantId</span> <span class="n">-Scopes</span> <span class="nv">$scopes</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Write-Host</span> <span class="s1">&#39;Connecting using App authentication&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Yellow</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">Connect-ToGraph</span> <span class="n">-tenantId</span> <span class="nv">$tenantId</span> <span class="n">-appId</span> <span class="nv">$appId</span> <span class="n">-appSecret</span> <span class="nv">$appSecret</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$context</span> <span class="p">=</span> <span class="nb">Get-MgContext</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s2">&#34;Successfully connected to Microsoft Graph tenant with ID </span><span class="p">$(</span><span class="nv">$context</span><span class="p">.</span><span class="n">TenantId</span><span class="p">)</span><span class="s2">.&#34;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nb">Get-MgContext</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Write-Host</span> <span class="s1">&#39;Disconnecting from existing Graph session.&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Disconnect-MgGraph</span>
+</span></span><span class="line"><span class="cl"><span class="k">catch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Exception</span><span class="p">.</span><span class="py">Message</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s1">&#39;Connecting to Graph&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Connect-ToGraph</span> <span class="n">-tenantId</span> <span class="nv">$tenantId</span> <span class="n">-Scopes</span> <span class="nv">$scopes</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$existingScopes</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-MgContext</span><span class="p">).</span><span class="py">Scopes</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s1">&#39;Disconnecting from Graph to allow for changes to consent requirements&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Disconnect-MgGraph</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Write-Host</span> <span class="s1">&#39;Connecting to Graph&#39;</span> <span class="n">-ForegroundColor</span> <span class="n">Cyan</span>
-</span></span><span class="line"><span class="cl"><span class="nb">Connect-ToGraph</span> <span class="n">-tenantId</span> <span class="nv">$tenantId</span> <span class="n">-Scopes</span> <span class="nv">$existingScopes</span>
-</span></span><span class="line"><span class="cl"><span class="c">#endregion authentication</span>
+</span></span><span class="line"><span class="cl"><span class="c">#endregion app auth</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(!(</span><span class="nb">Test-Path</span> <span class="n">-Path</span> <span class="nv">$xmlPath</span> <span class="n">-PathType</span> <span class="n">Leaf</span><span class="p">))</span> <span class="p">{</span>
@@ -1514,8 +1553,8 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">catch</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="nv">$Error</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="py">ErrorDetails</span><span class="p">.</span><span class="py">Message</span>
-</span></span><span class="line"><span class="cl">    <span class="n">exit</span> <span class="mf">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Exception</span><span class="p">.</span><span class="py">Message</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </div>
 
