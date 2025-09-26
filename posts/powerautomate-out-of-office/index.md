@@ -1,4 +1,4 @@
-# Setting your Out of Office with Power Automate
+# Setting your Out of Office message with Power Automate
 
 
 When I started in my current role, I was asked to ensure that I set a specific [Out of Office](https://support.microsoft.com/en-gb/office/send-automatic-replies-out-of-office-from-outlook-9742f476-5348-4f9f-997f-5e208513bd67) message in Outlook, letting anyone either internally or externally know that I was working on a Customer engagement and to ~leave me alone~ contact someone else if they needed assistance.

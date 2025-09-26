@@ -1,4 +1,4 @@
-# Keeping Windows Store Apps Updated with Microsoft Intune
+# Keeping Windows store apps updated with Intune
 
 
 So we're all onboard with the [New Microsoft Store](https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft), and deploying both UWP and Win32 apps from Microsoft Intune is an absolute breeze, and reduces the effort of deploying applications to a click click next OK exercise. What about the UWP apps that are already installed on a Windows Autopilot device, shouldn't we give them a bit of love? If you care at all about users and security you should.

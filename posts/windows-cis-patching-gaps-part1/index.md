@@ -1,4 +1,4 @@
-# Patching CIS Windows 11 Benchmark Gaps - BitLocker
+# Patching CIS Windows 11 benchmark gaps - BitLocker
 
 
 With the release of the [CIS](https://www.cisecurity.org/) (Center for Internet Security) [Windows 11 Benchmark 3.0.1](https://www.cisecurity.org/benchmark/intune), the corresponding release of the Microsoft Intune build kit, and my colleague [Jonathan Fallis](https://www.linkedin.com/in/jonathan-fallis) covering the CIS [community version](https://www.everything365.online/2023/09/18/cis-microsoft-intune-for-windows-11-benchmark-in-settings-catalog-json/) of the benchmark (and the limitations) on his [website](https://deploymentshare.com/articles/bp-cis/), we both thought it would be best to share our combined experience when working with the newly available CIS build kit; focussing on BitLocker security settings in the initial part of this series.

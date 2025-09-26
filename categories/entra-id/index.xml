@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/categories/entra-id/</link>
         <description>Entra ID - Category - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 10 Jan 2024 20:08:21 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/categories/entra-id/" rel="self" type="application/rss+xml" /><item>
-    <title>Device Attributes for Conditional Access Exceptions</title>
+    <title>Device attributes for conditional access exceptions</title>
     <link>https://www.oddsandendpoints.co.uk/posts/device-attributes-cap/</link>
     <pubDate>Wed, 10 Jan 2024 20:08:21 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/device-attributes-cap/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/microsoft-teams-rooms-android-device-administrator/featured.png" referrerpolicy="no-referrer">
             </div>What if you want to ensure that all of your Microsoft Teams Rooms System accounts, and any future accounts can enrol using Android Device Administrator in Microsoft Intune?]]></description>
 </item><item>
-    <title>Entra Dynamic Groups vs Intune Device Filters</title>
+    <title>Entra ID dynamic groups vs Intune assignment filters</title>
     <link>https://www.oddsandendpoints.co.uk/posts/endpoint-manager-device-filters/</link>
     <pubDate>Wed, 08 Jun 2022 22:25:47 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/endpoint-manager-device-filters/</guid>

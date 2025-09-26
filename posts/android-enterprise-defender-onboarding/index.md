@@ -1,4 +1,4 @@
-# Lower-Touch Defender Onboarding for Android Devices
+# Lower-touch Defender onboarding for Android devices
 
 
 {{< admonition type=note >}}

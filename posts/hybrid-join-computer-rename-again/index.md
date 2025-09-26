@@ -1,4 +1,4 @@
-# Proactively Renaming Hybrid Azure AD Joined Devices
+# Proactively renaming hybrid Entra ID joined devices
 
 
 Nothing has really changed in the Hybrid Join Autopilot space when it comes to device names, and we're still stuck with useless naming conventions for these devices; sometimes a prefix and random characters just isn't a good enough identification method for Windows devices.

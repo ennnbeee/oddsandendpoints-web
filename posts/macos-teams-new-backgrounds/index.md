@@ -1,4 +1,4 @@
-# Custom Backgrounds New Teams on macOS
+# Custom backgrounds New Teams on macOS
 
 
 This isn't the first time we've looked at deploying {{< reftab href="/posts/macos-teams-backgrounds/" title="backgrounds" >}} for Microsoft Teams on macOS, but it's been a while since we answered an internet strangers question, and hopefully my scripting has come on a little way since then (spoiler: it hasn't).

@@ -1,4 +1,4 @@
-# Renaming Windows Autopilot Hybrid Joined Devices
+# Renaming Windows Autopilot hybrid joined devices
 
 
 You've probably hit the limitation with Windows Autopilot Hybrid Azure AD Join deployments and the device name templates being less than flexible, restricting to only a prefix and, well, that's it.

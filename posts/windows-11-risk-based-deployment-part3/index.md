@@ -1,4 +1,4 @@
-# Risk Based Windows 11 Deployment - Feature Updates
+# Risk based Windows 11 deployment - Feature Updates
 
 
 We're almost there now; we've generated and captured the data from a {{< reftab href="/posts/windows-11-risk-based-deployment-part1/" title="Feature Update Readiness Report" >}} and we've {{< reftab href="/posts/windows-11-risk-based-deployment-part2/" title="tagged and grouped" >}} devices based on their readiness state using Dynamic Security Groups. All of this is useful when deploying a Windows 11 Feature Update, in this instance 23H2, to devices, so let's look at how we actually deploy the new Feature Update to these groups of devices and get you on your Windows 11 journey.

@@ -1,4 +1,4 @@
-# ConfigMgr Client Installation on Orphaned Devices
+# ConfigMgr client installation on orphaned devices
 
 
 You've just implemented a Cloud Management Gateway to help your hybrid joined Windows devices communicate to Configuration Manager over the internet, but what if they're orphaned and unable to communicate to Configuration Manager to get the new Client Settings?

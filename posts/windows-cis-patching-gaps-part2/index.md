@@ -1,4 +1,4 @@
-# Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows Autopilot
+# Patching CIS Windows 11 benchmark gaps - Level 1 Windows Autopilot
 
 
 We started with the {{< reftab  href="/posts/windows-cis-patching-gaps-part1/" title="BitLocker and DMA (Direct Memory Access)" >}} settings in the first post in this [Windows 11 CIS benchmark](https://www.cisecurity.org/benchmark/intune) based series, now is the time we dig deeper into the broader Level 1 settings, this time looking at the impact to Windows Autopilot cloud native deployments.

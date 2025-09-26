@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/device-enrolment/</link>
         <description>Device Enrolment - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 12 Feb 2025 11:40:20 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/device-enrolment/" rel="self" type="application/rss+xml" /><item>
-    <title>Improving the Android Enterprise Enrolment Experience</title>
+    <title>Improving the Android Enterprise enrolment experience</title>
     <link>https://www.oddsandendpoints.co.uk/posts/android-enterprise-enrolment-customisation/</link>
     <pubDate>Wed, 12 Feb 2025 11:40:20 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/android-enterprise-enrolment-customisation/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/macos-windows-autopilot-utm/featured.png" referrerpolicy="no-referrer">
             </div>With all this chat about macOS device management in Microsoft Intune, I wonder how many people are macOS users but still need to test Microsoft Intune settings on Windows devices? Well fear not, there is a way to deploy a Windows Autopilot Virtual machine on your macOS device for testing.]]></description>
 </item><item>
-    <title>Device Migration and ADE Profile Assignment</title>
+    <title>Device migration and ADE profile assignment</title>
     <link>https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/</link>
     <pubDate>Fri, 20 Jan 2023 19:57:07 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/microsoft-teams-rooms-android-device-administrator/featured.png" referrerpolicy="no-referrer">
             </div>What if you want to ensure that all of your Microsoft Teams Rooms System accounts, and any future accounts can enrol using Android Device Administrator in Microsoft Intune?]]></description>
 </item><item>
-    <title>Updating Enrolled Device Ownership Status</title>
+    <title>Updating enrolled device ownership status</title>
     <link>https://www.oddsandendpoints.co.uk/posts/updating-enrolled-device-ownership/</link>
     <pubDate>Mon, 08 Aug 2022 21:47:24 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/updating-enrolled-device-ownership/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/updating-enrolled-device-ownership/featured.jpg" referrerpolicy="no-referrer">
             </div>What happens if you&rsquo;ve allowed Windows, iOS, Android, and macOS devices to enrol into Microsoft Microsoft Intune in all kinds of ways, and now you&rsquo;re in a situation where devices that should be marked as corporate are marked as personal or unknown?]]></description>
 </item><item>
-    <title>Retrofitting Windows Autopilot Group Tags</title>
+    <title>Retrofitting Windows Autopilot group tags</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</link>
     <pubDate>Sun, 19 Jun 2022 15:55:02 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</guid>
@@ -52,7 +52,7 @@
                 <img src="/posts/windows-autopilot-retrofitting-group-tags/featured.png" referrerpolicy="no-referrer">
             </div>Now that we know how powerful Autopilot Group Tags can be, we should look into how we can retrofit devices with these Group Tags when the OEM or Supplier didn&rsquo;t bother doing their part of the deal.]]></description>
 </item><item>
-    <title>The Hidden Power of Windows Autopilot Group Tags</title>
+    <title>The hidden power of Windows Autopilot group tags</title>
     <link>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</link>
     <pubDate>Thu, 28 Apr 2022 10:03:55 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</guid>

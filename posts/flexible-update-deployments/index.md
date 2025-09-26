@@ -1,4 +1,4 @@
-# A Flexible Approach to Microsoft Update Deployments
+# A flexible approach to Microsoft update deployments
 
 
 So this isn't the {{< reftab href="/posts/windows-update-phased-deployment/" title="first time" >}} we've looked at improving the management of updates using Microsoft Intune, and probably won't be the last time either, especially with [declarative device management](https://learn.microsoft.com/en-us/mem/intune/protect/managed-software-updates-ios-macos) looming, for Apple and hopefully Windows devices, covering configuration of software updates.

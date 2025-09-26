@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/firewall/</link>
         <description>Firewall - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/firewall/" rel="self" type="application/rss+xml" /><item>
-    <title>Intune Custom Compliance for Cyber Essentials</title>
+    <title>Intune custom compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
 </item><item>
-    <title>Updating Windows Network Profile Locations with PowerShell</title>
+    <title>Updating Windows network profile locations with PowerShell</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</link>
     <pubDate>Tue, 06 May 2025 18:53:56 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/firewall-rule-policy-conversion/featured.png" referrerpolicy="no-referrer">
             </div>When did Microsoft go all covert ops (maybe don&rsquo;t answer that question) and start making changes to your very own Firewall Rule policies in Microsoft Intune without letting anyone know? Or did they?]]></description>
 </item><item>
-    <title>Reusable Firewall Settings for Microsoft Online Services</title>
+    <title>Reusable firewall settings for Microsoft Online Services</title>
     <link>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</link>
     <pubDate>Sat, 09 Mar 2024 21:12:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/resusable-firewall-settings-microsoft-online/featured.jpg" referrerpolicy="no-referrer">
             </div>It&rsquo;s time to remove another manual process, this time the creation of Microsoft 365 network endpoints for Windows Firewall Rules in Microsoft Intune, because nobody should be creating these manually.]]></description>
 </item><item>
-    <title>Modernising Microsoft Intune Firewall Rule Policies</title>
+    <title>Modernising Microsoft Intune firewall rule policies</title>
     <link>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</link>
     <pubDate>Tue, 12 Sep 2023 21:40:50 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</guid>

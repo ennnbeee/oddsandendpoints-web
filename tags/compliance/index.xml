@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/compliance/</link>
         <description>Compliance - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/compliance/" rel="self" type="application/rss+xml" /><item>
-    <title>Intune Custom Compliance for Cyber Essentials</title>
+    <title>Intune custom compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
 </item><item>
-    <title>Detailed Compliance for Non-Microsoft Antivirus Solutions</title>
+    <title>Detailed compliance for non-Microsoft antivirus solutions</title>
     <link>https://www.oddsandendpoints.co.uk/posts/custom-compliance-third-party-av/</link>
     <pubDate>Sun, 11 Jun 2023 21:25:23 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/custom-compliance-third-party-av/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/custom-compliance-third-party-av/featured.png" referrerpolicy="no-referrer">
             </div>So what happens when you&rsquo;re not using Windows Defender on your Windows 10 and later Microsoft Intune enrolled devices, and you&rsquo;re not happy with the basic compliance checks for Third-Party Antivirus products?]]></description>
 </item><item>
-    <title>Updating Apple Operating System Compliance Policies</title>
+    <title>Updating Apple operating system compliance policies</title>
     <link>https://www.oddsandendpoints.co.uk/posts/apple-os-updating-compliance/</link>
     <pubDate>Thu, 02 Feb 2023 20:08:49 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/apple-os-updating-compliance/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/apple-os-updating-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Apple devices shouldn&rsquo;t be exempt from Operating System compliance policies, and these policies should share the same fate as Windows ones, and be updated monthly in line with update release cycles.]]></description>
 </item><item>
-    <title>Updating Defender Antivirus Compliance Settings</title>
+    <title>Updating Defender antivirus compliance settings</title>
     <link>https://www.oddsandendpoints.co.uk/posts/defender-antivirus-compliance-updates/</link>
     <pubDate>Tue, 25 Oct 2022 22:04:47 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/defender-antivirus-compliance-updates/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/defender-antivirus-compliance-updates/featured.jpg" referrerpolicy="no-referrer">
             </div>We&rsquo;re going to have a look at updating a Microsoft Defender compliance policy with the latest platform update version, automatically.]]></description>
 </item><item>
-    <title>Windows Operating System Compliance Updates</title>
+    <title>Windows operating system compliance updates</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-os-compliance-updates/</link>
     <pubDate>Thu, 30 Jun 2022 11:20:36 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-os-compliance-updates/</guid>

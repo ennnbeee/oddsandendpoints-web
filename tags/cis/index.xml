@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/cis/</link>
         <description>Center for Internet Security (CIS) - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 12 Aug 2024 21:26:37 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/cis/" rel="self" type="application/rss+xml" /><item>
-    <title>Patching CIS Windows 11 Benchmark Gaps - Level 2 Windows 11</title>
+    <title>Patching CIS Windows 11 benchmark gaps - Level 2 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part4/</link>
     <pubDate>Mon, 12 Aug 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
@@ -13,7 +13,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part4/featured.png" referrerpolicy="no-referrer">
             </div>This is the last part in the series around the CIS (Center for Internet Security) benchmark for Windows 11, and we&rsquo;d like to say that we&rsquo;ve saved the best post for last, but we&rsquo;d be lying. Surely the Level 2 settings can&rsquo;t be worse than the Level 1?]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows 11</title>
+    <title>Patching CIS Windows 11 benchmark gaps - Level 1 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</link>
     <pubDate>Mon, 15 Jul 2024 11:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</guid>
@@ -21,7 +21,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part3/featured.png" referrerpolicy="no-referrer">
             </div>The impact of the CIS settings on BitLocker and Windows Autopilot now done and dusted, we should broaden our horizons and start to look at what other problems the CIS level 1 benchmark brings to Windows 11 as a whole. Are there any? Will it be smooth sailing? Yeah, no.]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows Autopilot</title>
+    <title>Patching CIS Windows 11 benchmark gaps - Level 1 Windows Autopilot</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part2/</link>
     <pubDate>Sun, 23 Jun 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
@@ -30,7 +30,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part2/featured.png" referrerpolicy="no-referrer">
             </div>With the CIS BitLocker and associated DMA settings reviewed and updated, now is time to delve into the Windows 11 specific settings that exist in the CIS Level 1 benchmark. What issues do they bring to Windows Autopilot, what solutions can we find? Honestly, who knows.]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 Benchmark Gaps - BitLocker</title>
+    <title>Patching CIS Windows 11 benchmark gaps - BitLocker</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part1/</link>
     <pubDate>Sat, 15 Jun 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>

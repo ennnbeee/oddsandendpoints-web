@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/updates/</link>
         <description>Software Updates - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/updates/" rel="self" type="application/rss+xml" /><item>
-    <title>Capturing Windows Feature Update Safeguard Holds</title>
+    <title>Capturing Windows feature update safeguard holds</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</link>
     <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-feature-updates-safeguards/featured.png" referrerpolicy="no-referrer">
             </div>Using our best friend the remediation script in Intune to pull back Safeguard Hold information so we can see why some devices aren&rsquo;t updating to Windows 11.]]></description>
 </item><item>
-    <title>Forcing Windows 11 Feature Update Readiness Assessments</title>
+    <title>Forcing Windows 11 feature update readiness assessments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</link>
     <pubDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/windows-feature-updates-assessment/featured.png" referrerpolicy="no-referrer">
             </div>As a migration to Windows 11 is fast upon us, I thought I&rsquo;d help your devices on their way into understanding whether they will support Windows 11 and what risks you may encounter with the update, by forcing devices to evaluate their readiness states.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Deployment - Improvements</title>
+    <title>Risk based Windows 11 deployment - Improvements</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</link>
     <pubDate>Tue, 03 Dec 2024 18:12:49 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part5/featured.jpg" referrerpolicy="no-referrer">
             </div>An unexpected update to the Windows 11 Feature Update deployment series, looking at how to tag users instead of devices, and an improved way to get the readiness report data, and other performance improvements. What a day.]]></description>
 </item><item>
-    <title>Self-Service Software Update Deployments</title>
+    <title>Self-service software update deployments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</link>
     <pubDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
             </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Deployment - Automation</title>
+    <title>Risk based Windows 11 deployment - Automation</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part4/</link>
     <pubDate>Sat, 18 May 2024 18:12:49 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part4/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part4/featured.jpg" referrerpolicy="no-referrer">
             </div>The final part in this series looks at how to bring everything together under a single, repeatable script, allowing for the capture of readiness state, the tagging of devices to support the distribution of Windows 11 24H2.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Deployment - Feature Updates</title>
+    <title>Risk based Windows 11 deployment - Feature Updates</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part3/</link>
     <pubDate>Sun, 05 May 2024 10:18:36 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part3/</guid>
@@ -52,7 +52,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part3/featured.png" referrerpolicy="no-referrer">
             </div>Using the data captured from a Windows 11 Feature Update Readiness report to successfully tag device attributes to device objects, and group them based on risk, we now look at how to deploy Feature Updates to these devices in a controlled manner.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Deployment - Device Attributes</title>
+    <title>Risk based Windows 11 deployment - Device Attributes</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part2/</link>
     <pubDate>Fri, 19 Apr 2024 23:11:03 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part2/</guid>
@@ -60,7 +60,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part2/featured.jpg" referrerpolicy="no-referrer">
             </div>Having looked into capturing the Feature Update Readiness data for Windows 11 23H2 for our Windows devices, we can now use this risk based data to tag them with their associated risk, grouping them together to allow for sensible Feature Update profile assignment.]]></description>
 </item><item>
-    <title>Software Update Deployment Rings for Managed macOS Devices</title>
+    <title>Software update deployment rings for managed macOS devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-updates-phased-deployment/</link>
     <pubDate>Sat, 06 Apr 2024 20:05:09 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-updates-phased-deployment/</guid>
@@ -68,7 +68,7 @@
                 <img src="/posts/macos-updates-phased-deployment/featured.png" referrerpolicy="no-referrer">
             </div>So you&rsquo;ve pulled the trigger on managing macOS devices in Microsoft Intune, and with this year being the year of macOS for Microsoft (this seems like an oxymoron), you should probably look at how to handle software updates.]]></description>
 </item><item>
-    <title>Risk Based Windows 11 Deployment - Reporting</title>
+    <title>Risk based Windows 11 deployment - Reporting</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part1/</link>
     <pubDate>Mon, 25 Mar 2024 23:32:16 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part1/</guid>
@@ -76,7 +76,7 @@
                 <img src="/posts/windows-11-risk-based-deployment-part1/featured.png" referrerpolicy="no-referrer">
             </div>With Windows 10 support coming to an end sooner than you&rsquo;d expect, in the first part of this series we look at ways to capture Feature Update Readiness Report data using PowerShell and Graph to help with the rollout of the new Windows 11 operating system.]]></description>
 </item><item>
-    <title>A Flexible Approach to Microsoft Update Deployments</title>
+    <title>A flexible approach to Microsoft update deployments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/flexible-update-deployments/</link>
     <pubDate>Mon, 19 Feb 2024 20:07:23 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/flexible-update-deployments/</guid>

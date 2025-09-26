@@ -1,4 +1,4 @@
-# Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows 11
+# Patching CIS Windows 11 benchmark gaps - Level 1 Windows 11
 
 
 With the investigation into the impact of the CIS benchmark on {{< reftab  href="/posts/windows-cis-patching-gaps-part1/" title="BitLocker" >}} and {{< reftab  href="/posts/windows-cis-patching-gaps-part2/" title="Windows Autopilot" >}} now a fond and distant memory, it's time for me to stand [Jonathan](https://www.linkedin.com/in/jonathan-fallis) down (it was his Birthday after all, *and* he has his own [content](https://deploymentshare.com/) to create), pull up my sleeves, and get to testing the CIS Level 1 settings across the full Windows 11 operating system itself.

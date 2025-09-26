@@ -1,4 +1,4 @@
-# BitLocker Recovery Key Rotation Requirements in Intune
+# BitLocker recovery key rotation requirements in Intune
 
 
 BitLocker settings in Intune have gone through a transformation in recent years, with these encryption settings existing across multiple profile types, with different wording, settings, and options with Microsoft allow for configuration of BitLocker through three main policy types:

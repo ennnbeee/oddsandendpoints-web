@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" /><title>Settings Catalog Profile Assignments in Intune</title><script
+    <meta name="robots" content="noodp" /><title>Settings catalog policy assignments in Intune</title><script
   async
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789213189452480"
   crossorigin="anonymous"
 ></script>
 <meta name="Description" content="Automatically managing assignments of Settings Catalog profiles for Windows and macOS devices in Microsoft Intune using PowerShell and Graph API."><meta property="og:url" content="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/">
   <meta property="og:site_name" content="odds&#43;endpoints">
-  <meta property="og:title" content="Settings Catalog Profile Assignments in Intune">
+  <meta property="og:title" content="Settings catalog policy assignments in Intune">
   <meta property="og:description" content="Automatically managing assignments of Settings Catalog profiles for Windows and macOS devices in Microsoft Intune using PowerShell and Graph API.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -27,7 +27,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/featured.png">
-  <meta name="twitter:title" content="Settings Catalog Profile Assignments in Intune">
+  <meta name="twitter:title" content="Settings catalog policy assignments in Intune">
   <meta name="twitter:description" content="Automatically managing assignments of Settings Catalog profiles for Windows and macOS devices in Microsoft Intune using PowerShell and Graph API.">
 <meta name="application-name" content="odds&#43;endpoints">
 <meta name="apple-mobile-web-app-title" content="odds&#43;endpoints">
@@ -38,7 +38,7 @@
 
 <link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/custom-compliance-third-party-av/" /><link rel="next" href="https://www.oddsandendpoints.co.uk/posts/macos-ncsc-revisited/" />
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
-        "headline": "Settings Catalog Profile Assignments in Intune",
+        "headline": "Settings catalog policy assignments in Intune",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -48,7 +48,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["settings catalog","assignments","graph","powershell","automation"],"wordcount":  3644 ,
+                        }],"genre": "posts","keywords":["settings catalog","assignments","graph","powershell","automation"],"wordcount":  3628 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/","datePublished": "2023-06-27T19:17:02+01:00","dateModified": "2023-06-27T19:17:02+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -257,14 +257,14 @@
   </ul>
 </nav></div>
         </div>
-    </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:27 June 2023" data-pagefind-body>Settings Catalog Profile Assignments in Intune</h1><div class="post-meta">
+    </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:June 27, 2023" data-pagefind-body>Settings catalog policy assignments in Intune</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'>
         <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src='/img/ennbee.png'   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>
                 </span>&nbsp;<span class="post-category">included in </span>&nbsp;<span class="post-category">category <a href="/categories/intune/"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Intune</a></span></div>
             <div class="post-meta-line"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="27 June 2023">27 June 2023</time>&nbsp;</div>
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="June 27, 2023">June 27, 2023</time>&nbsp;</div>
         </div><div class="featured-image"><img  loading="eager" src='/posts/managing-intune-assignment-settingscatalog/featured.png'   alt="Automatically managing assignments of Settings Catalog profiles for Windows and macOS devices in Microsoft Intune using PowerShell and Graph API." height="500" width="1000"></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -316,7 +316,7 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2023-06-27T19:17:02" title="June 27, 2023">27 June 2023</span>, the content may be out of date.</div></div></div><p>Fresh off the back of a trawl of a Modern Endpoint Management LinkedIn group, someone wanted the ability to assign existing Settings Catalog profiles in Microsoft Intune to additional Groups&hellip;this sounded like a quick win if you fancy manually doing it, but no one wants that, and as I had experience of dealing with the logic when <a href="/posts/assigning-intune-applications/" rel="noopener" target="_blank">assigning apps</a>, I thought I&rsquo;d give it a go.</p>
+        <div class="admonition-content">This article was last updated on <span class="timeago" datetime="2023-06-27T19:17:02" title="June 27, 2023">June 27, 2023</span>, the content may be out of date.</div></div></div><p>Fresh off the back of a trawl of a Modern Endpoint Management LinkedIn group, someone wanted the ability to assign existing Settings Catalog profiles in Microsoft Intune to additional Groups&hellip;this sounded like a quick win if you fancy manually doing it, but no one wants that, and as I had experience of dealing with the logic when <a href="/posts/assigning-intune-applications/" rel="noopener" target="_blank">assigning apps</a>, I thought I&rsquo;d give it a go.</p>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -326,12 +326,12 @@
     <div class="details-content">
         <div class="admonition-content">The functions, authentication, and script have now been updated to support the use of the Graph PowerShell SDK.</div></div></div>
 <h2 id="assignment-overview" class="headerLink">
-    <a href="#assignment-overview" class="header-mark"></a>1 Assignment Overview</h2><p>Assigning <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/settings-catalog" target="_blank" rel="noopener noreferrer">Settings Catalog profiles</a> for Windows, macOS, and iOS/iPadOS devices isn&rsquo;t anything new, though Settings Catalogs were a bit of a revelation when they first appeared in Microsoft Intune allowing you to build profiles from scratch with a searchable interface, and with the ability to assign them to groups and use <a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters" target="_blank" rel="noopener noreferrer">Device Filters</a>, I jumped at the chance to use them in place of custom profiles where applicable.</p>
+    <a href="#assignment-overview" class="header-mark"></a>Assignment Overview</h2><p>Assigning <a href="https://learn.microsoft.com/en-us/mem/intune/configuration/settings-catalog" target="_blank" rel="noopener noreferrer">Settings Catalog profiles</a> for Windows, macOS, and iOS/iPadOS devices isn&rsquo;t anything new, though Settings Catalogs were a bit of a revelation when they first appeared in Microsoft Intune allowing you to build profiles from scratch with a searchable interface, and with the ability to assign them to groups and use <a href="https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters" target="_blank" rel="noopener noreferrer">Device Filters</a>, I jumped at the chance to use them in place of custom profiles where applicable.</p>
 <p>What about the assignment though, what does that look like?</p>
 <h3 id="assignment-restrictions" class="headerLink">
-    <a href="#assignment-restrictions" class="header-mark"></a>1.1 Assignment Restrictions</h3><p>Settings Catalog assignment isn&rsquo;t too dissimilar from assigning any other profile type, though as you&rsquo;ll discover through subsequent posts, each has it&rsquo;s own nuance when it comes to how you assign the profiles. So let&rsquo;s list what we can do when it comes to assignment, and what we can&rsquo;t do, as this will shape how we build out a PowerShell function to allow us to assign profiles in bulk.</p>
+    <a href="#assignment-restrictions" class="header-mark"></a>Assignment Restrictions</h3><p>Settings Catalog assignment isn&rsquo;t too dissimilar from assigning any other profile type, though as you&rsquo;ll discover through subsequent posts, each has it&rsquo;s own nuance when it comes to how you assign the profiles. So let&rsquo;s list what we can do when it comes to assignment, and what we can&rsquo;t do, as this will shape how we build out a PowerShell function to allow us to assign profiles in bulk.</p>
 <h4 id="assignment-wins" class="headerLink">
-    <a href="#assignment-wins" class="header-mark"></a>1.1.1 Assignment Wins</h4><p>These assignments, if already familiar with Microsoft Intune, shouldn&rsquo;t come as any surprise:</p>
+    <a href="#assignment-wins" class="header-mark"></a>Assignment Wins</h4><p>These assignments, if already familiar with Microsoft Intune, shouldn&rsquo;t come as any surprise:</p>
 <ul>
 <li><strong>Included Groups</strong>: Assigning to All Devices, All Users, and Groups of Devices or Users</li>
 <li><strong>Included Groups</strong>: Assigning to All Devices with an Include Device Filter, All Users with an Include Device Filter, and Groups of Devices or Users with an Include Device Filter</li>
@@ -348,7 +348,7 @@
         <div class="admonition-content">Remember that when excluding groups, you cannot mix user and device groups across include and exclude.</div></div></div>
 <p>So this is pretty useful and should, especially with Device Filters, be all you need for assignment. What about the things we can&rsquo;t do?</p>
 <h4 id="assignment-no-nos" class="headerLink">
-    <a href="#assignment-no-nos" class="header-mark"></a>1.1.2 Assignment No-nos</h4><p>The list below is the current list of things you cannot do with the assignments for Settings Catalogs, and takes into consideration whether there are existing assignments on the profile:</p>
+    <a href="#assignment-no-nos" class="header-mark"></a>Assignment No-nos</h4><p>The list below is the current list of things you cannot do with the assignments for Settings Catalogs, and takes into consideration whether there are existing assignments on the profile:</p>
 <ul>
 <li><strong>Included Groups</strong>: Assigning to All Devices and a Group of Devices or Users</li>
 <li><strong>Included Groups</strong>: Assigning to All Users and a Group of Devices or Users</li>
@@ -363,9 +363,9 @@
 </ul>
 <p>There are many restrictions when it comes to adding additional assignments, the above are the important ones, as we don&rsquo;t want to be creating ourselves issues with assignments later on. Though this is going to give me a headache writing PowerShell to deal with this logic.</p>
 <h3 id="getting-settings-catalog-information" class="headerLink">
-    <a href="#getting-settings-catalog-information" class="header-mark"></a>1.2 Getting Settings Catalog Information</h3><p>We&rsquo;ve now got a good grip on the methods for assignment, but to start this all off, we need a way to get both the the Settings Catalog profile itself, a method to capture all existing assignments, and importantly, how to add assignments to the profile.</p>
+    <a href="#getting-settings-catalog-information" class="header-mark"></a>Getting Settings Catalog Information</h3><p>We&rsquo;ve now got a good grip on the methods for assignment, but to start this all off, we need a way to get both the the Settings Catalog profile itself, a method to capture all existing assignments, and importantly, how to add assignments to the profile.</p>
 <h4 id="getting-settings-catalogs" class="headerLink">
-    <a href="#getting-settings-catalogs" class="header-mark"></a>1.2.1 Getting Settings Catalogs</h4><p>I already had the PowerShell function below at my disposal, so after connecting to Graph API using <code>Connect-MgGraph</code> and the Graph PowerShell SDK module, we can use the <a href="https://learn.microsoft.com/en-us/graph/api/intune-deviceconfigv2-devicemanagementconfigurationpolicy-get?view=graph-rest-beta" target="_blank" rel="noopener noreferrer"><code>deviceManagementConfigurationPolicy</code></a> endpoint in the below function to pull back either all Settings Catalogs, or specific ones using either the Id or Name.</p>
+    <a href="#getting-settings-catalogs" class="header-mark"></a>Getting Settings Catalogs</h4><p>I already had the PowerShell function below at my disposal, so after connecting to Graph API using <code>Connect-MgGraph</code> and the Graph PowerShell SDK module, we can use the <a href="https://learn.microsoft.com/en-us/graph/api/intune-deviceconfigv2-devicemanagementconfigurationpolicy-get?view=graph-rest-beta" target="_blank" rel="noopener noreferrer"><code>deviceManagementConfigurationPolicy</code></a> endpoint in the below function to pull back either all Settings Catalogs, or specific ones using either the Id or Name.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -600,7 +600,7 @@
 </div>
 <p>With a way to get a Settings Catalog profile, we now need a way to pull back any and all assignments for a profile using the <a href="https://learn.microsoft.com/en-us/graph/api/intune-deviceconfigv2-devicemanagementconfigurationpolicyassignment-list?view=graph-rest-beta" target="_blank" rel="noopener noreferrer"><code>deviceManagementConfigurationPolicyAssignments</code></a> endpoint in Graph and the above <code>Id</code> of the profile.</p>
 <h4 id="getting-settings-catalog-assignments" class="headerLink">
-    <a href="#getting-settings-catalog-assignments" class="header-mark"></a>1.2.2 Getting Settings Catalog Assignments</h4><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
+    <a href="#getting-settings-catalog-assignments" class="header-mark"></a>Getting Settings Catalog Assignments</h4><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
     tw-flex 
@@ -830,10 +830,10 @@
 </div>
 <p>So we kinda have the bits we need to get existing assignments, what about adding a new assignment?</p>
 <h2 id="assigning-settings-catalogs" class="headerLink">
-    <a href="#assigning-settings-catalogs" class="header-mark"></a>2 Assigning Settings Catalogs</h2><p>First thing to note about assignments in Microsoft Intune, is there is no <code>PATCH</code> option with Graph API for the assignment endpoints, what this means is there is no native way to update the assignments of a Settings Catalog profile, the default behaviour is to replace any and all existing assignments. After trying to deal with the restrictions around assignments, I can understand why there is no <code>PATCH</code> option, as it&rsquo;s a nightmare dealing with the logic.</p>
+    <a href="#assigning-settings-catalogs" class="header-mark"></a>Assigning Settings Catalogs</h2><p>First thing to note about assignments in Microsoft Intune, is there is no <code>PATCH</code> option with Graph API for the assignment endpoints, what this means is there is no native way to update the assignments of a Settings Catalog profile, the default behaviour is to replace any and all existing assignments. After trying to deal with the restrictions around assignments, I can understand why there is no <code>PATCH</code> option, as it&rsquo;s a nightmare dealing with the logic.</p>
 <p>We however, are not an API, so we can apply our squishy human brains and work something out to give us the ability to add new assignments, without ripping out the existing ones surely?</p>
 <h3 id="building-new-assignments" class="headerLink">
-    <a href="#building-new-assignments" class="header-mark"></a>2.1 Building New Assignments</h3><p>So where do we start exactly? With the many different ways to assign a profile, or the twelfty different restrictions when adding new assignments to existing ones? Let&rsquo;s go with the relatively simple creation of new assignments first, as this seems a little more straightforward.</p>
+    <a href="#building-new-assignments" class="header-mark"></a>Building New Assignments</h3><p>So where do we start exactly? With the many different ways to assign a profile, or the twelfty different restrictions when adding new assignments to existing ones? Let&rsquo;s go with the relatively simple creation of new assignments first, as this seems a little more straightforward.</p>
 <p>Luckily for us, Microsoft provide <a href="https://learn.microsoft.com/en-us/graph/api/intune-deviceconfigv2-devicemanagementconfigurationpolicy-assign?view=graph-rest-beta" target="_blank" rel="noopener noreferrer">documentation</a> for the JSON format of the payload required to create a new assignment, and as we have our own function to get existing assignments, we can quite easily build out the required data in PowerShell based on each of the methods for assignment.</p>
 <p>The table below details the data used for each assignment method, so this is useful reference for us when building our own assignment function.</p>
 
@@ -1237,7 +1237,7 @@
 </div>
 <p>That was the easy part, and we can take the above methods to create new assignments. So now onto the head scratcher.</p>
 <h3 id="capturing-existing-assignments" class="headerLink">
-    <a href="#capturing-existing-assignments" class="header-mark"></a>2.2 Capturing Existing Assignments</h3><p>We have the <code>Get-DeviceSettingsCatalogAssignment</code> function at our disposal now, so we can query a Settings Catalog profile to get any existing assignments, which is going to be important when dealing with the logic of adding new ones, for now we just need to get the existing ones into a useable JSON format so we can punt it back to Graph API.</p>
+    <a href="#capturing-existing-assignments" class="header-mark"></a>Capturing Existing Assignments</h3><p>We have the <code>Get-DeviceSettingsCatalogAssignment</code> function at our disposal now, so we can query a Settings Catalog profile to get any existing assignments, which is going to be important when dealing with the logic of adding new ones, for now we just need to get the existing ones into a useable JSON format so we can punt it back to Graph API.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -1469,10 +1469,10 @@
 </div>
 <p>We&rsquo;re onto something here, time to look at the logic around adding new assignments to existing ones, mmmm logic my favourite coffee fuelled exercise.</p>
 <h3 id="handling-existing-assignments" class="headerLink">
-    <a href="#handling-existing-assignments" class="header-mark"></a>2.3 Handling Existing Assignments</h3><p>Now that we can capture existing assignment, we need to deal with the logic when trying to add new assignments to the Settings Catalog profile. This will not be fun.</p>
+    <a href="#handling-existing-assignments" class="header-mark"></a>Handling Existing Assignments</h3><p>Now that we can capture existing assignment, we need to deal with the logic when trying to add new assignments to the Settings Catalog profile. This will not be fun.</p>
 <p>Let&rsquo;s go through each of the <a href="/posts/assigning-intune-applications/#assignment-no-nos/" rel="noopener" target="_blank">assignment non-nos</a> we&rsquo;ve already covered in this post.</p>
 <h4 id="include-assignments" class="headerLink">
-    <a href="#include-assignments" class="header-mark"></a>2.3.1 Include Assignments</h4><ul>
+    <a href="#include-assignments" class="header-mark"></a>Include Assignments</h4><ul>
 <li><strong>Assigning to All Devices and a Group of Devices or Users</strong></li>
 </ul>
 <p>We just need to check if the function parameter <code>$All</code> which equates to an option to assign to All Device or All Users exists, and whether there are any existing group targetted assignment on the Settings Catalog profile.</p>
@@ -1971,7 +1971,7 @@
 </ul>
 <p>This one is captured in the above logic, which is lucky as I was running out of steam by this point.</p>
 <h4 id="exclude-assignments" class="headerLink">
-    <a href="#exclude-assignments" class="header-mark"></a>2.3.2 Exclude Assignments</h4><ul>
+    <a href="#exclude-assignments" class="header-mark"></a>Exclude Assignments</h4><ul>
 <li><strong>Assigning to Groups of Devices or Users with any Device Filter</strong></li>
 </ul>
 <p>Using the parameters of the function itself, we can stop this assignment type, with parameters configured for Group assignment in <code>$GroupID</code> and the Assignment Type parameter <code>$AssignmentType</code>, as well as the Filter ID parameter <code>$FilterId</code>. With this combination of parameters being true, we can throw an error and stop the function from running.</p>
@@ -2172,7 +2172,7 @@
 </ul>
 <p>The logic for this is exactly the same as the Include assignment type, as whether there is an include or exclude assignment for the same group, the result is the same.</p>
 <h3 id="the-assignment-function" class="headerLink">
-    <a href="#the-assignment-function" class="header-mark"></a>2.4 The Assignment Function</h3><p>We now have all the component parts, all is left to do is to throw them all at Visual Studio Code and pray that we&rsquo;ve got something that works, configuring all the required logic and the function parameters to allow the assignment of new groups to Settings Catalog profiles.</p>
+    <a href="#the-assignment-function" class="header-mark"></a>The Assignment Function</h3><p>We now have all the component parts, all is left to do is to throw them all at Visual Studio Code and pray that we&rsquo;ve got something that works, configuring all the required logic and the function parameters to allow the assignment of new groups to Settings Catalog profiles.</p>
 <p>I&rsquo;ve given the option to not only add to existing assignments, but also to just flatten the existing ones and create new using the <code>$AssignmentAction</code> parameter.</p>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
@@ -2422,7 +2422,7 @@
 </div>
 <p>That&rsquo;s all there is to it, which is hilarious as I&rsquo;m pretty sure I aged significantly when coming up with this function. Let&rsquo;s see how we can use this to create new assignments.</p>
 <h4 id="using-the-assignment-function" class="headerLink">
-    <a href="#using-the-assignment-function" class="header-mark"></a>2.4.1 Using the Assignment Function</h4><p>We need to start by getting the Id of an existing Settings Catalog profile, so we can reference this Id when creating new assignments, and if we&rsquo;re using Devices Filters or Groups, we need to get the Ids of those as well.</p>
+    <a href="#using-the-assignment-function" class="header-mark"></a>Using the Assignment Function</h4><p>We need to start by getting the Id of an existing Settings Catalog profile, so we can reference this Id when creating new assignments, and if we&rsquo;re using Devices Filters or Groups, we need to get the Ids of those as well.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -2626,14 +2626,14 @@
 </div>
 <p>If all went to plan, we should now be able to successfully create Settings Catalog profile assignments as little and often as we&rsquo;d like, with the ability to now get all of your Settings Catalog profiles, and for each of them create and add new assignments.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>3 Summary</h2><p>This will end up being the first in a series of posts about managing assignments in Microsoft Intune, but luckily for me, Settings Catalog assignment is one of the more complicated ones (<em>he says already knowing the Application assignment is more complicated</em>) so the next one I look at should be a little less logic heavy, as well as the fact I should be able to reuse some of the Settings Catalog profile assignment function across many areas of Microsoft Intune.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>This will end up being the first in a series of posts about managing assignments in Microsoft Intune, but luckily for me, Settings Catalog assignment is one of the more complicated ones (<em>he says already knowing the Application assignment is more complicated</em>) so the next one I look at should be a little less logic heavy, as well as the fact I should be able to reuse some of the Settings Catalog profile assignment function across many areas of Microsoft Intune.</p>
 </div>
 
         <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 27 June 2023</span>
+                <span>Updated on June 27, 2023</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -2641,9 +2641,9 @@
             <div class="post-info-md"></div>
             <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/" data-hashtag="settings catalog"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button><button title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/" data-title="Settings Catalog Profile Assignments in Intune" data-web><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button><button title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/" data-title="Settings catalog policy assignments in Intune" data-web><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></button><button title="Share on Reddit" data-sharer="reddit" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></button><button title="Share on Telegram" data-sharer="telegram" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/" data-title="Settings Catalog Profile Assignments in Intune" data-web><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></button><button title="Share on Telegram" data-sharer="telegram" data-url="https://www.oddsandendpoints.co.uk/posts/managing-intune-assignment-settingscatalog/" data-title="Settings catalog policy assignments in Intune" data-web><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/></svg></button></div>
         </div>
     </div>
@@ -2653,16 +2653,16 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/settings-catalog/">Settings Catalog</a>,&nbsp;<a href="/tags/assignments/">Assignments</a>,&nbsp;<a href="/tags/graph/">Graph API</a>,&nbsp;<a href="/tags/powershell/">PowerShell</a>,&nbsp;<a href="/tags/automation/">Automation</a></section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/custom-compliance-third-party-av/" class="prev" rel="prev" title="Detailed Compliance for Non-Microsoft Antivirus Solutions"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Detailed Compliance for Non-Microsoft Antivirus Solutions</a>
-            <a href="/posts/macos-ncsc-revisited/" class="next" rel="next" title="Revisiting macOS NCSC Security Settings">Revisiting macOS NCSC Security Settings<svg class="icon"
+    <div class="post-nav print:tw-hidden"><a href="/posts/custom-compliance-third-party-av/" class="prev" rel="prev" title="Detailed compliance for non-Microsoft antivirus solutions"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Detailed compliance for non-Microsoft antivirus solutions</a>
+            <a href="/posts/macos-ncsc-revisited/" class="next" rel="next" title="Revisiting macOS NCSC security settings">Revisiting macOS NCSC security settings<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://giscus.app/">giscus</a>.
             </noscript></div></article></main><footer class="footer">
         <div class="footer-container"><div class="footer-line">
-                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.150.0">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.150.1">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
                 </div><div class="footer-line"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2025<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></div>

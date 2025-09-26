@@ -1,4 +1,4 @@
-# Converting ConfigMgr Direct Membership Collections
+# Converting ConfigMgr direct membership collections
 
 
 You may be using [Direct Membership Rules](https://docs.microsoft.com/en-us/mem/configmgr/core/clients/manage/collections/create-collections#direct-rule) in your Microsoft Configuration Manager environment, but should you really for critical production collections?

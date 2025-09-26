@@ -1,4 +1,4 @@
-# Risk Based Windows 11 Deployment - Device Attributes
+# Risk based Windows 11 deployment - Device Attributes
 
 
 I'd strongly suggest, if you haven't already, skimming over the first part of this series as this will give you a good understanding of where we started, and hopefully where we're trying to get to with putting the [Feature Update Readiness Reports](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-compatibility-reports#use-the-windows-feature-update-device-readiness-report) in Microsoft Intune to good use allowing for a risk based deployment approach of Windows 11 23H2.

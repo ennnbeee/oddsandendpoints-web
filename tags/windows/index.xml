@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/windows/</link>
         <description>Windows - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
-    <title>Intune Custom Compliance for Cyber Essentials</title>
+    <title>Intune custom compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
 </item><item>
-    <title>ConfigMgr Client Installation on Orphaned Devices</title>
+    <title>ConfigMgr client installation on orphaned devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</link>
     <pubDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/firewall-rule-policy-conversion/featured.png" referrerpolicy="no-referrer">
             </div>When did Microsoft go all covert ops (maybe don&rsquo;t answer that question) and start making changes to your very own Firewall Rule policies in Microsoft Intune without letting anyone know? Or did they?]]></description>
 </item><item>
-    <title>Reusable Firewall Settings for Microsoft Online Services</title>
+    <title>Reusable firewall settings for Microsoft Online Services</title>
     <link>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</link>
     <pubDate>Sat, 09 Mar 2024 21:12:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/resusable-firewall-settings-microsoft-online/featured.jpg" referrerpolicy="no-referrer">
             </div>It&rsquo;s time to remove another manual process, this time the creation of Microsoft 365 network endpoints for Windows Firewall Rules in Microsoft Intune, because nobody should be creating these manually.]]></description>
 </item><item>
-    <title>Modernising Microsoft Intune Firewall Rule Policies</title>
+    <title>Modernising Microsoft Intune firewall rule policies</title>
     <link>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</link>
     <pubDate>Tue, 12 Sep 2023 21:40:50 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/settings-catalog-firewall-rules/featured.png" referrerpolicy="no-referrer">
             </div>If you&rsquo;ve ever experienced the joys of migrating Group Policy and in particular Windows Defender Firewall rules away from Group Policy to Microsoft Intune, you&rsquo;ve probably encountered the Rule Migration Tool, and for now this tool has worked well. So what&rsquo;s the catch?]]></description>
 </item><item>
-    <title>Reinstalling ConfigMgr Clients on Migrated Devices</title>
+    <title>Reinstalling ConfigMgr clients on migrated devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</link>
     <pubDate>Thu, 15 Dec 2022 22:16:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</guid>
@@ -52,7 +52,7 @@
                 <img src="/posts/configmgr-client-migration/featured.png" referrerpolicy="no-referrer">
             </div>Have you ever had the pleasure of migrating Configuration Manager clients from one domain to another, or maybe between Configuration Manager environments? Tired of manually reinstalling the client from the Console? Wanting a quick and easy way to keep on top of migrated devices? You&rsquo;re in luck.]]></description>
 </item><item>
-    <title>Updating Defender Antivirus Compliance Settings</title>
+    <title>Updating Defender antivirus compliance settings</title>
     <link>https://www.oddsandendpoints.co.uk/posts/defender-antivirus-compliance-updates/</link>
     <pubDate>Tue, 25 Oct 2022 22:04:47 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/defender-antivirus-compliance-updates/</guid>
@@ -60,7 +60,7 @@
                 <img src="/posts/defender-antivirus-compliance-updates/featured.jpg" referrerpolicy="no-referrer">
             </div>We&rsquo;re going to have a look at updating a Microsoft Defender compliance policy with the latest platform update version, automatically.]]></description>
 </item><item>
-    <title>Windows Operating System Compliance Updates</title>
+    <title>Windows operating system compliance updates</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-os-compliance-updates/</link>
     <pubDate>Thu, 30 Jun 2022 11:20:36 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-os-compliance-updates/</guid>
@@ -68,7 +68,7 @@
                 <img src="/posts/windows-os-compliance-updates/featured.png" referrerpolicy="no-referrer">
             </div>Let&rsquo;s talk about Windows 10 and above Operating System Compliance in Microsoft Intune, and specifically how using &lsquo;Minimum OS Version&rsquo; and &lsquo;Maximum OS Version&rsquo; is dumb and you should definitely check yourself if you&rsquo;re using this in your environment.]]></description>
 </item><item>
-    <title>Retrofitting Windows Autopilot Group Tags</title>
+    <title>Retrofitting Windows Autopilot group tags</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</link>
     <pubDate>Sun, 19 Jun 2022 15:55:02 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</guid>
@@ -76,7 +76,7 @@
                 <img src="/posts/windows-autopilot-retrofitting-group-tags/featured.png" referrerpolicy="no-referrer">
             </div>Now that we know how powerful Autopilot Group Tags can be, we should look into how we can retrofit devices with these Group Tags when the OEM or Supplier didn&rsquo;t bother doing their part of the deal.]]></description>
 </item><item>
-    <title>The Hidden Power of Windows Autopilot Group Tags</title>
+    <title>The hidden power of Windows Autopilot group tags</title>
     <link>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</link>
     <pubDate>Thu, 28 Apr 2022 10:03:55 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</guid>

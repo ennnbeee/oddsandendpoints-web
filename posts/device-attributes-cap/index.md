@@ -1,4 +1,4 @@
-# Device Attributes for Conditional Access Exceptions
+# Device attributes for conditional access exceptions
 
 
 Imagine you've spent time getting your Windows devices enrolled into Intune, they're all getting [Device Compliance](https://learn.microsoft.com/en-us/mem/intune/protect/device-compliance-get-started) policies, and you've finally pulled the trigger on your shiny new [Conditional Access Policy](https://learn.microsoft.com/en-us/mem/intune/protect/conditional-access) that require device compliance for all your users across Windows devices, and low and behold, you've broken access to Microsoft 365 authenticated services from your Remote Desktop service environment, or even VDI environments.

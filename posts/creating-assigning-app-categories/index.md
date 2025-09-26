@@ -1,4 +1,4 @@
-# Creating and Assigning App Categories the Smart Way
+# Creating and assigning app categories the smart way
 
 
 Everyone likes managing clients apps in Microsoft Intune, the grind of packing Windows apps, the chore of selecting Managed Google Play apps, the joy of assigning Apple VPP app licenses in Apple Business Manager...all *good* fun.

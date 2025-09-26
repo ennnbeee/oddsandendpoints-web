@@ -1,4 +1,4 @@
-# Modernising Microsoft Intune Firewall Rule Policies
+# Modernising Microsoft Intune firewall rule policies
 
 
 {{< admonition type=info >}}

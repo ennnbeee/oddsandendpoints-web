@@ -1,4 +1,4 @@
-# Renaming Windows Autopilot v2 Devices
+# Renaming Windows Autopilot v2 devices
 
 
 We're no stranger to renaming Windows Autopilot devices having looked at this with Hybrid joined devices not {{< reftab  href="/posts/hybrid-join-computer-rename/" title="once" >}}, but {{< reftab  href="/posts/hybrid-join-computer-rename-again/" title="twice" >}}, to allow people to be happier with the names of their corporate owned devices, and not the random nature Windows Autopilot Hybrid Join deployments gives them.

@@ -1,4 +1,4 @@
-# Deploying Teams Backgrounds to macOS Devices
+# Deploying Teams backgrounds to macOS devices
 
 
 What happens when a stranger on the Internet asks you to look at something they've got a problem with? Well clearly you jump at the chance and hope that it's not a body part this time. So here we are, looking at how to deploy [Microsoft Teams Backgrounds](https://www.microsoft.com/en-us/microsoft-teams/virtual-meeting-backgrounds) to macOS devices using Intune, for organisations without the licensing to allow for corporate branding using [Microsoft Teams Premium Experience](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/microsoft-teams-premium-experiences-and-how-to-set-it-up/3697553).

@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/windows-autopilot/</link>
         <description>Windows Autopilot - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 06 May 2025 18:53:56 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows-autopilot/" rel="self" type="application/rss+xml" /><item>
-    <title>Updating Windows Network Profile Locations with PowerShell</title>
+    <title>Updating Windows network profile locations with PowerShell</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</link>
     <pubDate>Tue, 06 May 2025 18:53:56 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-network-profile-locations/featured.jpg" referrerpolicy="no-referrer">
             </div>So you&rsquo;ve got a restrictive Windows Firewall, and you&rsquo;re only allowing traffic to endpoints over either Domain or Private network locations, what happens if an end user doesn&rsquo;t allow for network discovery and the device is left thinking it&rsquo;s on a public network?]]></description>
 </item><item>
-    <title>Renaming Windows Autopilot v2 Devices</title>
+    <title>Renaming Windows Autopilot v2 devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-v2-renaming/</link>
     <pubDate>Tue, 02 Jul 2024 21:25:20 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-v2-renaming/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/windows-autopilot-v2-renaming/featured.png" referrerpolicy="no-referrer">
             </div>So Microsoft released Windows Autopilot Device Preparation, or more commonly known as APv2, into General Availability a little while ago. So with this production release we should be able to name our corporate owned Windows devices right Microsoft? Right?]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows Autopilot</title>
+    <title>Patching CIS Windows 11 benchmark gaps - Level 1 Windows Autopilot</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part2/</link>
     <pubDate>Sun, 23 Jun 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
@@ -37,7 +37,7 @@
                 <img src="/posts/macos-windows-autopilot-utm/featured.png" referrerpolicy="no-referrer">
             </div>With all this chat about macOS device management in Microsoft Intune, I wonder how many people are macOS users but still need to test Microsoft Intune settings on Windows devices? Well fear not, there is a way to deploy a Windows Autopilot Virtual machine on your macOS device for testing.]]></description>
 </item><item>
-    <title>Keeping Windows Store Apps Updated with Microsoft Intune</title>
+    <title>Keeping Windows store apps updated with Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-updating-store-apps/</link>
     <pubDate>Tue, 06 Feb 2024 21:03:00 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-updating-store-apps/</guid>
@@ -45,7 +45,7 @@
                 <img src="/posts/windows-updating-store-apps/featured.png" referrerpolicy="no-referrer">
             </div><p>So we&rsquo;re all onboard with the <a href="https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft" target="_blank" rel="noopener noreferrer">New Microsoft Store</a>, and deploying both UWP and Win32 apps from Microsoft Intune is an absolute breeze, and reduces the effort of deploying applications to a click click next OK exercise. What about the UWP apps that are already installed on a Windows Autopilot device, shouldn&rsquo;t we give them a bit of love? If you care at all about users and security you should.</p>]]></description>
 </item><item>
-    <title>Co-Managing Windows Autopilot Hybrid Join Devices</title>
+    <title>Co-Managing Windows Autopilot hybrid join devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-hybrid-autopilot/</link>
     <pubDate>Wed, 01 Mar 2023 21:26:30 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-hybrid-autopilot/</guid>
@@ -53,7 +53,7 @@
                 <img src="/posts/configmgr-client-hybrid-autopilot/featured.png" referrerpolicy="no-referrer">
             </div>Installing the Configuration Manager client on Hybrid Azure AD Joined Autopilot devices should be an easy process right?]]></description>
 </item><item>
-    <title>Proactively Renaming Hybrid Azure AD Joined Devices</title>
+    <title>Proactively renaming hybrid Entra ID joined devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename-again/</link>
     <pubDate>Thu, 12 Jan 2023 20:10:32 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename-again/</guid>
@@ -61,7 +61,7 @@
                 <img src="/posts/hybrid-join-computer-rename-again/featured.png" referrerpolicy="no-referrer">
             </div>Nothing has really changed in the Hybrid Join Autopilot space when it comes to device names, and we&rsquo;re still stuck with useless naming conventions for these devices; sometimes a prefix and random characters just isn&rsquo;t a good enough identification method for Windows devices.]]></description>
 </item><item>
-    <title>Retrofitting Windows Autopilot Group Tags</title>
+    <title>Retrofitting Windows Autopilot group tags</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</link>
     <pubDate>Sun, 19 Jun 2022 15:55:02 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</guid>
@@ -69,7 +69,7 @@
                 <img src="/posts/windows-autopilot-retrofitting-group-tags/featured.png" referrerpolicy="no-referrer">
             </div>Now that we know how powerful Autopilot Group Tags can be, we should look into how we can retrofit devices with these Group Tags when the OEM or Supplier didn&rsquo;t bother doing their part of the deal.]]></description>
 </item><item>
-    <title>Configuring Available User Languages on Windows Devices</title>
+    <title>Configuring available user languages on Windows devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-languages/</link>
     <pubDate>Sat, 21 May 2022 14:22:53 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-languages/</guid>
@@ -77,7 +77,7 @@
                 <img src="/posts/windows-autopilot-languages/featured.jpg" referrerpolicy="no-referrer">
             </div>Have you ever wondered how to ensure that a number of languages are available for selection to end users on shared Windows 10 devices? The thought hadn&rsquo;t crossed my mind, but then again, you encounter new use cases and requirements on a weekly basis. This was one of those occasions.]]></description>
 </item><item>
-    <title>The Hidden Power of Windows Autopilot Group Tags</title>
+    <title>The hidden power of Windows Autopilot group tags</title>
     <link>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</link>
     <pubDate>Thu, 28 Apr 2022 10:03:55 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</guid>

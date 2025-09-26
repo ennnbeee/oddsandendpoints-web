@@ -1,4 +1,4 @@
-# Updating Enrolled Device Ownership Status
+# Updating enrolled device ownership status
 
 
 What happens if you've allowed Windows, iOS, Android, and macOS devices to enrol into Microsoft Microsoft Intune in all kinds of ways, and now you're in a situation where devices that should be marked as corporate are marked as personal or unknown?

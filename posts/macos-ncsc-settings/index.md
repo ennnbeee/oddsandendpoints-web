@@ -1,4 +1,4 @@
-# macOS NCSC Security Settings in Intune
+# macOS NCSC security settings in Intune
 
 
 If you've ever had to implement baseline security settings, whether this be Centre for Internet Security (CIS), Cyber Security Essentials (CSE), or National Cyber Security Centre (NCSC), you'll probably have encountered some level of pain when it comes to non-Microsoft devices, as the guidance, is, well, *complicated*.

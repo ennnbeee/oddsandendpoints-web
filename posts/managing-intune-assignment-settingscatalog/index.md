@@ -1,4 +1,4 @@
-# Settings Catalog Profile Assignments in Intune
+# Settings catalog policy assignments in Intune
 
 
 Fresh off the back of a trawl of a Modern Endpoint Management LinkedIn group, someone wanted the ability to assign existing Settings Catalog profiles in Microsoft Intune to additional Groups...this sounded like a quick win if you fancy manually doing it, but no one wants that, and as I had experience of dealing with the logic when {{< reftab href="/posts/assigning-intune-applications/" title="assigning apps" >}}, I thought I'd give it a go.

@@ -1,4 +1,4 @@
-# Scheduling Defender for macOS Antivirus Scans in Intune
+# Scheduling Defender for macOS antivirus scans in Intune
 
 
 Assuming that you've decided to not only dip a toe into Microsoft products for managing your macOS device estate, but you've gone ~balls deep~ two-footed instead, you're probably [onboarding](https://learn.microsoft.com/en-us/defender-endpoint/mac-install-with-intune) your macOS devices into [Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-mac), and deploying the [Defender app](https://learn.microsoft.com/en-us/mem/intune/apps/apps-advanced-threat-protection-macos), to take full advantage of that M365 licensing that smiling sales person told you to get for your users.

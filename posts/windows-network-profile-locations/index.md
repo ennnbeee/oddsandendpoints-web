@@ -1,4 +1,4 @@
-# Updating Windows Network Profile Locations with PowerShell
+# Updating Windows network profile locations with PowerShell
 
 
 Oh I how love the ~Windows~ ~Defender~ Windows Firewall, and all the restrictions it brings. This time in the world of customers with aggressive firewall policies, we have Group Policy and Microsoft Intune applied firewall rules, only allowing inbound and outbound network traffic when on Private and Domain networks.

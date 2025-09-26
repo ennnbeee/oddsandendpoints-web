@@ -1,4 +1,4 @@
-# Retrofitting Windows Autopilot Group Tags
+# Retrofitting Windows Autopilot group tags
 
 
 Now I don't think I promised that I'd cover off bulk tagging Autopilot devices in a {{< reftab href="/posts/autopilot-power-of-group-tags/" title="previous post" >}}, but you know, I was running low on things to write about. So here we are.

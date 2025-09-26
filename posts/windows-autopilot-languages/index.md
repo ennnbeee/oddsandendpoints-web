@@ -1,4 +1,4 @@
-# Configuring Available User Languages on Windows Devices
+# Configuring available user languages on Windows devices
 
 
 Have you ever wondered how to ensure that a number of languages are available for selection to end users on shared Windows 10 devices? The thought hadn't crossed my mind, but then again, you encounter new use cases and requirements on a weekly basis. This was one of those occasions, needing a Library Kiosk machine to have a set of languages available to users upon login to the machine.

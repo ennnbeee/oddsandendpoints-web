@@ -1,4 +1,4 @@
-# Co-Managing Windows Autopilot Hybrid Join Devices
+# Co-Managing Windows Autopilot hybrid join devices
 
 
 As both Microsoft Intune and Configuration Manager are a match made in heaven, there are many reasons to still utilise both, either using [Co-Management](https://learn.microsoft.com/en-us/mem/configmgr/comanage/overview) or just plain old [Tenant Attach](https://learn.microsoft.com/en-us/mem/configmgr/tenant-attach/device-sync-actions), so imagine my joy when Microsoft released [Co-Management Authority](https://learn.microsoft.com/en-us/mem/configmgr/comanage/autopilot-enrollment) in Intune, and I thought the days of packaging the Configuration Manager Client were over.

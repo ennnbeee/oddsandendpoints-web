@@ -1,4 +1,4 @@
-# Automatically Resizing the WinRE Partition
+# Automatically resizing the WinRE partition
 
 
 If you've been under a rock, or like me, don't have to manage updates on a Windows device estate any more, chances are you might not have seen the issues with the size of the [Windows Recovery Environment](https://support.microsoft.com/en-us/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246) or WinRE, partition when applying Windows Updates like [KB5034441](https://support.microsoft.com/en-au/topic/kb5034441-windows-recovery-environment-update-for-windows-10-version-21h2-and-22h2-january-9-2024-62c04204-aaa5-4fee-a02a-2fdea17075a8), luckily Microsoft released a 'fix' for this in [KB5028997](https://support.microsoft.com/en-us/topic/kb5028997-instructions-to-manually-resize-your-partition-to-install-the-winre-update-400faa27-9343-461c-ada9-24c8229763bf) to resize the partition to allow for updates to install.
