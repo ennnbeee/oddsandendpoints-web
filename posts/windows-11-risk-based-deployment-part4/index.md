@@ -1,4 +1,4 @@
-# Risk based Windows 11 deployment - Automation
+# Risk Based Windows 11 Deployment - Automation
 
 
 Finally we're at the end of the series, where be bring all the components together from the previous three posts into one ~~sub par~~ suitable looking PowerShell script, allowing us to not only kick off the [Feature Update Readiness](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-compatibility-reports) report, but capture the risk state for each device, tag each device using [Extension Attributes](https://learn.microsoft.com/en-us/graph/extensibility-overview?tabs=http), and then automatically group these devices with [Dynamic Security Groups](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership) in order to deploy our Windows 11 23H2 Feature Update to low risk devices whilst we give our selves breathing space to fix the others.

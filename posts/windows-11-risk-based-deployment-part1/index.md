@@ -1,4 +1,4 @@
-# Risk based Windows 11 deployment - Reporting
+# Risk Based Windows 11 Deployment - Reporting
 
 
 At the time of writing we are only a [few hundred days](https://yourcountdown.to/windows-10-extended-support) away from the end of support of Windows 10 22H2, and really we should all be recommending the move to Windows 11, not just because it's shiny and new, but also it's going to actually get security updates.

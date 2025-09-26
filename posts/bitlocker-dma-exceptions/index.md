@@ -1,4 +1,4 @@
-# Handling BitLocker DMA exceptions with Intune
+# Handling BitLocker DMA Exceptions with Intune
 
 
 Configuring silent encryption for Windows 10 and later devices in [Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/protect/encrypt-devices#silently-enable-bitlocker-on-devices) isn't anything new, removing reliance on Administrator permissions to encrypt a device, setting the encryption algorithm used, and ensuring that the data on the device is protected.

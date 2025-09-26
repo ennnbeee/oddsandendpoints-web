@@ -1,4 +1,4 @@
-# Windows operating system compliance updates
+# Windows Operating System Compliance Updates
 
 
 Let's talk about Windows 10 and above [Operating System Compliance](https://docs.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-windows#operating-system-version) in Microsoft Intune, and specifically how using 'Minimum OS Version' and 'Maximum OS Version' is dumb and you should definitely check yourself if you're using this in your environment.

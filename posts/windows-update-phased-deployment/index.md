@@ -1,4 +1,4 @@
-# Intelligent phased Windows update deployments
+# Intelligent Phased Windows Update Deployments
 
 
 You might have been asked the question, especially from organisations that currently utilise Microsoft Configuration Manager, about how you mimic existing [Device Collections](https://learn.microsoft.com/en-us/mem/configmgr/core/clients/manage/collections/create-collections) used for Software Update deployments in Microsoft Intune.

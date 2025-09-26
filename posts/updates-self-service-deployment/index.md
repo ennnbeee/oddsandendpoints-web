@@ -1,4 +1,4 @@
-# Self-service software update deployments
+# Self-Service Software Update Deployments
 
 
 We've looked at {{< reftab href="/posts/windows-update-phased-deployment/" title="phasing" >}} the deployment of Windows Updates in a smart way with Dynamic Security Groups, we've looked at allowing VIP users to {{< reftab href="/posts/flexible-update-deployments/" title="opt out" >}} of phased Windows update installation, we've even looked at how we deliver {{< reftab href="/posts/macos-updates-phased-deployment/" title="macOS" >}} operating system and software updates just like we do with Windows, what else is there to do now?

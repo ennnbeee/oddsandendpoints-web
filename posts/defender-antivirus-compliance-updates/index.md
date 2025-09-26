@@ -1,4 +1,4 @@
-# Updating Defender antivirus compliance settings
+# Updating Defender Antivirus Compliance Settings
 
 
 So one of those rainy days is here, finally, and as I mentioned in a {{< reftab href="/posts/operating-system-compliance-updates/" title="previous post" >}} many months ago, I said I'd look at ways to update other update based compliance policies periodically.

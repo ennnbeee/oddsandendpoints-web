@@ -1,4 +1,4 @@
-# The hidden power of Windows Autopilot group tags
+# The Hidden Power of Windows Autopilot Group Tags
 
 
 So you're using Windows Autopilot in some shape or form to deploy Windows 10/11 devices to your users, and you're probably already familiar with the Autopilot [dynamic group queries](https://docs.microsoft.com/en-us/mem/autopilot/enrollment-autopilot) used for targetting these devices, right? Good.

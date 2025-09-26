@@ -1,4 +1,4 @@
-# Revisiting macOS NCSC security settings
+# Revisiting macOS NCSC Security Settings
 
 
 We looked at some of the ways to secure macOS devices in Microsoft Intune, aligned with the [NCSC platform guidance](https://www.ncsc.gov.uk/collection/device-security-guidance/platform-guides/macos) in {{< reftab href="/posts/macos-ncsc-settings/" title="macOS National Cyber Security Centre Security Settings in Intune" >}}, but this was when macOS device management in Intune was, at best, in beta.

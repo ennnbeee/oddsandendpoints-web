@@ -1,4 +1,4 @@
-# Converting AppLocker policies to Intune profiles
+# Converting AppLocker Policies to Intune Profiles
 
 
 There are [many posts](https://www.google.com/search?q=applocker+in+intune) about how to configure [AppLocker](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview) in Intune, most of which I've used and looked at some point in my time, so why are we here (writing a post about it I mean, not an existential crisis thing) looking at it?

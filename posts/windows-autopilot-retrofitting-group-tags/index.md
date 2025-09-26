@@ -1,5 +1,9 @@
-# Retrofitting Windows Autopilot group tags
+# Retrofitting Windows Autopilot Group Tags
 
+
+{{< admonition type=info >}}
+I've created an improved PowerShell script for tagging Autopilot devices, which is available [here](https://github.com/ennnbeee/AutopilotGroupTagger/)
+{{< /admonition >}}
 
 Now I don't think I promised that I'd cover off bulk tagging Autopilot devices in a {{< reftab href="/posts/autopilot-power-of-group-tags/" title="previous post" >}}, but you know, I was running low on things to write about. So here we are.
 

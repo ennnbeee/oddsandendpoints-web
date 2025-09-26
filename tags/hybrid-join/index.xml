@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/hybrid-join/</link>
         <description>Hybrid Entra Join - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Mar 2023 21:26:30 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/hybrid-join/" rel="self" type="application/rss+xml" /><item>
-    <title>Co-Managing Windows Autopilot hybrid join devices</title>
+    <title>Co-Managing Windows Autopilot Hybrid Join Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-hybrid-autopilot/</link>
     <pubDate>Wed, 01 Mar 2023 21:26:30 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-hybrid-autopilot/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/configmgr-client-hybrid-autopilot/featured.png" referrerpolicy="no-referrer">
             </div>Installing the Configuration Manager client on Hybrid Azure AD Joined Autopilot devices should be an easy process right?]]></description>
 </item><item>
-    <title>Proactively renaming hybrid Entra ID joined devices</title>
+    <title>Proactively Renaming Hybrid Entra ID Joined Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename-again/</link>
     <pubDate>Thu, 12 Jan 2023 20:10:32 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename-again/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/hybrid-join-computer-rename-again/featured.png" referrerpolicy="no-referrer">
             </div>Nothing has really changed in the Hybrid Join Autopilot space when it comes to device names, and we&rsquo;re still stuck with useless naming conventions for these devices; sometimes a prefix and random characters just isn&rsquo;t a good enough identification method for Windows devices.]]></description>
 </item><item>
-    <title>Renaming Windows Autopilot hybrid joined devices</title>
+    <title>Renaming Windows Autopilot Hybrid Joined Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename/</link>
     <pubDate>Sun, 20 Mar 2022 21:01:33 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename/</guid>

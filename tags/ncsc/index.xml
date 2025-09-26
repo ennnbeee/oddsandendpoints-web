@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/ncsc/</link>
         <description>National Cyber Security Centre (NCSC) - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/ncsc/" rel="self" type="application/rss+xml" /><item>
-    <title>Intune custom compliance for Cyber Essentials</title>
+    <title>Intune Custom Compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
 </item><item>
-    <title>Software update deployment rings for managed macOS devices</title>
+    <title>Software Update Deployment Rings for Managed macOS Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-updates-phased-deployment/</link>
     <pubDate>Sat, 06 Apr 2024 20:05:09 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-updates-phased-deployment/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/macos-updates-phased-deployment/featured.png" referrerpolicy="no-referrer">
             </div>So you&rsquo;ve pulled the trigger on managing macOS devices in Microsoft Intune, and with this year being the year of macOS for Microsoft (this seems like an oxymoron), you should probably look at how to handle software updates.]]></description>
 </item><item>
-    <title>A flexible approach to Microsoft update deployments</title>
+    <title>A Flexible  Approach to Microsoft Update Deployments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/flexible-update-deployments/</link>
     <pubDate>Mon, 19 Feb 2024 20:07:23 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/flexible-update-deployments/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/flexible-update-deployments/featured.jpg" referrerpolicy="no-referrer">
             </div>It&rsquo;s been a while since we&rsquo;ve looked at deploying Microsoft and Windows Updates using Microsoft Intune, this time we look at different ways to phase our deployments across a device estate.]]></description>
 </item><item>
-    <title>Revisiting macOS NCSC security settings</title>
+    <title>Revisiting macOS NCSC Security Settings</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-ncsc-revisited/</link>
     <pubDate>Tue, 11 Jul 2023 13:22:07 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-ncsc-revisited/</guid>
@@ -36,7 +36,7 @@
                 <img src="/posts/macos-ncsc-revisited/featured.png" referrerpolicy="no-referrer">
             </div>With the improved support for macOS devices in Microsoft Intune, it&rsquo;s time we revisited how to secure macOS devices aligned the National Cyber Security Centre guidance.]]></description>
 </item><item>
-    <title>macOS NCSC security settings in Intune</title>
+    <title>macOS NCSC Security Settings in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-ncsc-settings/</link>
     <pubDate>Thu, 21 Apr 2022 11:55:11 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-ncsc-settings/</guid>

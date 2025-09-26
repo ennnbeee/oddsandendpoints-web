@@ -1,4 +1,4 @@
-# The easy way to approve Managed Google Play apps
+# The Easy Way to Approve Managed Google Play Apps
 
 
 We've all had to add [Managed Google Play Apps](https://learn.microsoft.com/en-us/mem/intune/apps/apps-add-android-for-work) in bulk to Microsoft Intune for your Android Enterprise enrolled devices, whether this is just the raft of Microsoft Apps now that all your data is in Office 365, or the hundreds you have in a rival MDM (Mobile Device Management) solution that you're looking to migrate away from.

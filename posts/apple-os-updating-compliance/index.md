@@ -1,4 +1,4 @@
-# Updating Apple operating system compliance policies
+# Updating Apple Operating System Compliance Policies
 
 
 I'm not going to go over old ground in too much detail, as I've already covered the importance of keeping your {{< reftab href="/posts/operating-system-compliance-updates/" title="Operating System Compliance Policies" >}} up to date in line with the release of new updates, as well as a way to update your compliance policies using Graph and PowerShell.

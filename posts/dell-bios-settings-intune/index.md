@@ -1,4 +1,4 @@
-# Configuring Dell BIOS settings with Intune
+# Configuring Dell BIOS Settings with Intune
 
 
 What if you've only got Microsoft Intune to configure your Dell BIOS settings and not the glory that is Configuration Manager? How much do you like PowerShell, Win32 Apps and passwords in plain text?

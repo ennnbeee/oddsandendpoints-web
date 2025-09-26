@@ -1,8 +1,8 @@
-# Modernising Microsoft Intune firewall rule policies
+# Modernising Microsoft Intune Firewall Rule Policies
 
 
 {{< admonition type=info >}}
-I've created a PowerShell script to automatically capture and upload Windows Firewall rules to Microsoft Intune, which is available [here](https://github.com/ennnbeee/IntuneFirewallMigration)
+I've created a PowerShell script to automatically capture and upload Windows Firewall rules to Microsoft Intune, which is available [here](https://github.com/ennnbeee/IntuneFirewallMigration/)
 {{< /admonition >}}
 
 If you've ever experienced the joys of migrating Group Policy and in particular Windows Defender Firewall rules away from Group Policy to Microsoft Intune, you've probably encountered the [Rule Migration Tool](https://learn.microsoft.com/en-us/mem/intune/protect/endpoint-security-firewall-rule-tool), and for now this tool has worked well, beavering away grabbing firewall rules from a source Windows 10 or later device and punting them straight in Microsoft Intune. So what's the catch?

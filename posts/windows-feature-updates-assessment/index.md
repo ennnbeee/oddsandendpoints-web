@@ -1,4 +1,4 @@
-# Forcing Windows 11 feature update readiness assessments
+# Forcing Windows 11 Feature Update Readiness Assessments
 
 
 {{< admonition type=note >}}

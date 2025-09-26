@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/endpoint-security/</link>
         <description>Endpoint Security - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/endpoint-security/" rel="self" type="application/rss+xml" /><item>
-    <title>Intune custom compliance for Cyber Essentials</title>
+    <title>Intune Custom Compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
 </item><item>
-    <title>BitLocker recovery key rotation requirements in Intune</title>
+    <title>BitLocker Recovery Key Rotation Requirements in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</link>
     <pubDate>Tue, 21 Jan 2025 16:39:24 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/bitlocker-key-rotation-requirements/featured.png" referrerpolicy="no-referrer">
             </div>What are the actual settings you require to allow for BitLocker recovery key rotation from the Intune console? Which BitLocker profile support the key rotation settings? Are these settings actually documented anywhere? Well yes, they are now.]]></description>
 </item><item>
-    <title>Converting AppLocker policies to Intune profiles</title>
+    <title>Converting AppLocker Policies to Intune Profiles</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</link>
     <pubDate>Tue, 22 Oct 2024 11:13:46 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/windows-applocker-intune/featured.png" referrerpolicy="no-referrer">
             </div>We know that there is no native configuration for AppLocker in Intune, and we should be looking at App Control for Business already, but there is still a place for AppLocker, and I haven&rsquo;t got time to manually do anything, so let&rsquo;s use PowerShell to create out AppLocker policies from exported XML files.]]></description>
 </item><item>
-    <title>Scheduling Defender for macOS antivirus scans in Intune</title>
+    <title>Scheduling Defender for macOS Antivirus Scans in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/</link>
     <pubDate>Tue, 08 Oct 2024 15:14:25 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/</guid>
@@ -44,7 +44,7 @@
                 <img src="/posts/firewall-rule-policy-conversion/featured.png" referrerpolicy="no-referrer">
             </div>When did Microsoft go all covert ops (maybe don&rsquo;t answer that question) and start making changes to your very own Firewall Rule policies in Microsoft Intune without letting anyone know? Or did they?]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 benchmark gaps - Level 1 Windows 11</title>
+    <title>Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</link>
     <pubDate>Mon, 15 Jul 2024 11:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</guid>
@@ -52,7 +52,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part3/featured.png" referrerpolicy="no-referrer">
             </div>The impact of the CIS settings on BitLocker and Windows Autopilot now done and dusted, we should broaden our horizons and start to look at what other problems the CIS level 1 benchmark brings to Windows 11 as a whole. Are there any? Will it be smooth sailing? Yeah, no.]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 benchmark gaps - BitLocker</title>
+    <title>Patching CIS Windows 11 Benchmark Gaps - BitLocker</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part1/</link>
     <pubDate>Sat, 15 Jun 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
@@ -61,7 +61,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part1/featured.png" referrerpolicy="no-referrer">
             </div>Everyone loves a security benchmark, and with the imminent move to Windows 11 for everyone, the Center for Internet Security released version 3.0.1 of theirs, including a build kit for Microsoft Intune, but what does this build kit break for BitLocker encryption?]]></description>
 </item><item>
-    <title>Reusable firewall settings for Microsoft Online Services</title>
+    <title>Reusable Firewall Settings for Microsoft Online Services</title>
     <link>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</link>
     <pubDate>Sat, 09 Mar 2024 21:12:54 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</guid>
@@ -69,7 +69,7 @@
                 <img src="/posts/resusable-firewall-settings-microsoft-online/featured.jpg" referrerpolicy="no-referrer">
             </div>It&rsquo;s time to remove another manual process, this time the creation of Microsoft 365 network endpoints for Windows Firewall Rules in Microsoft Intune, because nobody should be creating these manually.]]></description>
 </item><item>
-    <title>Automatically resizing the WinRE partition</title>
+    <title>Automatically Resizing the WinRE Partition</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-winre-partition-resize-kb5034441/</link>
     <pubDate>Wed, 31 Jan 2024 20:54:12 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-winre-partition-resize-kb5034441/</guid>
@@ -77,7 +77,7 @@
                 <img src="/posts/windows-winre-partition-resize-kb5034441/featured.jpg" referrerpolicy="no-referrer">
             </div>When Microsoft releases an update that won&rsquo;t install due to the size of a Recovery partition, what do you do? Follow the manual steps provided by Microsoft or blindly follow a script created by a stranger on the internet?]]></description>
 </item><item>
-    <title>Modernising Microsoft Intune firewall rule policies</title>
+    <title>Modernising Microsoft Intune Firewall Rule Policies</title>
     <link>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</link>
     <pubDate>Tue, 12 Sep 2023 21:40:50 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</guid>

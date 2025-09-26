@@ -1,4 +1,4 @@
-# Intune custom compliance for Cyber Essentials
+# Intune Custom Compliance for Cyber Essentials
 
 
 Those outside of the UK may not have a scooby as to what [Cyber Essentials](https://www.ncsc.gov.uk/cyberessentials/overview) actually is, so in short, it's an assessed certification of a security standard provided by [The National Cyber Security Centre](https://www.ncsc.gov.uk/), for prevention of Cyber attacks by protecting your organisation and devices within.

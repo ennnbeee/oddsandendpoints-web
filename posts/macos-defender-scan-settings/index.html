@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" /><title>Scheduling Defender for macOS antivirus scans in Intune</title><script
+    <meta name="robots" content="noodp" /><title>Scheduling Defender for macOS Antivirus Scans in Intune</title><script
   async
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789213189452480"
   crossorigin="anonymous"
 ></script>
 <meta name="Description" content="Using PowerShell to create Defender for Endpoint antivirus scan setting custom profiles for Microsoft Intune and third-party MDM enrolled macOS devices."><meta property="og:url" content="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/">
   <meta property="og:site_name" content="odds&#43;endpoints">
-  <meta property="og:title" content="Scheduling Defender for macOS antivirus scans in Intune">
+  <meta property="og:title" content="Scheduling Defender for macOS Antivirus Scans in Intune">
   <meta property="og:description" content="Using PowerShell to create Defender for Endpoint antivirus scan setting custom profiles for Microsoft Intune and third-party MDM enrolled macOS devices.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -28,7 +28,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/featured.png">
-  <meta name="twitter:title" content="Scheduling Defender for macOS antivirus scans in Intune">
+  <meta name="twitter:title" content="Scheduling Defender for macOS Antivirus Scans in Intune">
   <meta name="twitter:description" content="Using PowerShell to create Defender for Endpoint antivirus scan setting custom profiles for Microsoft Intune and third-party MDM enrolled macOS devices.">
 <meta name="application-name" content="odds&#43;endpoints">
 <meta name="apple-mobile-web-app-title" content="odds&#43;endpoints">
@@ -39,7 +39,7 @@
 
 <link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/" /><link rel="next" href="https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/" />
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
-        "headline": "Scheduling Defender for macOS antivirus scans in Intune",
+        "headline": "Scheduling Defender for macOS Antivirus Scans in Intune",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -176,48 +176,7 @@
 </div>
 <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
-</div><main class="tw-mx-4 tw-flex-1"><div class="toc print:!tw-hidden" id="toc-auto">
-        <h2 class="toc-title">Contents</h2>
-        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#scheduling-scans">Scheduling Scans</a>
-      <ul>
-        <li><a href="#defender-scan-options">Defender Scan Options</a></li>
-        <li><a href="#example-profiles">Example Profiles</a></li>
-      </ul>
-    </li>
-    <li><a href="#using-powershell">Using PowerShell</a>
-      <ul>
-        <li><a href="#example-1">Example 1</a>
-          <ul>
-            <li><a href="#example-1---intune">Example 1 - Intune</a></li>
-            <li><a href="#example-1---third-party-mdm">Example 1 - Third-Party MDM</a></li>
-          </ul>
-        </li>
-        <li><a href="#example-2">Example 2</a>
-          <ul>
-            <li><a href="#example-2---intune">Example 2 - Intune</a></li>
-            <li><a href="#example-2---third-party-mdm">Example 2 - Third-Party MDM</a></li>
-          </ul>
-        </li>
-        <li><a href="#example-3">Example 3</a>
-          <ul>
-            <li><a href="#example-3---intune">Example 3 - Intune</a></li>
-            <li><a href="#example-3---third-party-mdm">Example 3 - Third-Party MDM</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#microsoft-intune-settings">Microsoft Intune Settings</a>
-      <ul>
-        <li><a href="#custom-profile">Custom Profile</a></li>
-        <li><a href="#validation">Validation</a></li>
-      </ul>
-    </li>
-    <li><a href="#summary">Summary</a></li>
-  </ul>
-</nav></div>
-    </div><dialog id="toc-dialog" class="tw-max-w-full tw-w-full tw-max-h-full tw-h-full tw-ml-16">
+</div><main class="tw-mx-4 tw-flex-1"><dialog id="toc-dialog" class="tw-max-w-full tw-w-full tw-max-h-full tw-h-full tw-ml-16">
         <div class="toc tw-mx-4 tw-max-w-full">
             <h2 class="tw-mx-0 tw-my-6 tw-uppercase tw-text-2xl">Contents</h2>
             <div class="toc-content"><nav id="TableOfContents">
@@ -260,7 +219,7 @@
   </ul>
 </nav></div>
         </div>
-    </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:October 8, 2024" data-pagefind-body>Scheduling Defender for macOS antivirus scans in Intune</h1><div class="post-meta">
+    </dialog><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "false")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title" data-pagefind-meta="date:October 8, 2024" data-pagefind-body>Scheduling Defender for macOS Antivirus Scans in Intune</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><span class='author'>
         <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src='/img/ennbee.png'   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>
@@ -269,52 +228,7 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>macOS</a></span></div>
             <div class="post-meta-line"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="October 8, 2024">October 8, 2024</time>&nbsp;</div>
-        </div><div class="featured-image"><img  loading="eager" src='/posts/macos-defender-scan-settings/featured.png'   alt="Using PowerShell to create Defender for Endpoint antivirus scan setting custom profiles for Microsoft Intune and third-party MDM enrolled macOS devices." height="500" width="1000"></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span class="details-icon"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#scheduling-scans">Scheduling Scans</a>
-      <ul>
-        <li><a href="#defender-scan-options">Defender Scan Options</a></li>
-        <li><a href="#example-profiles">Example Profiles</a></li>
-      </ul>
-    </li>
-    <li><a href="#using-powershell">Using PowerShell</a>
-      <ul>
-        <li><a href="#example-1">Example 1</a>
-          <ul>
-            <li><a href="#example-1---intune">Example 1 - Intune</a></li>
-            <li><a href="#example-1---third-party-mdm">Example 1 - Third-Party MDM</a></li>
-          </ul>
-        </li>
-        <li><a href="#example-2">Example 2</a>
-          <ul>
-            <li><a href="#example-2---intune">Example 2 - Intune</a></li>
-            <li><a href="#example-2---third-party-mdm">Example 2 - Third-Party MDM</a></li>
-          </ul>
-        </li>
-        <li><a href="#example-3">Example 3</a>
-          <ul>
-            <li><a href="#example-3---intune">Example 3 - Intune</a></li>
-            <li><a href="#example-3---third-party-mdm">Example 3 - Third-Party MDM</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#microsoft-intune-settings">Microsoft Intune Settings</a>
-      <ul>
-        <li><a href="#custom-profile">Custom Profile</a></li>
-        <li><a href="#validation">Validation</a></li>
-      </ul>
-    </li>
-    <li><a href="#summary">Summary</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content" data-pagefind-body><div class="details admonition note open">
+        </div><div class="featured-image"><img  loading="eager" src='/posts/macos-defender-scan-settings/featured.png'   alt="Using PowerShell to create Defender for Endpoint antivirus scan setting custom profiles for Microsoft Intune and third-party MDM enrolled macOS devices." height="500" width="1000"></div><div class="content" id="content" data-pagefind-body><div class="details admonition note open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
@@ -937,7 +851,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-16" 
+    id="codeblock-id-15" 
     class="
       chroma 
       !tw-block 
@@ -1225,7 +1139,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-18" 
+    id="codeblock-id-17" 
     class="
       chroma 
       !tw-block 
@@ -1482,7 +1396,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-19" 
+    id="codeblock-id-18" 
     class="
       chroma 
       !tw-block 
@@ -1768,7 +1682,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-21" 
+    id="codeblock-id-20" 
     class="
       chroma 
       !tw-block 
@@ -2024,7 +1938,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-22" 
+    id="codeblock-id-21" 
     class="
       chroma 
       !tw-block 
@@ -2552,9 +2466,9 @@
             <div class="post-info-md"></div>
             <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" data-hashtag="intune"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button><button title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" data-title="Scheduling Defender for macOS antivirus scans in Intune" data-web><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button><button title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" data-title="Scheduling Defender for macOS Antivirus Scans in Intune" data-web><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></button><button title="Share on Reddit" data-sharer="reddit" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></button><button title="Share on Telegram" data-sharer="telegram" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" data-title="Scheduling Defender for macOS antivirus scans in Intune" data-web><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></button><button title="Share on Telegram" data-sharer="telegram" data-url="https://www.oddsandendpoints.co.uk/posts/macos-defender-scan-settings/" data-title="Scheduling Defender for macOS Antivirus Scans in Intune" data-web><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/></svg></button></div>
         </div>
     </div>
@@ -2564,9 +2478,9 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/intune/">Intune</a>,&nbsp;<a href="/tags/configuration/">Configuration</a>,&nbsp;<a href="/tags/custom-profiles/">Custom Profiles</a>,&nbsp;<a href="/tags/powershell/">PowerShell</a>,&nbsp;<a href="/tags/security/">Security</a>,&nbsp;<a href="/tags/jamf/">Jamf</a>,&nbsp;<a href="/tags/endpoint-security/">Endpoint Security</a>,&nbsp;<a href="/tags/defender/">Microsoft Defender</a></section>
     </div>
 
-    <div class="post-nav print:tw-hidden"><a href="/posts/updates-self-service-deployment/" class="prev" rel="prev" title="Self-service software update deployments"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Self-service software update deployments</a>
-            <a href="/posts/windows-applocker-intune/" class="next" rel="next" title="Converting AppLocker policies to Intune profiles">Converting AppLocker policies to Intune profiles<svg class="icon"
+    <div class="post-nav print:tw-hidden"><a href="/posts/updates-self-service-deployment/" class="prev" rel="prev" title="Self-Service Software Update Deployments"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Self-Service Software Update Deployments</a>
+            <a href="/posts/windows-applocker-intune/" class="next" rel="next" title="Converting AppLocker Policies to Intune Profiles">Converting AppLocker Policies to Intune Profiles<svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
 </div>
 <div id="comments" class="print:!tw-hidden tw-pt-32 tw-pb-8"><div id="giscus"></div><noscript>

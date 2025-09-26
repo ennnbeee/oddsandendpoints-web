@@ -1,4 +1,4 @@
-# Device migration and ADE profile assignment
+# Device Migration and ADE Profile Assignment
 
 
 Now that you've made the ~~financial~~ sensible decision to migrate to Microsoft Intune for your Apple device management needs, you've got your [Apple Push Certificate](https://learn.microsoft.com/en-us/mem/intune/enrollment/apple-mdm-push-certificate-get), sorted your [Enrolment Token](https://learn.microsoft.com/en-us/mem/intune/enrollment/device-enrollment-program-enroll-ios#get-an-apple-automated-device-enrollment-token), added [Intune as an MDM provider](https://learn.microsoft.com/en-us/mem/intune/enrollment/device-enrollment-program-enroll-ios#assign-devices-to-the-apple-token-mdm-server), and now you've got all your iOS/iPadOS devices happily sitting synchronised in Intune waiting to be deployed using [Apple's Automated Device Enrolment.](https://learn.microsoft.com/en-us/mem/intune/enrollment/device-enrollment-program-enroll-ios) Life is good.

@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/tags/remediation/</link>
         <description>Remediation Scripts - Tag - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/remediation/" rel="self" type="application/rss+xml" /><item>
-    <title>Capturing Windows feature update safeguard holds</title>
+    <title>Capturing Windows Feature Update Safeguard Holds</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</link>
     <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/windows-feature-updates-safeguards/featured.png" referrerpolicy="no-referrer">
             </div>Using our best friend the remediation script in Intune to pull back Safeguard Hold information so we can see why some devices aren&rsquo;t updating to Windows 11.]]></description>
 </item><item>
-    <title>Forcing Windows 11 feature update readiness assessments</title>
+    <title>Forcing Windows 11 Feature Update Readiness Assessments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</link>
     <pubDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/windows-feature-updates-assessment/featured.png" referrerpolicy="no-referrer">
             </div>As a migration to Windows 11 is fast upon us, I thought I&rsquo;d help your devices on their way into understanding whether they will support Windows 11 and what risks you may encounter with the update, by forcing devices to evaluate their readiness states.]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 benchmark gaps - Level 2 Windows 11</title>
+    <title>Patching CIS Windows 11 Benchmark Gaps - Level 2 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part4/</link>
     <pubDate>Mon, 12 Aug 2024 21:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
@@ -29,7 +29,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part4/featured.png" referrerpolicy="no-referrer">
             </div>This is the last part in the series around the CIS (Center for Internet Security) benchmark for Windows 11, and we&rsquo;d like to say that we&rsquo;ve saved the best post for last, but we&rsquo;d be lying. Surely the Level 2 settings can&rsquo;t be worse than the Level 1?]]></description>
 </item><item>
-    <title>Patching CIS Windows 11 benchmark gaps - Level 1 Windows 11</title>
+    <title>Patching CIS Windows 11 Benchmark Gaps - Level 1 Windows 11</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</link>
     <pubDate>Mon, 15 Jul 2024 11:26:37 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part3/</guid>
@@ -37,7 +37,7 @@
                 <img src="/posts/windows-cis-patching-gaps-part3/featured.png" referrerpolicy="no-referrer">
             </div>The impact of the CIS settings on BitLocker and Windows Autopilot now done and dusted, we should broaden our horizons and start to look at what other problems the CIS level 1 benchmark brings to Windows 11 as a whole. Are there any? Will it be smooth sailing? Yeah, no.]]></description>
 </item><item>
-    <title>Keeping Windows store apps updated with Intune</title>
+    <title>Keeping Windows Store Apps Updated with Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-updating-store-apps/</link>
     <pubDate>Tue, 06 Feb 2024 21:03:00 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-updating-store-apps/</guid>
@@ -45,7 +45,7 @@
                 <img src="/posts/windows-updating-store-apps/featured.png" referrerpolicy="no-referrer">
             </div><p>So we&rsquo;re all onboard with the <a href="https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft" target="_blank" rel="noopener noreferrer">New Microsoft Store</a>, and deploying both UWP and Win32 apps from Microsoft Intune is an absolute breeze, and reduces the effort of deploying applications to a click click next OK exercise. What about the UWP apps that are already installed on a Windows Autopilot device, shouldn&rsquo;t we give them a bit of love? If you care at all about users and security you should.</p>]]></description>
 </item><item>
-    <title>Automatically resizing the WinRE partition</title>
+    <title>Automatically Resizing the WinRE Partition</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-winre-partition-resize-kb5034441/</link>
     <pubDate>Wed, 31 Jan 2024 20:54:12 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-winre-partition-resize-kb5034441/</guid>
@@ -53,7 +53,7 @@
                 <img src="/posts/windows-winre-partition-resize-kb5034441/featured.jpg" referrerpolicy="no-referrer">
             </div>When Microsoft releases an update that won&rsquo;t install due to the size of a Recovery partition, what do you do? Follow the manual steps provided by Microsoft or blindly follow a script created by a stranger on the internet?]]></description>
 </item><item>
-    <title>Co-Managing Windows Autopilot hybrid join devices</title>
+    <title>Co-Managing Windows Autopilot Hybrid Join Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-hybrid-autopilot/</link>
     <pubDate>Wed, 01 Mar 2023 21:26:30 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-hybrid-autopilot/</guid>
@@ -61,7 +61,7 @@
                 <img src="/posts/configmgr-client-hybrid-autopilot/featured.png" referrerpolicy="no-referrer">
             </div>Installing the Configuration Manager client on Hybrid Azure AD Joined Autopilot devices should be an easy process right?]]></description>
 </item><item>
-    <title>Proactively renaming hybrid Entra ID joined devices</title>
+    <title>Proactively Renaming Hybrid Entra ID Joined Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename-again/</link>
     <pubDate>Thu, 12 Jan 2023 20:10:32 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/hybrid-join-computer-rename-again/</guid>

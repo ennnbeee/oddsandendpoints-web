@@ -1,4 +1,4 @@
-# Reusable firewall settings for Microsoft Online Services
+# Reusable Firewall Settings for Microsoft Online Services
 
 
 If you've been living under a rock, or you don't have to deal with firewall and proxy requirements for accessing Microsoft Online services, you probably won't be aware that Microsoft publish their URLs and IP addresses for their services using a [web service](https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide).

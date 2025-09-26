@@ -1,4 +1,4 @@
-# Software update deployment rings for managed macOS devices
+# Software Update Deployment Rings for Managed macOS Devices
 
 
 So you've pulled the trigger on managing macOS devices in Microsoft Intune, and with this year being the year of macOS for Microsoft (this seems like an oxymoron), you should probably look at how to handle software updates.

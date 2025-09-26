@@ -1,4 +1,4 @@
-# Capturing Windows feature update safeguard holds
+# Capturing Windows Feature Update Safeguard Holds
 
 
 We're all on Windows 11 now aren't we? Deployed it using Intune [feature update policies](https://learn.microsoft.com/en-us/intune/intune-service/protect/windows-10-feature-updates) and everyone is happy?

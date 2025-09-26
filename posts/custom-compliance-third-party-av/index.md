@@ -1,4 +1,4 @@
-# Detailed compliance for non-Microsoft antivirus solutions
+# Detailed Compliance for Non-Microsoft Antivirus Solutions
 
 
 So what happens when you're not using Windows Defender on your Windows 10 and later Microsoft Intune enrolled devices, and you're not happy with the basic compliance checks for Third-Party Antivirus products?

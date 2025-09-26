@@ -4,7 +4,7 @@
         <link>https://www.oddsandendpoints.co.uk/categories/ios/</link>
         <description>iOS/iPadOS - Category - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/categories/ios/" rel="self" type="application/rss+xml" /><item>
-    <title>Self-service software update deployments</title>
+    <title>Self-Service Software Update Deployments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</link>
     <pubDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</guid>
@@ -12,7 +12,7 @@
                 <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
             </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
 </item><item>
-    <title>Assigning Intune mobile apps quickly and consistently</title>
+    <title>Assigning Intune Mobile Apps Quickly and Consistently</title>
     <link>https://www.oddsandendpoints.co.uk/posts/assigning-intune-applications/</link>
     <pubDate>Mon, 13 Feb 2023 20:46:43 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/assigning-intune-applications/</guid>
@@ -20,7 +20,7 @@
                 <img src="/posts/assigning-intune-applications/featured.png" referrerpolicy="no-referrer">
             </div>No one, and I mean no one, really wants to manually and individually assign Mobile Apps to Users or Devices in Intune in their 100&rsquo;s, so we should find a solution for this bulk assignment approach.]]></description>
 </item><item>
-    <title>Updating Apple operating system compliance policies</title>
+    <title>Updating Apple Operating System Compliance Policies</title>
     <link>https://www.oddsandendpoints.co.uk/posts/apple-os-updating-compliance/</link>
     <pubDate>Thu, 02 Feb 2023 20:08:49 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/apple-os-updating-compliance/</guid>
@@ -28,7 +28,7 @@
                 <img src="/posts/apple-os-updating-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Apple devices shouldn&rsquo;t be exempt from Operating System compliance policies, and these policies should share the same fate as Windows ones, and be updated monthly in line with update release cycles.]]></description>
 </item><item>
-    <title>Device migration and ADE profile assignment</title>
+    <title>Device Migration and ADE Profile Assignment</title>
     <link>https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/</link>
     <pubDate>Fri, 20 Jan 2023 19:57:07 &#43;0000</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/</guid>

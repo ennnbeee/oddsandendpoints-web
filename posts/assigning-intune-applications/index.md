@@ -1,4 +1,4 @@
-# Assigning Intune mobile apps quickly and consistently
+# Assigning Intune Mobile Apps Quickly and Consistently
 
 
 No one, and I mean no one, really wants to manually and individually [assign Mobile Apps](https://learn.microsoft.com/en-us/mem/intune/apps/apps-deploy) to Users or Devices in Intune, especially after you've happily used a script to {{< reftab href="/posts/approving-managed-google-play-apps/" title="Approve Managed Google Play Apps" >}} in their 100's as part of migrating to Microsoft Intune from other ~~below par~~ Mobile Device Management solutions.
