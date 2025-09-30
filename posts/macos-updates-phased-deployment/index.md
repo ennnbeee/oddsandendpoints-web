@@ -87,12 +87,15 @@ You'll notice that for `Critical Update Install` and `Config Data Install` we're
 
 The phasing of Software update is a little bit of a pain, but it can be achieved using the below settings, creating one Settings Catalog profile for each deployment group. Now you don't get the same pause and uninstall functionality as you would with Windows Update Rings, but at least you're not pushing out updates all at once to devices.
 
-| Update Ring | Automatically Install App Updates | Automatically Install Mac OS Updates | Force Delayed App Software Updates | Force Delayed Software Updates | Enforced Software Update Delay | Enforced Software Update Non OS Deferred Install Delay | Enforced Software Update Minor OS Deferred Install Delay |
-| :- | :- | :- | :- | :- | :- | :- | :- |
-| Pilot | `True` | `True` | `False` | `False` | `-` | `-` | `-` |
-| Pre-Production | `False` | `False` | `True` | `True` | `5` | `5` | `5` |
-| Initial Production | `False` | `False` | `True` | `True` | `9` | `9` | `9` |
-| Final Production | `False` | `False` | `True` | `True` | `12` | `12` | `12` |
+| Setting | Pilot | Pre-Production | Initial Production | Final Production |
+| :- | :- | :- | :- | :- |
+| Automatically Install App Updates | `True` | `False` | `False` | `False` |
+| Automatically Install Mac OS Updates | `True` | `False` | `False` | `False` |
+| Force Delayed App Software Updates | `False` | `True` | `True` | `True` |
+| Force Delayed Software Updates | `False` | `True` | `True` | `True` |
+| Enforced Software Update Delay | `-` | `5` | `9` | `12` |
+| Enforced Software Update Non OS Deferred Install Delay | `-` | `5` | `9` | `12` |
+| Enforced Software Update Minor OS Deferred Install Delay | `-` | `5` | `9` | `12` |
 
 These phased deployment of updates across the groups, will ensure that there is enough time between each phase to identify any issues (*cough* like with Sonoma 14.4 *cough*), allowing for some level of testing of updates prior to a full deployment across your whole macOS device estate.
 
@@ -141,12 +144,11 @@ Updated the `Enable AutoUpdate` settings based on feedback from [Somesh Pathak (
 
 To phase the delivery of Microsoft Application updates across the four deployment groups, you will need to create four separate Settings Catalog profiles with the below settings, with restrictions configured to stop users checking for updates and relying on the deferral and deadline settings where applicable.
 
-| Update Ring | Enable check for updates | Deferred updates | Days before forced updates |
-| :- | :- | :- | :- |
-| Pilot | `True` | `-` | `-` |
-| Pre-Production | `False` | `Defer 3 days` | `2` |
-| Initial Production | `False` | `Defer 7 days` | `2` |
-| Final Production | `False` | `Defer 7 days` | `5` |
+| Setting | Pilot | Pre-Production | Initial Production | Final Production |
+| :- | :- | :- | :- | :- |
+| Enable check for updates | `True` | `False` | `False` | `False` |
+| Deferred updates | `-` | `Defer 3 days` | `Defer 7 days` | `Defer 7 days` |
+| Days before forced updates | `-` | `2` | `2` | `5` |
 
 You can now see why I stuck with four deployment groups, as we love working within the National Cyber Security Centre guidelines to ensure that updates are installed in that wonderful 14-day window, and the Microsoft AutoUpdate configuration only allows set values for `Deferred updates`.
 

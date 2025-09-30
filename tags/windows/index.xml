@@ -3,7 +3,23 @@
         <title>Windows - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/windows/</link>
         <description>Windows - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
+    <title>Capturing Windows Feature Update Safeguard Holds</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</link>
+    <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-feature-updates-safeguards/featured.png" referrerpolicy="no-referrer">
+            </div>Using our best friend the remediation script in Intune to pull back Safeguard Hold information so we can see why some devices aren&rsquo;t updating to Windows 11.]]></description>
+</item><item>
+    <title>Forcing Windows 11 Feature Update Readiness Assessments</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</link>
+    <pubDate>Tue, 22 Jul 2025 22:06:20 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-assessment/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-feature-updates-assessment/featured.png" referrerpolicy="no-referrer">
+            </div>As a migration to Windows 11 is fast upon us, I thought I&rsquo;d help your devices on their way into understanding whether they will support Windows 11 and what risks you may encounter with the update, by forcing devices to evaluate their readiness states.]]></description>
+</item><item>
     <title>Intune Custom Compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>
@@ -11,6 +27,46 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/windows-cyber-essentials-compliance/featured.png" referrerpolicy="no-referrer">
             </div>Achieving Cyber Essentials Plus accreditation isn&rsquo;t the easiest across your whole organisation, but with Microsoft Intune you can enforce zero trust for your corporate managed Windows devices, for the key areas of the security framework using Custom Device Compliance.]]></description>
+</item><item>
+    <title>Updating Windows Network Profile Locations with PowerShell</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</link>
+    <pubDate>Tue, 06 May 2025 18:53:56 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-network-profile-locations/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-network-profile-locations/featured.jpg" referrerpolicy="no-referrer">
+            </div>So you&rsquo;ve got a restrictive Windows Firewall, and you&rsquo;re only allowing traffic to endpoints over either Domain or Private network locations, what happens if an end user doesn&rsquo;t allow for network discovery and the device is left thinking it&rsquo;s on a public network?]]></description>
+</item><item>
+    <title>BitLocker Recovery Key Rotation Requirements in Intune</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</link>
+    <pubDate>Tue, 21 Jan 2025 16:39:24 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/bitlocker-key-rotation-requirements/featured.png" referrerpolicy="no-referrer">
+            </div>What are the actual settings you require to allow for BitLocker recovery key rotation from the Intune console? Which BitLocker profile support the key rotation settings? Are these settings actually documented anywhere? Well yes, they are now.]]></description>
+</item><item>
+    <title>Risk Based Windows 11 Deployment - Improvements</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</link>
+    <pubDate>Tue, 03 Dec 2024 18:12:49 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part5/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-11-risk-based-deployment-part5/featured.jpg" referrerpolicy="no-referrer">
+            </div>An unexpected update to the Windows 11 Feature Update deployment series, looking at how to tag users instead of devices, and an improved way to get the readiness report data, and other performance improvements. What a day.]]></description>
+</item><item>
+    <title>Converting AppLocker Policies to Intune Profiles</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</link>
+    <pubDate>Tue, 22 Oct 2024 11:13:46 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-applocker-intune/featured.png" referrerpolicy="no-referrer">
+            </div>We know that there is no native configuration for AppLocker in Intune, and we should be looking at App Control for Business already, but there is still a place for AppLocker, and I haven&rsquo;t got time to manually do anything, so let&rsquo;s use PowerShell to create out AppLocker policies from exported XML files.]]></description>
+</item><item>
+    <title>Self-Service Software Update Deployments</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</link>
+    <pubDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
+            </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
 </item><item>
     <title>ConfigMgr Client Installation on Orphaned Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</link>
@@ -20,68 +76,13 @@
                 <img src="/posts/configmgr-client-install-cmg/featured.png" referrerpolicy="no-referrer">
             </div>You&rsquo;ve just implemented a Cloud Management Gateway to help your hybrid joined Windows devices communicate to Configuration Manager over the internet, but what if they&rsquo;re orphaned and unable to communicate to Configuration Manager to get the new Client Settings?]]></description>
 </item><item>
-    <title>Intune and the Curious Case of the Converting Firewall Rules</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/</link>
-    <pubDate>Mon, 22 Jul 2024 21:14:28 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/</guid>
+    <title>Patching CIS Windows 11 Benchmark Gaps - Level 2 Windows 11</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part4/</link>
+    <pubDate>Mon, 12 Aug 2024 21:26:37 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><author>
+                        <name>Jonathan Fallis</name><uri>https://deploymentshare.com/author/jonathan-fallis/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-cis-patching-gaps-part4/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/posts/firewall-rule-policy-conversion/featured.png" referrerpolicy="no-referrer">
-            </div>When did Microsoft go all covert ops (maybe don&rsquo;t answer that question) and start making changes to your very own Firewall Rule policies in Microsoft Intune without letting anyone know? Or did they?]]></description>
-</item><item>
-    <title>Reusable Firewall Settings for Microsoft Online Services</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</link>
-    <pubDate>Sat, 09 Mar 2024 21:12:54 &#43;0000</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/resusable-firewall-settings-microsoft-online/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/resusable-firewall-settings-microsoft-online/featured.jpg" referrerpolicy="no-referrer">
-            </div>It&rsquo;s time to remove another manual process, this time the creation of Microsoft 365 network endpoints for Windows Firewall Rules in Microsoft Intune, because nobody should be creating these manually.]]></description>
-</item><item>
-    <title>Modernising Microsoft Intune Firewall Rule Policies</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</link>
-    <pubDate>Tue, 12 Sep 2023 21:40:50 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/settings-catalog-firewall-rules/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/settings-catalog-firewall-rules/featured.png" referrerpolicy="no-referrer">
-            </div>If you&rsquo;ve ever experienced the joys of migrating Group Policy and in particular Windows Defender Firewall rules away from Group Policy to Microsoft Intune, you&rsquo;ve probably encountered the Rule Migration Tool, and for now this tool has worked well. So what&rsquo;s the catch?]]></description>
-</item><item>
-    <title>Reinstalling ConfigMgr Clients on Migrated Devices</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</link>
-    <pubDate>Thu, 15 Dec 2022 22:16:54 &#43;0000</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-migration/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/configmgr-client-migration/featured.png" referrerpolicy="no-referrer">
-            </div>Have you ever had the pleasure of migrating Configuration Manager clients from one domain to another, or maybe between Configuration Manager environments? Tired of manually reinstalling the client from the Console? Wanting a quick and easy way to keep on top of migrated devices? You&rsquo;re in luck.]]></description>
-</item><item>
-    <title>Updating Defender Antivirus Compliance Settings</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/defender-antivirus-compliance-updates/</link>
-    <pubDate>Tue, 25 Oct 2022 22:04:47 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/defender-antivirus-compliance-updates/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/defender-antivirus-compliance-updates/featured.jpg" referrerpolicy="no-referrer">
-            </div>We&rsquo;re going to have a look at updating a Microsoft Defender compliance policy with the latest platform update version, automatically.]]></description>
-</item><item>
-    <title>Windows Operating System Compliance Updates</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-os-compliance-updates/</link>
-    <pubDate>Thu, 30 Jun 2022 11:20:36 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-os-compliance-updates/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-os-compliance-updates/featured.png" referrerpolicy="no-referrer">
-            </div>Let&rsquo;s talk about Windows 10 and above Operating System Compliance in Microsoft Intune, and specifically how using &lsquo;Minimum OS Version&rsquo; and &lsquo;Maximum OS Version&rsquo; is dumb and you should definitely check yourself if you&rsquo;re using this in your environment.]]></description>
-</item><item>
-    <title>Retrofitting Windows Autopilot Group Tags</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</link>
-    <pubDate>Sun, 19 Jun 2022 15:55:02 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-autopilot-retrofitting-group-tags/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-autopilot-retrofitting-group-tags/featured.png" referrerpolicy="no-referrer">
-            </div>Now that we know how powerful Autopilot Group Tags can be, we should look into how we can retrofit devices with these Group Tags when the OEM or Supplier didn&rsquo;t bother doing their part of the deal.]]></description>
-</item><item>
-    <title>The Hidden Power of Windows Autopilot Group Tags</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</link>
-    <pubDate>Thu, 28 Apr 2022 10:03:55 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/autopilot-power-of-group-tags/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/autopilot-power-of-group-tags/featured.jpg" referrerpolicy="no-referrer">
-            </div>A hidden gem with Autopilot service, is the Group Tag attribute for Autopilot devices, this tag can be provided during the pre-registration by a supplier or OEM, and can be configured or updated after the device has been imported. What can we use it for in Intune?]]></description>
+                <img src="/posts/windows-cis-patching-gaps-part4/featured.png" referrerpolicy="no-referrer">
+            </div>This is the last part in the series around the CIS (Center for Internet Security) benchmark for Windows 11, and we&rsquo;d like to say that we&rsquo;ve saved the best post for last, but we&rsquo;d be lying. Surely the Level 2 settings can&rsquo;t be worse than the Level 1?]]></description>
 </item></channel>
 </rss>

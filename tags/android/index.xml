@@ -1,0 +1,55 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Android - Tag - odds&#43;endpoints</title>
+        <link>https://www.oddsandendpoints.co.uk/tags/android/</link>
+        <description>Android - Tag - odds&#43;endpoints</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 27 Feb 2025 09:43:55 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/android/" rel="self" type="application/rss+xml" /><item>
+    <title>Lower-Touch Defender Onboarding for Android Devices</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/</link>
+    <pubDate>Thu, 27 Feb 2025 09:43:55 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/android-enterprise-defender-onboarding/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/android-enterprise-defender-onboarding/featured.png" referrerpolicy="no-referrer">
+            </div>Can we improve upon the onboarding of Android Enterprise devices to Defender for Endpoint and make users lives a little easier, and Security Teams hearts a little less restless having to rely on end users to implement their own security controls?]]></description>
+</item><item>
+    <title>Improving the Android Enterprise Enrolment Experience</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/android-enterprise-enrolment-customisation/</link>
+    <pubDate>Wed, 12 Feb 2025 11:40:20 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/android-enterprise-enrolment-customisation/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/android-enterprise-enrolment-customisation/featured.png" referrerpolicy="no-referrer">
+            </div>Making your users lives easier with Android Enterprise enrolment into Intune, allowing them to use mobile data or a configured wireless network.]]></description>
+</item><item>
+    <title>Self-Service Software Update Deployments</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</link>
+    <pubDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
+            </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
+</item><item>
+    <title>Assigning Intune Mobile Apps Quickly and Consistently</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/assigning-intune-applications/</link>
+    <pubDate>Mon, 13 Feb 2023 20:46:43 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/assigning-intune-applications/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/assigning-intune-applications/featured.png" referrerpolicy="no-referrer">
+            </div>No one, and I mean no one, really wants to manually and individually assign Mobile Apps to Users or Devices in Intune in their 100&rsquo;s, so we should find a solution for this bulk assignment approach.]]></description>
+</item><item>
+    <title>Enrolling Microsoft Teams Room Systems in Intune</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/microsoft-teams-rooms-android-device-administrator/</link>
+    <pubDate>Mon, 14 Nov 2022 20:21:20 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/microsoft-teams-rooms-android-device-administrator/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/microsoft-teams-rooms-android-device-administrator/featured.png" referrerpolicy="no-referrer">
+            </div>What if you want to ensure that all of your Microsoft Teams Rooms System accounts, and any future accounts can enrol using Android Device Administrator in Microsoft Intune?]]></description>
+</item><item>
+    <title>The Easy Way to Approve Managed Google Play Apps</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/android-enterprise-approving-google-play-apps/</link>
+    <pubDate>Tue, 27 Sep 2022 22:13:24 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/android-enterprise-approving-google-play-apps/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/android-enterprise-approving-google-play-apps/featured.png" referrerpolicy="no-referrer">
+            </div>We&rsquo;ve all had to add Managed Google Play Apps in bulk to Microsoft Intune for your Android Enterprise enrolled devices, sometimes in the hundreds, let&rsquo;s see if we can make this easier and less clicky.]]></description>
+</item></channel>
+</rss>

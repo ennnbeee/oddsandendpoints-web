@@ -34,7 +34,7 @@ For the members of Test and Pilot groups, these should be targeted members, not 
 You'll notice that this time we're using Dynamic Groups across all the pre-production and production groups, and using a new attribute of `deviceId`, which is a wonderful UUID associated with *all* Entra computer objects, and it being a UUID gives us a nice split of devices based on the queries used.
 
 | Group | Type | Membership |
-| :- | :- | :- | :- |
+| :- | :- | :- |
 | Test Group | Assigned | TBC |
 | Pilot Group | Assigned | TBC |
 | Pre-Production Group | Dynamic Device | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and (device.deviceId -match "^[0-1,a]")` |
@@ -52,7 +52,7 @@ You may want to tweak the rules used here, to alter the size of each of the prod
 If you want to please Microsoft Daddy, then you could use these alternative queries for the groups, Test and Pilot are still assigned, so don't forget to populate those members.
 
 | Group | Type | Membership |
-| :- | :- | :- | :- |
+| :- | :- | :- |
 | Test Group | Assigned | TBC |
 | Pilot Group | Assigned | TBC |
 | Pre-Production Group | Dynamic Device | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -startsWith "0") or (device.deviceId -startsWith "1") or (device.deviceId -startsWith "a"))` |
@@ -141,9 +141,9 @@ Feel free to alter the deferral, deadline, and grace periods where applicable to
 | :- | :- | :- |
 | Test | Test Group | - |
 | Pilot | Pilot Group | Test Group |
-| Pre-Production | Pre-Production Group | Test Group, Pilot Group |
-| Initial Production | Initial Production Group | Test Group, Pilot Group |
-| Final Production | Final Production Group | Test Group, Pilot Group |
+| Pre-Production | Pre-Production Group | Test Group<br>Pilot Group |
+| Initial Production | Initial Production Group | Test Group<br>Pilot Group |
+| Final Production | Final Production Group | Test Group<br>Pilot Group |
 
 I'm assuming here that you aren't putting VIP user devices in Test and Pilot, because you don't want to anger them, maybe do it on your last day .
 
@@ -161,9 +161,9 @@ Changing the assignments of our Update Rings to the below, will allow for the ma
 | :- | :- | :- |
 | Test  | Test Group | - |
 | Pilot | Pilot Group | Test Group |
-| Pre-Production | Pre-Production Group, *VIP Pre-Production* | Test Group, Pilot Group, *VIP Initial Production*, *VIP Final Production* |
-| Initial Production | Initial-Production Group, *VIP Initial-Production* | Test Group, Pilot Group, *VIP Pre-Production,* *VIP Final Production* |
-| Final Production | Final Production, *VIP Final Production* | Test Group, Pilot Group, *VIP Pre-Production*, *VIP Initial Production* |
+| Pre-Production | Pre-Production Group<br>*VIP Pre-Production* | Test Group<br>Pilot Group<br>*VIP Initial Production*<br>*VIP Final Production* |
+| Initial Production | Initial-Production Group<br>*VIP Initial-Production* | Test Group<br>Pilot Group<br>*VIP Pre-Production*<br>*VIP Final Production* |
+| Final Production | Final Production<br>*VIP Final Production* | Test Group<br>Pilot Group<br>*VIP Pre-Production*<br>*VIP Initial Production* |
 
 For example if device name `VIP-7wa7f4c35`, with deviceId `ec759183-4492-44f4-a2ec-dbc33470bf48` (which will captured by the 'Final Production' dynamic group), is added to group `VIP Initial Production`, it will exclude the device from the 'Final Production' Update Ring, and assign the Update Ring for 'Initial Production', with the device restarting after updates on a Friday.
 
