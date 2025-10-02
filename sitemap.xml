@@ -2,6 +2,8 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://www.oddsandendpoints.co.uk/</loc><lastmod>2025-09-30T12:50:35&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/posts/</loc><lastmod>2025-09-30T12:50:35&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/authors/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/categories/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -9,8 +11,6 @@
             <loc>https://www.oddsandendpoints.co.uk/categories/intune/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/intune/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/authors/nick-benton/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/posts/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/powershell/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/remediation/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/security/</loc><lastmod>2025-07-23T10:22:32&#43;01:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -140,5 +140,5 @@
             <loc>https://www.oddsandendpoints.co.uk/tags/custom-attributes/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/encryption/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/information/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://www.oddsandendpoints.co.uk/projects/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://www.oddsandendpoints.co.uk/tools/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.oddsandendpoints.co.uk/tags/resource-access/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

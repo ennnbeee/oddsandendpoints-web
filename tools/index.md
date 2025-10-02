@@ -1,4 +1,4 @@
-# Projects
+# Intune Tools
 
 
 {{< showcase "AutopilotGroupTagger" "AutoPilotGroupTagger is a PowerShell based utility that allows for bulk update and management of Windows Autopilot Device Group Tags, for those who are retrospectively updating Autopilot devices or otherwise." "img/agt-icon.png" "https://github.com/ennnbeee/AutopilotGroupTagger" >}}
