@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1747 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1815 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/","datePublished": "2025-10-13T12:50:35+01:00","dateModified": "2025-10-13T12:50:35+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -189,9 +189,9 @@
     </li>
     <li><a href="#expanding-the-script">Expanding the Script</a>
       <ul>
-        <li><a href="#example---five-groups-of-corporate-windows-devices">Example - Five Groups of Corporate Windows Devices</a></li>
-        <li><a href="#example---four-groups-of-all-macos-devices">Example - Four Groups of All macOS Devices</a></li>
-        <li><a href="#example---three-groups-of-personal-iosipados-devices">Example - Three Groups of Personal iOS/iPadOS Devices</a></li>
+        <li><a href="#example-1---five-groups-of-corporate-windows-devices">Example 1 - Five Groups of Corporate Windows Devices</a></li>
+        <li><a href="#example-2---four-groups-of-all-macos-devices">Example 2 - Four Groups of All macOS Devices</a></li>
+        <li><a href="#example-3---three-groups-of-personal-iosipados-devices">Example 3 - Three Groups of Personal iOS/iPadOS Devices</a></li>
       </ul>
     </li>
     <li><a href="#summary">Summary</a></li>
@@ -215,9 +215,9 @@
     </li>
     <li><a href="#expanding-the-script">Expanding the Script</a>
       <ul>
-        <li><a href="#example---five-groups-of-corporate-windows-devices">Example - Five Groups of Corporate Windows Devices</a></li>
-        <li><a href="#example---four-groups-of-all-macos-devices">Example - Four Groups of All macOS Devices</a></li>
-        <li><a href="#example---three-groups-of-personal-iosipados-devices">Example - Three Groups of Personal iOS/iPadOS Devices</a></li>
+        <li><a href="#example-1---five-groups-of-corporate-windows-devices">Example 1 - Five Groups of Corporate Windows Devices</a></li>
+        <li><a href="#example-2---four-groups-of-all-macos-devices">Example 2 - Four Groups of All macOS Devices</a></li>
+        <li><a href="#example-3---three-groups-of-personal-iosipados-devices">Example 3 - Three Groups of Personal iOS/iPadOS Devices</a></li>
       </ul>
     </li>
     <li><a href="#summary">Summary</a></li>
@@ -265,19 +265,20 @@
     </li>
     <li><a href="#expanding-the-script">Expanding the Script</a>
       <ul>
-        <li><a href="#example---five-groups-of-corporate-windows-devices">Example - Five Groups of Corporate Windows Devices</a></li>
-        <li><a href="#example---four-groups-of-all-macos-devices">Example - Four Groups of All macOS Devices</a></li>
-        <li><a href="#example---three-groups-of-personal-iosipados-devices">Example - Three Groups of Personal iOS/iPadOS Devices</a></li>
+        <li><a href="#example-1---five-groups-of-corporate-windows-devices">Example 1 - Five Groups of Corporate Windows Devices</a></li>
+        <li><a href="#example-2---four-groups-of-all-macos-devices">Example 2 - Four Groups of All macOS Devices</a></li>
+        <li><a href="#example-3---three-groups-of-personal-iosipados-devices">Example 3 - Three Groups of Personal iOS/iPadOS Devices</a></li>
       </ul>
     </li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>You must either be living under a rock, or just using <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview" target="_blank" rel="noopener noreferrer">Windows Autopatch</a> to manage the delivery of updates to phased device groups, but what Autopatch won&rsquo;t allow you to do is use the same phases for deployment of applications, configurations, or even updates for non-Windows devices.</p>
-<p>Now we&rsquo;re no stranger to using <a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership" target="_blank" rel="noopener noreferrer">Dynamic Security groups</a> in Entra to split our device estate in suitable phased collections, having touched upon the subject <a href="/posts/updates-self-service-deployment/" rel="">a</a> <a href="/posts/macos-updates-phased-deployment/" rel="">few</a> <a href="/posts/flexible-update-deployments/" rel="">times</a> <a href="/posts/windows-update-phased-deployment/" rel="">already</a>, but we may as well flog this horse for all it&rsquo;s worth.</p>
+            </div><div class="content" id="content" data-pagefind-body><p>You must either be living under a rock, or just using <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview" target="_blank" rel="noopener noreferrer">Windows Autopatch</a> to manage the delivery of updates, if you aren&rsquo;t aware about <a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership" target="_blank" rel="noopener noreferrer">Dynamic Security groups</a> and their use for phased update delivery.</p>
+<p>What Autopatch won&rsquo;t allow you to do, is use the same phased groups for the deployment of applications, configurations, or even non-Windows device updates.</p>
+<p>Now we&rsquo;re no stranger to using Dynamic Security groups in Entra to split our device estate in phased collections, having touched upon the subject <a href="/posts/updates-self-service-deployment/" rel="">a</a>, <a href="/posts/macos-updates-phased-deployment/" rel="">few</a>, <a href="/posts/flexible-update-deployments/" rel="">times</a>, <a href="/posts/windows-update-phased-deployment/" rel="">already</a>, but we may as well flog this horse for all it&rsquo;s worth.</p>
 <h2 id="broad-phasing" class="headerLink">
-    <a href="#broad-phasing" class="header-mark"></a>Broad Phasing</h2><p>Previously we&rsquo;ve used the <code>device.deviceId</code> attribute on computer objects in Entra, which is just a GUID/UUID, and grouped devices based on the start of this string whether its <code>0-9</code> or <code>a-f</code>.</p>
-<p>As there are <strong>sixteen</strong> potential characters (I counted for you) this GUID can start with, each one of these should in theory equal <strong>6.25%</strong> of all devices. You can then use this to create some bulky looking dynamic groups to split your device estate into chunks.</p>
+    <a href="#broad-phasing" class="header-mark"></a>Broad Phasing</h2><p>Previously we&rsquo;ve used the <code>device.deviceId</code> attribute on computer objects in Entra, which is just a GUID/UUID, to group devices based on the start of this string whether its <code>0-9</code> or <code>a-f</code>.</p>
+<p>As there are <strong>sixteen</strong> potential characters (I counted for you) this GUID can start with (a-f, 0-9), each one of these should in theory equal <strong>6.25%</strong> of all devices. You can then use this to create some bulky looking dynamic groups to split your device estate into chunks.</p>
 <div class="details admonition info open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -287,7 +288,7 @@
     <div class="details-content">
         <div class="admonition-content">GUID (aka UUID) is an acronym for &lsquo;Globally Unique Identifier&rsquo; (or &lsquo;Universally Unique Identifier&rsquo;). It is a 128-bit integer number used to identify resources.</div></div></div>
 <h3 id="sample-groups" class="headerLink">
-    <a href="#sample-groups" class="header-mark"></a>Sample Groups</h3><p>Using this calculation we can combine devices where their <code>device.deviceId</code> starts with differing characters to give us a set of groups that contain <strong>6.25%</strong>, <strong>18.75%</strong>, <strong>31.25%</strong>, and <strong>43.75%</strong> of all, in the below example, corporate owned, managed, Windows devices.</p>
+    <a href="#sample-groups" class="header-mark"></a>Sample Groups</h3><p>Using this calculation we can combine devices where their <code>device.deviceId</code> starts with differing characters to give us a set of groups that contain for example <strong>6.25%</strong>, <strong>18.75%</strong>, <strong>31.25%</strong>, and <strong>43.75%</strong> of all, in the below example, corporate owned, managed, Windows devices.</p>
 
 <div class="table-wrapper">
   <table>
@@ -317,10 +318,18 @@
     </tbody>
   </table>
 </div>
-<p>Now these phases might work for you, and you <em>might</em> want to use the smallest percentage as a pilot or test group&hellip;but ~6% of 10000 is 600 devices (<a href="https://www.youtube.com/watch?v=X09oxyIeGuY" target="_blank" rel="noopener noreferrer">quick maths</a>) which isn&rsquo;t <em>that</em> small a test or pilot.</p>
-<p>Can we use the same approach with Entra groups to create fine-tuned deployment groups?</p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/></svg></span>Tip<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">A device will only exist in <strong>one</strong> of these dynamic groups if you get your rules correct with no overlapping starting characters.</div></div></div>
+<p>Now these multiples of 6.25 phase groups <em>might</em> work for you, and you <em>might</em> want to use the smallest percentage as a pilot or test group&hellip;but ~6% of 10000 is 600 devices (<a href="https://www.youtube.com/watch?v=X09oxyIeGuY" target="_blank" rel="noopener noreferrer">quick maths</a>) which isn&rsquo;t <em>that</em> small a test or pilot.</p>
+<p>Can we use a similar approach using Entra groups to create fine-tuned deployment groups?</p>
 <h2 id="granular-phased-groups" class="headerLink">
-    <a href="#granular-phased-groups" class="header-mark"></a>Granular Phased Groups</h2><p>How about instead of the above 16 available characters to query in the <code>device.deviceId</code>, we extend that to the next character i.e., <code>device.deviceId -startsWith &quot;01&quot;</code> <code>device.deviceId -startsWith &quot;02&quot;</code>, <code>device.deviceId -startsWith &quot;03&quot;</code> etc., which would give us a massive <strong>256</strong> options &ndash; each one about <strong>0.40%</strong> of devices.</p>
+    <a href="#granular-phased-groups" class="header-mark"></a>Granular Phased Groups</h2><p>How about instead of the above 16 available characters to query in the start of the <code>device.deviceId</code> attribute, we extend that to the next character i.e., <code>device.deviceId -startsWith &quot;01&quot;</code> <code>device.deviceId -startsWith &quot;02&quot;</code>, <code>device.deviceId -startsWith &quot;03&quot;</code> etc., which would give us a massive <strong>256</strong> options &ndash; each one about <strong>0.4%</strong> of devices.</p>
 <p>So now instead of blocking devices in chunks of 6% we can group them in roughly 0.5%. Yeah I think that might be granular enough 😅.</p>
 <div class="details admonition info open">
     <div class="details-summary admonition-title">
@@ -329,12 +338,12 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">I think this is how Microsoft is splitting devices in <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/deploy/windows-autopatch-groups-overview" target="_blank" rel="noopener noreferrer">Autopatch Dynamic Groups</a> behind the scenes and perhaps a reason they&rsquo;ve told us off for using <a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-more-efficient" target="_blank" rel="noopener noreferrer">inefficient rules</a> to save all the compute resources for themselves, but I&rsquo;ll take my tinfoil hat off for now 😂.</div></div></div>
+        <div class="admonition-content">I <em>think</em> this is how Microsoft is splitting devices in <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/deploy/windows-autopatch-groups-overview" target="_blank" rel="noopener noreferrer">Autopatch Dynamic Groups</a> behind the scenes and perhaps a reason they&rsquo;ve <del>told us off for</del> warned us about using <a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-more-efficient" target="_blank" rel="noopener noreferrer">inefficient rules</a> to save all the compute resources for themselves, but I&rsquo;ll take my tinfoil hat off for now 😂.</div></div></div>
 <h3 id="calculating-group-membership" class="headerLink">
     <a href="#calculating-group-membership" class="header-mark"></a>Calculating Group Membership</h3><p>Now the concept is all well and good, and I&rsquo;m <em>OK</em> enough with PowerShell to give it a go myself, but there are times when coffee and caffeine don&rsquo;t cut it to get you the results you need, so we can lean on the new C-word in our lives <del>nope</del> Copilot.</p>
 <p>So with a half decent prompt and some tweaks along the way:</p>
 <blockquote>
-  <p><em>&ldquo;Using powershell, i want to be able to split out dynamic entra device groups based on the device attribute device.deviceId which is a UUID, based on percentages. So if I want approx 5% of all devices for the first group, it would equate to devices where device.deviceId starts with 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0cThen each subsequent group is 15%, 25%, 45% of devices. give me the logic and the powershell script to able to use dynamic group membership percentages, ensuring for n groups the total adds to 100, and to make sure that no device is missed from any of the dynamic groups, so all device.deviceId are covered by only one dynamic group query&rdquo;</em></p>
+  <p><em>&ldquo;Using powershell, i want to be able to split out dynamic entra device groups based on the device attribute device.deviceId which is a UUID, based on percentages. So if I want approx 5% of all devices for the first group, it would equate to devices where device.deviceId starts with 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c. Then each subsequent group is 15%, 25%, 45% of devices. Give me the logic and the powershell script to able to use dynamic group membership percentages, ensuring for n groups the total adds to 100, and to make sure that no device is missed from any of the dynamic groups, so all device.deviceId are covered by only one dynamic group query&rdquo;</em></p>
 </blockquote><p>This gave me something to start with, but the results of the rules were way too long, and didn&rsquo;t allow me to actually save a group in Entra without it throwing a wobbly.</p>
 <blockquote>
   <p><em>&ldquo;Can you instead of using the startsWith operator can you use regex and the match operator?&rdquo;</em></p>
@@ -342,7 +351,7 @@
 <blockquote>
   <p><em>&ldquo;Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator.&rdquo;</em></p>
 </blockquote><h3 id="testing-the-function" class="headerLink">
-    <a href="#testing-the-function" class="header-mark"></a>Testing the Function</h3><p>Not sure Copilot like my sassy opener 🤐, but we got there in the end, a PowerShell function that will accept an array of values and kick out some basic Group rules.</p>
+    <a href="#testing-the-function" class="header-mark"></a>Testing the Function</h3><p>Not sure Copilot like my sassy opener 🤐, but we got there in the end&hellip;a PowerShell function that will accept an array of values and kick out some basic Group rules.</p>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -485,7 +494,7 @@
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$groupRules</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </div>
-<p>You can try it yourself, throw an array of numbers that adds up to 100 at it and see what it kicks out:</p>
+<p>You can try it yourself, throw an array of numbers that adds up to 100 at it and see what it kicks out.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -578,23 +587,23 @@
       "><span class="line"><span class="cl"><span class="nv">$groups</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">35</span><span class="p">,</span> <span class="mf">50</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Get-PhasedDynamicGroups</span> <span class="n">-percentages</span> <span class="nv">$groups</span></span></span></code></pre>
 </div>
-<p>Lob the function and the above example into a PowerShell window:</p>
+<p>Using the function and the above example in a PowerShell console:</p>
 <p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-function.png" title="Phased Deployment Group Examples" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-function.png" data-sub-html="<h2>A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.</h2><p>Phased Deployment Group Examples</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-function.png'   alt="Phased Deployment Group Examples" height="633" width="1120"></a><figcaption class="image-caption">A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.</figcaption>
 </figure>
 
 </p>
 <p>Great that&rsquo;s half the battle, a list of rules for each of the five groups. But can we make it a little more user friendly?</p>
 <h2 id="expanding-the-script" class="headerLink">
-    <a href="#expanding-the-script" class="header-mark"></a>Expanding the Script</h2><p>Back to using my actual brain 🧠 and not Copilot 🧙‍♂️, we can take the function and lob it into a more complete <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Devices/PhasedGroups/Get-PhasedGroupRules.ps1" target="_blank" rel="noopener noreferrer">script</a> giving us some parameters  along the way to be specific in our group use.</p>
+    <a href="#expanding-the-script" class="header-mark"></a>Expanding the Script</h2><p>Back to using my actual brain 🧠 and not Copilot 🧙‍♂️, we can take the function and lob it into a more complete <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Devices/PhasedGroups/Get-PhasedGroupRules.ps1" target="_blank" rel="noopener noreferrer">script</a> giving us some parameters and a way to be specific in our group use.</p>
 <p>With the following as options when running the script to create Operating System and/or Ownership specific rules:</p>
 <ul>
-<li><strong>operatingSystem</strong>: Options from Windows, macOS, Android, iOS, and All</li>
-<li><strong>ownership</strong>: Options from Corporate, Personal, and Both</li>
-<li><strong>groups</strong>: How many group rules you want to create from 2 to 10</li>
+<li><strong>operatingSystem</strong>: Options from <code>Windows</code>, <code>macOS</code>, <code>Android</code>, <code>iOS</code>, and <code>All</code></li>
+<li><strong>ownership</strong>: Options from <code>Corporate</code>, <code>Personal</code>, and <code>Both</code></li>
+<li><strong>groups</strong>: How many group rules you want to create from <code>2</code> to <code>10</code></li>
 </ul>
 <p>We can go ahead and run the script to create some rules.</p>
-<h3 id="example---five-groups-of-corporate-windows-devices" class="headerLink">
-    <a href="#example---five-groups-of-corporate-windows-devices" class="header-mark"></a>Example - Five Groups of Corporate Windows Devices</h3><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
+<h3 id="example-1---five-groups-of-corporate-windows-devices" class="headerLink">
+    <a href="#example-1---five-groups-of-corporate-windows-devices" class="header-mark"></a>Example 1 - Five Groups of Corporate Windows Devices</h3><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
     tw-flex 
@@ -685,7 +694,7 @@
       tw-scrollbar-thin
       "><span class="line"><span class="cl"><span class="p">./</span><span class="nb">Get-PhasedGroupRules</span><span class="p">.</span><span class="py">ps1</span> <span class="n">-operatingSystem</span> <span class="n">Windows</span> <span class="n">-ownership</span> <span class="n">Corporate</span> <span class="n">-groups</span> <span class="mf">5</span></span></span></code></pre>
 </div>
-<p>Seeing it in action:</p>
+<p>Seeing it in action.</p>
 <figure><img src="/posts/tuning-phased-deployment-groups/img/tpdg-windows.gif"
     alt="Five Groups of Corporate Windows Devices">
 </figure>
@@ -730,8 +739,8 @@
     </tbody>
   </table>
 </div>
-<h3 id="example---four-groups-of-all-macos-devices" class="headerLink">
-    <a href="#example---four-groups-of-all-macos-devices" class="header-mark"></a>Example - Four Groups of All macOS Devices</h3><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
+<h3 id="example-2---four-groups-of-all-macos-devices" class="headerLink">
+    <a href="#example-2---four-groups-of-all-macos-devices" class="header-mark"></a>Example 2 - Four Groups of All macOS Devices</h3><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
     tw-flex 
@@ -827,7 +836,7 @@
     alt="Example - Four Groups of All macOS Devices">
 </figure>
 
-<p>Group rules.</p>
+<p>Different group rules.</p>
 
 <div class="table-wrapper">
   <table>
@@ -862,8 +871,8 @@
     </tbody>
   </table>
 </div>
-<h3 id="example---three-groups-of-personal-iosipados-devices" class="headerLink">
-    <a href="#example---three-groups-of-personal-iosipados-devices" class="header-mark"></a>Example - Three Groups of Personal iOS/iPadOS Devices</h3><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
+<h3 id="example-3---three-groups-of-personal-iosipados-devices" class="headerLink">
+    <a href="#example-3---three-groups-of-personal-iosipados-devices" class="header-mark"></a>Example 3 - Three Groups of Personal iOS/iPadOS Devices</h3><div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
     tw-flex 
@@ -959,7 +968,7 @@
     alt="Example - Three Groups of Personal iOS Devices">
 </figure>
 
-<p>Group rules.</p>
+<p>More group rules.</p>
 
 <div class="table-wrapper">
   <table>
@@ -989,9 +998,9 @@
     </tbody>
   </table>
 </div>
-<p>You get the gist now. These rules can be used to create your granular phased dynamic device deployment groups in Entra 😄.</p>
+<p>You get the gist now. These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>Summary</h2><p>See dynamic groups aren&rsquo;t dead, and nor is how you can use them across your Intune environment, whether it&rsquo;s just for updates, or pushing out new settings, these very granular dynamic groups can be used pretty much everywhere to control the deployment of new or updated things.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>Dynamic groups aren&rsquo;t dead (even if <a href="https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters" target="_blank" rel="noopener noreferrer">Assignment Filters</a> are nicer), especially when you can use them across your entire Intune environment, whether it&rsquo;s just for updates, or pushing out new settings, these <em>very</em> granular dynamic groups can be used pretty much everywhere to control the deployment of new or updated things.</p>
 <p>If you want to see examples of where these phased groups can be used <a href="https://nl.linkedin.com/in/dpklapwijk" target="_blank" rel="noopener noreferrer">Peter Klapwijk</a> has a <a href="https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/" target="_blank" rel="noopener noreferrer">set of posts</a> detailing exactly how they&rsquo;ve been using them.</p>
 </div>
 
