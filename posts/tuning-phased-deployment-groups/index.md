@@ -1,11 +1,13 @@
-# Fine Tuning Phased Groups for Deployments in Intune
+# Fine-Tuning Groups for Phased Deployments in Intune
 
 
-You must either be living under a rock, or just using [Windows Autopatch](https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) to manage the delivery of updates, if you aren't aware about [Dynamic Security groups](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership) and their use for phased update delivery.
+You must either be living under a rock, or just using [Windows Autopatch](https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) to manage the delivery of Windows updates, if you aren't aware about using [Dynamic Security groups](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership) for phased update delivery.
 
-What Autopatch won't allow you to do, is use the same phased groups for the deployment of applications, configurations, or even non-Windows device updates.
+You might not realise that you *could* and *should* be using these same groups for the deployment of controlled changes across your device estate, in a test, pilot, pre-production, production type approach whether this is for Windows, macOS, or mobile devices.
 
-Now we're no stranger to using Dynamic Security groups in Entra to split our device estate in phased collections, having touched upon the subject [a](/posts/updates-self-service-deployment/), [few](/posts/macos-updates-phased-deployment/), [times](/posts/flexible-update-deployments/), [already](/posts/windows-update-phased-deployment/), but we may as well flog this horse for all it's worth.
+![Phased Deployment Diagram](./img/tpdg-phases.png "A sample phased deployment diagram showing stages of update deployment.")
+
+Now we're no stranger to using Dynamic Security groups in Entra to split our device estate in phased collections, having touched upon the subject [a](/posts/updates-self-service-deployment/), [few](/posts/macos-updates-phased-deployment/), [times](/posts/flexible-update-deployments/), [already](/posts/windows-update-phased-deployment/), but we may as well flog this horse for all it's worth and see if we can improve upon our existing logic.
 
 ## Broad Phasing
 
@@ -21,26 +23,26 @@ GUID (aka UUID) is an acronym for 'Globally Unique Identifier' (or 'Universally 
 
 Using this calculation we can combine devices where their `device.deviceId` starts with differing characters to give us a set of groups that contain for example **6.25%**, **18.75%**, **31.25%**, and **43.75%** of all, in the below example, corporate owned, managed, Windows devices.
 
-| Device Percentage | Rule |
-| :- | :- |
-| 6.25% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company")  and (device.deviceOSType -eq "Windows") and (device.deviceId -startsWith "0")` |
-| 18.75% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company")  and (device.deviceOSType -eq "Windows") and ((device.deviceId -startsWith "1") or (device.deviceId -startsWith "2") or (device.deviceId -startsWith "3"))` |
-| 31.25% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company") and (device.deviceOSType -eq "Windows") and ((device.deviceId -startsWith "4") or (device.deviceId -startsWith "5") or (device.deviceId -startsWith "6") or (device.deviceId -startsWith "7") or (device.deviceId -startsWith "8"))` |
-| 43.75% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company") and (device.deviceOSType -eq "Windows") and ((device.deviceId -startsWith "9") or (device.deviceId -startsWith "a") or (device.deviceId -startsWith "b") or (device.deviceId -startsWith "c") or (device.deviceId -startsWith "d") or (device.deviceId -startsWith "e") or (device.deviceId -startsWith "f"))` |
+| Phase | Device Percentage | Rule |
+| :-: | :-: | :- |
+| 1 | 6.25% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company")  and (device.deviceOSType -eq "Windows") and (device.deviceId -startsWith "0")` |
+| 2 | 18.75% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company")  and (device.deviceOSType -eq "Windows") and ((device.deviceId -startsWith "1") or (device.deviceId -startsWith "2") or (device.deviceId -startsWith "3"))` |
+| 3 | 31.25% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company") and (device.deviceOSType -eq "Windows") and ((device.deviceId -startsWith "4") or (device.deviceId -startsWith "5") or (device.deviceId -startsWith "6") or (device.deviceId -startsWith "7") or (device.deviceId -startsWith "8"))` |
+| 4 | 43.75% | `(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq "Company") and (device.deviceOSType -eq "Windows") and ((device.deviceId -startsWith "9") or (device.deviceId -startsWith "a") or (device.deviceId -startsWith "b") or (device.deviceId -startsWith "c") or (device.deviceId -startsWith "d") or (device.deviceId -startsWith "e") or (device.deviceId -startsWith "f"))` |
 
-{{< admonition type=tip >}}
-A device will only exist in **one** of these dynamic groups if you get your rules correct with no overlapping starting characters.
+{{< admonition type=note >}}
+A device will only exist in **one** of these dynamic groups if you get your rules correct, with no overlapping starting characters.
 {{< /admonition >}}
 
-Now these multiples of 6.25 phase groups *might* work for you, and you *might* want to use the smallest percentage as a pilot or test group...but ~6% of 10000 is 600 devices ([quick maths](https://www.youtube.com/watch?v=X09oxyIeGuY)) which isn't *that* small a test or pilot.
+Now these multiples of **6.25** phase groups *might* work for you, and you *might* want to use the smallest percentage as a pilot or test group...but ~6% of 10000 is 600 devices ([quick maths](https://www.youtube.com/watch?v=X09oxyIeGuY)) which isn't that small a test or pilot.
 
 Can we use a similar approach using Entra groups to create fine-tuned deployment groups?
 
-## Granular Phased Groups
+## Accurate Phased Groups
 
-How about instead of the above 16 available characters to query in the start of the `device.deviceId` attribute, we extend that to the next character i.e., `device.deviceId -startsWith "01"` `device.deviceId -startsWith "02"`, `device.deviceId -startsWith "03"` etc., which would give us a massive **256** options -- each one about **0.4%** of devices.
+How about instead of the above 16 available characters to query in the start of the `device.deviceId` attribute, we extend that to the next character i.e., `device.deviceId -startsWith "01"` `device.deviceId -startsWith "02"`, `device.deviceId -startsWith "03"` etc., which would give us a massive **256** options -- each one corresponding to about **0.4%** of devices.
 
-So now instead of blocking devices in chunks of 6% we can group them in roughly 0.5%. Yeah I think that might be granular enough 😅.
+So now instead of grouping devices in blocks of 6% we can group them in roughly 0.4% chunks. Yeah I think that might be granular enough 😅.
 
 {{< admonition type=info >}}
 I *think* this is how Microsoft is splitting devices in [Autopatch Dynamic Groups](https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/deploy/windows-autopatch-groups-overview) behind the scenes and perhaps a reason they've ~told us off for~ warned us about using [inefficient rules](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-rule-more-efficient) to save all the compute resources for themselves, but I'll take my tinfoil hat off for now 😂.
@@ -52,15 +54,21 @@ Now the concept is all well and good, and I'm *OK* enough with PowerShell to giv
 
 So with a half decent prompt and some tweaks along the way:
 
-> *"Using powershell, i want to be able to split out dynamic entra device groups based on the device attribute device.deviceId which is a UUID, based on percentages. So if I want approx 5% of all devices for the first group, it would equate to devices where device.deviceId starts with 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c. Then each subsequent group is 15%, 25%, 45% of devices. Give me the logic and the powershell script to able to use dynamic group membership percentages, ensuring for n groups the total adds to 100, and to make sure that no device is missed from any of the dynamic groups, so all device.deviceId are covered by only one dynamic group query"*
+{{< admonition type=quote >}}
+*Using powershell, i want to be able to split out dynamic entra device groups based on the device attribute device.deviceId which is a UUID, based on percentages. So if I want approx 5% of all devices for the first group, it would equate to devices where device.deviceId starts with 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c. Then each subsequent group is 15%, 25%, 45% of devices. Give me the logic and the powershell script to able to use dynamic group membership percentages, ensuring for n groups the total adds to 100, and to make sure that no device is missed from any of the dynamic groups, so all device.deviceId are covered by only one dynamic group query.*
+{{< /admonition >}}
 
 This gave me something to start with, but the results of the rules were way too long, and didn't allow me to actually save a group in Entra without it throwing a wobbly.
 
-> *"Can you instead of using the startsWith operator can you use regex and the match operator?"*
+{{< admonition type=quote >}}
+*Can you instead of using the startsWith operator can you use regex and the match operator?*
+{{< /admonition >}}
 
 This just changed the logic and didn't shorten the rule length, as the rule just used the regex equivalent of startsWith.
 
-> *"Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator."*
+{{< admonition type=quote >}}
+*Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator.*
+{{< /admonition >}}
 
 ### Testing the Function
 
@@ -158,13 +166,13 @@ Seeing it in action.
 
 With generated group rules.
 
-| Group | Percentage | Rule |
-| :- | :-: | :- |
-| 1 | 1 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[012]"))` |
-| 2 | 4 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[3456789abc]"))` |
-| 3 | 15 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[def]") or (device.deviceId-match "^1[0123456789abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[012]"))` |
-| 4 | 30 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[0123456789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]"))` |
-| 5 | 50 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
+| Phase | Percentage | Rule |
+| :-: | :-: | :- |
+| 1 | 1% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[012]"))` |
+| 2 | 4% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[3456789abc]"))` |
+| 3 | 15% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[def]") or (device.deviceId-match "^1[0123456789abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[012]"))` |
+| 4 | 30% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[0123456789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]"))` |
+| 5 | 50% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
 
 ### Example 2 - Four Groups of All macOS Devices
 
@@ -178,12 +186,12 @@ More demos.
 
 Different group rules.
 
-| Group | Percentage | Rule |
-| :- | :-: | :- |
-| 1 | 5 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[0123456789abc]"))` |
-| 2 | 15 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[def]") or (device.deviceId -match "^1[0123456789abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[012]"))` |
-| 3 | 30 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[0123456789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]"))` |
-| 4 | 50 | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
+| Phase | Percentage | Rule |
+| :-: | :-: | :- |
+| 1 | 5% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[0123456789abc]"))` |
+| 2 | 15% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[def]") or (device.deviceId -match "^1[0123456789abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[012]"))` |
+| 3 | 30% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[0123456789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]"))` |
+| 4 | 50% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
 
 ### Example 3 - Three Groups of Personal iOS/iPadOS Devices
 
@@ -197,17 +205,19 @@ Once more with feeling.
 
 More group rules.
 
-| Group | Percentage | Rule |
-| :- | :-: | :- |
-| 1 | 10 | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^0[0123456789abcdef]") or (device.deviceId -match "^1[012345678]"))`|
-| 2 | 30 | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^1[9abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[0123456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[012345]"))`|
-| 3 | 60 | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^6[6789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]") or (device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
+| Phase | Percentage | Rule |
+| :-: | :-: | :- |
+| 1 | 10% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^0[0123456789abcdef]") or (device.deviceId -match "^1[012345678]"))`|
+| 2 | 30% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^1[9abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[0123456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[012345]"))`|
+| 3 | 60% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^6[6789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]") or (device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
 
-You get the gist now. These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.
+These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.
+
+![Rule Syntax](./img/tpdg-syntax.png "A screenshot of Entra ID and the Dynamic Group Rule Editor.")
 
 ## Summary
 
-Dynamic groups aren't dead (even if [Assignment Filters](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters) are nicer), especially when you can use them across your entire Intune environment, whether it's just for updates, or pushing out new settings, these *very* granular dynamic groups can be used pretty much everywhere to control the deployment of new or updated things.
+You really should be making the most of the tools you have available for managing devices in Intune, and leveraging Dynamic Groups in this way to ensure controlled deployments of updates or new policies or applications, using these *very* granular dynamic groups is a great place to start.
 
-If you want to see examples of where these phased groups can be used [Peter Klapwijk](https://nl.linkedin.com/in/dpklapwijk) has a [set of posts](https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/) detailing exactly how they've been using them.
+If you want to see examples of where these phased groups can be used [Peter Klapwijk](https://nl.linkedin.com/in/dpklapwijk) has a [post](https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/) detailing exactly how they've been using them.
 

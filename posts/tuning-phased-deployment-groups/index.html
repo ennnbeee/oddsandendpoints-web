@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noodp" /><title>Fine Tuning Phased Groups for Deployments in Intune</title><script
+    <meta name="robots" content="noodp" /><title>Fine-Tuning Groups for Phased Deployments in Intune</title><script
   async
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4789213189452480"
   crossorigin="anonymous"
 ></script>
 <meta name="Description" content="Using Dynamic Entra ID device groups to create fine tuned granular groups of managed Intune devices to support controlled phasing of configurations and updates."><meta property="og:url" content="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/">
   <meta property="og:site_name" content="odds&#43;endpoints">
-  <meta property="og:title" content="Fine Tuning Phased Groups for Deployments in Intune">
+  <meta property="og:title" content="Fine-Tuning Groups for Phased Deployments in Intune">
   <meta property="og:description" content="Using Dynamic Entra ID device groups to create fine tuned granular groups of managed Intune devices to support controlled phasing of configurations and updates.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -20,15 +20,14 @@
     <meta property="article:modified_time" content="2025-10-13T12:50:35+01:00">
     <meta property="article:tag" content="Intune">
     <meta property="article:tag" content="Entra ID">
-    <meta property="article:tag" content="Windows">
-    <meta property="article:tag" content="macOS">
-    <meta property="article:tag" content="Android">
-    <meta property="article:tag" content="iOS/iPadOS">
+    <meta property="article:tag" content="Dynamic Groups">
+    <meta property="article:tag" content="Software Updates">
+    <meta property="article:tag" content="PowerShell">
     <meta property="og:image" content="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/featured.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/featured.png">
-  <meta name="twitter:title" content="Fine Tuning Phased Groups for Deployments in Intune">
+  <meta name="twitter:title" content="Fine-Tuning Groups for Phased Deployments in Intune">
   <meta name="twitter:description" content="Using Dynamic Entra ID device groups to create fine tuned granular groups of managed Intune devices to support controlled phasing of configurations and updates.">
 <meta name="application-name" content="odds&#43;endpoints">
 <meta name="apple-mobile-web-app-title" content="odds&#43;endpoints">
@@ -39,7 +38,7 @@
 
 <link rel="canonical" href="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/" /><link rel="prev" href="https://www.oddsandendpoints.co.uk/posts/windows-feature-updates-safeguards/" />
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
-        "headline": "Fine Tuning Phased Groups for Deployments in Intune",
+        "headline": "Fine-Tuning Groups for Phased Deployments in Intune",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -49,7 +48,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1815 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1863 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/","datePublished": "2025-10-13T12:50:35+01:00","dateModified": "2025-10-13T12:50:35+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -181,7 +180,7 @@
         <li><a href="#sample-groups">Sample Groups</a></li>
       </ul>
     </li>
-    <li><a href="#granular-phased-groups">Granular Phased Groups</a>
+    <li><a href="#accurate-phased-groups">Accurate Phased Groups</a>
       <ul>
         <li><a href="#calculating-group-membership">Calculating Group Membership</a></li>
         <li><a href="#testing-the-function">Testing the Function</a></li>
@@ -207,7 +206,7 @@
         <li><a href="#sample-groups">Sample Groups</a></li>
       </ul>
     </li>
-    <li><a href="#granular-phased-groups">Granular Phased Groups</a>
+    <li><a href="#accurate-phased-groups">Accurate Phased Groups</a>
       <ul>
         <li><a href="#calculating-group-membership">Calculating Group Membership</a></li>
         <li><a href="#testing-the-function">Testing the Function</a></li>
@@ -229,16 +228,12 @@
             <div class="post-meta-line">
                 <div class="post-tags"><div class="post-tag"><a href="/tags/intune/">#Intune</a>
                         </div><div class="post-tag"><a href="/tags/entra-id/">#Entra ID</a>
-                        </div><div class="post-tag"><a href="/tags/windows/">#Windows</a>
-                        </div><div class="post-tag"><a href="/tags/macos/">#macOS</a>
-                        </div><div class="post-tag"><a href="/tags/android/">#Android</a>
-                        </div><div class="post-tag"><a href="/tags/ios/">#iOS/iPadOS</a>
                         </div><div class="post-tag"><a href="/tags/dynamic-groups/">#Dynamic Groups</a>
                         </div><div class="post-tag"><a href="/tags/updates/">#Software Updates</a>
                         </div><div class="post-tag"><a href="/tags/powershell/">#PowerShell</a>
                         </div></div>
             </div>
-        </div><h1 class="single-title" data-pagefind-meta="date:October 13, 2025" data-pagefind-body>Fine Tuning Phased Groups for Deployments in Intune</h1>
+        </div><h1 class="single-title" data-pagefind-meta="date:October 13, 2025" data-pagefind-body>Fine-Tuning Groups for Phased Deployments in Intune</h1>
 
         <div class="post-meta">
                 <span class="post-author">
@@ -257,7 +252,7 @@
         <li><a href="#sample-groups">Sample Groups</a></li>
       </ul>
     </li>
-    <li><a href="#granular-phased-groups">Granular Phased Groups</a>
+    <li><a href="#accurate-phased-groups">Accurate Phased Groups</a>
       <ul>
         <li><a href="#calculating-group-membership">Calculating Group Membership</a></li>
         <li><a href="#testing-the-function">Testing the Function</a></li>
@@ -273,9 +268,13 @@
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>You must either be living under a rock, or just using <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview" target="_blank" rel="noopener noreferrer">Windows Autopatch</a> to manage the delivery of updates, if you aren&rsquo;t aware about <a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership" target="_blank" rel="noopener noreferrer">Dynamic Security groups</a> and their use for phased update delivery.</p>
-<p>What Autopatch won&rsquo;t allow you to do, is use the same phased groups for the deployment of applications, configurations, or even non-Windows device updates.</p>
-<p>Now we&rsquo;re no stranger to using Dynamic Security groups in Entra to split our device estate in phased collections, having touched upon the subject <a href="/posts/updates-self-service-deployment/" rel="">a</a>, <a href="/posts/macos-updates-phased-deployment/" rel="">few</a>, <a href="/posts/flexible-update-deployments/" rel="">times</a>, <a href="/posts/windows-update-phased-deployment/" rel="">already</a>, but we may as well flog this horse for all it&rsquo;s worth.</p>
+            </div><div class="content" id="content" data-pagefind-body><p>You must either be living under a rock, or just using <a href="https://learn.microsoft.com/en-us/windows/deployment/windows-autopatch/overview/windows-autopatch-overview" target="_blank" rel="noopener noreferrer">Windows Autopatch</a> to manage the delivery of Windows updates, if you aren&rsquo;t aware about using <a href="https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership" target="_blank" rel="noopener noreferrer">Dynamic Security groups</a> for phased update delivery.</p>
+<p>You might not realise that you <em>could</em> and <em>should</em> be using these same groups for the deployment of controlled changes across your device estate, in a test, pilot, pre-production, production type approach whether this is for Windows, macOS, or mobile devices.</p>
+<p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-phases.png" title="Phased Deployment Diagram" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-phases.png" data-sub-html="<h2>A sample phased deployment diagram showing stages of update deployment.</h2><p>Phased Deployment Diagram</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-phases.png'   alt="Phased Deployment Diagram" height="180" width="620"></a><figcaption class="image-caption">A sample phased deployment diagram showing stages of update deployment.</figcaption>
+</figure>
+
+</p>
+<p>Now we&rsquo;re no stranger to using Dynamic Security groups in Entra to split our device estate in phased collections, having touched upon the subject <a href="/posts/updates-self-service-deployment/" rel="">a</a>, <a href="/posts/macos-updates-phased-deployment/" rel="">few</a>, <a href="/posts/flexible-update-deployments/" rel="">times</a>, <a href="/posts/windows-update-phased-deployment/" rel="">already</a>, but we may as well flog this horse for all it&rsquo;s worth and see if we can improve upon our existing logic.</p>
 <h2 id="broad-phasing" class="headerLink">
     <a href="#broad-phasing" class="header-mark"></a>Broad Phasing</h2><p>Previously we&rsquo;ve used the <code>device.deviceId</code> attribute on computer objects in Entra, which is just a GUID/UUID, to group devices based on the start of this string whether its <code>0-9</code> or <code>a-f</code>.</p>
 <p>As there are <strong>sixteen</strong> potential characters (I counted for you) this GUID can start with (a-f, 0-9), each one of these should in theory equal <strong>6.25%</strong> of all devices. You can then use this to create some bulky looking dynamic groups to split your device estate into chunks.</p>
@@ -294,43 +293,48 @@
   <table>
     <thead>
         <tr>
-            <th style="text-align: left">Device Percentage</th>
+            <th style="text-align: center">Phase</th>
+            <th style="text-align: center">Device Percentage</th>
             <th style="text-align: left">Rule</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: left">6.25%</td>
+            <td style="text-align: center">1</td>
+            <td style="text-align: center">6.25%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq &quot;Company&quot;)  and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceId -startsWith &quot;0&quot;)</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">18.75%</td>
+            <td style="text-align: center">2</td>
+            <td style="text-align: center">18.75%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq &quot;Company&quot;)  and (device.deviceOSType -eq &quot;Windows&quot;) and ((device.deviceId -startsWith &quot;1&quot;) or (device.deviceId -startsWith &quot;2&quot;) or (device.deviceId -startsWith &quot;3&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">31.25%</td>
+            <td style="text-align: center">3</td>
+            <td style="text-align: center">31.25%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq &quot;Company&quot;) and (device.deviceOSType -eq &quot;Windows&quot;) and ((device.deviceId -startsWith &quot;4&quot;) or (device.deviceId -startsWith &quot;5&quot;) or (device.deviceId -startsWith &quot;6&quot;) or (device.deviceId -startsWith &quot;7&quot;) or (device.deviceId -startsWith &quot;8&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">43.75%</td>
+            <td style="text-align: center">4</td>
+            <td style="text-align: center">43.75%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOwnership -eq &quot;Company&quot;) and (device.deviceOSType -eq &quot;Windows&quot;) and ((device.deviceId -startsWith &quot;9&quot;) or (device.deviceId -startsWith &quot;a&quot;) or (device.deviceId -startsWith &quot;b&quot;) or (device.deviceId -startsWith &quot;c&quot;) or (device.deviceId -startsWith &quot;d&quot;) or (device.deviceId -startsWith &quot;e&quot;) or (device.deviceId -startsWith &quot;f&quot;))</code></td>
         </tr>
     </tbody>
   </table>
 </div>
-<div class="details admonition tip open">
+<div class="details admonition note open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"/></svg></span>Tip<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">A device will only exist in <strong>one</strong> of these dynamic groups if you get your rules correct with no overlapping starting characters.</div></div></div>
-<p>Now these multiples of 6.25 phase groups <em>might</em> work for you, and you <em>might</em> want to use the smallest percentage as a pilot or test group&hellip;but ~6% of 10000 is 600 devices (<a href="https://www.youtube.com/watch?v=X09oxyIeGuY" target="_blank" rel="noopener noreferrer">quick maths</a>) which isn&rsquo;t <em>that</em> small a test or pilot.</p>
+        <div class="admonition-content">A device will only exist in <strong>one</strong> of these dynamic groups if you get your rules correct, with no overlapping starting characters.</div></div></div>
+<p>Now these multiples of <strong>6.25</strong> phase groups <em>might</em> work for you, and you <em>might</em> want to use the smallest percentage as a pilot or test group&hellip;but ~6% of 10000 is 600 devices (<a href="https://www.youtube.com/watch?v=X09oxyIeGuY" target="_blank" rel="noopener noreferrer">quick maths</a>) which isn&rsquo;t that small a test or pilot.</p>
 <p>Can we use a similar approach using Entra groups to create fine-tuned deployment groups?</p>
-<h2 id="granular-phased-groups" class="headerLink">
-    <a href="#granular-phased-groups" class="header-mark"></a>Granular Phased Groups</h2><p>How about instead of the above 16 available characters to query in the start of the <code>device.deviceId</code> attribute, we extend that to the next character i.e., <code>device.deviceId -startsWith &quot;01&quot;</code> <code>device.deviceId -startsWith &quot;02&quot;</code>, <code>device.deviceId -startsWith &quot;03&quot;</code> etc., which would give us a massive <strong>256</strong> options &ndash; each one about <strong>0.4%</strong> of devices.</p>
-<p>So now instead of blocking devices in chunks of 6% we can group them in roughly 0.5%. Yeah I think that might be granular enough 😅.</p>
+<h2 id="accurate-phased-groups" class="headerLink">
+    <a href="#accurate-phased-groups" class="header-mark"></a>Accurate Phased Groups</h2><p>How about instead of the above 16 available characters to query in the start of the <code>device.deviceId</code> attribute, we extend that to the next character i.e., <code>device.deviceId -startsWith &quot;01&quot;</code> <code>device.deviceId -startsWith &quot;02&quot;</code>, <code>device.deviceId -startsWith &quot;03&quot;</code> etc., which would give us a massive <strong>256</strong> options &ndash; each one corresponding to about <strong>0.4%</strong> of devices.</p>
+<p>So now instead of grouping devices in blocks of 6% we can group them in roughly 0.4% chunks. Yeah I think that might be granular enough 😅.</p>
 <div class="details admonition info open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -342,15 +346,33 @@
 <h3 id="calculating-group-membership" class="headerLink">
     <a href="#calculating-group-membership" class="header-mark"></a>Calculating Group Membership</h3><p>Now the concept is all well and good, and I&rsquo;m <em>OK</em> enough with PowerShell to give it a go myself, but there are times when coffee and caffeine don&rsquo;t cut it to get you the results you need, so we can lean on the new C-word in our lives <del>nope</del> Copilot.</p>
 <p>So with a half decent prompt and some tweaks along the way:</p>
-<blockquote>
-  <p><em>&ldquo;Using powershell, i want to be able to split out dynamic entra device groups based on the device attribute device.deviceId which is a UUID, based on percentages. So if I want approx 5% of all devices for the first group, it would equate to devices where device.deviceId starts with 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c. Then each subsequent group is 15%, 25%, 45% of devices. Give me the logic and the powershell script to able to use dynamic group membership percentages, ensuring for n groups the total adds to 100, and to make sure that no device is missed from any of the dynamic groups, so all device.deviceId are covered by only one dynamic group query&rdquo;</em></p>
-</blockquote><p>This gave me something to start with, but the results of the rules were way too long, and didn&rsquo;t allow me to actually save a group in Entra without it throwing a wobbly.</p>
-<blockquote>
-  <p><em>&ldquo;Can you instead of using the startsWith operator can you use regex and the match operator?&rdquo;</em></p>
-</blockquote><p>This just changed the logic and didn&rsquo;t shorten the rule length, as the rule just used the regex equivalent of startsWith.</p>
-<blockquote>
-  <p><em>&ldquo;Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator.&rdquo;</em></p>
-</blockquote><h3 id="testing-the-function" class="headerLink">
+<div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg></span>Quote<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><em>Using powershell, i want to be able to split out dynamic entra device groups based on the device attribute device.deviceId which is a UUID, based on percentages. So if I want approx 5% of all devices for the first group, it would equate to devices where device.deviceId starts with 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0a, 0b, 0c. Then each subsequent group is 15%, 25%, 45% of devices. Give me the logic and the powershell script to able to use dynamic group membership percentages, ensuring for n groups the total adds to 100, and to make sure that no device is missed from any of the dynamic groups, so all device.deviceId are covered by only one dynamic group query.</em></div></div></div>
+<p>This gave me something to start with, but the results of the rules were way too long, and didn&rsquo;t allow me to actually save a group in Entra without it throwing a wobbly.</p>
+<div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg></span>Quote<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><em>Can you instead of using the startsWith operator can you use regex and the match operator?</em></div></div></div>
+<p>This just changed the logic and didn&rsquo;t shorten the rule length, as the rule just used the regex equivalent of startsWith.</p>
+<div class="details admonition quote open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"/></svg></span>Quote<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content"><em>Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator.</em></div></div></div>
+<h3 id="testing-the-function" class="headerLink">
     <a href="#testing-the-function" class="header-mark"></a>Testing the Function</h3><p>Not sure Copilot like my sassy opener 🤐, but we got there in the end&hellip;a PowerShell function that will accept an array of values and kick out some basic Group rules.</p>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
   <div class="
@@ -705,35 +727,35 @@
   <table>
     <thead>
         <tr>
-            <th style="text-align: left">Group</th>
+            <th style="text-align: center">Phase</th>
             <th style="text-align: center">Percentage</th>
             <th style="text-align: left">Rule</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: left">1</td>
             <td style="text-align: center">1</td>
+            <td style="text-align: center">1%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^0[012]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">2</td>
-            <td style="text-align: center">4</td>
+            <td style="text-align: center">2</td>
+            <td style="text-align: center">4%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^0[3456789abc]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">3</td>
-            <td style="text-align: center">15</td>
+            <td style="text-align: center">3</td>
+            <td style="text-align: center">15%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^0[def]&quot;) or (device.deviceId-match &quot;^1[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^2[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^3[012]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">4</td>
-            <td style="text-align: center">30</td>
+            <td style="text-align: center">4</td>
+            <td style="text-align: center">30%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^3[3456789abcdef]&quot;) or (device.deviceId -match &quot;^4[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^5[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^6[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^7[0123456789abcdef]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">5</td>
-            <td style="text-align: center">50</td>
+            <td style="text-align: center">5</td>
+            <td style="text-align: center">50%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^8[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^9[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^a[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^b[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^c[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^d[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^e[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^f[0123456789abcdef]&quot;))</code></td>
         </tr>
     </tbody>
@@ -842,30 +864,30 @@
   <table>
     <thead>
         <tr>
-            <th style="text-align: left">Group</th>
+            <th style="text-align: center">Phase</th>
             <th style="text-align: center">Percentage</th>
             <th style="text-align: left">Rule</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: left">1</td>
-            <td style="text-align: center">5</td>
+            <td style="text-align: center">1</td>
+            <td style="text-align: center">5%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^0[0123456789abc]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">2</td>
-            <td style="text-align: center">15</td>
+            <td style="text-align: center">2</td>
+            <td style="text-align: center">15%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^0[def]&quot;) or (device.deviceId -match &quot;^1[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^2[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^3[012]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">3</td>
-            <td style="text-align: center">30</td>
+            <td style="text-align: center">3</td>
+            <td style="text-align: center">30%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^3[3456789abcdef]&quot;) or (device.deviceId -match &quot;^4[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^5[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^6[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^7[0123456789abcdef]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">4</td>
-            <td style="text-align: center">50</td>
+            <td style="text-align: center">4</td>
+            <td style="text-align: center">50%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^8[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^9[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^a[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^b[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^c[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^d[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^e[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^f[0123456789abcdef]&quot;))</code></td>
         </tr>
     </tbody>
@@ -974,34 +996,38 @@
   <table>
     <thead>
         <tr>
-            <th style="text-align: left">Group</th>
+            <th style="text-align: center">Phase</th>
             <th style="text-align: center">Percentage</th>
             <th style="text-align: left">Rule</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td style="text-align: left">1</td>
-            <td style="text-align: center">10</td>
+            <td style="text-align: center">1</td>
+            <td style="text-align: center">10%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^0[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^1[012345678]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">2</td>
-            <td style="text-align: center">30</td>
+            <td style="text-align: center">2</td>
+            <td style="text-align: center">30%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^1[9abcdef]&quot;) or (device.deviceId -match &quot;^2[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^3[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^4[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^5[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^6[012345]&quot;))</code></td>
         </tr>
         <tr>
-            <td style="text-align: left">3</td>
-            <td style="text-align: center">60</td>
+            <td style="text-align: center">3</td>
+            <td style="text-align: center">60%</td>
             <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^6[6789abcdef]&quot;) or (device.deviceId -match &quot;^7[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^8[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^9[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^a[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^b[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^c[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^d[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^e[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^f[0123456789abcdef]&quot;))</code></td>
         </tr>
     </tbody>
   </table>
 </div>
-<p>You get the gist now. These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.</p>
+<p>These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.</p>
+<p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-syntax.png" title="Rule Syntax" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-syntax.png" data-sub-html="<h2>A screenshot of Entra ID and the Dynamic Group Rule Editor.</h2><p>Rule Syntax</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-syntax.png'   alt="Rule Syntax" height="402" width="844"></a><figcaption class="image-caption">A screenshot of Entra ID and the Dynamic Group Rule Editor.</figcaption>
+</figure>
+
+</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>Summary</h2><p>Dynamic groups aren&rsquo;t dead (even if <a href="https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters" target="_blank" rel="noopener noreferrer">Assignment Filters</a> are nicer), especially when you can use them across your entire Intune environment, whether it&rsquo;s just for updates, or pushing out new settings, these <em>very</em> granular dynamic groups can be used pretty much everywhere to control the deployment of new or updated things.</p>
-<p>If you want to see examples of where these phased groups can be used <a href="https://nl.linkedin.com/in/dpklapwijk" target="_blank" rel="noopener noreferrer">Peter Klapwijk</a> has a <a href="https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/" target="_blank" rel="noopener noreferrer">set of posts</a> detailing exactly how they&rsquo;ve been using them.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>You really should be making the most of the tools you have available for managing devices in Intune, and leveraging Dynamic Groups in this way to ensure controlled deployments of updates or new policies or applications, using these <em>very</em> granular dynamic groups is a great place to start.</p>
+<p>If you want to see examples of where these phased groups can be used <a href="https://nl.linkedin.com/in/dpklapwijk" target="_blank" rel="noopener noreferrer">Peter Klapwijk</a> has a <a href="https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/" target="_blank" rel="noopener noreferrer">post</a> detailing exactly how they&rsquo;ve been using them.</p>
 </div>
 
         <div class="post-footer" id="post-footer">
@@ -1016,9 +1042,9 @@
             <div class="post-info-md"></div>
             <div class="post-info-share"><button title="Share on Facebook" data-sharer="facebook" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/" data-hashtag="intune"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></button><button title="Share on Linkedin" data-sharer="linkedin" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button><button title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/" data-title="Fine Tuning Phased Groups for Deployments in Intune" data-web><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></button><button title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/" data-title="Fine-Tuning Groups for Phased Deployments in Intune" data-web><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></button><button title="Share on Reddit" data-sharer="reddit" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></button><button title="Share on Telegram" data-sharer="telegram" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/" data-title="Fine Tuning Phased Groups for Deployments in Intune" data-web><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></button><button title="Share on Telegram" data-sharer="telegram" data-url="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/" data-title="Fine-Tuning Groups for Phased Deployments in Intune" data-web><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/></svg></button></div>
         </div>
     </div>

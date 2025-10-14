@@ -3,15 +3,7 @@
         <title>iOS/iPadOS - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/ios/</link>
         <description>iOS/iPadOS - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/ios/" rel="self" type="application/rss+xml" /><item>
-    <title>Fine Tuning Phased Groups for Deployments in Intune</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/</link>
-    <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/tuning-phased-deployment-groups/featured.png" referrerpolicy="no-referrer">
-            </div>Can we improve upon our attempts to control the deployment of updates, new policies, and updated applications across our managed Intune devices once again?]]></description>
-</item><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/ios/" rel="self" type="application/rss+xml" /><item>
     <title>Self-Service Software Update Deployments</title>
     <link>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</link>
     <pubDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</pubDate><author>
