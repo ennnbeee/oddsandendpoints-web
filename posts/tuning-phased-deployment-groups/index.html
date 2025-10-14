@@ -23,6 +23,7 @@
     <meta property="article:tag" content="Dynamic Groups">
     <meta property="article:tag" content="Software Updates">
     <meta property="article:tag" content="PowerShell">
+    <meta property="article:tag" content="Copilot">
     <meta property="og:image" content="https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/featured.png">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1863 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1905 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/","datePublished": "2025-10-13T12:50:35+01:00","dateModified": "2025-10-13T12:50:35+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -231,6 +232,7 @@
                         </div><div class="post-tag"><a href="/tags/dynamic-groups/">#Dynamic Groups</a>
                         </div><div class="post-tag"><a href="/tags/updates/">#Software Updates</a>
                         </div><div class="post-tag"><a href="/tags/powershell/">#PowerShell</a>
+                        </div><div class="post-tag"><a href="/tags/copilot/">#Copilot</a>
                         </div></div>
             </div>
         </div><h1 class="single-title" data-pagefind-meta="date:October 13, 2025" data-pagefind-body>Fine-Tuning Groups for Phased Deployments in Intune</h1>
@@ -372,6 +374,7 @@
     </div>
     <div class="details-content">
         <div class="admonition-content"><em>Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator.</em></div></div></div>
+<p>This produced something workable, but it still needed tweaking, and updating to use the correct syntax for the rules 🫠.</p>
 <h3 id="testing-the-function" class="headerLink">
     <a href="#testing-the-function" class="header-mark"></a>Testing the Function</h3><p>Not sure Copilot like my sassy opener 🤐, but we got there in the end&hellip;a PowerShell function that will accept an array of values and kick out some basic Group rules.</p>
 <div class="code-block highlight is-closed show-line-numbers  tw-group tw-my-2">
@@ -469,13 +472,13 @@
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c"># Validate total percentage</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$total</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$percentages</span> <span class="p">|</span> <span class="nb">Measure-Object</span> <span class="n">-Sum</span><span class="p">).</span><span class="py">Sum</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$total</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$Percentages</span> <span class="p">|</span> <span class="nb">Measure-Object</span> <span class="n">-Sum</span><span class="p">).</span><span class="py">Sum</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$total</span> <span class="o">-ne</span> <span class="mf">100</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="k">throw</span> <span class="s2">&#34;Total percentage must equal 100. Current total: </span><span class="nv">$total</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nv">$hexValues</span> <span class="p">=</span> <span class="mf">0</span><span class="p">.</span><span class="mf">.255</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$groupSizes</span> <span class="p">=</span> <span class="nv">$percentages</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span> <span class="p">[</span><span class="no">math</span><span class="p">]::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$_</span> <span class="p">*</span> <span class="mf">256</span> <span class="p">/</span> <span class="mf">100</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$groupSizes</span> <span class="p">=</span> <span class="nv">$Percentages</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span> <span class="p">[</span><span class="no">math</span><span class="p">]::</span><span class="n">Round</span><span class="p">(</span><span class="nv">$_</span> <span class="p">*</span> <span class="mf">256</span> <span class="p">/</span> <span class="mf">100</span><span class="p">)</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c"># Adjust rounding to ensure total is exactly 256</span>
 </span></span><span class="line"><span class="cl">    <span class="nv">$diff</span> <span class="p">=</span> <span class="mf">256</span> <span class="p">-</span> <span class="p">(</span><span class="nv">$groupSizes</span> <span class="p">|</span> <span class="nb">Measure-Object</span> <span class="n">-Sum</span><span class="p">).</span><span class="py">Sum</span>
@@ -496,20 +499,27 @@
 </span></span><span class="line"><span class="cl">        <span class="c"># Group prefixes by first hex digit</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$grouped</span> <span class="p">=</span> <span class="nv">$prefixes</span> <span class="p">|</span> <span class="nb">Group-Object</span> <span class="p">{</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">1</span><span class="p">)</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="nv">$regexParts</span> <span class="p">=</span> <span class="nv">$grouped</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$ruleParts</span> <span class="p">=</span> <span class="nv">$grouped</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="nv">$firstChar</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Name</span>
 </span></span><span class="line"><span class="cl">            <span class="nv">$secondChars</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="nb">Group </span><span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span> <span class="nv">$_</span><span class="p">.</span><span class="py">Substring</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span> <span class="mf">1</span><span class="p">)</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="nv">$charClass</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$secondChars</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Unique</span><span class="p">)</span> <span class="n">-join</span> <span class="s1">&#39;&#39;</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;^</span><span class="nv">$firstChar</span><span class="s2">[</span><span class="nv">$charClass</span><span class="s2">]&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$uniqueSecondChars</span> <span class="p">=</span> <span class="nv">$secondChars</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Unique</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nv">$uniqueSecondChars</span><span class="p">.</span><span class="py">Count</span> <span class="o">-eq</span> <span class="mf">16</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c"># All hex digits present, use startsWith</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;(device.deviceId -startsWith </span><span class="se">`&#34;</span><span class="nv">$firstChar</span><span class="se">`&#34;</span><span class="s2">)&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c"># Use regex match</span>
+</span></span><span class="line"><span class="cl">                <span class="nv">$charClass</span> <span class="p">=</span> <span class="nv">$uniqueSecondChars</span> <span class="n">-join</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;(device.deviceId -match </span><span class="se">`&#34;</span><span class="s2">^</span><span class="nv">$firstChar</span><span class="s2">[</span><span class="nv">$charClass</span><span class="s2">]</span><span class="se">`&#34;</span><span class="s2">)&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="nv">$rule</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$regexParts</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;(device.deviceId -match </span><span class="se">`&#34;</span><span class="p">$(</span><span class="nv">$_</span><span class="p">)</span><span class="se">`&#34;</span><span class="s2">)&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">})</span> <span class="n">-join</span> <span class="s1">&#39; or &#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$rule</span> <span class="p">=</span> <span class="nv">$ruleParts</span> <span class="n">-join</span> <span class="s1">&#39; or &#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="nv">$groupRules</span> <span class="p">+=</span> <span class="p">[</span><span class="no">PSCustomObject</span><span class="p">]</span><span class="vm">@</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">Group </span><span class="p">=</span> <span class="s2">&#34;</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="mf">1</span><span class="p">)</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">Rule</span>  <span class="p">=</span> <span class="nv">$rule</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">group </span><span class="p">=</span> <span class="s2">&#34;</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="mf">1</span><span class="p">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Rule</span> <span class="p">=</span> <span class="nv">$rule</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -610,7 +620,7 @@
 </span></span><span class="line"><span class="cl"><span class="nb">Get-PhasedDynamicGroups</span> <span class="n">-percentages</span> <span class="nv">$groups</span></span></span></code></pre>
 </div>
 <p>Using the function and the above example in a PowerShell console:</p>
-<p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-function.png" title="Phased Deployment Group Examples" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-function.png" data-sub-html="<h2>A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.</h2><p>Phased Deployment Group Examples</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-function.png'   alt="Phased Deployment Group Examples" height="633" width="1120"></a><figcaption class="image-caption">A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-function_hu_99352950517d8582.png" title="Phased Deployment Group Examples" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-function_hu_99352950517d8582.png" data-sub-html="<h2>A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.</h2><p>Phased Deployment Group Examples</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-function_hu_99352950517d8582.png'   alt="Phased Deployment Group Examples"  ></a><figcaption class="image-caption">A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.</figcaption>
 </figure>
 
 </p>
@@ -746,17 +756,17 @@
         <tr>
             <td style="text-align: center">3</td>
             <td style="text-align: center">15%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^0[def]&quot;) or (device.deviceId-match &quot;^1[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^2[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^3[012]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^0[def]&quot;) or (device.deviceId -startsWith &quot;1&quot;) or (device.deviceId -startsWith &quot;2&quot;) or (device.deviceId -match &quot;^3[012]&quot;))</code></td>
         </tr>
         <tr>
             <td style="text-align: center">4</td>
             <td style="text-align: center">30%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^3[3456789abcdef]&quot;) or (device.deviceId -match &quot;^4[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^5[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^6[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^7[0123456789abcdef]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^3[3456789abcdef]&quot;) or (device.deviceId -startsWith &quot;4&quot;) or (device.deviceId -startsWith &quot;5&quot;) or (device.deviceId -startsWith &quot;6&quot;) or (device.deviceId -startsWith &quot;7&quot;))</code></td>
         </tr>
         <tr>
             <td style="text-align: center">5</td>
             <td style="text-align: center">50%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -match &quot;^8[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^9[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^a[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^b[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^c[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^d[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^e[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^f[0123456789abcdef]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;Windows&quot;) and (device.deviceOwnership -eq &quot;Company&quot;) and ((device.deviceId -startsWith &quot;8&quot;) or (device.deviceId -startsWith &quot;9&quot;) or (device.deviceId -startsWith &quot;a&quot;) or (device.deviceId -startsWith &quot;b&quot;) or (device.deviceId -startsWith &quot;c&quot;) or (device.deviceId -startsWith &quot;d&quot;) or (device.deviceId -startsWith &quot;e&quot;) or (device.deviceId -startsWith &quot;f&quot;))</code></td>
         </tr>
     </tbody>
   </table>
@@ -878,17 +888,17 @@
         <tr>
             <td style="text-align: center">2</td>
             <td style="text-align: center">15%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^0[def]&quot;) or (device.deviceId -match &quot;^1[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^2[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^3[012]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^0[def]&quot;) or (device.deviceId -startsWith &quot;1&quot;) or (device.deviceId -startsWith &quot;2&quot;) or (device.deviceId -match &quot;^3[012]&quot;)</code></td>
         </tr>
         <tr>
             <td style="text-align: center">3</td>
             <td style="text-align: center">30%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^3[3456789abcdef]&quot;) or (device.deviceId -match &quot;^4[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^5[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^6[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^7[0123456789abcdef]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^3[3456789abcdef]&quot;) or (device.deviceId -startsWith &quot;4&quot;) or (device.deviceId -startsWith &quot;5&quot;) or (device.deviceId -startsWith &quot;6&quot;) or (device.deviceId -startsWith &quot;7&quot;))</code></td>
         </tr>
         <tr>
             <td style="text-align: center">4</td>
             <td style="text-align: center">50%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -match &quot;^8[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^9[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^a[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^b[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^c[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^d[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^e[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^f[0123456789abcdef]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq &quot;macmdm&quot;) and ((device.deviceId -startsWith &quot;8&quot;) or (device.deviceId -startsWith &quot;9&quot;) or (device.deviceId -startsWith &quot;a&quot;) or (device.deviceId -startsWith &quot;b&quot;) or (device.deviceId -startsWith &quot;c&quot;) or (device.deviceId -startsWith &quot;d&quot;) or (device.deviceId -startsWith &quot;e&quot;) or (device.deviceId -startsWith &quot;f&quot;))</code></td>
         </tr>
     </tbody>
   </table>
@@ -1005,29 +1015,29 @@
         <tr>
             <td style="text-align: center">1</td>
             <td style="text-align: center">10%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^0[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^1[012345678]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -startsWith &quot;0&quot;) or (device.deviceId -match &quot;^1[012345678]&quot;))</code></td>
         </tr>
         <tr>
             <td style="text-align: center">2</td>
             <td style="text-align: center">30%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^1[9abcdef]&quot;) or (device.deviceId -match &quot;^2[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^3[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^4[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^5[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^6[012345]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^1[9abcdef]&quot;) or (device.deviceId -startsWith &quot;2&quot;) or (device.deviceId -startsWith &quot;3&quot;) or (device.deviceId -startsWith &quot;4&quot;) or (device.deviceId -startsWith &quot;5&quot;) or (device.deviceId -match &quot;^6[012345]&quot;))</code></td>
         </tr>
         <tr>
             <td style="text-align: center">3</td>
             <td style="text-align: center">60%</td>
-            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^6[6789abcdef]&quot;) or (device.deviceId -match &quot;^7[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^8[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^9[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^a[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^b[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^c[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^d[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^e[0123456789abcdef]&quot;) or (device.deviceId -match &quot;^f[0123456789abcdef]&quot;))</code></td>
+            <td style="text-align: left"><code>(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq &quot;iPhone&quot;) or (device.deviceOSType -eq &quot;iPad&quot;)) and (device.deviceOwnership -eq &quot;Personal&quot;) and ((device.deviceId -match &quot;^6[6789abcdef]&quot;) or (device.deviceId -startsWith &quot;7&quot;) or (device.deviceId -startsWith &quot;8&quot;) or (device.deviceId -startsWith &quot;9&quot;) or (device.deviceId -startsWith &quot;a&quot;) or (device.deviceId -startsWith &quot;b&quot;) or (device.deviceId -startsWith &quot;c&quot;) or (device.deviceId -startsWith &quot;d&quot;) or (device.deviceId -startsWith &quot;e&quot;) or (device.deviceId -startsWith &quot;f&quot;))</code></td>
         </tr>
     </tbody>
   </table>
 </div>
 <p>These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.</p>
-<p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-syntax.png" title="Rule Syntax" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-syntax.png" data-sub-html="<h2>A screenshot of Entra ID and the Dynamic Group Rule Editor.</h2><p>Rule Syntax</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-syntax.png'   alt="Rule Syntax" height="402" width="844"></a><figcaption class="image-caption">A screenshot of Entra ID and the Dynamic Group Rule Editor.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/tuning-phased-deployment-groups/img/tpdg-syntax_hu_32d40e342d1290fd.png" title="Rule Syntax" data-thumbnail="/posts/tuning-phased-deployment-groups/img/tpdg-syntax_hu_32d40e342d1290fd.png" data-sub-html="<h2>A screenshot of Entra ID and the Dynamic Group Rule Editor.</h2><p>Rule Syntax</p>"><img  loading="lazy" src='/posts/tuning-phased-deployment-groups/img/tpdg-syntax_hu_32d40e342d1290fd.png'   alt="Rule Syntax"  ></a><figcaption class="image-caption">A screenshot of Entra ID and the Dynamic Group Rule Editor.</figcaption>
 </figure>
 
 </p>
 <h2 id="summary" class="headerLink">
     <a href="#summary" class="header-mark"></a>Summary</h2><p>You really should be making the most of the tools you have available for managing devices in Intune, and leveraging Dynamic Groups in this way to ensure controlled deployments of updates or new policies or applications, using these <em>very</em> granular dynamic groups is a great place to start.</p>
-<p>If you want to see examples of where these phased groups can be used <a href="https://nl.linkedin.com/in/dpklapwijk" target="_blank" rel="noopener noreferrer">Peter Klapwijk</a> has a <a href="https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/" target="_blank" rel="noopener noreferrer">post</a> detailing exactly how they&rsquo;ve been using them.</p>
+<p>If you want to see examples of where these phased groups can be used, <a href="https://nl.linkedin.com/in/dpklapwijk" target="_blank" rel="noopener noreferrer">Peter Klapwijk</a> has a <a href="https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/" target="_blank" rel="noopener noreferrer">post</a> detailing exactly how they&rsquo;ve been using them.</p>
 </div>
 
         <div class="post-footer" id="post-footer">

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Copilot - Tag - odds&#43;endpoints</title>
+        <link>https://www.oddsandendpoints.co.uk/tags/copilot/</link>
+        <description>Copilot - Tag - odds&#43;endpoints</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/copilot/" rel="self" type="application/rss+xml" /><item>
+    <title>Fine-Tuning Groups for Phased Deployments in Intune</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/</link>
+    <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/tuning-phased-deployment-groups/featured.png" referrerpolicy="no-referrer">
+            </div>Can we improve upon our attempts to control the deployment of updates, new policies, and updated applications across our managed Intune devices once again?]]></description>
+</item></channel>
+</rss>

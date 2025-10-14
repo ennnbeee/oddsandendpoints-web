@@ -70,6 +70,8 @@ This just changed the logic and didn't shorten the rule length, as the rule just
 *Great, but the benefit of using the match operator is to reduce the number of queries, so using regex can you update the function to combine values using regex and the match operator.*
 {{< /admonition >}}
 
+This produced something workable, but it still needed tweaking, and updating to use the correct syntax for the rules 🫠.
+
 ### Testing the Function
 
 Not sure Copilot like my sassy opener 🤐, but we got there in the end...a PowerShell function that will accept an array of values and kick out some basic Group rules.
@@ -81,13 +83,13 @@ function Get-PhasedDynamicGroups {
     )
 
     # Validate total percentage
-    $total = ($percentages | Measure-Object -Sum).Sum
+    $total = ($Percentages | Measure-Object -Sum).Sum
     if ($total -ne 100) {
         throw "Total percentage must equal 100. Current total: $total"
     }
 
     $hexValues = 0..255
-    $groupSizes = $percentages | ForEach-Object { [math]::Round($_ * 256 / 100) }
+    $groupSizes = $Percentages | ForEach-Object { [math]::Round($_ * 256 / 100) }
 
     # Adjust rounding to ensure total is exactly 256
     $diff = 256 - ($groupSizes | Measure-Object -Sum).Sum
@@ -108,20 +110,27 @@ function Get-PhasedDynamicGroups {
         # Group prefixes by first hex digit
         $grouped = $prefixes | Group-Object { $_.Substring(0, 1) }
 
-        $regexParts = $grouped | ForEach-Object {
+        $ruleParts = $grouped | ForEach-Object {
             $firstChar = $_.Name
             $secondChars = $_.Group | ForEach-Object { $_.Substring(1, 1) }
-            $charClass = ($secondChars | Sort-Object -Unique) -join ''
-            "^$firstChar[$charClass]"
+            $uniqueSecondChars = $secondChars | Sort-Object -Unique
+
+            if ($uniqueSecondChars.Count -eq 16) {
+                # All hex digits present, use startsWith
+                "(device.deviceId -startsWith `"$firstChar`")"
+            }
+            else {
+                # Use regex match
+                $charClass = $uniqueSecondChars -join ''
+                "(device.deviceId -match `"^$firstChar[$charClass]`")"
+            }
         }
 
-        $rule = ($regexParts | ForEach-Object {
-                "(device.deviceId -match `"$($_)`")"
-            }) -join ' or '
+        $rule = $ruleParts -join ' or '
 
         $groupRules += [PSCustomObject]@{
-            Group = "$($i + 1)"
-            Rule  = $rule
+            group = "$($i + 1)"
+            Rule = $rule
         }
     }
 
@@ -138,7 +147,7 @@ Get-PhasedDynamicGroups -percentages $groups
 
 Using the function and the above example in a PowerShell console:
 
-![Phased Deployment Group Examples](./img/tpdg-function.png "A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.")
+![Phased Deployment Group Examples](img/tpdg-function.png "A screenshot of PowerShell with the Get-PhasedDynamicGroups function and the output.")
 
 Great that's half the battle, a list of rules for each of the five groups. But can we make it a little more user friendly?
 
@@ -170,9 +179,9 @@ With generated group rules.
 | :-: | :-: | :- |
 | 1 | 1% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[012]"))` |
 | 2 | 4% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[3456789abc]"))` |
-| 3 | 15% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[def]") or (device.deviceId-match "^1[0123456789abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[012]"))` |
-| 4 | 30% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[0123456789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]"))` |
-| 5 | 50% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
+| 3 | 15% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^0[def]") or (device.deviceId -startsWith "1") or (device.deviceId -startsWith "2") or (device.deviceId -match "^3[012]"))` |
+| 4 | 30% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -startsWith "4") or (device.deviceId -startsWith "5") or (device.deviceId -startsWith "6") or (device.deviceId -startsWith "7"))` |
+| 5 | 50% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Company") and ((device.deviceId -startsWith "8") or (device.deviceId -startsWith "9") or (device.deviceId -startsWith "a") or (device.deviceId -startsWith "b") or (device.deviceId -startsWith "c") or (device.deviceId -startsWith "d") or (device.deviceId -startsWith "e") or (device.deviceId -startsWith "f"))` |
 
 ### Example 2 - Four Groups of All macOS Devices
 
@@ -189,9 +198,9 @@ Different group rules.
 | Phase | Percentage | Rule |
 | :-: | :-: | :- |
 | 1 | 5% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[0123456789abc]"))` |
-| 2 | 15% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[def]") or (device.deviceId -match "^1[0123456789abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[012]"))` |
-| 3 | 30% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[0123456789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]"))` |
-| 4 | 50% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
+| 2 | 15% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^0[def]") or (device.deviceId -startsWith "1") or (device.deviceId -startsWith "2") or (device.deviceId -match "^3[012]")` |
+| 3 | 30% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -match "^3[3456789abcdef]") or (device.deviceId -startsWith "4") or (device.deviceId -startsWith "5") or (device.deviceId -startsWith "6") or (device.deviceId -startsWith "7"))` |
+| 4 | 50% | `(device.deviceManagementAppId -ne null) and (device.deviceOSType -eq "macmdm") and ((device.deviceId -startsWith "8") or (device.deviceId -startsWith "9") or (device.deviceId -startsWith "a") or (device.deviceId -startsWith "b") or (device.deviceId -startsWith "c") or (device.deviceId -startsWith "d") or (device.deviceId -startsWith "e") or (device.deviceId -startsWith "f"))` |
 
 ### Example 3 - Three Groups of Personal iOS/iPadOS Devices
 
@@ -207,17 +216,17 @@ More group rules.
 
 | Phase | Percentage | Rule |
 | :-: | :-: | :- |
-| 1 | 10% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^0[0123456789abcdef]") or (device.deviceId -match "^1[012345678]"))`|
-| 2 | 30% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^1[9abcdef]") or (device.deviceId -match "^2[0123456789abcdef]") or (device.deviceId -match "^3[0123456789abcdef]") or (device.deviceId -match "^4[0123456789abcdef]") or (device.deviceId -match "^5[0123456789abcdef]") or (device.deviceId -match "^6[012345]"))`|
-| 3 | 60% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^6[6789abcdef]") or (device.deviceId -match "^7[0123456789abcdef]") or (device.deviceId -match "^8[0123456789abcdef]") or (device.deviceId -match "^9[0123456789abcdef]") or (device.deviceId -match "^a[0123456789abcdef]") or (device.deviceId -match "^b[0123456789abcdef]") or (device.deviceId -match "^c[0123456789abcdef]") or (device.deviceId -match "^d[0123456789abcdef]") or (device.deviceId -match "^e[0123456789abcdef]") or (device.deviceId -match "^f[0123456789abcdef]"))` |
+| 1 | 10% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -startsWith "0") or (device.deviceId -match "^1[012345678]"))`|
+| 2 | 30% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^1[9abcdef]") or (device.deviceId -startsWith "2") or (device.deviceId -startsWith "3") or (device.deviceId -startsWith "4") or (device.deviceId -startsWith "5") or (device.deviceId -match "^6[012345]"))`|
+| 3 | 60% | `(device.deviceManagementAppId -ne null) and ((device.deviceOSType -eq "iPhone") or (device.deviceOSType -eq "iPad")) and (device.deviceOwnership -eq "Personal") and ((device.deviceId -match "^6[6789abcdef]") or (device.deviceId -startsWith "7") or (device.deviceId -startsWith "8") or (device.deviceId -startsWith "9") or (device.deviceId -startsWith "a") or (device.deviceId -startsWith "b") or (device.deviceId -startsWith "c") or (device.deviceId -startsWith "d") or (device.deviceId -startsWith "e") or (device.deviceId -startsWith "f"))` |
 
 These rules can be used to create your granular phased dynamic device deployment groups in Entra to be used for Windows updates, macOS updates, new application deployments etc.
 
-![Rule Syntax](./img/tpdg-syntax.png "A screenshot of Entra ID and the Dynamic Group Rule Editor.")
+![Rule Syntax](img/tpdg-syntax.png "A screenshot of Entra ID and the Dynamic Group Rule Editor.")
 
 ## Summary
 
 You really should be making the most of the tools you have available for managing devices in Intune, and leveraging Dynamic Groups in this way to ensure controlled deployments of updates or new policies or applications, using these *very* granular dynamic groups is a great place to start.
 
-If you want to see examples of where these phased groups can be used [Peter Klapwijk](https://nl.linkedin.com/in/dpklapwijk) has a [post](https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/) detailing exactly how they've been using them.
+If you want to see examples of where these phased groups can be used, [Peter Klapwijk](https://nl.linkedin.com/in/dpklapwijk) has a [post](https://inthecloud247.com/deploy-microsoft-defender-updates-in-deployment-rings/) detailing exactly how they've been using them.
 
