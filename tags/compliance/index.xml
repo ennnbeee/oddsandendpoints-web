@@ -3,7 +3,15 @@
         <title>Compliance - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/compliance/</link>
         <description>Compliance - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/compliance/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/compliance/" rel="self" type="application/rss+xml" /><item>
+    <title>Blocking Windows Recall Enabled Managed Devices</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-recall-compliance/featured.jpg" referrerpolicy="no-referrer">
+            </div>Whether we like it or not, AI and Copilot is everywhere, and even if you don&rsquo;t want AI backed features like Windows Recall enabled on managed corporate and BYOD devices, it will happen. So how do we block these Copilot+ devices from accessing Corporate data or services?]]></description>
+</item><item>
     <title>Intune Custom Compliance for Cyber Essentials</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-cyber-essentials-compliance/</link>
     <pubDate>Mon, 23 Jun 2025 10:48:33 &#43;0100</pubDate><author>

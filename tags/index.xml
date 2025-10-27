@@ -3,12 +3,54 @@
         <title>Tags - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/</link>
         <description>Tags - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Compliance</title>
+    <link>https://www.oddsandendpoints.co.uk/tags/compliance/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+        <name>Nick Benton</name>
+    </author><guid>https://www.oddsandendpoints.co.uk/tags/compliance/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Conditional Access</title>
+    <link>https://www.oddsandendpoints.co.uk/tags/conditional-access/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+        <name>Nick Benton</name>
+    </author><guid>https://www.oddsandendpoints.co.uk/tags/conditional-access/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Copilot</title>
     <link>https://www.oddsandendpoints.co.uk/tags/copilot/</link>
-    <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
         <name>Nick Benton</name>
     </author><guid>https://www.oddsandendpoints.co.uk/tags/copilot/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Intune</title>
+    <link>https://www.oddsandendpoints.co.uk/tags/intune/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+        <name>Nick Benton</name>
+    </author><guid>https://www.oddsandendpoints.co.uk/tags/intune/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>PowerShell</title>
+    <link>https://www.oddsandendpoints.co.uk/tags/powershell/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+        <name>Nick Benton</name>
+    </author><guid>https://www.oddsandendpoints.co.uk/tags/powershell/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Security</title>
+    <link>https://www.oddsandendpoints.co.uk/tags/security/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+        <name>Nick Benton</name>
+    </author><guid>https://www.oddsandendpoints.co.uk/tags/security/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Windows</title>
+    <link>https://www.oddsandendpoints.co.uk/tags/windows/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+        <name>Nick Benton</name>
+    </author><guid>https://www.oddsandendpoints.co.uk/tags/windows/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Dynamic Groups</title>
@@ -25,53 +67,11 @@
     </author><guid>https://www.oddsandendpoints.co.uk/tags/entra-id/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>Intune</title>
-    <link>https://www.oddsandendpoints.co.uk/tags/intune/</link>
-    <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
-        <name>Nick Benton</name>
-    </author><guid>https://www.oddsandendpoints.co.uk/tags/intune/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>PowerShell</title>
-    <link>https://www.oddsandendpoints.co.uk/tags/powershell/</link>
-    <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
-        <name>Nick Benton</name>
-    </author><guid>https://www.oddsandendpoints.co.uk/tags/powershell/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
     <title>Software Updates</title>
     <link>https://www.oddsandendpoints.co.uk/tags/updates/</link>
     <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
         <name>Nick Benton</name>
     </author><guid>https://www.oddsandendpoints.co.uk/tags/updates/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Feature Updates</title>
-    <link>https://www.oddsandendpoints.co.uk/tags/feature-updates/</link>
-    <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
-        <name>Nick Benton</name>
-    </author><guid>https://www.oddsandendpoints.co.uk/tags/feature-updates/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Remediation Scripts</title>
-    <link>https://www.oddsandendpoints.co.uk/tags/remediation/</link>
-    <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
-        <name>Nick Benton</name>
-    </author><guid>https://www.oddsandendpoints.co.uk/tags/remediation/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Security</title>
-    <link>https://www.oddsandendpoints.co.uk/tags/security/</link>
-    <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
-        <name>Nick Benton</name>
-    </author><guid>https://www.oddsandendpoints.co.uk/tags/security/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Windows</title>
-    <link>https://www.oddsandendpoints.co.uk/tags/windows/</link>
-    <pubDate>Wed, 23 Jul 2025 10:22:32 &#43;0100</pubDate><author>
-        <name>Nick Benton</name>
-    </author><guid>https://www.oddsandendpoints.co.uk/tags/windows/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

@@ -3,7 +3,15 @@
         <title>Intune - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/intune/</link>
         <description>Intune - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/intune/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/intune/" rel="self" type="application/rss+xml" /><item>
+    <title>Blocking Windows Recall Enabled Managed Devices</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/</link>
+    <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-recall-compliance/featured.jpg" referrerpolicy="no-referrer">
+            </div>Whether we like it or not, AI and Copilot is everywhere, and even if you don&rsquo;t want AI backed features like Windows Recall enabled on managed corporate and BYOD devices, it will happen. So how do we block these Copilot+ devices from accessing Corporate data or services?]]></description>
+</item><item>
     <title>Fine-Tuning Groups for Phased Deployments in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/</link>
     <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
@@ -75,13 +83,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/windows-11-risk-based-deployment-part5/featured.jpg" referrerpolicy="no-referrer">
             </div>An unexpected update to the Windows 11 Feature Update deployment series, looking at how to tag users instead of devices, and an improved way to get the readiness report data, and other performance improvements. What a day.]]></description>
-</item><item>
-    <title>Converting AppLocker Policies to Intune Profiles</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</link>
-    <pubDate>Tue, 22 Oct 2024 11:13:46 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-applocker-intune/featured.png" referrerpolicy="no-referrer">
-            </div>We know that there is no native configuration for AppLocker in Intune, and we should be looking at App Control for Business already, but there is still a place for AppLocker, and I haven&rsquo;t got time to manually do anything, so let&rsquo;s use PowerShell to create out AppLocker policies from exported XML files.]]></description>
 </item></channel>
 </rss>
