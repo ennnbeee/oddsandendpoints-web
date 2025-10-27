@@ -7,7 +7,7 @@ So what do we do about the [Windows Recall](https://support.microsoft.com/en-gb/
 
 ## Disable Windows Recall
 
-Well Windows Recall is disabled and removed on managed devices by default at least, but let's just make doubly sure and enforce this setting using Intune, and pushing out this new policy to all devices, because you know, fear 👻.
+Well Windows Recall is disabled and removed on commerical devices by default at least, but let's just make doubly sure and enforce this setting using Intune, and pushing out this new policy to all devices, because you know, fear 👻.
 
 | Category | Setting | Value |
 | :- | :- | :- |
@@ -17,23 +17,51 @@ Well Windows Recall is disabled and removed on managed devices by default at lea
 
 What if, just what if, someone with Administrator permissions goes and changes these settings or even enables the feature. What do we do then?
 
+{{< admonition type=quote >}}
+Commercial devices are defined as devices with an Enterprise (ENT) or Education (EDU) SKU or any premium SKU device that is managed by an IT administrator (whether via Microsoft Endpoint Manager or other endpoint management solution), has a volume license key, or is joined to a domain. Commercial devices during Out of Box Experience (OOBE) are defined as those with ENT or EDU SKU or any premium SKU device that has a volume license key or is Microsoft Entra joined.
+{{< /admonition >}}
+
 ## Device Compliance
 
 We mark them as non-compliant and block then with a Conditional Access policy, next.
 
 Ok, we should expand on this a little bit, [Custom Compliance](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings) allows additional checks on Windows (and Linux) devices, that native compliance checks don't support.
 
-Essentially, if you can script something self-contained (i.e., it isn't calling external web services or apis for information) that will run on the device in the `SYSTEM` context, to pull back information from the device, you can use that to determine whether a device is going to be marked as compliant or non-compliant.
+Essentially, if you can script something self-contained (i.e., it isn't calling external web services or apis for information) that will run on the device in the SYSTEM or User context, to pull back information from the device, you can use that to determine whether a device is going to be marked as compliant or non-compliant.
 
 {{< admonition type=tip >}}
 If you want a breakdown of Custom Compliance check out [Florian Salzmann's](https://www.linkedin.com/in/fsalzmann/) [post](https://scloud.work/custom-compliance-windows-intune/) which includes details of supported operators and examples.
 {{< /admonition >}}
 
-We've used Custom Compliance with Third-Party Antivirus products [previously](/posts/custom-compliance-third-party-av/), so let's look at what we need to detect to understand whether someone on a corporate device has somehow enabled Windows Recall, or someone on using BYOD already has enabled it on their [Copilot+ PC](https://blogs.microsoft.com/blog/2024/05/20/introducing-copilot-pcs/).
+We've used Custom Compliance with Third-Party Antivirus products [previously](/posts/custom-compliance-third-party-av/), so let's look at what we need to detect to understand whether someone on a corporate device has somehow enabled Windows Recall, or someone using BYOD device already has enabled it on their [Copilot+ PC](https://blogs.microsoft.com/blog/2024/05/20/introducing-copilot-pcs/).
+
+## Device Platform Restrictions
+
+Now before you jump to conclusions about Custom Compliance only working on [Windows Pro and above](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings), and Windows Recall having vague enough [pre-requisites](https://learn.microsoft.com/en-us/windows/client-management/manage-recall#system-requirements) to make you wonder why Microsoft would allow it on Windows Home in the first place, have you thought about ~ab~using [Device Platform Restrictions](https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions) and [Assignment Filters](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters) to block the enrolment of Windows Home devices?
+
+Easy enough to implement, but a bigger question on whether you would want to, either way I want to as it's not like you can really manage Windows Home devices anyway 😂.
+
+Go create a new Windows Assignment Filter with the below rule, which will basically include all non-home editions of Windows #logic.
+
+```SQL
+(device.operatingSystemSKU -notIn ["Core", "CoreCountrySpecific", "CoreN", "CoreSingleLanguage"])
+```
+
+Then go amend your Device Platform Restriction policy that allows BYOD, and apply the filter.
+
+![Device Platform Restrictions](img/wrc-platform.png "Windows Enrolment Platform restrictions blocking Windows Home editions.")
+
+{{< admonition type=note >}}
+There isn't the option to use an exclude filter mode in the web interface at least, hence the use of `notIn` in the filter.
+{{< /admonition >}}
+
+Now with BYOD Windows Home editions blocked from enrolment, we can be sleep safe at night (well after you un-enrol all existing Windows Home BYOD devices 😶).
 
 ## Detection Methods
 
-Short of detecting whether the settings we configured using Intune have applied correctly, what else do we need to check on the device to be sure Windows Recall isn't ~snooping and listening~ working in the background.
+Back to Windows Recall and compliance.
+
+Short of detecting whether the Windows Recall settings we configured using Intune have applied correctly, what else do we need to check on the device to be sure Windows Recall isn't ~snooping and listening~ working in the background.
 
 Three things really, and all can be used in a Custom Compliance policy to understand whether **any** or **all** or the Windows Recall settings are enabled depending on your approach:
 
@@ -65,7 +93,7 @@ Both 'Allow Recall Enablement' and 'Disable AI Data Analysis' registry settings 
 ![Windows Recall Registry entries](img/wrc-reg.png "Windows Recall registry settings under HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsAI")
 
 {{< admonition type=note >}}
-I am aware that these two entries also exist in the Current User Registry Hive, but if we're going to use Custom Compliance on BYOD as well as corporate owned Windows devices, we might struggle getting [user context](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings#prerequisites) scripts to work due to certain limitations.
+I am aware that `DisableAIDataAnalysis` also exists in the Current User Registry Hive, but if we're going to use Custom Compliance on BYOD as well as corporate owned Windows devices, we might struggle getting [user context](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings#prerequisites) scripts to work due to certain limitations.
 
 Plus we're still detecting if the Windows Recall feature is installed, so ~do one,~ ~get off my back~ there we go 😅.
 {{< /admonition >}}
@@ -116,13 +144,13 @@ With the polite notice configured in the JSON file, users at least get told in t
 
 ![Company Portal showing non-compliance](img/wrc-companyportal.png "The Company Portal showing the reason for device non-compliance.")
 
-Once we're happy that the compliance policy is applying as expected, and marking devices as non-compliant, you can blindly create a [Conditional Access Policy](https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-device-compliance) to require Device Compliance, and block devices that are non-compliant, now including those with Windows Recall or associated settings enabled.
+Once we're happy that the compliance policy is applying as expected and marking devices as non-compliant where Windows Recall is enabled, you can ~blindly~ create a [Conditional Access Policy](https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-device-compliance) to require Device Compliance, blocking devices that are non-compliant, now including those with Windows Recall or associated settings enabled.
 
 ## Summary
 
-We should be embracing AI even if it will come for all our jobs eventually, or write pithy blog posts about Intune, for now though we should be ~combatting our AI overlords~ conscious of the use of AI functionality on corporate owned devices, or devices accessing corporate data held in Microsoft services, and putting in place suitable controls to manage or mitigate the use things like Windows Recall.
+We should be embracing AI even if it *will* come for all our jobs eventually, or write blog posts about Intune for us 👀. For now though we should be ~combatting our AI overlords~ conscious of the use of AI functionality on corporate owned devices, or devices accessing corporate data held in Microsoft services, and putting in place suitable controls to manage or mitigate the use things like Windows Recall.
 
-Luckily for you, me and my mate Microsoft, have the functionality to both limit the use of Windows Recall or just full on block devices where Windows Recall is enabled.
+Luckily for you, me and my mate Microsoft have the functionality to both limit the use of Windows Recall or just full on block devices where Windows Recall is enabled.
 
 Shout out to [Petr Pospíšil](https://www.linkedin.com/in/petr-pospisil111/) whose [LinkedIn post](https://www.linkedin.com/posts/petr-pospisil111_windows-recall-overprivileged-activity-7387814465817178112-vQsh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAIrTrgB3O-zXDndCm5jau1yOL81a0hcwRE) got me annoyed enough to write this blog post 😘.
 
