@@ -37,7 +37,11 @@ We've used Custom Compliance with Third-Party Antivirus products [previously](/p
 
 ## Device Platform Restrictions
 
-Now before you jump to conclusions about Custom Compliance only working on [Windows Pro and above](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings), and Windows Recall having vague enough [pre-requisites](https://learn.microsoft.com/en-us/windows/client-management/manage-recall#system-requirements) to make you wonder why Microsoft would allow it on Windows Home in the first place, have you thought about ~ab~using [Device Platform Restrictions](https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions) and [Assignment Filters](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters) to block the enrolment of Windows Home devices?
+"*Oh but Custom Compliance only works on Windows Pro and above, what about Windows Recall running on Windows Home?*", I hear you whinge.
+
+Yeah, you're not wrong, Custom Compliance *is* only supported on [Windows excluding Windows Home](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings), and Windows Recall has vague enough [pre-requisites](https://learn.microsoft.com/en-us/windows/client-management/manage-recall#system-requirements) to make you think it shouldn't support Windows Home, but in fact it does (ish).
+
+Have you thought about ~ab~using [Device Platform Restrictions](https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions) and [Assignment Filters](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters) to block the enrolment of Windows Home devices though?
 
 Easy enough to implement, but a bigger question on whether you would want to, either way I want to as it's not like you can really manage Windows Home devices anyway 😂.
 
@@ -47,15 +51,15 @@ Go create a new Windows Assignment Filter with the below rule, which will basica
 (device.operatingSystemSKU -notIn ["Core", "CoreCountrySpecific", "CoreN", "CoreSingleLanguage"])
 ```
 
-Then go amend your Device Platform Restriction policy that allows BYOD, and apply the filter.
+Then go amend your Device Platform Restriction policy that allows BYOD, and apply the new filter.
 
 ![Device Platform Restrictions](img/wrc-platform.png "Windows Enrolment Platform restrictions blocking Windows Home editions.")
+
+Now with BYOD Windows Home editions blocked from enrolment, we can sleep safe at night (well after you remove all existing Windows Home BYOD devices from Intune 😶).
 
 {{< admonition type=note >}}
 There isn't the option to use an exclude filter mode in the web interface at least, hence the use of `notIn` in the filter.
 {{< /admonition >}}
-
-Now with BYOD Windows Home editions blocked from enrolment, we can be sleep safe at night (well after you un-enrol all existing Windows Home BYOD devices 😶).
 
 ## Detection Methods
 
@@ -148,7 +152,9 @@ Once we're happy that the compliance policy is applying as expected and marking 
 
 ## Summary
 
-We should be embracing AI even if it *will* come for all our jobs eventually, or write blog posts about Intune for us 👀. For now though we should be ~combatting our AI overlords~ conscious of the use of AI functionality on corporate owned devices, or devices accessing corporate data held in Microsoft services, and putting in place suitable controls to manage or mitigate the use things like Windows Recall.
+We should be embracing AI even if it *will* come for all our jobs eventually, or write blog posts about Intune for us 👀.
+
+For now though we should be ~combatting our AI overlords~ conscious of the use of AI functionality on corporate owned devices, or devices accessing corporate data held in Microsoft services, and putting in place suitable controls to manage or mitigate the use things like Windows Recall.
 
 Luckily for you, me and my mate Microsoft have the functionality to both limit the use of Windows Recall or just full on block devices where Windows Recall is enabled.
 
