@@ -7,7 +7,7 @@ So what do we do about the [Windows Recall](https://support.microsoft.com/en-gb/
 
 ## Disable Windows Recall
 
-Well Windows Recall is disabled and removed on commerical devices by default at least, but let's just make sure and enforce this disablement using Intune, and push out this new Settings Catalog policy to all devices, because you know, fear 👻.
+Well Windows Recall is disabled and removed on commerical devices by default at least, but let's just make sure and enforce this disablement using Intune, and push out this new Settings Catalog policy to all supported (10.0.26100.3915 and above) devices, because you know, fear 👻.
 
 | Category | Setting | Value |
 | :- | :- | :- |
@@ -140,9 +140,13 @@ Now just to create the Compliance Policy to use the script we created, and uploa
 
 ![Creating a Compliance policy for Windows](img/wrc-compliance.png "Creating a new Compliance policy for Windows devices.")
 
-All is left is to deploy the script to your chosen groups of devices, for me this is all of them, and sit back and [wait](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings#after-an-issue-on-a-device-is-fixed-subsequent-syncs-dont-identify-the-issue-as-resolved-and-compliant) for the results to come in...
+All is left is to deploy the script to your chosen groups of devices, for me this is all of them running a supported version of Windows (10.0.26100.3915 and above), and sit back and [wait](https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings#after-an-issue-on-a-device-is-fixed-subsequent-syncs-dont-identify-the-issue-as-resolved-and-compliant) for the results to come in...
 
 ![Compliance Policy Report for Custom Compliance](img/wrc-noncompliant.png "Device Compliance State in Intune for the Custom Compliance policy for Windows Recall.")
+
+{{< admonition type=tip >}}
+You can use an Assignment Filter for the Compliance Policy, using a rule like `(device.operatingSystemVersion -ge 10.0.26100.3915)` if you like.
+{{< /admonition >}}
 
 With the polite notice configured in the JSON file, users at least get told in the Company Portal why they're being marked as non-compliant, with a nice link telling them how to fix it.
 
