@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/featured.jpg",
                             "width":  1600 ,
                             "height":  900 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1791 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1814 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/","datePublished": "2025-10-26T17:28:22+00:00","dateModified": "2025-10-26T17:28:22+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -265,10 +265,10 @@
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>I&rsquo;m not a fan of scaremongery when it comes to privacy and AI functionality, especially Microsoft Copilot AI features; but I am aware that with all the <a href="https://learn.microsoft.com/en-us/windows/client-management/manage-recall" target="_blank" rel="noopener noreferrer">configuration options</a> you have at your fingertips with Intune to limit what AI features for Windows Recall can be used on managed devices, there is still a security concern with data that is captured and stored, or even accessed.</p>
-<p>So what do we do about the <a href="https://support.microsoft.com/en-gb/windows/retrace-your-steps-with-recall-aa03f8a0-a78b-4b3e-b0a1-2eb8ac48701c" target="_blank" rel="noopener noreferrer">Windows Recall</a> functionality that records your screen, on both corporate owned and BYOD devices.</p>
+            </div><div class="content" id="content" data-pagefind-body><p>I&rsquo;m not a fan of scaremongery when it comes to privacy and AI functionality, especially Microsoft Copilot AI features; but I am aware that even with all the <a href="https://learn.microsoft.com/en-us/windows/client-management/manage-recall" target="_blank" rel="noopener noreferrer">configuration options</a> you have at your fingertips with Intune to limit what AI features for Windows Recall can be used on managed devices, there is still a security concern with data that is captured and stored, or even accessed.</p>
+<p>So what do we do about the <a href="https://support.microsoft.com/en-gb/windows/retrace-your-steps-with-recall-aa03f8a0-a78b-4b3e-b0a1-2eb8ac48701c" target="_blank" rel="noopener noreferrer">Windows Recall</a> functionality that can record your screen, on both corporate owned and BYOD devices.</p>
 <h2 id="disable-windows-recall" class="headerLink">
-    <a href="#disable-windows-recall" class="header-mark"></a>Disable Windows Recall</h2><p>Well Windows Recall is disabled and removed on commerical devices by default at least, but let&rsquo;s just make doubly sure and enforce this setting using Intune, and pushing out this new policy to all devices, because you know, fear 👻.</p>
+    <a href="#disable-windows-recall" class="header-mark"></a>Disable Windows Recall</h2><p>Well Windows Recall is disabled and removed on commerical devices by default at least, but let&rsquo;s just make sure and enforce this disablement using Intune, and push out this new Settings Catalog policy to all devices, because you know, fear 👻.</p>
 
 <div class="table-wrapper">
   <table>
@@ -298,7 +298,7 @@
     </tbody>
   </table>
 </div>
-<p>What if, just what if, someone with Administrator permissions goes and changes these settings or even enables the feature. What do we do then?</p>
+<p>What if, just <em>what if</em>, someone with Administrator permissions goes and changes these settings manually or enables the Windows Optional Feature. What do we do then?</p>
 <div class="details admonition quote open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -308,9 +308,9 @@
     <div class="details-content">
         <div class="admonition-content">Commercial devices are defined as devices with an Enterprise (ENT) or Education (EDU) SKU or any premium SKU device that is managed by an IT administrator (whether via Microsoft Endpoint Manager or other endpoint management solution), has a volume license key, or is joined to a domain. Commercial devices during Out of Box Experience (OOBE) are defined as those with ENT or EDU SKU or any premium SKU device that has a volume license key or is Microsoft Entra joined.</div></div></div>
 <h2 id="device-compliance" class="headerLink">
-    <a href="#device-compliance" class="header-mark"></a>Device Compliance</h2><p>We mark them as non-compliant and block then with a Conditional Access policy, next.</p>
+    <a href="#device-compliance" class="header-mark"></a>Device Compliance</h2><p>We mark them as non-compliant and block then with a Conditional Access policy. Next.</p>
 <p>Ok, we should expand on this a little bit, <a href="https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings" target="_blank" rel="noopener noreferrer">Custom Compliance</a> allows additional checks on Windows (and Linux) devices, that native compliance checks don&rsquo;t support.</p>
-<p>Essentially, if you can script something self-contained (i.e., it isn&rsquo;t calling external web services or apis for information) that will run on the device in the SYSTEM or User context, to pull back information from the device, you can use that to determine whether a device is going to be marked as compliant or non-compliant.</p>
+<p>Essentially, if you can script something self-contained (i.e., it isn&rsquo;t calling external web services or apis for information) that will run on the device in the SYSTEM or User context to pull back information from the device, you can use that to determine whether a device is going to be marked as compliant or non-compliant.</p>
 <div class="details admonition tip open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -322,10 +322,10 @@
 <p>We&rsquo;ve used Custom Compliance with Third-Party Antivirus products <a href="/posts/custom-compliance-third-party-av/" rel="">previously</a>, so let&rsquo;s look at what we need to detect to understand whether someone on a corporate device has somehow enabled Windows Recall, or someone using BYOD device already has enabled it on their <a href="https://blogs.microsoft.com/blog/2024/05/20/introducing-copilot-pcs/" target="_blank" rel="noopener noreferrer">Copilot+ PC</a>.</p>
 <h2 id="device-platform-restrictions" class="headerLink">
     <a href="#device-platform-restrictions" class="header-mark"></a>Device Platform Restrictions</h2><p>&ldquo;<em>Oh but Custom Compliance only works on Windows Pro and above, what about Windows Recall running on Windows Home?</em>&rdquo;, I hear you whinge.</p>
-<p>Yeah, you&rsquo;re not wrong, Custom Compliance <em>is</em> only supported on <a href="https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings" target="_blank" rel="noopener noreferrer">Windows excluding Windows Home</a>, and Windows Recall has vague enough <a href="https://learn.microsoft.com/en-us/windows/client-management/manage-recall#system-requirements" target="_blank" rel="noopener noreferrer">pre-requisites</a> to make you think it shouldn&rsquo;t support Windows Home, but in fact it does (ish).</p>
+<p>Yeah, you&rsquo;re not wrong, Custom Compliance <em>is</em> only supported on <a href="https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings" target="_blank" rel="noopener noreferrer">Windows excluding Windows Home</a>, and Windows Recall has vague enough <a href="https://learn.microsoft.com/en-us/windows/client-management/manage-recall#system-requirements" target="_blank" rel="noopener noreferrer">pre-requisites</a> to make you think it shouldn&rsquo;t support Windows Home, but in fact it does, kind of.</p>
 <p>Have you thought about <del>ab</del>using <a href="https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions" target="_blank" rel="noopener noreferrer">Device Platform Restrictions</a> and <a href="https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters" target="_blank" rel="noopener noreferrer">Assignment Filters</a> to block the enrolment of Windows Home devices though?</p>
 <p>Easy enough to implement, but a bigger question on whether you would want to, either way I want to as it&rsquo;s not like you can really manage Windows Home devices anyway 😂.</p>
-<p>Go create a new Windows Assignment Filter with the below rule, which will basically include all non-home editions of Windows #logic.</p>
+<p>Go create a new Windows Assignment Filter with the below rule, which will basically include all non-home editions of Windows, logic.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -417,12 +417,12 @@
       tw-scrollbar-thin
       "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">operatingSystemSKU</span><span class="w"> </span><span class="o">-</span><span class="n">notIn</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Core&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreCountrySpecific&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreSingleLanguage&#34;</span><span class="p">])</span></span></span></code></pre>
 </div>
-<p>Then go amend your Device Platform Restriction policy that allows BYOD, and apply the new filter.</p>
+<p>Then go amend your Device Platform Restriction policy that allows Windows BYOD, and apply the new filter.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-recall-compliance/img/wrc-platform_hu_756687ec339c4546.png" title="Device Platform Restrictions" data-thumbnail="/posts/windows-recall-compliance/img/wrc-platform_hu_756687ec339c4546.png" data-sub-html="<h2>Windows Enrolment Platform restrictions blocking Windows Home editions.</h2><p>Device Platform Restrictions</p>"><img  loading="lazy" src='/posts/windows-recall-compliance/img/wrc-platform_hu_756687ec339c4546.png'   alt="Device Platform Restrictions"  ></a><figcaption class="image-caption">Windows Enrolment Platform restrictions blocking Windows Home editions.</figcaption>
 </figure>
 
 </p>
-<p>Now with BYOD Windows Home editions blocked from enrolment, we can sleep safe at night (well after you remove all existing Windows Home BYOD devices from Intune 😶).</p>
+<p>Now with BYOD Windows Home editions blocked from enrolment, and therefore unable to be marked as compliant, we can sleep safe at night (well after you remove all existing Windows Home BYOD devices from Intune 😶).</p>
 <div class="details admonition note open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -433,7 +433,7 @@
         <div class="admonition-content">There isn&rsquo;t the option to use an exclude filter mode in the web interface at least, hence the use of <code>notIn</code> in the filter.</div></div></div>
 <h2 id="detection-methods" class="headerLink">
     <a href="#detection-methods" class="header-mark"></a>Detection Methods</h2><p>Back to Windows Recall and compliance.</p>
-<p>Short of detecting whether the Windows Recall settings we configured using Intune have applied correctly, what else do we need to check on the device to be sure Windows Recall isn&rsquo;t <del>snooping and listening</del> working in the background.</p>
+<p>Short of confirming whether the Windows Recall settings we pushed to devices using Intune have applied correctly, what else do we need to check on the device to be sure Windows Recall isn&rsquo;t <del>snooping and listening</del> working in the background?</p>
 <p>Three things really, and all can be used in a Custom Compliance policy to understand whether <strong>any</strong> or <strong>all</strong> or the Windows Recall settings are enabled depending on your approach:</p>
 <ul>
 <li>Whether the <strong>Windows Recall Feature</strong> itself is installed</li>
@@ -710,7 +710,7 @@
 
 
 
-<p>Which when running from an elevated PowerShell prompt should give us a happy outcome.</p>
+<p>Which when testing from an elevated PowerShell prompt should give us a happy outcome.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -809,9 +809,9 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">I&rsquo;ve gone very cautious with the script (mainly due to the User Registry settings we can&rsquo;t query), and regardless of whether the Windows Recall is enabled or disabled, if the registry keys don&rsquo;t exist disabling the functionality, then the device will be marked as non-compliant.</div></div></div>
+        <div class="admonition-content">I&rsquo;ve gone very cautious with the script (mainly due to the User Registry settings we can&rsquo;t query), so regardless of whether the Windows Recall feature is enabled or disabled, if the registry keys don&rsquo;t exist disabling the functionality, then the device will be marked as non-compliant.</div></div></div>
 <h3 id="json-validation" class="headerLink">
-    <a href="#json-validation" class="header-mark"></a>JSON Validation</h3><p>With a discovery script, we also need a corresponding <a href="https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-custom-json" target="_blank" rel="noopener noreferrer">JSON file</a> to ensure that we can check the data captured by the discovery script against our benchmark for device compliance.</p>
+    <a href="#json-validation" class="header-mark"></a>JSON Validation</h3><p>With a discovery script, we also need a corresponding <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Compliance/Custom/WindowsRecall/WindowsRecall-Hard.json" target="_blank" rel="noopener noreferrer">JSON file</a> to ensure that we can check the data captured by the discovery script against our benchmark for device compliance.</p>
 
 
 
@@ -971,7 +971,7 @@
 
 
 
-<p>This <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Compliance/Custom/WindowsRecall/WindowsRecall-Hard.json" target="_blank" rel="noopener noreferrer">JSON file</a> not only allows for validation of the settings, but also what information is displayed to the end users in the Company Portal when their device is marked as non-compliant, friendly 😇.</p>
+<p>This <a href="https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-custom-json" target="_blank" rel="noopener noreferrer">JSON file</a> not only allows for validation of the settings, but also what information is displayed to the end users in the Company Portal when their device is marked as non-compliant, friendly 😇.</p>
 <h3 id="compliance-policy" class="headerLink">
     <a href="#compliance-policy" class="header-mark"></a>Compliance Policy</h3><p>With all we need at our disposal, head into Intune and navigate to <strong>Devices &gt; Manage Devices &gt; Compliance &gt; Scripts</strong> and add our discovery script for <strong>Windows 10 and later</strong> devices.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-recall-compliance/img/wrc-script_hu_d9bbd29d64ab0e5.png" title="Creating a Custom Compliance Discovery script for Windows" data-thumbnail="/posts/windows-recall-compliance/img/wrc-script_hu_d9bbd29d64ab0e5.png" data-sub-html="<h2>Creating a new Custom Compliance script for Windows devices.</h2><p>Creating a Custom Compliance Discovery script for Windows</p>"><img  loading="lazy" src='/posts/windows-recall-compliance/img/wrc-script_hu_d9bbd29d64ab0e5.png'   alt="Creating a Custom Compliance Discovery script for Windows"  ></a><figcaption class="image-caption">Creating a new Custom Compliance script for Windows devices.</figcaption>
@@ -995,8 +995,8 @@
 </p>
 <p>Once we&rsquo;re happy that the compliance policy is applying as expected and marking devices as non-compliant where Windows Recall is enabled, you can <del>blindly</del> create a <a href="https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-device-compliance" target="_blank" rel="noopener noreferrer">Conditional Access Policy</a> to require Device Compliance, blocking devices that are non-compliant, now including those with Windows Recall or associated settings enabled.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>Summary</h2><p>We should be embracing AI even if it <em>will</em> come for all our jobs eventually, or write blog posts about Intune for us 👀.</p>
-<p>For now though we should be <del>combatting our AI overlords</del> conscious of the use of AI functionality on corporate owned devices, or devices accessing corporate data held in Microsoft services, and putting in place suitable controls to manage or mitigate the use things like Windows Recall.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>We should be embracing AI even if it <em>will</em> come for all our jobs at some point, or at least write blog posts about Intune for us 👀.</p>
+<p>For now though we should be <del>combatting our AI overlords</del> conscious of the use of AI functionality on corporate owned devices, or devices accessing corporate data held in Microsoft services, and putting in place suitable controls to manage or mitigate the use of things like Windows Recall.</p>
 <p>Luckily for you, me and my mate Microsoft have the functionality to both limit the use of Windows Recall or just full on block devices where Windows Recall is enabled.</p>
 <p>Shout out to <a href="https://www.linkedin.com/in/petr-pospisil111/" target="_blank" rel="noopener noreferrer">Petr Pospíšil</a> whose <a href="https://www.linkedin.com/posts/petr-pospisil111_windows-recall-overprivileged-activity-7387814465817178112-vQsh?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAIrTrgB3O-zXDndCm5jau1yOL81a0hcwRE" target="_blank" rel="noopener noreferrer">LinkedIn post</a> got me annoyed enough to write this blog post 😘.</p>
 </div>
