@@ -154,6 +154,10 @@ With the polite notice configured in the JSON file, users at least get told in t
 
 Once we're happy that the compliance policy is applying as expected and marking devices as non-compliant where Windows Recall is enabled, you can ~blindly~ create a [Conditional Access Policy](https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-device-compliance) to require Device Compliance, blocking devices that are non-compliant, now including those with Windows Recall or associated settings enabled.
 
+{{< admonition type=tip >}}
+If you want something a little more lenient that only detects whether the Windows Recall feature is enabled, a softer [Discovery Script](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Compliance/Custom/WindowsRecall/WindowRecall-ReallySoft.ps1) and [JSON validation](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Compliance/Custom/WindowsRecall/WindowsRecall-ReallySoft.json) are available in my GitHub Repo.
+{{< /admonition >}}
+
 ## Summary
 
 We should be embracing AI even if it *will* come for all our jobs at some point, or at least write blog posts about Intune for us 👀.
