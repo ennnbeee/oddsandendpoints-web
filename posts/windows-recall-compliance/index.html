@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/featured.jpg",
                             "width":  1600 ,
                             "height":  900 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1862 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1889 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/","datePublished": "2025-10-26T17:28:22+00:00","dateModified": "2025-10-26T17:28:22+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -325,7 +325,7 @@
 <p>Yeah, you&rsquo;re not wrong, Custom Compliance <em>is</em> only supported on <a href="https://learn.microsoft.com/en-us/intune/intune-service/protect/compliance-use-custom-settings" target="_blank" rel="noopener noreferrer">Windows excluding Windows Home</a>, and Windows Recall has vague enough <a href="https://learn.microsoft.com/en-us/windows/client-management/manage-recall#system-requirements" target="_blank" rel="noopener noreferrer">pre-requisites</a> to make you think it shouldn&rsquo;t support Windows Home, but in fact it does, kind of.</p>
 <p>Have you thought about <del>ab</del>using <a href="https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions" target="_blank" rel="noopener noreferrer">Device Platform Restrictions</a> and <a href="https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/filters" target="_blank" rel="noopener noreferrer">Assignment Filters</a> to block the enrolment of Windows Home devices though?</p>
 <p>Easy enough to implement, but a bigger question on whether you would want to, either way I want to as it&rsquo;s not like you can really manage Windows Home devices anyway 😂.</p>
-<p>Go create a new Windows <a href="https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions#apply-assignment-filters" target="_blank" rel="noopener noreferrer">Assignment Filter</a> with the below rule, which will basically include all home editions of Windows.</p>
+<p>Go create a new Windows <a href="https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions#apply-assignment-filters" target="_blank" rel="noopener noreferrer">Assignment Filter</a> with the below rule, which will basically includes all non-home editions of Windows.</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
   <div class="
     
@@ -415,7 +415,7 @@
       tw-overflow-y-hidden
       tw-overflow-x-auto
       tw-scrollbar-thin
-      "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">operatingSystemSKU</span><span class="w"> </span><span class="o">-</span><span class="k">in</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Core&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreCountrySpecific&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreSingleLanguage&#34;</span><span class="p">])</span></span></span></code></pre>
+      "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">operatingSystemSKU</span><span class="w"> </span><span class="o">-</span><span class="n">notIn</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;Core&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreCountrySpecific&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreN&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;CoreSingleLanguage&#34;</span><span class="p">])</span></span></span></code></pre>
 </div>
 <p>Or for the lazy&hellip;</p>
 <div class="code-block highlight is-open show-line-numbers  tw-group tw-my-2">
@@ -507,7 +507,7 @@
       tw-overflow-y-hidden
       tw-overflow-x-auto
       tw-scrollbar-thin
-      "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">operatingSystemSKU</span><span class="w"> </span><span class="o">-</span><span class="k">contains</span><span class="w"> </span><span class="s2">&#34;Core&#34;</span><span class="p">)</span></span></span></code></pre>
+      "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">operatingSystemSKU</span><span class="w"> </span><span class="o">-</span><span class="n">notContains</span><span class="w"> </span><span class="s2">&#34;Core&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
 <p>Then go amend your Device Platform Restriction policy that allows Windows BYOD, and apply the new filter.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-recall-compliance/img/wrc-platform_hu_46d43205726d18a0.png" title="Device Platform Restrictions" data-thumbnail="/posts/windows-recall-compliance/img/wrc-platform_hu_46d43205726d18a0.png" data-sub-html="<h2>Windows Enrolment Platform restrictions blocking Windows Home editions.</h2><p>Device Platform Restrictions</p>"><img  loading="lazy" src='/posts/windows-recall-compliance/img/wrc-platform_hu_46d43205726d18a0.png'   alt="Device Platform Restrictions"  ></a><figcaption class="image-caption">Windows Enrolment Platform restrictions blocking Windows Home editions.</figcaption>
@@ -515,6 +515,14 @@
 
 </p>
 <p>Now with BYOD Windows Home editions blocked from enrolment, and therefore unable to be marked as compliant, we can sleep safe at night (well after you remove all existing Windows Home BYOD devices from Intune 😶).</p>
+<div class="details admonition note open">
+    <div class="details-summary admonition-title">
+        <span class="icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg></span>Note<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+    </div>
+    <div class="details-content">
+        <div class="admonition-content">There isn&rsquo;t the option to use an exclude mode for the Filter in the web interface at least, hence the use of <code>notIn</code> in the filter.</div></div></div>
 <h2 id="detection-methods" class="headerLink">
     <a href="#detection-methods" class="header-mark"></a>Detection Methods</h2><p>Back to Windows Recall and compliance.</p>
 <p>Short of confirming whether the Windows Recall settings we pushed to devices using Intune have applied correctly, what else do we need to check on the device to be sure Windows Recall isn&rsquo;t <del>snooping and listening</del> working in the background?</p>

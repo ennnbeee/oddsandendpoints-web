@@ -45,16 +45,16 @@ Have you thought about ~ab~using [Device Platform Restrictions](https://learn.mi
 
 Easy enough to implement, but a bigger question on whether you would want to, either way I want to as it's not like you can really manage Windows Home devices anyway 😂.
 
-Go create a new Windows [Assignment Filter](https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions#apply-assignment-filters) with the below rule, which will basically include all home editions of Windows.
+Go create a new Windows [Assignment Filter](https://learn.microsoft.com/en-us/intune/intune-service/enrollment/create-device-platform-restrictions#apply-assignment-filters) with the below rule, which will basically includes all non-home editions of Windows.
 
 ```SQL
-(device.operatingSystemSKU -in ["Core", "CoreCountrySpecific", "CoreN", "CoreSingleLanguage"])
+(device.operatingSystemSKU -notIn ["Core", "CoreCountrySpecific", "CoreN", "CoreSingleLanguage"])
 ```
 
 Or for the lazy...
 
 ```SQL
-(device.operatingSystemSKU -contains "Core")
+(device.operatingSystemSKU -notContains "Core")
 ```
 
 Then go amend your Device Platform Restriction policy that allows Windows BYOD, and apply the new filter.
@@ -62,6 +62,10 @@ Then go amend your Device Platform Restriction policy that allows Windows BYOD, 
 ![Device Platform Restrictions](img/wrc-platform.png "Windows Enrolment Platform restrictions blocking Windows Home editions.")
 
 Now with BYOD Windows Home editions blocked from enrolment, and therefore unable to be marked as compliant, we can sleep safe at night (well after you remove all existing Windows Home BYOD devices from Intune 😶).
+
+{{< admonition type=note >}}
+There isn't the option to use an exclude mode for the Filter in the web interface at least, hence the use of `notIn` in the filter.
+{{< /admonition >}}
 
 ## Detection Methods
 
