@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/featured.jpg",
                             "width":  1600 ,
                             "height":  900 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1889 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1906 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/","datePublished": "2025-10-26T17:28:22+00:00","dateModified": "2025-10-26T17:28:22+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -510,7 +510,7 @@
       "><span class="line"><span class="cl"><span class="p">(</span><span class="n">device</span><span class="p">.</span><span class="n">operatingSystemSKU</span><span class="w"> </span><span class="o">-</span><span class="n">notContains</span><span class="w"> </span><span class="s2">&#34;Core&#34;</span><span class="p">)</span></span></span></code></pre>
 </div>
 <p>Then go amend your Device Platform Restriction policy that allows Windows BYOD, and apply the new filter.</p>
-<p><figure><a class="lightgallery" href="/posts/windows-recall-compliance/img/wrc-platform_hu_46d43205726d18a0.png" title="Device Platform Restrictions" data-thumbnail="/posts/windows-recall-compliance/img/wrc-platform_hu_46d43205726d18a0.png" data-sub-html="<h2>Windows Enrolment Platform restrictions blocking Windows Home editions.</h2><p>Device Platform Restrictions</p>"><img  loading="lazy" src='/posts/windows-recall-compliance/img/wrc-platform_hu_46d43205726d18a0.png'   alt="Device Platform Restrictions"  ></a><figcaption class="image-caption">Windows Enrolment Platform restrictions blocking Windows Home editions.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-recall-compliance/img/wrc-platform_hu_7fe1f185e6c6ed2d.png" title="Device Platform Restrictions" data-thumbnail="/posts/windows-recall-compliance/img/wrc-platform_hu_7fe1f185e6c6ed2d.png" data-sub-html="<h2>Windows Enrolment Platform restrictions blocking Windows Home editions.</h2><p>Device Platform Restrictions</p>"><img  loading="lazy" src='/posts/windows-recall-compliance/img/wrc-platform_hu_7fe1f185e6c6ed2d.png'   alt="Device Platform Restrictions"  ></a><figcaption class="image-caption">Windows Enrolment Platform restrictions blocking Windows Home editions.</figcaption>
 </figure>
 
 </p>
@@ -522,7 +522,9 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
     </div>
     <div class="details-content">
-        <div class="admonition-content">There isn&rsquo;t the option to use an exclude mode for the Filter in the web interface at least, hence the use of <code>notIn</code> in the filter.</div></div></div>
+        <div class="admonition-content"><p>There isn&rsquo;t the option to use an exclude mode for the Filter in the web interface at least, hence the use of <code>notIn</code> in the filter.</p>
+<p>Also, ensure that the default <strong>All users</strong> Platform Restriction is blocking Personally owned enrolment for Windows devices.</p>
+</div></div></div>
 <h2 id="detection-methods" class="headerLink">
     <a href="#detection-methods" class="header-mark"></a>Detection Methods</h2><p>Back to Windows Recall and compliance.</p>
 <p>Short of confirming whether the Windows Recall settings we pushed to devices using Intune have applied correctly, what else do we need to check on the device to be sure Windows Recall isn&rsquo;t <del>snooping and listening</del> working in the background?</p>

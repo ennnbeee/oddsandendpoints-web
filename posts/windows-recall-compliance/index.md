@@ -65,6 +65,8 @@ Now with BYOD Windows Home editions blocked from enrolment, and therefore unable
 
 {{< admonition type=note >}}
 There isn't the option to use an exclude mode for the Filter in the web interface at least, hence the use of `notIn` in the filter.
+
+Also, ensure that the default **All users** Platform Restriction is blocking Personally owned enrolment for Windows devices.
 {{< /admonition >}}
 
 ## Detection Methods
