@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Enrolment - Tag - odds&#43;endpoints</title>
+        <link>https://www.oddsandendpoints.co.uk/tags/enrolment/</link>
+        <description>Enrolment - Tag - odds&#43;endpoints</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/enrolment/" rel="self" type="application/rss+xml" /><item>
+    <title>Block Windows Home Intune Enrolment</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-block-home-editions/</link>
+    <pubDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-block-home-editions/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-block-home-editions/featured.png" referrerpolicy="no-referrer">
+            </div>With a general lack of management capability for Windows Home devices, should you be allowing them access to Entra ID services, and how do you stop them from enrolling into Intune?]]></description>
+</item></channel>
+</rss>

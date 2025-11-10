@@ -3,7 +3,15 @@
         <title>Windows - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/windows/</link>
         <description>Windows - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
+    <title>Block Windows Home Intune Enrolment</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-block-home-editions/</link>
+    <pubDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-block-home-editions/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-block-home-editions/featured.png" referrerpolicy="no-referrer">
+            </div>With a general lack of management capability for Windows Home devices, should you be allowing them access to Entra ID services, and how do you stop them from enrolling into Intune?]]></description>
+</item><item>
     <title>Blocking Windows Recall Enabled Managed Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-recall-compliance/</link>
     <pubDate>Sun, 26 Oct 2025 17:28:22 &#43;0000</pubDate><author>
@@ -75,13 +83,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
             </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
-</item><item>
-    <title>ConfigMgr Client Installation on Orphaned Devices</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</link>
-    <pubDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/configmgr-client-install-cmg/featured.png" referrerpolicy="no-referrer">
-            </div>You&rsquo;ve just implemented a Cloud Management Gateway to help your hybrid joined Windows devices communicate to Configuration Manager over the internet, but what if they&rsquo;re orphaned and unable to communicate to Configuration Manager to get the new Client Settings?]]></description>
 </item></channel>
 </rss>
