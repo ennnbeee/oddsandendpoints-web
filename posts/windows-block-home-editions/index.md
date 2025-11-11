@@ -1,4 +1,4 @@
-# Block Windows Home Intune Enrolment
+# Block Windows Home Enrolment in Intune
 
 
 I'm not saying BYOD on Windows is a bad idea, far from it, with the correct policies in place in Intune and Entra ID, and even Defender for Cloud Apps if you want, you can somewhat manage these personally owned devices, whether you should or not is a different question.
