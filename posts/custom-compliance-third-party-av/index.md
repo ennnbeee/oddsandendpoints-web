@@ -10,8 +10,7 @@ Microsoft have come to the rescue with their [Custom Compliance Settings](https:
 As Custom Compliance isn't that new a feature of Microsoft Intune, I'm not going to deep dive into the process, a number of other people have done that already:
 
 - [Peter van der Woude](https://www.petervanderwoude.nl/post/working-with-custom-compliance-settings/)
-- [Call4Cloud](https://call4cloud.nl/2021/11/the-last-days-of-custom-compliance/)
-- [Device Advice](https://deviceadvice.io/2021/12/01/deploy-a-custom-compliance-policy-in-mem/)
+- [Rudy Ooms](https://call4cloud.nl/2021/11/the-last-days-of-custom-compliance/)
 
 We're going to focus on how to use it to achieve our goal, detecting additional information about third-party Antivirus solutions.
 
@@ -77,7 +76,7 @@ With the information available about the Antivirus products, we need to be able 
 productState             : 393472
 ```
 
-This hex value does translate into something we can use to identify the definition and protection status checks, and thanks to [Marc Schneider](https://github.com/appgate/sdp-win-security-center/blob/master/avinspect.ps1) we can actually understand this number and how to use it as part of a Custom Compliance policy.
+This hex value does translate into something we can use to identify the definition and protection status checks, and thanks to [Marc Schneider](https://appgate.github.io/sdp-win-security-center/) we can actually understand this number and how to use it as part of a Custom Compliance policy.
 
 The six-digit value for 'productState' can be broken down into three pairs of two-digits, with each actually meaning something once converted to a hex string:
 

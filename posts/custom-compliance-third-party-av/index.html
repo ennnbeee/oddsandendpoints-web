@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/custom-compliance-third-party-av/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["custom compliance policies","third-party antivirus compliance","Intune antivirus management","non-Microsoft antivirus","endpoint security compliance"],"wordcount":  1549 ,
+                        }],"genre": "posts","keywords":["custom compliance policies","third-party antivirus compliance","Intune antivirus management","non-Microsoft antivirus","endpoint security compliance"],"wordcount":  1548 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/custom-compliance-third-party-av/","datePublished": "2023-06-11T21:25:23+01:00","dateModified": "2024-12-02T21:03:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -268,8 +268,7 @@
     <a href="#custom-compliance-policies" class="header-mark"></a>Custom Compliance Policies</h2><p>As Custom Compliance isn&rsquo;t that new a feature of Microsoft Intune, I&rsquo;m not going to deep dive into the process, a number of other people have done that already:</p>
 <ul>
 <li><a href="https://www.petervanderwoude.nl/post/working-with-custom-compliance-settings/" target="_blank" rel="noopener noreferrer">Peter van der Woude</a></li>
-<li><a href="https://call4cloud.nl/2021/11/the-last-days-of-custom-compliance/" target="_blank" rel="noopener noreferrer">Call4Cloud</a></li>
-<li><a href="https://deviceadvice.io/2021/12/01/deploy-a-custom-compliance-policy-in-mem/" target="_blank" rel="noopener noreferrer">Device Advice</a></li>
+<li><a href="https://call4cloud.nl/2021/11/the-last-days-of-custom-compliance/" target="_blank" rel="noopener noreferrer">Rudy Ooms</a></li>
 </ul>
 <p>We&rsquo;re going to focus on how to use it to achieve our goal, detecting additional information about third-party Antivirus solutions.</p>
 <h3 id="powershell-and-wmi" class="headerLink">
@@ -675,7 +674,7 @@
       tw-scrollbar-thin
       "><span class="line hl"><span class="cl">productState             : 393472</span></span></code></pre>
 </div>
-<p>This hex value does translate into something we can use to identify the definition and protection status checks, and thanks to <a href="https://github.com/appgate/sdp-win-security-center/blob/master/avinspect.ps1" target="_blank" rel="noopener noreferrer">Marc Schneider</a> we can actually understand this number and how to use it as part of a Custom Compliance policy.</p>
+<p>This hex value does translate into something we can use to identify the definition and protection status checks, and thanks to <a href="https://appgate.github.io/sdp-win-security-center/" target="_blank" rel="noopener noreferrer">Marc Schneider</a> we can actually understand this number and how to use it as part of a Custom Compliance policy.</p>
 <p>The six-digit value for &lsquo;productState&rsquo; can be broken down into three pairs of two-digits, with each actually meaning something once converted to a hex string:</p>
 <ul>
 <li>1st Pair: Product Type</li>
