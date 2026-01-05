@@ -24,7 +24,7 @@ So we can create a new Settings Catalog policy in Intune, with the below setting
 | Administrative Templates > Control Panel > Personalization | Enable screen saver (User) | `Enabled` |
 | Administrative Templates > Control Panel > Personalization | Force specific screen saver (User) | `Enabled` |
 | Administrative Templates > Control Panel > Personalization | Force specific screen saver (User) > Screen saver executable name (User) | `%Systemroot%\System32\Ribbons.scr` |
-| Administrative Templates > Control Panel > Personalization| Prevent changing screen saver (User) | `Enabled` |
+| Administrative Templates > Control Panel > Personalization | Prevent changing screen saver (User) | `Enabled` |
 | Administrative Templates > Control Panel > Personalization | Screen saver timeout (User) | `Enabled` |
 | Administrative Templates > Control Panel > Personalization | Screen saver timeout (User) > Seconds: (User) | `30` |
 
@@ -115,5 +115,5 @@ Here the device has been idle for the configured 30 seconds (just assume this is
 
 Yes, I *could* have included the creation of a log file in the script, I *could* have included a check to see if an existing Scheduled Task of the same name existed first, and I *could* have given the logged on user an option to stop the logoff or even notify them that something is happening, but honestly, ~I've seen some of the scripts being punted into the production and the fact I'm using try and catch is more than enough~ just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.
 
-Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media 😶.
+Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media on their phones 😶.
 

@@ -47,7 +47,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1225 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1228 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/","datePublished": "2026-01-05T15:24:23+00:00","dateModified": "2026-01-05T15:24:23+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -481,7 +481,7 @@
 </span></span><span class="line"><span class="cl">    <span class="n">Exit</span> <span class="mf">0</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">catch</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="s2">&#34;Failed to create scheduled task &#39;</span><span class="nv">$stTaskName</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Write-Error</span> <span class="s2">&#34;Failed to create scheduled task </span><span class="nv">$stTaskName</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Exit</span> <span class="mf">1</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </div>
@@ -551,7 +551,7 @@
 <p>Here the device has been idle for the configured 30 seconds (just assume this is true, also please update the screensaver timeout setting before you deploy it 😂), the screensaver was invoked, and the logoff forced.</p>
 <h2 id="summary" class="headerLink">
     <a href="#summary" class="header-mark"></a>Summary</h2><p>Yes, I <em>could</em> have included the creation of a log file in the script, I <em>could</em> have included a check to see if an existing Scheduled Task of the same name existed first, and I <em>could</em> have given the logged on user an option to stop the logoff or even notify them that something is happening, but honestly, <del>I&rsquo;ve seen some of the scripts being punted into the production and the fact I&rsquo;m using try and catch is more than enough</del> just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.</p>
-<p>Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media 😶.</p>
+<p>Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media on their phones 😶.</p>
 </div>
 
         <div class="post-footer" id="post-footer">
