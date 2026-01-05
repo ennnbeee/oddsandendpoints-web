@@ -3,7 +3,15 @@
         <title>Windows - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/windows/</link>
         <description>Windows - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 05 Jan 2026 15:24:23 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/windows/" rel="self" type="application/rss+xml" /><item>
+    <title>Automatically Logging Off Idle Windows Devices</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/</link>
+    <pubDate>Mon, 05 Jan 2026 15:24:23 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-idle-logoff/featured.png" referrerpolicy="no-referrer">
+            </div>Can we use native Intune tools to automatically log off idle users on shared Windows devices when device locking isn&rsquo;t good enough?]]></description>
+</item><item>
     <title>Block Windows Home Enrolment in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-block-home-editions/</link>
     <pubDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</pubDate><author>
@@ -75,13 +83,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/windows-applocker-intune/featured.png" referrerpolicy="no-referrer">
             </div>We know that there is no native configuration for AppLocker in Intune, and we should be looking at App Control for Business already, but there is still a place for AppLocker, and I haven&rsquo;t got time to manually do anything, so let&rsquo;s use PowerShell to create out AppLocker policies from exported XML files.]]></description>
-</item><item>
-    <title>Self-Service Software Update Deployments</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</link>
-    <pubDate>Tue, 24 Sep 2024 11:11:47 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/updates-self-service-deployment/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/updates-self-service-deployment/featured.png" referrerpolicy="no-referrer">
-            </div>Fancy letting your end users select what day of the week they get their device updates allowing them to be truly empowered but still ensure a level of device security, sure you do.]]></description>
 </item></channel>
 </rss>

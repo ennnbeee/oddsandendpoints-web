@@ -262,7 +262,7 @@
             </div><div class="content" id="content" data-pagefind-body><p>Oh I how love the <del>Windows</del> <del>Defender</del> Windows Firewall, and all the restrictions it brings. This time in the world of customers with aggressive firewall policies, we have Group Policy and Microsoft Intune applied firewall rules, only allowing inbound and outbound network traffic when on Private and Domain networks.</p>
 <p>This you think shouldn&rsquo;t be such an issue, but it is in general and particularly during Windows Autopilot deployments.</p>
 <p>What happens when a user doesn&rsquo;t select <strong>&lsquo;Yes&rsquo;</strong> to the below notification prompt, or just plain ignores it?</p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/nwpro-notification_hu_9cea182740ce4155.png" title="Network Notification" data-thumbnail="/posts/windows-network-profile-locations/img/nwpro-notification_hu_9cea182740ce4155.png" data-sub-html="<h2>Network location user notification.</h2><p>Network Notification</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/nwpro-notification_hu_9cea182740ce4155.png'   alt="Network Notification"  ></a><figcaption class="image-caption">Network location user notification.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/nwpro-notification_hu_e94b9654856a8324.png" title="Network Notification" data-thumbnail="/posts/windows-network-profile-locations/img/nwpro-notification_hu_e94b9654856a8324.png" data-sub-html="<h2>Network location user notification.</h2><p>Network Notification</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/nwpro-notification_hu_e94b9654856a8324.png'   alt="Network Notification"  ></a><figcaption class="image-caption">Network location user notification.</figcaption>
 </figure>
 
 </p>
@@ -364,7 +364,7 @@
       "><span class="line"><span class="cl"><span class="n">HKLM</span><span class="err">:</span><span class="p">\</span><span class="n">SOFTWARE</span><span class="p">\</span><span class="n">Microsoft</span><span class="p">\</span><span class="n">Windows</span> <span class="n">NT</span><span class="p">\</span><span class="n">CurrentVersion</span><span class="p">\</span><span class="n">NetworkList</span><span class="p">\</span><span class="n">Profiles</span></span></span></code></pre>
 </div>
 <p>You&rsquo;ll see a whole host of network profiles stored under GUIDs, just like the below:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regpub_hu_7891439c46a55f6f.png" title="Network Profile Registry" data-thumbnail="/posts/windows-network-profile-locations/img/network-regpub_hu_7891439c46a55f6f.png" data-sub-html="<h2>Registry settings for Network Profiles.</h2><p>Network Profile Registry</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regpub_hu_7891439c46a55f6f.png'   alt="Network Profile Registry"  ></a><figcaption class="image-caption">Registry settings for Network Profiles.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regpub_hu_8eeb807aad4ffabb.png" title="Network Profile Registry" data-thumbnail="/posts/windows-network-profile-locations/img/network-regpub_hu_8eeb807aad4ffabb.png" data-sub-html="<h2>Registry settings for Network Profiles.</h2><p>Network Profile Registry</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regpub_hu_8eeb807aad4ffabb.png'   alt="Network Profile Registry"  ></a><figcaption class="image-caption">Registry settings for Network Profiles.</figcaption>
 </figure>
 
 </p>
@@ -901,7 +901,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-11" 
+    id="codeblock-id-12" 
     class="
       chroma 
       !tw-block 
@@ -1066,7 +1066,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-12" 
+    id="codeblock-id-13" 
     class="
       chroma 
       !tw-block 
@@ -1122,39 +1122,39 @@
 <p>No, the remediation script didn&rsquo;t get any prettier.</p>
 <h3 id="deployment-outcome" class="headerLink">
     <a href="#deployment-outcome" class="header-mark"></a>Deployment Outcome</h3><p>Before we deploy these scripts using Microsoft Intune, we can look at the network profiles on a sample device, with each profile currently having the incorrect category assigned:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regpub_hu_7891439c46a55f6f.png" title="Network Public" data-thumbnail="/posts/windows-network-profile-locations/img/network-regpub_hu_7891439c46a55f6f.png" data-sub-html="<h2>Screenshot of the registry settings for a public network profile.</h2><p>Network Public</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regpub_hu_7891439c46a55f6f.png'   alt="Network Public"  ></a><figcaption class="image-caption">Screenshot of the registry settings for a public network profile.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regpub_hu_8eeb807aad4ffabb.png" title="Network Public" data-thumbnail="/posts/windows-network-profile-locations/img/network-regpub_hu_8eeb807aad4ffabb.png" data-sub-html="<h2>Screenshot of the registry settings for a public network profile.</h2><p>Network Public</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regpub_hu_8eeb807aad4ffabb.png'   alt="Network Public"  ></a><figcaption class="image-caption">Screenshot of the registry settings for a public network profile.</figcaption>
 </figure>
 
 </p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regpriv_hu_aa1f0eec70c4792d.png" title="Network Private" data-thumbnail="/posts/windows-network-profile-locations/img/network-regpriv_hu_aa1f0eec70c4792d.png" data-sub-html="<h2>Screenshot of the registry settings for a Private network profile.</h2><p>Network Private</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regpriv_hu_aa1f0eec70c4792d.png'   alt="Network Private"  ></a><figcaption class="image-caption">Screenshot of the registry settings for a Private network profile.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regpriv_hu_a68de6cbe7050787.png" title="Network Private" data-thumbnail="/posts/windows-network-profile-locations/img/network-regpriv_hu_a68de6cbe7050787.png" data-sub-html="<h2>Screenshot of the registry settings for a Private network profile.</h2><p>Network Private</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regpriv_hu_a68de6cbe7050787.png'   alt="Network Private"  ></a><figcaption class="image-caption">Screenshot of the registry settings for a Private network profile.</figcaption>
 </figure>
 
 </p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regvpn_hu_87b7e77aa75e9c1c.png" title="Network VPN" data-thumbnail="/posts/windows-network-profile-locations/img/network-regvpn_hu_87b7e77aa75e9c1c.png" data-sub-html="<h2>Screenshot of the registry settings for a VPN network profile.</h2><p>Network VPN</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regvpn_hu_87b7e77aa75e9c1c.png'   alt="Network VPN"  ></a><figcaption class="image-caption">Screenshot of the registry settings for a VPN network profile.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regvpn_hu_c44830524fdcf822.png" title="Network VPN" data-thumbnail="/posts/windows-network-profile-locations/img/network-regvpn_hu_c44830524fdcf822.png" data-sub-html="<h2>Screenshot of the registry settings for a VPN network profile.</h2><p>Network VPN</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regvpn_hu_c44830524fdcf822.png'   alt="Network VPN"  ></a><figcaption class="image-caption">Screenshot of the registry settings for a VPN network profile.</figcaption>
 </figure>
 
 </p>
 <p>Configure the remediation in Microsoft Intune like the below:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-rem_hu_1519b5af501fce43.png" title="Intune Remediation" data-thumbnail="/posts/windows-network-profile-locations/img/network-rem_hu_1519b5af501fce43.png" data-sub-html="<h2>Microsoft Intune remediation script settings.</h2><p>Intune Remediation</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-rem_hu_1519b5af501fce43.png'   alt="Intune Remediation"  ></a><figcaption class="image-caption">Microsoft Intune remediation script settings.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-rem_hu_1e3242ba452e3aaa.png" title="Intune Remediation" data-thumbnail="/posts/windows-network-profile-locations/img/network-rem_hu_1e3242ba452e3aaa.png" data-sub-html="<h2>Microsoft Intune remediation script settings.</h2><p>Intune Remediation</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-rem_hu_1e3242ba452e3aaa.png'   alt="Intune Remediation"  ></a><figcaption class="image-caption">Microsoft Intune remediation script settings.</figcaption>
 </figure>
 
 </p>
 <p>Make sure you actually assign this to your devices, I&rsquo;d recommend a daily schedule to ensure that any new networks are picked up by the remediation.</p>
 <p>After a while, you should start seeing devices check in and remediate:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-remresults_hu_728259bf4d60c1c6.png" title="Intune Remediation" data-thumbnail="/posts/windows-network-profile-locations/img/network-remresults_hu_728259bf4d60c1c6.png" data-sub-html="<h2>Microsoft Intune remediation results.</h2><p>Intune Remediation</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-remresults_hu_728259bf4d60c1c6.png'   alt="Intune Remediation"  ></a><figcaption class="image-caption">Microsoft Intune remediation results.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-remresults_hu_7f05ffa2dcdd1acd.png" title="Intune Remediation" data-thumbnail="/posts/windows-network-profile-locations/img/network-remresults_hu_7f05ffa2dcdd1acd.png" data-sub-html="<h2>Microsoft Intune remediation results.</h2><p>Intune Remediation</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-remresults_hu_7f05ffa2dcdd1acd.png'   alt="Intune Remediation"  ></a><figcaption class="image-caption">Microsoft Intune remediation results.</figcaption>
 </figure>
 
 </p>
 <p>Looking back on our sample device in the registry, we can see that the networks have updated to the correct locations:</p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-reffixdom_hu_84ff9a83a6e3935b.png" title="Network Domain" data-thumbnail="/posts/windows-network-profile-locations/img/network-reffixdom_hu_84ff9a83a6e3935b.png" data-sub-html="<h2>Screenshot of the updated registry settings for a Domain network profile.</h2><p>Network Domain</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-reffixdom_hu_84ff9a83a6e3935b.png'   alt="Network Domain"  ></a><figcaption class="image-caption">Screenshot of the updated registry settings for a Domain network profile.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-reffixdom_hu_60016867028a51c4.png" title="Network Domain" data-thumbnail="/posts/windows-network-profile-locations/img/network-reffixdom_hu_60016867028a51c4.png" data-sub-html="<h2>Screenshot of the updated registry settings for a Domain network profile.</h2><p>Network Domain</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-reffixdom_hu_60016867028a51c4.png'   alt="Network Domain"  ></a><figcaption class="image-caption">Screenshot of the updated registry settings for a Domain network profile.</figcaption>
 </figure>
 
 </p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regfixpriv_hu_e50948acd1897bc7.png" title="Network Private" data-thumbnail="/posts/windows-network-profile-locations/img/network-regfixpriv_hu_e50948acd1897bc7.png" data-sub-html="<h2>Screenshot of the updated registry settings for a Private network profile.</h2><p>Network Private</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regfixpriv_hu_e50948acd1897bc7.png'   alt="Network Private"  ></a><figcaption class="image-caption">Screenshot of the updated registry settings for a Private network profile.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regfixpriv_hu_4c762c6dc75f72e.png" title="Network Private" data-thumbnail="/posts/windows-network-profile-locations/img/network-regfixpriv_hu_4c762c6dc75f72e.png" data-sub-html="<h2>Screenshot of the updated registry settings for a Private network profile.</h2><p>Network Private</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regfixpriv_hu_4c762c6dc75f72e.png'   alt="Network Private"  ></a><figcaption class="image-caption">Screenshot of the updated registry settings for a Private network profile.</figcaption>
 </figure>
 
 </p>
-<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regfixvpn_hu_3a4e38331935fe40.png" title="Network VPN" data-thumbnail="/posts/windows-network-profile-locations/img/network-regfixvpn_hu_3a4e38331935fe40.png" data-sub-html="<h2>Screenshot of the updated registry settings for a VPN network profile.</h2><p>Network VPN</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regfixvpn_hu_3a4e38331935fe40.png'   alt="Network VPN"  ></a><figcaption class="image-caption">Screenshot of the updated registry settings for a VPN network profile.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/windows-network-profile-locations/img/network-regfixvpn_hu_28476a6105b78c7b.png" title="Network VPN" data-thumbnail="/posts/windows-network-profile-locations/img/network-regfixvpn_hu_28476a6105b78c7b.png" data-sub-html="<h2>Screenshot of the updated registry settings for a VPN network profile.</h2><p>Network VPN</p>"><img  loading="lazy" src='/posts/windows-network-profile-locations/img/network-regfixvpn_hu_28476a6105b78c7b.png'   alt="Network VPN"  ></a><figcaption class="image-caption">Screenshot of the updated registry settings for a VPN network profile.</figcaption>
 </figure>
 
 </p>
@@ -1212,8 +1212,8 @@
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p class="copyright"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2025<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></p>
-                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.152.2">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2026<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></p>
+                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.154.2">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a></p>
             </div>
         </div>

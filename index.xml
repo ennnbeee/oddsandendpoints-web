@@ -3,9 +3,17 @@
         <title>odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/</link>
         <description>A collection of solutions, ideas, and insights into problems you probably didn&#39;t know existed with Modern Endpoint Management products.</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Dec 2025 15:24:23 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 05 Jan 2026 15:24:23 &#43;0000</lastBuildDate>
             <atom:link href="https://www.oddsandendpoints.co.uk/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Automatically Logging Off Idle Windows Devices</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/</link>
+    <pubDate>Mon, 05 Jan 2026 15:24:23 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-idle-logoff/featured.png" referrerpolicy="no-referrer">
+            </div>Can we use native Intune tools to automatically log off idle users on shared Windows devices when device locking isn&rsquo;t good enough?]]></description>
+</item><item>
     <title>Block Windows Home Enrolment in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-block-home-editions/</link>
     <pubDate>Tue, 11 Nov 2025 13:27:26 &#43;0000</pubDate><author>
@@ -77,13 +85,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/android-enterprise-enrolment-customisation/featured.png" referrerpolicy="no-referrer">
             </div>Making your users lives easier with Android Enterprise enrolment into Intune, allowing them to use mobile data or a configured wireless network.]]></description>
-</item><item>
-    <title>BitLocker Recovery Key Rotation Requirements in Intune</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</link>
-    <pubDate>Tue, 21 Jan 2025 16:39:24 &#43;0000</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/bitlocker-key-rotation-requirements/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/bitlocker-key-rotation-requirements/featured.png" referrerpolicy="no-referrer">
-            </div>What are the actual settings you require to allow for BitLocker recovery key rotation from the Intune console? Which BitLocker profile support the key rotation settings? Are these settings actually documented anywhere? Well yes, they are now.]]></description>
 </item></channel>
 </rss>

@@ -842,7 +842,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-26" 
+    id="codeblock-id-29" 
     class="
       chroma 
       !tw-block 
@@ -1196,7 +1196,7 @@
     </div>
   </div>
   <pre style="counter-reset: codeblock;" class="tw-block tw-m-0 tw-p-0"><code 
-    id="codeblock-id-27" 
+    id="codeblock-id-30" 
     class="
       chroma 
       !tw-block 
@@ -1263,12 +1263,12 @@
 <h2 id="deploying-custom-compliance" class="headerLink">
     <a href="#deploying-custom-compliance" class="header-mark"></a>Deploying Custom Compliance</h2><p>We&rsquo;ve now got both a PowerShell script and JSON file, so the last steps are to throw these into Microsoft Intune.</p>
 <p>First off we need to add the PowerShell script in the <a href="https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesComplianceMenu/~/customComplianceScripts" target="_blank" rel="noopener noreferrer">Compliance Scripts</a> section.</p>
-<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-script_hu_4707534e95af9df7.png" title="Compliance Script" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-script_hu_4707534e95af9df7.png" data-sub-html="<h2>Compliance Policy script in Microsoft Intune.</h2><p>Compliance Script</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-script_hu_4707534e95af9df7.png'   alt="Compliance Script"  ></a><figcaption class="image-caption">Compliance Policy script in Microsoft Intune.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-script_hu_3acc88683d78fb80.png" title="Compliance Script" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-script_hu_3acc88683d78fb80.png" data-sub-html="<h2>Compliance Policy script in Microsoft Intune.</h2><p>Compliance Script</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-script_hu_3acc88683d78fb80.png'   alt="Compliance Script"  ></a><figcaption class="image-caption">Compliance Policy script in Microsoft Intune.</figcaption>
 </figure>
 
 </p>
 <p>Following this, we can now create our Custom Compliance policy for Windows; select the previously created PowerShell script, and we&rsquo;ll need to upload the JSON file created earlier.</p>
-<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-compliance_hu_36e87b010e8abcd6.png" title="Custom Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-compliance_hu_36e87b010e8abcd6.png" data-sub-html="<h2>Compliance Policy in Microsoft Intune.</h2><p>Custom Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-compliance_hu_36e87b010e8abcd6.png'   alt="Custom Compliance"  ></a><figcaption class="image-caption">Compliance Policy in Microsoft Intune.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-compliance_hu_9d230e66b14f77ea.png" title="Custom Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-compliance_hu_9d230e66b14f77ea.png" data-sub-html="<h2>Compliance Policy in Microsoft Intune.</h2><p>Custom Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-compliance_hu_9d230e66b14f77ea.png'   alt="Custom Compliance"  ></a><figcaption class="image-caption">Compliance Policy in Microsoft Intune.</figcaption>
 </figure>
 
 </p>
@@ -1276,17 +1276,17 @@
 <h3 id="checking-compliance-state" class="headerLink">
     <a href="#checking-compliance-state" class="header-mark"></a>Checking Compliance State</h3><p>With the Custom Compliance policy deployed, and waiting a little while for devices to start reporting back, we can check on the status of the devices it has been assigned to.</p>
 <p>We have some good devices:</p>
-<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-compliant_hu_22be3a6ed80eab18.png" title="Good Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-compliant_hu_22be3a6ed80eab18.png" data-sub-html="<h2>Microsoft Intune Compliance check with good results.</h2><p>Good Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-compliant_hu_22be3a6ed80eab18.png'   alt="Good Compliance"  ></a><figcaption class="image-caption">Microsoft Intune Compliance check with good results.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-compliant_hu_3d8e2f7a6d726c33.png" title="Good Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-compliant_hu_3d8e2f7a6d726c33.png" data-sub-html="<h2>Microsoft Intune Compliance check with good results.</h2><p>Good Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-compliant_hu_3d8e2f7a6d726c33.png'   alt="Good Compliance"  ></a><figcaption class="image-caption">Microsoft Intune Compliance check with good results.</figcaption>
 </figure>
 
 </p>
 <p>Some not so good:</p>
-<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-defs_hu_c1141a84683b39e4.png" title="Poor Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-defs_hu_c1141a84683b39e4.png" data-sub-html="<h2>Microsoft Intune Compliance check with poor results.</h2><p>Poor Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-defs_hu_c1141a84683b39e4.png'   alt="Poor Compliance"  ></a><figcaption class="image-caption">Microsoft Intune Compliance check with poor results.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-defs_hu_2a3454debcbde4e4.png" title="Poor Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-defs_hu_2a3454debcbde4e4.png" data-sub-html="<h2>Microsoft Intune Compliance check with poor results.</h2><p>Poor Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-defs_hu_2a3454debcbde4e4.png'   alt="Poor Compliance"  ></a><figcaption class="image-caption">Microsoft Intune Compliance check with poor results.</figcaption>
 </figure>
 
 </p>
 <p>Some truly problematic:</p>
-<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-all_hu_7b0d037811dae696.png" title="Bad Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-all_hu_7b0d037811dae696.png" data-sub-html="<h2>Microsoft Intune Compliance check with bad results.</h2><p>Bad Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-all_hu_7b0d037811dae696.png'   alt="Bad Compliance"  ></a><figcaption class="image-caption">Microsoft Intune Compliance check with bad results.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-all_hu_b5bc309b18c845b8.png" title="Bad Compliance" data-thumbnail="/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-all_hu_b5bc309b18c845b8.png" data-sub-html="<h2>Microsoft Intune Compliance check with bad results.</h2><p>Bad Compliance</p>"><img  loading="lazy" src='/posts/custom-compliance-third-party-av/img/avcomp-noncompliant-all_hu_b5bc309b18c845b8.png'   alt="Bad Compliance"  ></a><figcaption class="image-caption">Microsoft Intune Compliance check with bad results.</figcaption>
 </figure>
 
 </p>
@@ -1344,8 +1344,8 @@
         <div class="footer-bottom">
             <div class="footer-bottom-content">
                 <p class="copyright"><svg class="icon"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2025<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></p>
-                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.152.2">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2026<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></p>
+                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.154.2">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a></p>
             </div>
         </div>
