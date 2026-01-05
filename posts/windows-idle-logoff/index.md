@@ -17,7 +17,7 @@ Firstly, we need a suitable and importantly built-in way to identify whether a d
 
 Configuring a screensaver with an idle timeout, instead of having to apply our own logic, will speed up the process, or at least an ability to trigger a logoff to happen.
 
-So we can create a new Settings Catalog policy in Intune, with the below settings that will enable and set a specific screensaver (bring back [Windows XP Starfield](https://www.youtube.com/watch?v=CRQF__6A93k)), the timeout, and stopping users changing these settings which we will actually rely on for something other than power saving.
+So we can create a new Settings Catalog policy in Intune, with the below settings that will enable and set a specific screensaver (bring back [Windows XP Starfield](https://www.youtube.com/watch?v=CRQF__6A93k)), the timeout, and stop users changing these settings which we will actually rely on for something other than power saving.
 
 | Category | Setting | Value |
 | :- | :- | :- |
@@ -28,7 +28,7 @@ So we can create a new Settings Catalog policy in Intune, with the below setting
 | Administrative Templates > Control Panel > Personalization | Screen saver timeout (User) | `Enabled` |
 | Administrative Templates > Control Panel > Personalization | Screen saver timeout (User) > Seconds: (User) | `30` |
 
-For testing, I'm setting the **Screen saver timeout (User) > Seconds: (User)** to `30` so I'm not sitting around twiddling my thumbs waiting for something to happen.
+For testing, I'm setting the **Screen saver timeout (User) > Seconds: (User)** to `30` so I'm not sitting around twiddling my thumbs waiting for something to happen, I'd suggest you set this to something more realistic before you deploy this policy.
 
 With these settings applied you should see them in the [HKCU](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) registry of the logged in user under `HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Control Panel\Desktop`.
 
@@ -40,13 +40,13 @@ The screensaver will trigger even if the device is locked, but not if the device
 
 ### Event Logs
 
-With a policy configuring the screensaver to start, we now need a way to initiate a shutdown based on this event (*hint hint*).
+With a policy configuring the screensaver to start after a set idle time, we now need a way to initiate a shutdown based on this event (*hint hint*).
 
 Luckily for us, with the right audit policies, we can capture [Event ID 4802](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4802) which covers whether a screensaver was invoked (that's "started" to you and me).
 
 ![Windows Event Viewer](img/wil-eventid4802.png "The Windows Security Event log showing Event ID 4802 for invocation of the screensaver.")
 
-Now for that event to even be displayed, we need to turn on auditing of [Other Logon/Logoff Events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-logonlogoff-events), which can be done using Intune, so go and amend your previous Settings Catalog policy with the below setting.
+Now for that event to even be displayed, we need to turn on auditing of [Other Logon/Logoff Events](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-logonlogoff-events), which can be done using Intune, so go and update your Settings Catalog policy with the below setting.
 
 | Category | Setting | Value |
 | :- | :- | :- |
@@ -85,9 +85,11 @@ Just make sure that you configure the deployment with the below settings.
 | Enforce script signature check | `No` |
 | Run script in 64 bit PowerShell Host | `Yes` |
 
+With a bit of luck, and the usual patience, the script will run on the targeted devices and along with the corresponding Settings Catalog policy to configure the screensaver and event log audit settings, we should be good.
+
 ### Scheduled Task Settings
 
-To make sure that the script has done what we've asked it to, you should now see a new Scheduled Task deployed to your targeted devices
+To make sure that the script has done what we've asked it to, you should now see a new Scheduled Task deployed to your targeted devices.
 
 ![Scheduled Task General Settings](img/wil-st-gen.png "A screenshot of the Scheduled Task general settings page.")
 
@@ -99,17 +101,19 @@ And the action to force logoff the user on the device using the **shutdown.exe**
 
 ![Scheduled Task Actions](img/wil-st-action.png "A screenshot of the Scheduled Task actions page.")
 
+All we need now are some idle users 😅.
+
 ### Scheduled Task in Action
 
 For those that didn't get enough time off over the Christmas/Winter holidays to watch videos, here's one showing the logoff process.
 
 {{< video src="img/wil-logoff" width="800px">}}
 
-Here the device has been idle for the configured 30 seconds (just assume this is true), the screensaver was invoked, and the logoff forced.
+Here the device has been idle for the configured 30 seconds (just assume this is true, also please update the screensaver timeout setting before you deploy it 😂), the screensaver was invoked, and the logoff forced.
 
 ## Summary
 
-Yes, I *could* have included the creation of log file in the script, I *could* have included a check to see if an existing Scheduled Task of the same name existed first, and I *could* have given the logged on user an option to stop the logoff, but honestly, ~I've seen some of the scripts being punted into the wild as production ready and the fact I'm using try and catch is more than enough~ just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.
+Yes, I *could* have included the creation of a log file in the script, I *could* have included a check to see if an existing Scheduled Task of the same name existed first, and I *could* have given the logged on user an option to stop the logoff or even notify them that something is happening, but honestly, ~I've seen some of the scripts being punted into the production and the fact I'm using try and catch is more than enough~ just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.
 
-Either way, this was a quick and easy way for ensuring some level of device security when people just leave their workstation unattended or even just blankly stare into the abyss forgetting to move their mouse once in a while 😶.
+Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media 😶.
 

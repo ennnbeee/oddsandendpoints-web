@@ -47,7 +47,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":[""],"wordcount":  1139 ,
+                        }],"genre": "posts","keywords":[""],"wordcount":  1225 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-idle-logoff/","datePublished": "2026-01-05T15:24:23+00:00","dateModified": "2026-01-05T15:24:23+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -262,7 +262,7 @@
 </p>
 <h3 id="screensaver-settings" class="headerLink">
     <a href="#screensaver-settings" class="header-mark"></a>Screensaver Settings</h3><p>Configuring a screensaver with an idle timeout, instead of having to apply our own logic, will speed up the process, or at least an ability to trigger a logoff to happen.</p>
-<p>So we can create a new Settings Catalog policy in Intune, with the below settings that will enable and set a specific screensaver (bring back <a href="https://www.youtube.com/watch?v=CRQF__6A93k" target="_blank" rel="noopener noreferrer">Windows XP Starfield</a>), the timeout, and stopping users changing these settings which we will actually rely on for something other than power saving.</p>
+<p>So we can create a new Settings Catalog policy in Intune, with the below settings that will enable and set a specific screensaver (bring back <a href="https://www.youtube.com/watch?v=CRQF__6A93k" target="_blank" rel="noopener noreferrer">Windows XP Starfield</a>), the timeout, and stop users changing these settings which we will actually rely on for something other than power saving.</p>
 
 <div class="table-wrapper">
   <table>
@@ -307,7 +307,7 @@
     </tbody>
   </table>
 </div>
-<p>For testing, I&rsquo;m setting the <strong>Screen saver timeout (User) &gt; Seconds: (User)</strong> to <code>30</code> so I&rsquo;m not sitting around twiddling my thumbs waiting for something to happen.</p>
+<p>For testing, I&rsquo;m setting the <strong>Screen saver timeout (User) &gt; Seconds: (User)</strong> to <code>30</code> so I&rsquo;m not sitting around twiddling my thumbs waiting for something to happen, I&rsquo;d suggest you set this to something more realistic before you deploy this policy.</p>
 <p>With these settings applied you should see them in the <a href="https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users" target="_blank" rel="noopener noreferrer">HKCU</a> registry of the logged in user under <code>HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Control Panel\Desktop</code>.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-idle-logoff/img/wil-reg_hu_c73ad2f13444e882.png" title="Windows Registry" data-thumbnail="/posts/windows-idle-logoff/img/wil-reg_hu_c73ad2f13444e882.png" data-sub-html="<h2>The HKCU registry containing the applied screensaver settings.</h2><p>Windows Registry</p>"><img  loading="lazy" src='/posts/windows-idle-logoff/img/wil-reg_hu_c73ad2f13444e882.png'   alt="Windows Registry"  ></a><figcaption class="image-caption">The HKCU registry containing the applied screensaver settings.</figcaption>
 </figure>
@@ -322,13 +322,13 @@
     <div class="details-content">
         <div class="admonition-content">The screensaver will trigger even if the device is locked, but not if the device is asleep, so you may have to amend the timeout settings to suit your setup.</div></div></div>
 <h3 id="event-logs" class="headerLink">
-    <a href="#event-logs" class="header-mark"></a>Event Logs</h3><p>With a policy configuring the screensaver to start, we now need a way to initiate a shutdown based on this event (<em>hint hint</em>).</p>
+    <a href="#event-logs" class="header-mark"></a>Event Logs</h3><p>With a policy configuring the screensaver to start after a set idle time, we now need a way to initiate a shutdown based on this event (<em>hint hint</em>).</p>
 <p>Luckily for us, with the right audit policies, we can capture <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4802" target="_blank" rel="noopener noreferrer">Event ID 4802</a> which covers whether a screensaver was invoked (that&rsquo;s &ldquo;started&rdquo; to you and me).</p>
 <p><figure><a class="lightgallery" href="/posts/windows-idle-logoff/img/wil-eventid4802_hu_c4fcdf6ded952110.png" title="Windows Event Viewer" data-thumbnail="/posts/windows-idle-logoff/img/wil-eventid4802_hu_c4fcdf6ded952110.png" data-sub-html="<h2>The Windows Security Event log showing Event ID 4802 for invocation of the screensaver.</h2><p>Windows Event Viewer</p>"><img  loading="lazy" src='/posts/windows-idle-logoff/img/wil-eventid4802_hu_c4fcdf6ded952110.png'   alt="Windows Event Viewer"  ></a><figcaption class="image-caption">The Windows Security Event log showing Event ID 4802 for invocation of the screensaver.</figcaption>
 </figure>
 
 </p>
-<p>Now for that event to even be displayed, we need to turn on auditing of <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-logonlogoff-events" target="_blank" rel="noopener noreferrer">Other Logon/Logoff Events</a>, which can be done using Intune, so go and amend your previous Settings Catalog policy with the below setting.</p>
+<p>Now for that event to even be displayed, we need to turn on auditing of <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-logonlogoff-events" target="_blank" rel="noopener noreferrer">Other Logon/Logoff Events</a>, which can be done using Intune, so go and update your Settings Catalog policy with the below setting.</p>
 
 <div class="table-wrapper">
   <table>
@@ -524,8 +524,9 @@
     </tbody>
   </table>
 </div>
+<p>With a bit of luck, and the usual patience, the script will run on the targeted devices and along with the corresponding Settings Catalog policy to configure the screensaver and event log audit settings, we should be good.</p>
 <h3 id="scheduled-task-settings" class="headerLink">
-    <a href="#scheduled-task-settings" class="header-mark"></a>Scheduled Task Settings</h3><p>To make sure that the script has done what we&rsquo;ve asked it to, you should now see a new Scheduled Task deployed to your targeted devices</p>
+    <a href="#scheduled-task-settings" class="header-mark"></a>Scheduled Task Settings</h3><p>To make sure that the script has done what we&rsquo;ve asked it to, you should now see a new Scheduled Task deployed to your targeted devices.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-idle-logoff/img/wil-st-gen_hu_c3800edc35d1b98f.png" title="Scheduled Task General Settings" data-thumbnail="/posts/windows-idle-logoff/img/wil-st-gen_hu_c3800edc35d1b98f.png" data-sub-html="<h2>A screenshot of the Scheduled Task general settings page.</h2><p>Scheduled Task General Settings</p>"><img  loading="lazy" src='/posts/windows-idle-logoff/img/wil-st-gen_hu_c3800edc35d1b98f.png'   alt="Scheduled Task General Settings"  ></a><figcaption class="image-caption">A screenshot of the Scheduled Task general settings page.</figcaption>
 </figure>
 
@@ -540,16 +541,17 @@
 </figure>
 
 </p>
+<p>All we need now are some idle users 😅.</p>
 <h3 id="scheduled-task-in-action" class="headerLink">
     <a href="#scheduled-task-in-action" class="header-mark"></a>Scheduled Task in Action</h3><p>For those that didn&rsquo;t get enough time off over the Christmas/Winter holidays to watch videos, here&rsquo;s one showing the logoff process.</p>
 <video controls preload="auto" width="800px"  playsinline class="html-video">
         <source src="/posts/windows-idle-logoff/img/wil-logoff.mp4" type="video/mp4">
       <span></span>
     </video>
-<p>Here the device has been idle for the configured 30 seconds (just assume this is true), the screensaver was invoked, and the logoff forced.</p>
+<p>Here the device has been idle for the configured 30 seconds (just assume this is true, also please update the screensaver timeout setting before you deploy it 😂), the screensaver was invoked, and the logoff forced.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>Summary</h2><p>Yes, I <em>could</em> have included the creation of log file in the script, I <em>could</em> have included a check to see if an existing Scheduled Task of the same name existed first, and I <em>could</em> have given the logged on user an option to stop the logoff, but honestly, <del>I&rsquo;ve seen some of the scripts being punted into the wild as production ready and the fact I&rsquo;m using try and catch is more than enough</del> just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.</p>
-<p>Either way, this was a quick and easy way for ensuring some level of device security when people just leave their workstation unattended or even just blankly stare into the abyss forgetting to move their mouse once in a while 😶.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>Yes, I <em>could</em> have included the creation of a log file in the script, I <em>could</em> have included a check to see if an existing Scheduled Task of the same name existed first, and I <em>could</em> have given the logged on user an option to stop the logoff or even notify them that something is happening, but honestly, <del>I&rsquo;ve seen some of the scripts being punted into the production and the fact I&rsquo;m using try and catch is more than enough</del> just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.</p>
+<p>Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media 😶.</p>
 </div>
 
         <div class="post-footer" id="post-footer">
