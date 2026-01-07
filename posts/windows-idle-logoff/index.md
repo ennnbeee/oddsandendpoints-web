@@ -113,7 +113,7 @@ Here the device has been idle for the configured 30 seconds (just assume this is
 
 ## Summary
 
-Yes, I *could* have included the creation of a log file in the script, I *could* have included a check to see if an existing Scheduled Task of the same name existed first, and I *could* have given the logged on user an option to stop the logoff or even notify them that something is happening, but honestly, ~I've seen some of the scripts being punted into the production and the fact I'm using try and catch is more than enough~ just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.
+Yes, I *could* have included the creation of a log file in the script, I *could* have included a check to see if an existing Scheduled Task of the same name existed first, and I *could* have given the logged on user an option to stop the logoff or even notify them that something is happening, but honestly, ~I've seen some of the scripts being punted into production and the fact I'm using try and catch is more than enough~ just ask Copilot for some advice, we should all be asking it for help and forgiveness in simple scripting tasks like this.
 
 Anyway, this is a quick and easy method for ensuring some level of device security when people just leave their workstation unattended or just blankly stare into the abyss forgetting to move their mouse once in a while whilst they browse social media on their phones 😶.
 
