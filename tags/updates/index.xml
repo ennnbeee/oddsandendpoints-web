@@ -3,7 +3,15 @@
         <title>Software Updates - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/updates/</link>
         <description>Software Updates - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/updates/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 20 Jan 2026 11:15:12 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/updates/" rel="self" type="application/rss+xml" /><item>
+    <title>Keeping macOS Apps updated with App Auto-Patch and Intune</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/</link>
+    <pubDate>Tue, 20 Jan 2026 11:15:12 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/macos-app-auto-patch-intune/featured.png" referrerpolicy="no-referrer">
+            </div>Now that there are so many players in the macOS app management space, how exactly do we keep these apps current and importantly, secure?]]></description>
+</item><item>
     <title>Fine-Tuning Groups for Phased Deployments in Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/tuning-phased-deployment-groups/</link>
     <pubDate>Mon, 13 Oct 2025 12:50:35 &#43;0100</pubDate><author>
@@ -75,13 +83,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/macos-updates-phased-deployment/featured.png" referrerpolicy="no-referrer">
             </div>So you&rsquo;ve pulled the trigger on managing macOS devices in Microsoft Intune, and with this year being the year of macOS for Microsoft (this seems like an oxymoron), you should probably look at how to handle software updates.]]></description>
-</item><item>
-    <title>Risk Based Windows 11 Deployment - Reporting</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part1/</link>
-    <pubDate>Mon, 25 Mar 2024 23:32:16 &#43;0000</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-11-risk-based-deployment-part1/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-11-risk-based-deployment-part1/featured.png" referrerpolicy="no-referrer">
-            </div>With Windows 10 support coming to an end sooner than you&rsquo;d expect, in the first part of this series we look at ways to capture Feature Update Readiness Report data using PowerShell and Graph to help with the rollout of the new Windows 11 operating system.]]></description>
 </item></channel>
 </rss>

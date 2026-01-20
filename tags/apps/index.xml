@@ -3,7 +3,15 @@
         <title>Apps - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/apps/</link>
         <description>Apps - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/apps/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 20 Jan 2026 11:15:12 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/apps/" rel="self" type="application/rss+xml" /><item>
+    <title>Keeping macOS Apps updated with App Auto-Patch and Intune</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/</link>
+    <pubDate>Tue, 20 Jan 2026 11:15:12 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/macos-app-auto-patch-intune/featured.png" referrerpolicy="no-referrer">
+            </div>Now that there are so many players in the macOS app management space, how exactly do we keep these apps current and importantly, secure?]]></description>
+</item><item>
     <title>ConfigMgr Client Installation on Orphaned Devices</title>
     <link>https://www.oddsandendpoints.co.uk/posts/configmgr-client-install-cmg/</link>
     <pubDate>Mon, 02 Sep 2024 20:43:33 &#43;0100</pubDate><author>
