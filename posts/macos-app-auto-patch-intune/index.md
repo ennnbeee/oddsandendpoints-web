@@ -1,9 +1,9 @@
 # Keeping macOS Apps updated with App Auto-Patch and Intune
 
 
-One thing I've learned over the last 18 months or so, is just how congested the app management space is for Intune enrolled Windows and macOS devices alike; with everyone clambering to have the best offerings, or unified portals, or latest functionality.
+One thing I've learned over the last 18 months or so, is just how congested the app management space is for Intune enrolled Windows and macOS devices; with everyone clambering to have the best offerings, unified portals, cloud-first approach, or latest functionality.
 
-What about keeping these apps up to date, there must be easier ways than pushing the new versions of apps from MDM solutions?
+What about keeping these apps up to date? There must be easier ways than pushing the new versions of apps from MDM solutions?
 
 And what's wrong with just using Intune and some open-source software to make sure your devices are running current software?
 
@@ -11,9 +11,9 @@ Well nothing, if it's good enough for [Jamf](https://www.jamf.com/) it's certain
 
 ## Auto App-Patch
 
-There are a handful of options to support the update of applications already installed on macOS devices, one of those is [Auto App-Patch](https://github.com/App-Auto-Patch/App-Auto-Patch) which leans on, and improves the functionality of [Installomator](https://github.com/Installomator/Installomator), and using [swiftDialog](https://github.com/swiftDialog/swiftDialog) can provide users with notifications and interactive messages when updating a set list of apps on the devices.
+There are a handful of options to support the update of applications already installed on macOS devices, one of those is [Auto App-Patch](https://github.com/App-Auto-Patch/App-Auto-Patch) which leans on, and adds to the functionality of [Installomator](https://github.com/Installomator/Installomator), and using [swiftDialog](https://github.com/swiftDialog/swiftDialog) can provide users with notifications and interactive messages when updating a set list of apps on the devices.
 
-So how do we get Auto App-Patch configured and deployed to our Intune enrolled devices, to make sure we're not exposing our environments to app based security vulnerabilities?
+So how do we get Auto App-Patch configured and deployed to our Intune enrolled devices, making sure we're not exposing our environments to app-based security vulnerabilities?
 
 ### User Interaction
 
@@ -26,7 +26,7 @@ As mentioned, App Auto-Patch uses [swiftDialog](https://github.com/swiftDialog/s
 With the app installing (to test devices first), we can now look at the App Auto-Patch configuration settings, that configure update and installation behaviour.
 
 {{< admonition type=info >}}
-The `InteractiveMode` setting within the App Auto-Patch configuration settings is the reason we needed to install swiftDialog, if you configure this setting anything other than `0`, App Auto-Patch will use swiftDialog to display information to your users.
+The **InteractiveMode** setting within the App Auto-Patch configuration settings is the reason we needed to install swiftDialog, if you configure this setting to anything other than **0**, App Auto-Patch will use swiftDialog to display information to your users.
 {{< /admonition >}}
 
 ## App Auto-Patch Settings
@@ -142,15 +142,19 @@ Right, last bit of effort to push out App Auto-Patch to your macOS devices, we'l
 
 {{< codeimporter title="AAP-Intune-Installer.zsh" url="https://raw.githubusercontent.com/ennnbeee/oddsandendpoints-scripts/refs/heads/main/Intune/PlatformScripts/Shell/AAP/AAP-Intune-Installer.zsh" type="Shell" >}}
 
-When installing App Auto-Patch using this shell script, it will get the actual installer script for the version specified in the `INSTALL_VERSION` variable and install it on the device, so make sure your devices can get to the required GitHub network endpoint.
+When installing App Auto-Patch using this shell script, it will get the actual installation script for the version specified in the `INSTALL_VERSION` variable and run it on the device, so make sure your devices can get to the required GitHub network endpoint.
 
 {{< admonition type=info >}}
-The shell script used in Intune has a hash verification check for the downloaded **App-Auto-Patch-via-Dialog.zsh** file, you may need to update the variable `HASH_CHECK` in the Intune script, or at least validate it first before deploying using Intune. Also, make sure the hash is in lowercase 😅.
+The shell script used in Intune has a hash verification check for the downloaded **App-Auto-Patch-via-Dialog.zsh** file, you may need to update the variable `HASH_CHECK` in the Intune script, or at least validate it first before deploying using Intune. Also, make sure the hash is in lowercase 😅 #justunixthings.
 {{< /admonition >}}
 
-After adding this shell script in Intune looking like the below, we're at the point where we wait for devices to run the script, and make the App Auto-Patch tool available.
+After adding this shell script in Intune configured as below, we're at the point where we wait for devices to run the script, and make the App Auto-Patch tool available.
 
 ![Microsoft Intune Shell Script](img/aap-script.png "Screenshot of the shell script using for installing Auto App-Patch in Intune.")
+
+{{< admonition type=tip >}}
+We might have been able to use this script as a post-install script for the swiftDialog app, but I'd rather keep things separate and clean.
+{{< /admonition >}}
 
 ## User Experience
 
@@ -170,9 +174,9 @@ Once this has completed, users will be prompted to start the update of any apps 
 
 ![Auto App-Patch update prompt](img/aap-update.png "Screenshot of the Auto App-Patch update prompt.")
 
-Giving them the option to defer the installation based on the settings configured in Intune.
+Giving them the option to defer the installation based on the settings configured in the Custom Policy deployed from Intune.
 
-If they chose to start the installation now, or if they defer the installation enough times that it hits the configured deadline, App Auto-Patch will start the installation process.
+If they choose to start the installation now, or if they defer the installation enough times that it hits the configured deadline, App Auto-Patch will start the installation process.
 
 ![Auto App-Patch installation](img/aap-install.png "Screenshot of the Auto App-Patch installation progress.")
 
@@ -180,7 +184,7 @@ With users being notified to close any apps that need to be closed to allow the 
 
 ## Summary
 
-Now before you just go and throw everything I've setup into your own Intune environment and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and test the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed app on a test device, just to see what actually happens, what additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or changes to the suggested  settings need to be made for your own environment.
+Now before you just go and throw everything I've setup into your own Intune environment and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and test the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device, just to see what actually happens, what additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or changes to the suggested  settings need to be made for your own environment.
 
-As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you're expecting a full fledged enterprise level solution for macOS app management, well for that you need to find some cash. If however, you're in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn't be any issue with your using open-source software to support that requirement, at least in my books.
+As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you're expecting a full fledged enterprise level solution for macOS app management include status updates of installed app versions, well for that you need to find some cash. If however, you're in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn't be any issue with your using open-source software to support that requirement, at least in my books.
 
