@@ -145,7 +145,7 @@ Right, last bit of effort to push out App Auto-Patch to your macOS devices, we'l
 When installing App Auto-Patch using this shell script, it will get the actual installation script for the version specified in the `INSTALL_VERSION` variable and run it on the device, so make sure your devices can get to the required GitHub network endpoint.
 
 {{< admonition type=info >}}
-The shell script used in Intune has a hash verification check for the downloaded **App-Auto-Patch-via-Dialog.zsh** file, you may need to update the variable `HASH_CHECK` in the Intune script, or at least validate it first before deploying using Intune. Also, make sure the hash is in lowercase 😅 #justunixthings.
+The shell script used in Intune has a hash verification check for the downloaded **App-Auto-Patch-via-Dialog.zsh** file, you may need to update the variable `HASH_CHECK` in the Intune script, or at least validate it first before deploying using Intune. Also, make sure the hash is in lowercase #justunixthings 😅.
 {{< /admonition >}}
 
 After adding this shell script in Intune configured as below, we're at the point where we wait for devices to run the script, and make the App Auto-Patch tool available.
@@ -153,7 +153,7 @@ After adding this shell script in Intune configured as below, we're at the point
 ![Microsoft Intune Shell Script](img/aap-script.png "Screenshot of the shell script using for installing Auto App-Patch in Intune.")
 
 {{< admonition type=tip >}}
-We might have been able to use this script as a post-install script for the swiftDialog app, but I'd rather keep things separate and clean.
+We might have been able to use this script as a post-install script for the swiftDialog app, but I'd rather keep things separate and clean without adding too many interdependencies.
 {{< /admonition >}}
 
 ## User Experience
@@ -184,7 +184,7 @@ With users being notified to close any apps that need to be closed to allow the 
 
 ## Summary
 
-Now before you just go and throw everything I've setup into your own Intune environment and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and test the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device, just to see what actually happens, what additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or changes to the suggested  settings need to be made for your own environment.
+Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and check the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device; you know, just to see what actually happens. You may need additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or you might like to make changes to the suggested settings for your own environment, instead of just blindly copy and pasting what someone on the internet said was a good idea.
 
-As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you're expecting a full fledged enterprise level solution for macOS app management include status updates of installed app versions, well for that you need to find some cash. If however, you're in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn't be any issue with your using open-source software to support that requirement, at least in my books.
+As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you're expecting a full fledged enterprise level solution for macOS app management including status updates of installed app versions, well for that you need to find some cash. If however, you're in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn't be any issue with your using open-source software to support that requirement, at least in my books.
 
