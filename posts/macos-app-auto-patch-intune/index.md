@@ -13,6 +13,8 @@ Well nothing, if it's good enough for [Jamf](https://www.jamf.com/) it's certain
 
 There are a handful of options to support the update of applications already installed on macOS devices, one of those is [Auto App-Patch](https://github.com/App-Auto-Patch/App-Auto-Patch) which leans on, and adds to the functionality of [Installomator](https://github.com/Installomator/Installomator), and using [swiftDialog](https://github.com/swiftDialog/swiftDialog) can provide users with notifications and interactive messages when updating a set list of apps on the devices.
 
+![Auto App-Patch combined dialogs](img/aap-combined.png "Screenshot the Auto App-Patch combined dialog windows.")
+
 So how do we get Auto App-Patch configured and deployed to our Intune enrolled devices, making sure we're not exposing our environments to app-based security vulnerabilities?
 
 ### User Interaction
@@ -113,14 +115,14 @@ With this Custom Policy deployed to devices, when we push out App Auto-Patch its
 ![macOS Configuration Profile](img/aap-profile.png "Screenshot of the profile installation on the targeted macOS device.")
 
 {{< admonition type=info >}}
-The above [mobileconfig](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Configuration/macOS/AppAutoPatch/xyz.techitout.appAutoPatch.mobileconfig) and corresponding custom policy deployed by Intune gets stored in `/Library/Managed Preferences/xyz.techitout.appAutoPatch.plist`
+The above [mobileconfig](https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Configuration/macOS/AppAutoPatch/xyz.techitout.appAutoPatch.mobileconfig) and corresponding custom policy deployed by Intune gets stored in **/Library/Managed Preferences/xyz.techitout.appAutoPatch.plist**
 {{< /admonition >}}
 
 ### Managed Login Items
 
-To further configure App Auto-Patch, even if as part of the installation it will add itself to the [managed login items](https://support.apple.com/en-gb/guide/deployment/dep07b92494/web) we want to make sure that it stays there and doesn't get removed by a rogue user.
+Even if as part of the installation Auto App-Patch will add an agent to the [managed login items](https://support.apple.com/en-gb/guide/deployment/dep07b92494/web) we want to make sure that it stays there and doesn't get removed by a rogue user.
 
-There is a [mobileconfig](https://github.com/App-Auto-Patch/App-Auto-Patch/blob/main/Resources/App%20Auto-Patch%20Managed%20Login%20Item%20Example.mobileconfig) profile available to deploy as a Custom Policy, or you can just create a Settings Catalog policy using the below settings to do exactly the same thing.
+There is a [sample mobileconfig](https://github.com/App-Auto-Patch/App-Auto-Patch/blob/main/Resources/App%20Auto-Patch%20Managed%20Login%20Item%20Example.mobileconfig) profile available to deploy as a Custom Policy, or you can just create a Settings Catalog policy using the below settings to do exactly the same thing.
 
 | Category | Setting | Value |
 | :- | :- | :- |
@@ -184,7 +186,9 @@ With users being notified to close any apps that need to be closed to allow the 
 
 ## Summary
 
-Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and check the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device; you know, just to see what actually happens. You may need additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or you might like to make changes to the suggested settings for your own environment, instead of just blindly copy and pasting what someone on the internet said was a good idea.
+Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and check the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device; you know, just to see what actually happens.
 
-As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you're expecting a full fledged enterprise level solution for macOS app management including status updates of installed app versions, well for that you need to find some cash. If however, you're in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn't be any issue with your using open-source software to support that requirement, at least in my books.
+You may need additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or you might like to make changes to the suggested settings for your own environment, instead of just blindly copy and pasting what someone on the internet said was a good idea.
+
+As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you're expecting a fully fledged enterprise level solution for macOS app management including status updates of installed app versions, well for that you need to find some cash. If however, you're in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn't be any issue with your using open-source software to support that requirement, at least in my books.
 
