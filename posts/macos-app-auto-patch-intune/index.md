@@ -9,13 +9,13 @@ And what's wrong with just using Intune and some open-source software to make su
 
 Well nothing, if it's good enough for [Jamf](https://www.jamf.com/) it's certainly good enough for Intune.
 
-## Auto App-Patch
+## App Auto-Patch
 
-There are a handful of options to support the update of applications already installed on macOS devices, one of those is [Auto App-Patch](https://github.com/App-Auto-Patch/App-Auto-Patch) which leans on, and adds to the functionality of [Installomator](https://github.com/Installomator/Installomator), and using [swiftDialog](https://github.com/swiftDialog/swiftDialog) can provide users with notifications and interactive messages when updating a set list of apps on the devices.
+There are a handful of options to support the update of applications already installed on macOS devices, one of those is [App Auto-Patch](https://github.com/App-Auto-Patch/App-Auto-Patch) which leans on, and adds to the functionality of [Installomator](https://github.com/Installomator/Installomator), and using [swiftDialog](https://github.com/swiftDialog/swiftDialog) can provide users with notifications and interactive messages when updating a set list of apps on the devices.
 
-![Auto App-Patch combined dialogs](img/aap-combined.png "Screenshot the Auto App-Patch combined dialog windows.")
+![App Auto-Patch combined dialogs](img/aap-combined.png "Screenshot the App Auto-Patch combined dialog windows.")
 
-So how do we get Auto App-Patch configured and deployed to our Intune enrolled devices, making sure we're not exposing our environments to app-based security vulnerabilities?
+So how do we get App Auto-Patch configured and deployed to our Intune enrolled devices, making sure we're not exposing our environments to app-based security vulnerabilities?
 
 ### User Interaction
 
@@ -39,7 +39,7 @@ For now we'll focus on just getting **all** apps updated; so with that in mind, 
 
 ### App Settings
 
-These cover the general look and feel of Auto App-Patch, including the support information displayed within the app, whether the app will update itself, and configure the user experience.
+These cover the general look and feel of App Auto-Patch, including the support information displayed within the app, whether the app will update itself, and configure the user experience.
 
 | Setting | Value | Detail |
 | :- | :- | :- |
@@ -98,7 +98,7 @@ You might need to adjust these and other ignored labels for your own environment
 
 ## Intune Configuration
 
-With the settings reviewed and gathered, we can now use Intune to deploy the App Auto-Patch settings, some other required profiles, and of course Auto App-Patch itself.
+With the settings reviewed and gathered, we can now use Intune to deploy the App Auto-Patch settings, some other required profiles, and of course App Auto-Patch itself.
 
 ### Custom Policy
 
@@ -120,7 +120,7 @@ The above [mobileconfig](https://github.com/ennnbeee/oddsandendpoints-scripts/bl
 
 ### Managed Login Items
 
-Even if as part of the installation Auto App-Patch will add an agent to the [managed login items](https://support.apple.com/en-gb/guide/deployment/dep07b92494/web) we want to make sure that it stays there and doesn't get removed by a rogue user.
+Even if as part of the installation App Auto-Patch will add an agent to the [managed login items](https://support.apple.com/en-gb/guide/deployment/dep07b92494/web) we want to make sure that it stays there and doesn't get removed by a rogue user.
 
 There is a [sample mobileconfig](https://github.com/App-Auto-Patch/App-Auto-Patch/blob/main/Resources/App%20Auto-Patch%20Managed%20Login%20Item%20Example.mobileconfig) profile available to deploy as a Custom Policy, or you can just create a Settings Catalog policy using the below settings to do exactly the same thing.
 
@@ -152,7 +152,7 @@ The shell script used in Intune has a hash verification check for the downloaded
 
 After adding this shell script in Intune configured as below, we're at the point where we wait for devices to run the script, and make the App Auto-Patch tool available.
 
-![Microsoft Intune Shell Script](img/aap-script.png "Screenshot of the shell script using for installing Auto App-Patch in Intune.")
+![Microsoft Intune Shell Script](img/aap-script.png "Screenshot of the shell script using for installing App Auto-Patch in Intune.")
 
 {{< admonition type=tip >}}
 We might have been able to use this script as a post-install script for the swiftDialog app, but I'd rather keep things separate and clean without adding too many interdependencies.
@@ -162,31 +162,31 @@ We might have been able to use this script as a post-install script for the swif
 
 Once the shell script has deployed and installed the App Auto-Patch script, users will first be presented with the below window (this is because we configured full visibility using the **InteractiveMode** setting) showing the status of the analysation (ahem) process.
 
-![Auto App-Patch analysing](img/aap-analyzing.png "Screenshot of Auto App-Patch starting the app analysing process.")
+![App Auto-Patch analysing](img/aap-analyzing.png "Screenshot of App Auto-Patch starting the app analysing process.")
 
 It will detect the applications not excluded by the **ignoredLabels** configuration, so that means apps like Keka...
 
-![Auto App-Patch analysing Keka](img/aap-analyzing-keka.png "Screenshot of Auto App-Patch analysing Keka.")
+![App Auto-Patch analysing Keka](img/aap-analyzing-keka.png "Screenshot of App Auto-Patch analysing Keka.")
 
 and our Microsoft apps like Defender...
 
-![Auto App-Patch analysing Defender](img/aap-analyzing-defender.png "Screenshot of Auto App-Patch analysing Microsoft Defender.")
+![App Auto-Patch analysing Defender](img/aap-analyzing-defender.png "Screenshot of App Auto-Patch analysing Microsoft Defender.")
 
 Once this has completed, users will be prompted to start the update of any apps that are not current.
 
-![Auto App-Patch update prompt](img/aap-update.png "Screenshot of the Auto App-Patch update prompt.")
+![App Auto-Patch update prompt](img/aap-update.png "Screenshot of the App Auto-Patch update prompt.")
 
 Giving them the option to defer the installation based on the settings configured in the Custom Policy deployed from Intune.
 
 If they choose to start the installation now, or if they defer the installation enough times that it hits the configured deadline, App Auto-Patch will start the installation process.
 
-![Auto App-Patch installation](img/aap-install.png "Screenshot of the Auto App-Patch installation progress.")
+![App Auto-Patch installation](img/aap-install.png "Screenshot of the App Auto-Patch installation progress.")
 
 With users being notified to close any apps that need to be closed to allow the update to complete.
 
 ## Summary
 
-Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I'd suggest reviewing the [Auto App-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and check the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device; you know, just to see what actually happens.
+Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I'd suggest reviewing the [App Auto-Patch wiki](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki) and check the functionality manually first using `appautopatch --reset-defaults --reset-labels` after you've installed the app on a test device; you know, just to see what actually happens.
 
 You may need additional [configuration settings](https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile) or you might like to make changes to the suggested settings for your own environment, instead of just blindly copy and pasting what someone on the internet said was a good idea.
 

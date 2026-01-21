@@ -23,6 +23,7 @@
     <meta property="article:tag" content="Software Updates">
     <meta property="article:tag" content="Apps">
     <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Configuration">
     <meta property="og:image" content="https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/featured.png">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/featured.png",
                             "width":  1000 ,
                             "height":  500 
-                        }],"genre": "posts","keywords":["macOS app auto patching","Intune macOS app updates","macOS LOB app updates","Intune automatic app patching","macOS enterprise app management","update macOS apps Intune","macOS app version control","Intune macOS deployment","macOS app lifecycle management","macOS app update automation"],"wordcount":  2273 ,
+                        }],"genre": "posts","keywords":["macOS app auto patching","Intune macOS app updates","macOS LOB app updates","Intune automatic app patching","macOS enterprise app management","update macOS apps Intune","macOS app version control","Intune macOS deployment","macOS app lifecycle management","macOS app update automation","app auto-patch"],"wordcount":  2273 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/","datePublished": "2026-01-20T11:15:12+00:00","dateModified": "2026-01-20T11:15:12+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -175,7 +176,7 @@
         <h2 class="toc-title">Contents</h2>
         <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
   <ul>
-    <li><a href="#auto-app-patch">Auto App-Patch</a>
+    <li><a href="#app-auto-patch">App Auto-Patch</a>
       <ul>
         <li><a href="#user-interaction">User Interaction</a></li>
       </ul>
@@ -204,7 +205,7 @@
             <h2 class="tw-mx-0 tw-my-6 tw-uppercase tw-text-2xl">Contents</h2>
             <div class="toc-content"><nav id="TableOfContents">
   <ul>
-    <li><a href="#auto-app-patch">Auto App-Patch</a>
+    <li><a href="#app-auto-patch">App Auto-Patch</a>
       <ul>
         <li><a href="#user-interaction">User Interaction</a></li>
       </ul>
@@ -237,6 +238,8 @@
                         </div><div class="post-tag"><a href="/tags/updates/">#Software Updates</a>
                         </div><div class="post-tag"><a href="/tags/apps/">#Apps</a>
                         </div><div class="post-tag"><a href="/tags/security/">#Security</a>
+                        </div><div class="post-tag"><a href="/tags/configuration/">#Configuration</a>
+                        </div><div class="post-tag"><a href="/tags/custom-profiles/">#Custom Profiles</a>
                         </div></div>
             </div>
         </div><h1 class="single-title" data-pagefind-meta="date:January 20, 2026" data-pagefind-body>Keeping macOS Apps updated with App Auto-Patch and Intune</h1>
@@ -253,7 +256,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#auto-app-patch">Auto App-Patch</a>
+    <li><a href="#app-auto-patch">App Auto-Patch</a>
       <ul>
         <li><a href="#user-interaction">User Interaction</a></li>
       </ul>
@@ -281,13 +284,13 @@
 <p>What about keeping these apps up to date? There must be easier ways than pushing the new versions of apps from MDM solutions?</p>
 <p>And what&rsquo;s wrong with just using Intune and some open-source software to make sure your devices are running current software?</p>
 <p>Well nothing, if it&rsquo;s good enough for <a href="https://www.jamf.com/" target="_blank" rel="noopener noreferrer">Jamf</a> it&rsquo;s certainly good enough for Intune.</p>
-<h2 id="auto-app-patch" class="headerLink">
-    <a href="#auto-app-patch" class="header-mark"></a>Auto App-Patch</h2><p>There are a handful of options to support the update of applications already installed on macOS devices, one of those is <a href="https://github.com/App-Auto-Patch/App-Auto-Patch" target="_blank" rel="noopener noreferrer">Auto App-Patch</a> which leans on, and adds to the functionality of <a href="https://github.com/Installomator/Installomator" target="_blank" rel="noopener noreferrer">Installomator</a>, and using <a href="https://github.com/swiftDialog/swiftDialog" target="_blank" rel="noopener noreferrer">swiftDialog</a> can provide users with notifications and interactive messages when updating a set list of apps on the devices.</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-combined_hu_aa67a7273b63e3ac.png" title="Auto App-Patch combined dialogs" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-combined_hu_aa67a7273b63e3ac.png" data-sub-html="<h2>Screenshot the Auto App-Patch combined dialog windows.</h2><p>Auto App-Patch combined dialogs</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-combined_hu_aa67a7273b63e3ac.png'   alt="Auto App-Patch combined dialogs"  ></a><figcaption class="image-caption">Screenshot the Auto App-Patch combined dialog windows.</figcaption>
+<h2 id="app-auto-patch" class="headerLink">
+    <a href="#app-auto-patch" class="header-mark"></a>App Auto-Patch</h2><p>There are a handful of options to support the update of applications already installed on macOS devices, one of those is <a href="https://github.com/App-Auto-Patch/App-Auto-Patch" target="_blank" rel="noopener noreferrer">App Auto-Patch</a> which leans on, and adds to the functionality of <a href="https://github.com/Installomator/Installomator" target="_blank" rel="noopener noreferrer">Installomator</a>, and using <a href="https://github.com/swiftDialog/swiftDialog" target="_blank" rel="noopener noreferrer">swiftDialog</a> can provide users with notifications and interactive messages when updating a set list of apps on the devices.</p>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-combined_hu_aa67a7273b63e3ac.png" title="App Auto-Patch combined dialogs" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-combined_hu_aa67a7273b63e3ac.png" data-sub-html="<h2>Screenshot the App Auto-Patch combined dialog windows.</h2><p>App Auto-Patch combined dialogs</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-combined_hu_aa67a7273b63e3ac.png'   alt="App Auto-Patch combined dialogs"  ></a><figcaption class="image-caption">Screenshot the App Auto-Patch combined dialog windows.</figcaption>
 </figure>
 
 </p>
-<p>So how do we get Auto App-Patch configured and deployed to our Intune enrolled devices, making sure we&rsquo;re not exposing our environments to app-based security vulnerabilities?</p>
+<p>So how do we get App Auto-Patch configured and deployed to our Intune enrolled devices, making sure we&rsquo;re not exposing our environments to app-based security vulnerabilities?</p>
 <h3 id="user-interaction" class="headerLink">
     <a href="#user-interaction" class="header-mark"></a>User Interaction</h3><p>First off, and importantly, if we want our end users to see what App Auto-Patch is doing, and give them the option to install or defer any app updates (because they&rsquo;re busy little bees), then we need a way to display notifications and update progress to them.</p>
 <p>As mentioned, App Auto-Patch uses <a href="https://github.com/swiftDialog/swiftDialog" target="_blank" rel="noopener noreferrer">swiftDialog</a> for these notifications, so we just need to make sure that our macOS fleet (<em>Is &ldquo;fleet&rdquo; a mac thing? I&rsquo;ve always used &ldquo;device estate&rdquo;</em>), has this app installed, so off you trot and download the swiftDialog installer from the <a href="https://github.com/swiftDialog/swiftDialog/releases" target="_blank" rel="noopener noreferrer">releases</a> page, and quickly punt it into Intune and deploy it to your &ldquo;fleet&rdquo; (<a href="https://www.youtube.com/watch?v=39Bnk6VU53Y" target="_blank" rel="noopener noreferrer">One of us, one of us</a>).</p>
@@ -308,7 +311,7 @@
     <a href="#app-auto-patch-settings" class="header-mark"></a>App Auto-Patch Settings</h2><p>User notifications sorted, we&rsquo;re going to trawl through the available <a href="https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile" target="_blank" rel="noopener noreferrer">config settings</a> for App Auto-Patch and pull out the ones we need as a minimum to ensure that our macOS fleet are running up to date apps.</p>
 <p>For now we&rsquo;ll focus on just getting <strong>all</strong> apps updated; so with that in mind, we&rsquo;ll need to create a new mobileconfig file and deploy it as a <a href="https://learn.microsoft.com/en-us/intune/intune-service/configuration/custom-settings-macos" target="_blank" rel="noopener noreferrer">custom policy</a> in Intune, with the combined settings in the below sections.</p>
 <h3 id="app-settings" class="headerLink">
-    <a href="#app-settings" class="header-mark"></a>App Settings</h3><p>These cover the general look and feel of Auto App-Patch, including the support information displayed within the app, whether the app will update itself, and configure the user experience.</p>
+    <a href="#app-settings" class="header-mark"></a>App Settings</h3><p>These cover the general look and feel of App Auto-Patch, including the support information displayed within the app, whether the app will update itself, and configure the user experience.</p>
 
 <div class="table-wrapper">
   <table>
@@ -495,7 +498,7 @@
 <p>You might need to adjust these and other ignored labels for your own environment, which is why we test things first.</p>
 </div></div></div>
 <h2 id="intune-configuration" class="headerLink">
-    <a href="#intune-configuration" class="header-mark"></a>Intune Configuration</h2><p>With the settings reviewed and gathered, we can now use Intune to deploy the App Auto-Patch settings, some other required profiles, and of course Auto App-Patch itself.</p>
+    <a href="#intune-configuration" class="header-mark"></a>Intune Configuration</h2><p>With the settings reviewed and gathered, we can now use Intune to deploy the App Auto-Patch settings, some other required profiles, and of course App Auto-Patch itself.</p>
 <h3 id="custom-policy" class="headerLink">
     <a href="#custom-policy" class="header-mark"></a>Custom Policy</h3><p>Using all the above settings as reference, we can create our own <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Configuration/macOS/AppAutoPatch/xyz.techitout.appAutoPatch.mobileconfig" target="_blank" rel="noopener noreferrer">mobileconfig</a> file based on the <a href="https://github.com/App-Auto-Patch/App-Auto-Patch/blob/main/AAP-Intune%20MDM%20Configuration/xyz.techitout.appAutoPatch.xml" target="_blank" rel="noopener noreferrer">sample xml provided for Intune</a>, and deploy it to our devices.</p>
 
@@ -715,7 +718,7 @@
     <div class="details-content">
         <div class="admonition-content">The above <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/blob/main/Intune/Configuration/macOS/AppAutoPatch/xyz.techitout.appAutoPatch.mobileconfig" target="_blank" rel="noopener noreferrer">mobileconfig</a> and corresponding custom policy deployed by Intune gets stored in <strong>/Library/Managed Preferences/xyz.techitout.appAutoPatch.plist</strong></div></div></div>
 <h3 id="managed-login-items" class="headerLink">
-    <a href="#managed-login-items" class="header-mark"></a>Managed Login Items</h3><p>Even if as part of the installation Auto App-Patch will add an agent to the <a href="https://support.apple.com/en-gb/guide/deployment/dep07b92494/web" target="_blank" rel="noopener noreferrer">managed login items</a> we want to make sure that it stays there and doesn&rsquo;t get removed by a rogue user.</p>
+    <a href="#managed-login-items" class="header-mark"></a>Managed Login Items</h3><p>Even if as part of the installation App Auto-Patch will add an agent to the <a href="https://support.apple.com/en-gb/guide/deployment/dep07b92494/web" target="_blank" rel="noopener noreferrer">managed login items</a> we want to make sure that it stays there and doesn&rsquo;t get removed by a rogue user.</p>
 <p>There is a <a href="https://github.com/App-Auto-Patch/App-Auto-Patch/blob/main/Resources/App%20Auto-Patch%20Managed%20Login%20Item%20Example.mobileconfig" target="_blank" rel="noopener noreferrer">sample mobileconfig</a> profile available to deploy as a Custom Policy, or you can just create a Settings Catalog policy using the below settings to do exactly the same thing.</p>
 
 <div class="table-wrapper">
@@ -958,7 +961,7 @@
     <div class="details-content">
         <div class="admonition-content">The shell script used in Intune has a hash verification check for the downloaded <strong>App-Auto-Patch-via-Dialog.zsh</strong> file, you may need to update the variable <code>HASH_CHECK</code> in the Intune script, or at least validate it first before deploying using Intune. Also, make sure the hash is in lowercase #justunixthings 😅.</div></div></div>
 <p>After adding this shell script in Intune configured as below, we&rsquo;re at the point where we wait for devices to run the script, and make the App Auto-Patch tool available.</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-script_hu_2d7398d77ef567e9.png" title="Microsoft Intune Shell Script" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-script_hu_2d7398d77ef567e9.png" data-sub-html="<h2>Screenshot of the shell script using for installing Auto App-Patch in Intune.</h2><p>Microsoft Intune Shell Script</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-script_hu_2d7398d77ef567e9.png'   alt="Microsoft Intune Shell Script"  ></a><figcaption class="image-caption">Screenshot of the shell script using for installing Auto App-Patch in Intune.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-script_hu_2d7398d77ef567e9.png" title="Microsoft Intune Shell Script" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-script_hu_2d7398d77ef567e9.png" data-sub-html="<h2>Screenshot of the shell script using for installing App Auto-Patch in Intune.</h2><p>Microsoft Intune Shell Script</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-script_hu_2d7398d77ef567e9.png'   alt="Microsoft Intune Shell Script"  ></a><figcaption class="image-caption">Screenshot of the shell script using for installing App Auto-Patch in Intune.</figcaption>
 </figure>
 
 </p>
@@ -972,34 +975,34 @@
         <div class="admonition-content">We might have been able to use this script as a post-install script for the swiftDialog app, but I&rsquo;d rather keep things separate and clean without adding too many interdependencies.</div></div></div>
 <h2 id="user-experience" class="headerLink">
     <a href="#user-experience" class="header-mark"></a>User Experience</h2><p>Once the shell script has deployed and installed the App Auto-Patch script, users will first be presented with the below window (this is because we configured full visibility using the <strong>InteractiveMode</strong> setting) showing the status of the analysation (ahem) process.</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-analyzing_hu_3b97243cbdd591d4.png" title="Auto App-Patch analysing" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-analyzing_hu_3b97243cbdd591d4.png" data-sub-html="<h2>Screenshot of Auto App-Patch starting the app analysing process.</h2><p>Auto App-Patch analysing</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-analyzing_hu_3b97243cbdd591d4.png'   alt="Auto App-Patch analysing"  ></a><figcaption class="image-caption">Screenshot of Auto App-Patch starting the app analysing process.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-analyzing_hu_3b97243cbdd591d4.png" title="App Auto-Patch analysing" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-analyzing_hu_3b97243cbdd591d4.png" data-sub-html="<h2>Screenshot of App Auto-Patch starting the app analysing process.</h2><p>App Auto-Patch analysing</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-analyzing_hu_3b97243cbdd591d4.png'   alt="App Auto-Patch analysing"  ></a><figcaption class="image-caption">Screenshot of App Auto-Patch starting the app analysing process.</figcaption>
 </figure>
 
 </p>
 <p>It will detect the applications not excluded by the <strong>ignoredLabels</strong> configuration, so that means apps like Keka&hellip;</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-analyzing-keka_hu_50b673148510458a.png" title="Auto App-Patch analysing Keka" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-analyzing-keka_hu_50b673148510458a.png" data-sub-html="<h2>Screenshot of Auto App-Patch analysing Keka.</h2><p>Auto App-Patch analysing Keka</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-analyzing-keka_hu_50b673148510458a.png'   alt="Auto App-Patch analysing Keka"  ></a><figcaption class="image-caption">Screenshot of Auto App-Patch analysing Keka.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-analyzing-keka_hu_50b673148510458a.png" title="App Auto-Patch analysing Keka" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-analyzing-keka_hu_50b673148510458a.png" data-sub-html="<h2>Screenshot of App Auto-Patch analysing Keka.</h2><p>App Auto-Patch analysing Keka</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-analyzing-keka_hu_50b673148510458a.png'   alt="App Auto-Patch analysing Keka"  ></a><figcaption class="image-caption">Screenshot of App Auto-Patch analysing Keka.</figcaption>
 </figure>
 
 </p>
 <p>and our Microsoft apps like Defender&hellip;</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-analyzing-defender_hu_4cda5d6a51ea6efe.png" title="Auto App-Patch analysing Defender" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-analyzing-defender_hu_4cda5d6a51ea6efe.png" data-sub-html="<h2>Screenshot of Auto App-Patch analysing Microsoft Defender.</h2><p>Auto App-Patch analysing Defender</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-analyzing-defender_hu_4cda5d6a51ea6efe.png'   alt="Auto App-Patch analysing Defender"  ></a><figcaption class="image-caption">Screenshot of Auto App-Patch analysing Microsoft Defender.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-analyzing-defender_hu_4cda5d6a51ea6efe.png" title="App Auto-Patch analysing Defender" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-analyzing-defender_hu_4cda5d6a51ea6efe.png" data-sub-html="<h2>Screenshot of App Auto-Patch analysing Microsoft Defender.</h2><p>App Auto-Patch analysing Defender</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-analyzing-defender_hu_4cda5d6a51ea6efe.png'   alt="App Auto-Patch analysing Defender"  ></a><figcaption class="image-caption">Screenshot of App Auto-Patch analysing Microsoft Defender.</figcaption>
 </figure>
 
 </p>
 <p>Once this has completed, users will be prompted to start the update of any apps that are not current.</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-update_hu_b6da4527296233eb.png" title="Auto App-Patch update prompt" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-update_hu_b6da4527296233eb.png" data-sub-html="<h2>Screenshot of the Auto App-Patch update prompt.</h2><p>Auto App-Patch update prompt</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-update_hu_b6da4527296233eb.png'   alt="Auto App-Patch update prompt"  ></a><figcaption class="image-caption">Screenshot of the Auto App-Patch update prompt.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-update_hu_b6da4527296233eb.png" title="App Auto-Patch update prompt" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-update_hu_b6da4527296233eb.png" data-sub-html="<h2>Screenshot of the App Auto-Patch update prompt.</h2><p>App Auto-Patch update prompt</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-update_hu_b6da4527296233eb.png'   alt="App Auto-Patch update prompt"  ></a><figcaption class="image-caption">Screenshot of the App Auto-Patch update prompt.</figcaption>
 </figure>
 
 </p>
 <p>Giving them the option to defer the installation based on the settings configured in the Custom Policy deployed from Intune.</p>
 <p>If they choose to start the installation now, or if they defer the installation enough times that it hits the configured deadline, App Auto-Patch will start the installation process.</p>
-<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-install_hu_f23e9f072039ba1a.png" title="Auto App-Patch installation" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-install_hu_f23e9f072039ba1a.png" data-sub-html="<h2>Screenshot of the Auto App-Patch installation progress.</h2><p>Auto App-Patch installation</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-install_hu_f23e9f072039ba1a.png'   alt="Auto App-Patch installation"  ></a><figcaption class="image-caption">Screenshot of the Auto App-Patch installation progress.</figcaption>
+<p><figure><a class="lightgallery" href="/posts/macos-app-auto-patch-intune/img/aap-install_hu_f23e9f072039ba1a.png" title="App Auto-Patch installation" data-thumbnail="/posts/macos-app-auto-patch-intune/img/aap-install_hu_f23e9f072039ba1a.png" data-sub-html="<h2>Screenshot of the App Auto-Patch installation progress.</h2><p>App Auto-Patch installation</p>"><img  loading="lazy" src='/posts/macos-app-auto-patch-intune/img/aap-install_hu_f23e9f072039ba1a.png'   alt="App Auto-Patch installation"  ></a><figcaption class="image-caption">Screenshot of the App Auto-Patch installation progress.</figcaption>
 </figure>
 
 </p>
 <p>With users being notified to close any apps that need to be closed to allow the update to complete.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>Summary</h2><p>Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I&rsquo;d suggest reviewing the <a href="https://github.com/App-Auto-Patch/App-Auto-Patch/wiki" target="_blank" rel="noopener noreferrer">Auto App-Patch wiki</a> and check the functionality manually first using <code>appautopatch --reset-defaults --reset-labels</code> after you&rsquo;ve installed the app on a test device; you know, just to see what actually happens.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>Now before you just go and deploy everything into your own Intune environment, and expect it to just work, I&rsquo;d suggest reviewing the <a href="https://github.com/App-Auto-Patch/App-Auto-Patch/wiki" target="_blank" rel="noopener noreferrer">App Auto-Patch wiki</a> and check the functionality manually first using <code>appautopatch --reset-defaults --reset-labels</code> after you&rsquo;ve installed the app on a test device; you know, just to see what actually happens.</p>
 <p>You may need additional <a href="https://github.com/App-Auto-Patch/App-Auto-Patch/wiki/Configure-Settings#mdm-configuration-profile" target="_blank" rel="noopener noreferrer">configuration settings</a> or you might like to make changes to the suggested settings for your own environment, instead of just blindly copy and pasting what someone on the internet said was a good idea.</p>
 <p>As much as device or user driven app updates are pretty cool, there is a bit of a gap regarding reporting, so if you&rsquo;re expecting a fully fledged enterprise level solution for macOS app management including status updates of installed app versions, well for that you need to find some cash. If however, you&rsquo;re in a pinch, and just need to make sure your fleet is running up-to-date apps, then there shouldn&rsquo;t be any issue with your using open-source software to support that requirement, at least in my books.</p>
 </div>
