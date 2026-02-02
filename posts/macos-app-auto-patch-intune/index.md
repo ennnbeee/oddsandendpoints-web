@@ -84,7 +84,7 @@ The below essentially covers what apps are out scope of the update, as we want t
 
 | Setting | Value | Detail |
 | :- | :- | :- |
-| IgnoredLabels | `googlechrome* microsoftonedrive-* microsoftonedrivesuprod firefox*` | Basically a list of apps that self-update or apps that have issues with installomator, space-separated and wildcards supported |
+| IgnoredLabels | `googlechrome* microsoftonedrive-* microsoftonedrivesuprod microsoftonedrivesuinsiders firefox*` | Basically a list of apps that self-update or apps that have issues with installomator, space-separated and wildcards supported |
 | ConvertAppsInHomeFolder | `True` | Remove apps in the '/Users/*' folder and install them to the default path |
 | InstallomatorOptions | `BLOCKING_PROCESS_ACTION=prompt_user NOTIFY=silent LOGO=microsoft` | A space-separated list of options to override default Installomator options |
 | InstallomatorVersion | `Main` | Determines if the AAP script should use the Main (beta) or Release version of Installomator. |
@@ -142,7 +142,11 @@ You could just combine the two mobileconfig file payloads if you'd like, I just 
 
 Right, last bit of effort to push out App Auto-Patch to your macOS devices, we'll be using the [provided](https://github.com/App-Auto-Patch/App-Auto-Patch/blob/main/AAP-Intune%20MDM%20Configuration/AAP-Intune-Installer.zsh) shell script as a reference, and update it to support the latest version of the app (3.5.0 at time of writing).
 
-{{< codeimporter title="AAP-Intune-Installer.zsh" url="https://raw.githubusercontent.com/ennnbeee/oddsandendpoints-scripts/refs/heads/main/Intune/PlatformScripts/Shell/AAP/AAP-Intune-Installer.zsh" type="Shell" >}}
+{{< codeimporter title="AAP-Intune-Installer.zsh" url="https://raw.githubusercontent.com/ennnbeee/oddsandendpoints-scripts/refs/heads/main/Intune/PlatformScripts/Shell/AppAutoPatch/AAP-Intune-Installer.zsh" type="Shell" >}}
+
+{{< admonition type=note >}}
+The script has been updated to wait for the Dock to be available, so nothing starts running during Automated Device Enrolment.
+{{< /admonition >}}
 
 When installing App Auto-Patch using this shell script, it will get the actual installation script for the version specified in the `INSTALL_VERSION` variable and run it on the device, so make sure your devices can get to the required GitHub network endpoint.
 
