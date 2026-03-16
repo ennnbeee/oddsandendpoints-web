@@ -1,10 +1,6 @@
 # Lower-Touch Defender Onboarding for Android Devices
 
 
-{{< admonition type=note >}}
-This post has been updated to include configuration settings for Motorola devices.
-{{< /admonition >}}
-
 Onboarding corporate mobile devices managed by Intune into Defender for Endpoint shouldn't require your end users to do *anything*, and with supervised iOS/iPadOS devices this is exactly the case with Microsoft providing [great documentation](https://learn.microsoft.com/en-us/defender-endpoint/ios-install) on the process and corresponding configuration profiles to support silent onboarding.
 
 The same however can't be said for Android Enterprise devices, even with the feature for [low-touch onboarding](https://learn.microsoft.com/en-us/defender-endpoint/android-intune#configure-low-touch-onboarding) ~currently in preview~ now [Generally Available](https://learn.microsoft.com/en-us/defender-endpoint/android-whatsnew#android-low-touch-onboarding-is-now-ga).
@@ -56,7 +52,9 @@ With these basic settings we can at least ensure that the Defender App on the An
 
 As we've configured the Defender app with the VPN setting, we need to deploy one to our Android Enterprise devices. This VPN isn't really giving your devices access to anything, but is required to support the [Web Protection](https://learn.microsoft.com/en-us/defender-endpoint/android-configure#configure-web-protection) functionality.
 
-> Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN is not a regular VPN. Instead, it's a local/self-looping VPN that does not take traffic outside the device.
+{{< admonition type=quote >}}
+Defender for Endpoint on Android would use a VPN in order to provide the Web Protection feature. This VPN is not a regular VPN. Instead, it's a local/self-looping VPN that does not take traffic outside the device.
+{{< /admonition >}}
 
 We can easily create a new Device Restriction configuration profile (please can Settings Catalog come to Android Enterprise 🙏) based on the information in the [Learn article](https://learn.microsoft.com/en-us/defender-endpoint/android-intune#auto-setup-of-always-on-vpn), but save you clicking away, here are the settings required:
 
@@ -126,7 +124,9 @@ Can we sort out the remaining permissions though?
 
 The answer is *maybe*, and only if you have Samsung Android Enterprise devices running at least [Android 13](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/kbas/kba-1261-grant-special-permissions-for-an-app/#:~:text=EMM-,Environment,-Knox%20Service%20Plugin).
 
-> If a special permission is granted through the policy, the device doesn’t request the permission from the device user.
+{{< admonition type=quote >}}
+If a special permission is granted through the policy, the device doesn’t request the permission from the device user.
+{{< /admonition >}}
 
 What started me on this journey was a post about the changes to the [Shared Device mode for Android Enterprise on Samsung devices](https://techcommunity.microsoft.com/blog/microsoftendpointmanagerblog/frontline-workers-get-a-better-experience-from-microsoft-and-samsung/4078801) detailing how to use the [Knox Service Plugin](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) and an [OEMConfig profile](https://learn.microsoft.com/en-us/mem/intune/configuration/android-oem-configuration-overview) in Intune to give Microsoft Launcher overlay, or display over other app permissions on-behalf of a user.
 

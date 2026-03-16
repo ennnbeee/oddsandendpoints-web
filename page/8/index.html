@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.155.2">
+	<meta name="generator" content="Hugo 0.157.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" /><title>Page 8   - odds&#43;endpoints</title><script
@@ -36,6 +36,20 @@
 <link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
         {"@context": "https://schema.org",
         "@graph": [{"@type": "BlogPosting",
+        "headline": "Device Migration and ADE Profile Assignment",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/"
+        },"image": ["https://www.oddsandendpoints.co.uk/logo-opengraph.png"],"genre": "posts","keywords":["intune","ios","macos","device enrolment","graph","powershell","automated device enrolment","automation"],"wordcount":  1634 ,
+        "url": "https://www.oddsandendpoints.co.uk/posts/apple-ade-profile-assignment/","datePublished": "2023-01-20T19:57:07+00:00","dateModified": "2023-01-20T19:57:07+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Nick Benton"},"author": [{
+                        "@type": "Person",
+                        "name": "Nick Benton",
+                        "url": "https://www.oddsandendpoints.co.uk/authors/nick-benton/"
+                    }],"description": "Automatically assigning Microsoft Intune Automated Device Enrolment profiles to iPhones and iPads using PowerShell and Graph API."
+    },{"@type": "BlogPosting",
         "headline": "Proactively Renaming Hybrid Entra ID Joined Devices",
         "inLanguage": "en",
         "mainEntityOfPage": {
@@ -119,20 +133,6 @@
                         "name": "Nick Benton",
                         "url": "https://www.oddsandendpoints.co.uk/authors/nick-benton/"
                     }],"description": "Using PowerShell and Graph API to create and assign mobile app categories in Microsoft Intune for iOS and Android devices."
-    },{"@type": "BlogPosting",
-        "headline": "Updating Enrolled Device Ownership Status",
-        "inLanguage": "en",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.oddsandendpoints.co.uk/posts/updating-enrolled-device-ownership/"
-        },"image": ["https://www.oddsandendpoints.co.uk/logo-opengraph.png"],"genre": "posts","keywords":["intune","device enrolment","administration","graph","powershell"],"wordcount":  1733 ,
-        "url": "https://www.oddsandendpoints.co.uk/posts/updating-enrolled-device-ownership/","datePublished": "2022-08-08T21:47:24+01:00","dateModified": "2022-08-08T21:47:24+01:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
-            "@type": "Organization",
-            "name": "Nick Benton"},"author": [{
-                        "@type": "Person",
-                        "name": "Nick Benton",
-                        "url": "https://www.oddsandendpoints.co.uk/authors/nick-benton/"
-                    }],"description": "Updating Microsoft Intune device ownership state to company owned using PowerShell and Graph API. Simplify device management by updating enrolled device ownership. Follow our expert tips to ensure accurate ownership details and compliance."
     }]}
         </script></head>
 
@@ -254,6 +254,26 @@
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a><a href="https://www.reddit.com/user/ennnbeee" title="Reddit" target="_blank" rel="noopener noreferrer me"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg></a><a href="https://www.buymeacoffee.com/ennnbeee" title="BuyMeaCoffee" target="_blank" rel="noopener noreferrer me"><svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Buy Me A Coffee</title><path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.2-1.756.205-.656.004-1.31-.025-1.966-.022-.699.004-1.556-.06-2.095-.58-.475-.458-.54-1.174-.605-1.793l-.731-7.013-.322-3.094c-.037-.351-.286-.695-.678-.678-.336.015-.718.3-.678.679l.228 2.185.949 9.112c.147 1.344 1.174 2.068 2.446 2.272.742.12 1.503.144 2.257.156.966.016 1.942.053 2.892-.122 1.408-.258 2.465-1.198 2.616-2.657.34-3.332.683-6.663 1.024-9.995l.215-2.087a.484.484 0 01.39-.426c.402-.078.787-.212 1.074-.518.455-.488.546-1.124.385-1.766zm-1.478.772c-.145.137-.363.201-.578.233-2.416.359-4.866.54-7.308.46-1.748-.06-3.477-.254-5.207-.498-.17-.024-.353-.055-.47-.18-.22-.236-.111-.71-.054-.995.052-.26.152-.609.463-.646.484-.057 1.046.148 1.526.22.577.088 1.156.159 1.737.212 2.48.226 5.002.19 7.472-.14.45-.06.899-.13 1.345-.21.399-.072.84-.206 1.08.206.166.281.188.657.162.974a.544.544 0 01-.169.364zm-6.159 3.9c-.862.37-1.84.788-3.109.788a5.884 5.884 0 01-1.569-.217l.877 9.004c.065.78.717 1.38 1.5 1.38 0 0 1.243.065 1.658.065.447 0 1.786-.065 1.786-.065.783 0 1.434-.6 1.499-1.38l.94-9.95a3.996 3.996 0 00-1.322-.238c-.826 0-1.491.284-2.26.613z"/></svg></a><a href="https://bsky.app/profile/ennnbeee.bsky.social" title="Bluesky" target="_blank" rel="noopener noreferrer me"><svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bluesky</title><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreferrer me"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"/></svg></a></div></div><article class="single summary"><div class="featured-image-preview">
+            <a href="/posts/apple-ade-profile-assignment/" aria-label=Device&#32;Migration&#32;and&#32;ADE&#32;Profile&#32;Assignment>
+                <img  loading="eager" src='/posts/apple-ade-profile-assignment/featured.png'  sizes="(max-width: 680px) 100vw, (max-width: 1000px) 80vw, (max-width: 1440px) 56vw, 800px" alt="Featured image for Device Migration and ADE Profile Assignment" height="240" width="800"></a>
+        </div><h1 class="single-title">
+        <a href="/posts/apple-ade-profile-assignment/">Device Migration and ADE Profile Assignment</a>
+    </h1><div class="post-meta">
+            <span class="post-author">
+                Written by&nbsp;<span class='author'>
+        <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src='/img/ennbee.png'   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>&nbsp;on&nbsp;
+            </span><span class="post-publish"><time datetime="January 20, 2023">January 20, 2023</time></span></div><div class="content">Migrating iOS/iPadOS device to Microsoft Intune shouldn&rsquo;t be a headache, and assignment of Automated Device Enrolment profiles with Apple Business Manager integration isn&rsquo;t the exception.</div><div class="post-footer">
+        <a href="/posts/apple-ade-profile-assignment/"></a><div class="post-tags"><div class="post-tag"><a href="/tags/intune/">#Intune</a>
+                    </div><div class="post-tag"><a href="/tags/ios/">#iOS/iPadOS</a>
+                    </div><div class="post-tag"><a href="/tags/macos/">#macOS</a>
+                    </div><div class="post-tag"><a href="/tags/device-enrolment/">#Device Enrolment</a>
+                    </div><div class="post-tag"><a href="/tags/graph/">#Graph API</a>
+                    </div><div class="post-tag"><a href="/tags/powershell/">#PowerShell</a>
+                    </div><div class="post-tag"><a href="/tags/automated-device-enrolment/">#Automated Device Enrolment</a>
+                    </div><div class="post-tag"><a href="/tags/automation/">#Automation</a>
+                    </div></div></div>
+</article>
+<article class="single summary"><div class="featured-image-preview">
             <a href="/posts/hybrid-join-computer-rename-again/" aria-label=Proactively&#32;Renaming&#32;Hybrid&#32;Entra&#32;ID&#32;Joined&#32;Devices>
                 <img  loading="eager" src='/posts/hybrid-join-computer-rename-again/featured.png'  sizes="(max-width: 680px) 100vw, (max-width: 1000px) 80vw, (max-width: 1440px) 56vw, 800px" alt="Featured image for Proactively Renaming Hybrid Entra ID Joined Devices" height="240" width="800"></a>
         </div><h1 class="single-title">
@@ -366,23 +386,6 @@
                     </div><div class="post-tag"><a href="/tags/automation/">#Automation</a>
                     </div></div></div>
 </article>
-<article class="single summary"><div class="featured-image-preview">
-            <a href="/posts/updating-enrolled-device-ownership/" aria-label=Updating&#32;Enrolled&#32;Device&#32;Ownership&#32;Status>
-                <img  loading="eager" src='/posts/updating-enrolled-device-ownership/featured.jpg'  sizes="(max-width: 680px) 100vw, (max-width: 1000px) 80vw, (max-width: 1440px) 56vw, 800px" alt="Featured image for Updating Enrolled Device Ownership Status" height="240" width="800"></a>
-        </div><h1 class="single-title">
-        <a href="/posts/updating-enrolled-device-ownership/">Updating Enrolled Device Ownership Status</a>
-    </h1><div class="post-meta">
-            <span class="post-author">
-                Written by&nbsp;<span class='author'>
-        <span class='screen-reader-text'>  </span><a href='https://www.oddsandendpoints.co.uk/authors/nick-benton/'><img class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"  src='/img/ennbee.png'   alt="Nick Benton avatar" height="16" width="16">Nick Benton</a></span>&nbsp;on&nbsp;
-            </span><span class="post-publish"><time datetime="August 8, 2022">August 8, 2022</time></span></div><div class="content">What happens if you&rsquo;ve allowed Windows, iOS, Android, and macOS devices to enrol into Microsoft Microsoft Intune in all kinds of ways, and now you&rsquo;re in a situation where devices that should be marked as corporate are marked as personal or unknown?</div><div class="post-footer">
-        <a href="/posts/updating-enrolled-device-ownership/"></a><div class="post-tags"><div class="post-tag"><a href="/tags/intune/">#Intune</a>
-                    </div><div class="post-tag"><a href="/tags/device-enrolment/">#Device Enrolment</a>
-                    </div><div class="post-tag"><a href="/tags/administration/">#Administration</a>
-                    </div><div class="post-tag"><a href="/tags/graph/">#Graph API</a>
-                    </div><div class="post-tag"><a href="/tags/powershell/">#PowerShell</a>
-                    </div></div></div>
-</article>
 <ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -425,7 +428,7 @@
             <div class="footer-bottom-content">
                 <p class="copyright"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2026<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></p>
-                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.155.2">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.157.0">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a></p>
             </div>
         </div>

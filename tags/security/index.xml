@@ -3,7 +3,15 @@
         <title>Security - Tag - odds&#43;endpoints</title>
         <link>https://www.oddsandendpoints.co.uk/tags/security/</link>
         <description>Security - Tag - odds&#43;endpoints</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 20 Jan 2026 11:15:12 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/security/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 16 Mar 2026 21:19:25 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/security/" rel="self" type="application/rss+xml" /><item>
+    <title>Updating Event Log Sizes with Intune and PowerShell</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/</link>
+    <pubDate>Mon, 16 Mar 2026 21:19:25 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-event-log-size/featured.png" referrerpolicy="no-referrer">
+            </div>Whether implementing good practice controls, or extending your device security posture using App Control for Business, log files are your friend&hellip;until they fill up.]]></description>
+</item><item>
     <title>Keeping macOS Apps updated with App Auto-Patch and Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-app-auto-patch-intune/</link>
     <pubDate>Tue, 20 Jan 2026 11:15:12 &#43;0000</pubDate><author>
@@ -75,13 +83,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/bitlocker-key-rotation-requirements/featured.png" referrerpolicy="no-referrer">
             </div>What are the actual settings you require to allow for BitLocker recovery key rotation from the Intune console? Which BitLocker profile support the key rotation settings? Are these settings actually documented anywhere? Well yes, they are now.]]></description>
-</item><item>
-    <title>Converting AppLocker Policies to Intune Profiles</title>
-    <link>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</link>
-    <pubDate>Tue, 22 Oct 2024 11:13:46 &#43;0100</pubDate><author>
-                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-applocker-intune/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/posts/windows-applocker-intune/featured.png" referrerpolicy="no-referrer">
-            </div>We know that there is no native configuration for AppLocker in Intune, and we should be looking at App Control for Business already, but there is still a place for AppLocker, and I haven&rsquo;t got time to manually do anything, so let&rsquo;s use PowerShell to create out AppLocker policies from exported XML files.]]></description>
 </item></channel>
 </rss>

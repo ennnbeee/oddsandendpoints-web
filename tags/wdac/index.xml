@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>App Control for Business - Tag - odds&#43;endpoints</title>
+        <link>https://www.oddsandendpoints.co.uk/tags/wdac/</link>
+        <description>App Control for Business - Tag - odds&#43;endpoints</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 16 Mar 2026 21:19:25 &#43;0000</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/tags/wdac/" rel="self" type="application/rss+xml" /><item>
+    <title>Updating Event Log Sizes with Intune and PowerShell</title>
+    <link>https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/</link>
+    <pubDate>Mon, 16 Mar 2026 21:19:25 &#43;0000</pubDate><author>
+                        <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/posts/windows-event-log-size/featured.png" referrerpolicy="no-referrer">
+            </div>Whether implementing good practice controls, or extending your device security posture using App Control for Business, log files are your friend&hellip;until they fill up.]]></description>
+</item></channel>
+</rss>
