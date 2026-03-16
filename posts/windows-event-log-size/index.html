@@ -49,7 +49,7 @@
                             "url": "https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/featured.png",
                             "width":  1281 ,
                             "height":  641 
-                        }],"genre": "posts","keywords":["Windows event log size","update event log size","Intune event log configuration","PowerShell event log size","AppLocker event logs","App Control for Business event logs"],"wordcount":  935 ,
+                        }],"genre": "posts","keywords":["Windows event log size","update event log size","Intune event log configuration","PowerShell event log size","AppLocker event logs","App Control for Business event logs"],"wordcount":  989 ,
         "url": "https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/","datePublished": "2026-03-16T21:19:25+00:00","dateModified": "2026-03-16T21:19:25+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "Nick Benton","logo": "https://www.oddsandendpoints.co.uk/logo-opengraph.png"},"author": [{
@@ -241,13 +241,13 @@
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content" data-pagefind-body><p>If you&rsquo;ve ever implemented <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview" target="_blank" rel="noopener noreferrer">AppLocker</a> or its bigger <a href="https://www.tiktok.com/@wespeakenglishgood/video/7543509314602814734" target="_blank" rel="noopener noreferrer">security heavy</a> sibling formerly known as Windows Defender App Control, <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/appcontrol-and-applocker-overview" target="_blank" rel="noopener noreferrer">App Control for Business</a>, you&rsquo;ve likely been <del>nope</del> knees deep in either event logs on local machines, or trying your hand at advanced hunting in Defender for Endpoint.</p>
-<p>What makes life difficult about trawling through local event logs, or parsing them using the <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/appcontrol-wizard-parsing-event-logs#app-control-event-viewer-log-parsing" target="_blank" rel="noopener noreferrer">App Control Wizard</a> 🧙, is that they&rsquo;re only <strong>1028KB</strong> large.</p>
+            </div><div class="content" id="content" data-pagefind-body><p>If you&rsquo;ve ever implemented <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview" target="_blank" rel="noopener noreferrer">AppLocker</a> or its bigger <a href="https://www.tiktok.com/@wespeakenglishgood/video/7543509314602814734" target="_blank" rel="noopener noreferrer">security heavy</a> sibling formerly known as Windows Defender App Control, <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/appcontrol-and-applocker-overview" target="_blank" rel="noopener noreferrer">App Control for Business (ACFB)</a>, you&rsquo;ve likely been <del>nope</del> knees deep in either event logs on local machines, or trying your hand at advanced hunting in Defender for Endpoint.</p>
+<p>What makes life difficult about trawling through local event logs, or parsing them using the <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/design/appcontrol-wizard-parsing-event-logs#app-control-event-viewer-log-parsing" target="_blank" rel="noopener noreferrer">App Control Wizard</a> 🧙, is that they&rsquo;re a maximum of <strong>1028KB</strong>.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-event-log-size/img/els-codeintegrity_hu_c3dbe3a92c0951e2.png" title="Event log Microsoft-Windows-CodeIntegrity/Operational" data-thumbnail="/posts/windows-event-log-size/img/els-codeintegrity_hu_c3dbe3a92c0951e2.png" data-sub-html="<h2>Screenshot of the Microsoft-Windows-CodeIntegrity/Operational event log properties</h2><p>Event log Microsoft-Windows-CodeIntegrity/Operational</p>"><img  loading="lazy" src='/posts/windows-event-log-size/img/els-codeintegrity_hu_c3dbe3a92c0951e2.png'   alt="Event log Microsoft-Windows-CodeIntegrity/Operational"  ></a><figcaption class="image-caption">Screenshot of the Microsoft-Windows-CodeIntegrity/Operational event log properties</figcaption>
 </figure>
 
 </p>
-<p>Meaning that your investigation is likely going to come up short when the logs start deleting themselves. But there must be a native way to change the maximum log size of these critical <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/operations/event-id-explanations#core-app-control-event-logs" target="_blank" rel="noopener noreferrer">event logs</a>?</p>
+<p>Meaning that your investigation is likely going to come up short when the logs start deleting themselves. But there must be a native way to change the maximum log size of these critical to both audit and implementation of <del>WDAC</del> ACFB <a href="https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/operations/event-id-explanations#core-app-control-event-logs" target="_blank" rel="noopener noreferrer">event logs</a>?</p>
 <h2 id="event-logs" class="headerLink">
     <a href="#event-logs" class="header-mark"></a>Event Logs</h2><p>Well there isn&rsquo;t.</p>
 <p>At least not for event logs that aren&rsquo;t your standard Application, Security, Setup, and System logs.</p>
@@ -257,9 +257,9 @@
 </p>
 <p>So what do we want to do tonight? The same thing we do every night, try to <del>take over the world</del> to fix things with PowerShell 🐭.</p>
 <h2 id="powershell-logic" class="headerLink">
-    <a href="#powershell-logic" class="header-mark"></a>PowerShell Logic</h2><p>So all we need is a way to detect the current size of our event logs, and if they aren&rsquo;t good enough, to set them to a new size.</p>
+    <a href="#powershell-logic" class="header-mark"></a>PowerShell Logic</h2><p>All we need is a way to detect the current size of our chosen event logs, and if they aren&rsquo;t good enough, to set them to a new size.</p>
 <p>As always, Microsoft has done a pretty good job at <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-winevent" target="_blank" rel="noopener noreferrer">documenting the process</a> using the <code>Get-WinEvent</code> command, so we&rsquo;ll lean on that to loop through the event logs we want to update.</p>
-<p>For completions sake, we&rsquo;ll be updating the log size for <em>all</em> the AppLocker event logs, not just those used by App Control for Business, so either using your eyes and event viewer, or using PowerShell (<code>Get-WinEvent -ListLog *</code>) we can get a list of event logs and the names of the ones we want to <del>tamper</del> <del>fiddle</del> mess with.</p>
+<p>For completions sake, we&rsquo;ll be updating the log size for <em>all</em> the AppLocker event logs, not just those used by App Control for Business, as well as the Code Integrity log. So either using your eyes and event viewer, or using PowerShell (<code>Get-WinEvent -ListLog *</code>) we can get a list of event logs and the names of the ones we want to <del>tamper</del> <del>fiddle</del> <del>break</del> mess with.</p>
 <ul>
 <li>Microsoft-Windows-AppLocker/EXE and DLL</li>
 <li>Microsoft-Windows-AppLocker/MSI and Script</li>
@@ -267,7 +267,7 @@
 <li>Microsoft-Windows-AppLocker/Packaged app-Execution</li>
 <li>Microsoft-Windows-CodeIntegrity/Operational</li>
 </ul>
-<p>We can throw these with their desired sizes as a <a href="https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pscustomobject" target="_blank" rel="noopener noreferrer">PSCustomObject</a> into an array, so that both the detection and remediation script can use this data to set the new event log size.</p>
+<p>We can then throw these event log names with their desired sizes as a <a href="https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pscustomobject" target="_blank" rel="noopener noreferrer">PSCustomObject</a> into an array, so that both the detection and remediation script can use this data to set the new event log size.</p>
 <div class="details admonition info open">
     <div class="details-summary admonition-title">
         <span class="icon"><svg class="icon"
@@ -276,10 +276,10 @@
     </div>
     <div class="details-content">
         <div class="admonition-content">The maximum log size is <strong>18014398509481983 Kilobytes</strong> so don&rsquo;t take the piss and try and set the log size to be bigger <strong>18014398 Terabytes</strong></div></div></div>
-<p>So now with the basic setup done with, now all that&rsquo;s needed is the detection and remediation scripts.</p>
+<p>Now with the basic setup done with, now all that&rsquo;s needed are the detection and remediation scripts.</p>
 <h3 id="detection-script" class="headerLink">
-    <a href="#detection-script" class="header-mark"></a>Detection Script</h3><p>For each of your event logs, make sure you are using the correct name, and a suitable size, for this example each log will be set to <strong>10MB</strong>.</p>
-<p>We&rsquo;re also capturing which event logs don&rsquo;t match the set size in the <code>$remediateOutput</code> array variable, so we can output that in the event that the current log size doesn&rsquo;t match.</p>
+    <a href="#detection-script" class="header-mark"></a>Detection Script</h3><p>For each of your event logs (and remember this can be any event log), make sure you are using the correct name and a suitable size, for this example each log will be set to <strong>10MB</strong>.</p>
+<p>We&rsquo;re also capturing which of the event logs don&rsquo;t match the required size in a <code>$remediateOutput</code> array variable, so we can output that in Intune in the event that the current log size doesn&rsquo;t match.</p>
 
 
 
@@ -407,9 +407,6 @@
 </span></span><span class="line"><span class="cl">                <span class="nv">$remediateOutput</span> <span class="p">+=</span> <span class="s2">&#34;Event log </span><span class="p">$(</span><span class="nv">$log</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span><span class="s2"> is configured with size </span><span class="p">$(</span><span class="nv">$eventLog</span><span class="p">.</span><span class="n">MaximumSizeInBytes</span><span class="p">)</span><span class="s2"> bytes, expected size is </span><span class="p">$(</span><span class="nv">$log</span><span class="p">.</span><span class="n">Size</span><span class="p">)</span><span class="s2"> bytes&#34;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$remediateCount</span> <span class="o">-gt</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
@@ -430,7 +427,7 @@
 
 
 <h3 id="remediation-script" class="headerLink">
-    <a href="#remediation-script" class="header-mark"></a>Remediation Script</h3><p>We don&rsquo;t need the remediation script to be pretty, just functional so when the event log current size doesn&rsquo;t match the required size, it will update it.</p>
+    <a href="#remediation-script" class="header-mark"></a>Remediation Script</h3><p>We don&rsquo;t need the remediation script to display anything pretty, it just needs to be functional, so when an event logs current size doesn&rsquo;t match the required size, it will update it.</p>
 
 
 
@@ -547,7 +544,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$logs</span> <span class="p">+=</span> <span class="p">[</span><span class="no">PSCustomObject</span><span class="p">]</span><span class="vm">@</span><span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s1">&#39;Microsoft-Windows-AppLocker/Packaged app-Execution&#39;</span><span class="p">;</span> <span class="n">Size</span> <span class="p">=</span> <span class="mf">10</span><span class="p">MB</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$logs</span> <span class="p">+=</span> <span class="p">[</span><span class="no">PSCustomObject</span><span class="p">]</span><span class="vm">@</span><span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s1">&#39;Microsoft-Windows-CodeIntegrity/Operational&#39;</span><span class="p">;</span> <span class="n">Size</span> <span class="p">=</span> <span class="mf">10</span><span class="p">MB</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span><span class="n">s</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$log</span> <span class="k">in</span> <span class="nv">$logs</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="nv">$eventLog</span> <span class="p">=</span> <span class="nb">Get-WinEvent</span> <span class="n">-ListLog</span> <span class="nv">$log</span><span class="p">.</span><span class="py">Name</span> <span class="n">-ErrorAction</span> <span class="n">SilentlyContinue</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$eventLog</span><span class="p">)</span> <span class="p">{</span>
@@ -556,9 +553,6 @@
 </span></span><span class="line"><span class="cl">                <span class="nv">$eventLog</span><span class="p">.</span><span class="py">SaveChanges</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">                <span class="nb">Write-Output</span> <span class="s2">&#34;Remediated event log </span><span class="p">$(</span><span class="nv">$log</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span><span class="s2"> to size </span><span class="p">$(</span><span class="nv">$log</span><span class="p">.</span><span class="n">Size</span><span class="p">)</span><span class="s2">.&#34;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="k">continue</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -579,12 +573,12 @@
     <div class="details-content">
         <div class="admonition-content">Make sure that the event logs and their sizes you&rsquo;ve set in the detection script match those in the remediation script otherwise you&rsquo;ll be in an endless loop of remediating device event logs.</div></div></div>
 <h2 id="proactive-remediations" class="headerLink">
-    <a href="#proactive-remediations" class="header-mark"></a>Proactive Remediations</h2><p>With the above scripts in hand, wander over to Intune and deploy them to your devices with reckless abandon with the settings below.</p>
+    <a href="#proactive-remediations" class="header-mark"></a>Proactive Remediations</h2><p>With the above scripts in hand, wander over to Intune and deploy them to your devices with the settings below.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-event-log-size/img/els-remediation_hu_cd6b912df3ea2c3.png" title="Microsoft Intune remediation script" data-thumbnail="/posts/windows-event-log-size/img/els-remediation_hu_cd6b912df3ea2c3.png" data-sub-html="<h2>Screenshot of the Proactive remediation script in Microsoft Intune</h2><p>Microsoft Intune remediation script</p>"><img  loading="lazy" src='/posts/windows-event-log-size/img/els-remediation_hu_cd6b912df3ea2c3.png'   alt="Microsoft Intune remediation script"  ></a><figcaption class="image-caption">Screenshot of the Proactive remediation script in Microsoft Intune</figcaption>
 </figure>
 
 </p>
-<p>And after a little patience your devices will start reporting their event log sizes, and updating them.</p>
+<p>And after a little patience, or by forcing a remediation to run, your devices will start reporting their event log sizes, and updating them to the new ones if they need to.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-event-log-size/img/els-remediation-output_hu_51dac0686bce8eba.png" title="Microsoft Intune remediation script output" data-thumbnail="/posts/windows-event-log-size/img/els-remediation-output_hu_51dac0686bce8eba.png" data-sub-html="<h2>Screenshot of the Proactive remediation pre-remediation output in Microsoft Intune</h2><p>Microsoft Intune remediation script output</p>"><img  loading="lazy" src='/posts/windows-event-log-size/img/els-remediation-output_hu_51dac0686bce8eba.png'   alt="Microsoft Intune remediation script output"  ></a><figcaption class="image-caption">Screenshot of the Proactive remediation pre-remediation output in Microsoft Intune</figcaption>
 </figure>
 
@@ -597,14 +591,14 @@
     </div>
     <div class="details-content">
         <div class="admonition-content">I&rsquo;ve had to join the <code>$remediateOutput</code> array variable to make it a string, otherwise Intune will only output the last entry in the array, and that&rsquo;s pretty useless 😅.</div></div></div>
-<p>Checking on the device we can see that it has actually updated the log size.</p>
+<p>Checking on the device we can see that it has actually updated the log size if the event logs in question.</p>
 <p><figure><a class="lightgallery" href="/posts/windows-event-log-size/img/els-codeintegrity-updated_hu_d2d3609222500e46.png" title="Event log Microsoft-Windows-CodeIntegrity/Operational" data-thumbnail="/posts/windows-event-log-size/img/els-codeintegrity-updated_hu_d2d3609222500e46.png" data-sub-html="<h2>Screenshot of the Microsoft-Windows-CodeIntegrity/Operational event log properties with updated size</h2><p>Event log Microsoft-Windows-CodeIntegrity/Operational</p>"><img  loading="lazy" src='/posts/windows-event-log-size/img/els-codeintegrity-updated_hu_d2d3609222500e46.png'   alt="Event log Microsoft-Windows-CodeIntegrity/Operational"  ></a><figcaption class="image-caption">Screenshot of the Microsoft-Windows-CodeIntegrity/Operational event log properties with updated size</figcaption>
 </figure>
 
 </p>
-<p>Which will hopefully make hunting through event logs a little more fruitful as part of your App Control for Business implementation.</p>
+<p>Which will hopefully make hunting through event logs a little more fruitful as part of your App Control for Business or even AppLocker implementation, audit, or testing.</p>
 <h2 id="summary" class="headerLink">
-    <a href="#summary" class="header-mark"></a>Summary</h2><p>It <em>shouldn&rsquo;t</em> be that difficult to increase the event log size, especially of actual Microsoft event logs, but until there&rsquo;s a nicer Intune native way to do it, you&rsquo;re going to have to rely on good ol&rsquo; PowerShell and <del>friendly</del> folks like myself to patch the gaps in Microsoft device management tooling 😇.</p>
+    <a href="#summary" class="header-mark"></a>Summary</h2><p>It really <em>shouldn&rsquo;t</em> be that difficult to increase the event log size, especially of actual Microsoft event logs, but until there&rsquo;s a nicer native way to do it, you&rsquo;re going to have to rely on good ol&rsquo; PowerShell and <del>friendly</del> folks like myself to patch the gaps in Microsoft device management tooling 😇.</p>
 </div>
 
         <div class="post-footer" id="post-footer">
