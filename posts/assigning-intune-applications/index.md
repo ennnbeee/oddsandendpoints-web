@@ -1,6 +1,10 @@
 # Assigning Intune Mobile Apps Quickly and Consistently
 
 
+{{< admonition type=note >}}
+This tool has been replaced by [IntuneAppAssigner](https://github.com/ennnbeee/IntuneAppAssigner)
+{{< /admonition >}}
+
 No one, and I mean no one, really wants to manually and individually [assign Mobile Apps](https://learn.microsoft.com/en-us/mem/intune/apps/apps-deploy) to Users or Devices in Intune, especially after you've happily used a script to {{< reftab href="/posts/approving-managed-google-play-apps/" title="Approve Managed Google Play Apps" >}} in their 100's as part of migrating to Microsoft Intune from other ~~below par~~ Mobile Device Management solutions.
 
 We could try and use [Policy Sets](https://learn.microsoft.com/en-us/mem/intune/fundamentals/policy-sets) here, but you know, they're in preview, and more importantly they have [issues](https://learn.microsoft.com/en-us/mem/intune/fundamentals/policy-sets#policy-sets-known-issues) like not supporting Managed Google Play or Apple VPP apps, so that's a no go.
@@ -483,8 +487,6 @@ It's got to the point now where I honestly couldn't be bothered to take screensh
 - Adding Assignments for multiple Apps, with install intent as Available to the All Users group with a Device Filter
 
 I haven't recorded every possible option, as I have coffee to drink and other awful PowerShell to write, but you get the gist.
-
-{{< youtube 36wdQ2JTXAE >}}
 
 ## Summary
 
