@@ -45,7 +45,7 @@ Knowing the call to Graph is the easy bit, building the JSON data we're sending 
 
 We've built JSON data in PowerShell before, so this one isn't any different, we do however need to cater for Installation Intents, Assignment Groups, Device Filters, and Device Filter States. These can be broken down as below, with the ones we actually care about in **bold**.
 
-| Item | Details|
+| Item | Details |
 | :- | :- |
 | Installation Intents | **Required**, **Available for Enrolled Devices**, Available for Un-enrolled Devices, Uninstall |
 | Assignment Groups | **All Users**, **All Devices**, **Groups** |
