@@ -3,7 +3,7 @@
 
 ## Author
 
-I'm Nick Benton, an end-user computing specialist with over a decade of experience in consulting, architecture, design, and implementation of modern device management, and enterprise mobility solutions. I currently have the role of Principal Cloud Endpoint Consultant at [Phoenix Software Ltd](https://www.phoenixs.co.uk/) who were the Global Microsoft Partner of the Year for Modern Endpoint Management 2023, where my main focus is assisting customers in their road to a modern workplace cloud first approach, using Microsoft Intune, with a focus on migration, security and zero touch deployments.
+I'm Nick Benton, an end-user computing specialist with over a decade of experience in consulting, architecture, design, and implementation of modern device management, and enterprise mobility solutions. I currently have the role of Principal Cloud Endpoint Consultant at [Phoenix Software Ltd](https://www.phoenixs.co.uk/) where my main focus is assisting customers in their road to a modern workplace cloud first approach, using Microsoft Intune, with a focus on migration, security and zero touch deployments.
 
 I use this website as a platform to share content with the community, based on solutions I find, to problems encountered in real world scenarios.
 
@@ -32,5 +32,4 @@ Please note that we use Google Analytics, which places cookies on your computer,
 ### Rejecting Cookies
 
 You block cookies by activating the setting on your browser that allows you to refuse the setting of all or some cookies or by choosing to deny Cookies when prompted, then no information will be collected whatsoever.
-
 

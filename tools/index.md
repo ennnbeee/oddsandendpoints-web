@@ -1,4 +1,4 @@
-# Intune Tools
+# Endpoint Tools
 
 
 {{< showcase "AutopilotGroupTagger" "AutoPilotGroupTagger is a PowerShell based utility that allows for bulk update and management of Windows Autopilot Device Group Tags, for those who are retrospectively updating Autopilot devices or otherwise." "img/agt-icon.png" "https://github.com/ennnbeee/AutopilotGroupTagger" >}}
@@ -9,4 +9,3 @@
 
 {{< showcase "Win11Accelerator" "Win11Accelerator is a PowerShell based utility that allows for the tagging of Windows devices with their Windows 11 Feature Update risk score, to allow for a controlled update to Windows 11." "img/w11a-icon.png" "https://github.com/ennnbeee/Win11Accelerator" >}}
 
-{{< showcase "EPManager" "EPManager is a PowerShell based utility that allows for export of Intune EPM elevation requests, and using the data the ability to create rule policies using the exported data. " "img/epm-icon.png" "https://github.com/ennnbeee/EPManager" >}}
