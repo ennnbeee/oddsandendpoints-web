@@ -3,7 +3,7 @@
 
 ## Author
 
-I'm Nick Benton, an end-user computing specialist with over a decade of experience in consulting, architecture, design, and implementation of modern device management, and enterprise mobility solutions. I currently have the role of Principal Cloud Endpoint Consultant at [Phoenix Software Ltd](https://www.phoenixs.co.uk/) where my main focus is assisting customers in their road to a modern workplace cloud first approach, using Microsoft Intune, with a focus on migration, security and zero touch deployments.
+I'm Nick Benton, an end-user computing specialist with over a decade of experience in consulting, architecture, design, and implementation of modern device management and enterprise mobility solutions. I currently have the role of Principal Cloud Endpoint Consultant at [Phoenix Software Ltd](https://www.phoenixs.co.uk/) where my main focus is assisting customers in their road to a modern workplace cloud first approach, using Microsoft Intune, with a focus on migration, security and zero touch deployments.
 
 I use this website as a platform to share content with the community, based on solutions I find, to problems encountered in real world scenarios.
 
