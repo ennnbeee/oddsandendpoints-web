@@ -4,13 +4,13 @@
         <link>https://www.oddsandendpoints.co.uk/authors/nick-benton/</link>
         <description>Nick Benton - Author - odds&#43;endpoints</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 24 Aug 2026 09:04:47 &#43;0100</lastBuildDate><atom:link href="https://www.oddsandendpoints.co.uk/authors/nick-benton/" rel="self" type="application/rss+xml" /><item>
-    <title>Custom macOS Defender Antivirus Compliance</title>
+    <title>Custom macOS Defender Antivirus Compliance with Microsoft Intune</title>
     <link>https://www.oddsandendpoints.co.uk/posts/macos-custom-defender-compliance/</link>
     <pubDate>Mon, 24 Aug 2026 09:04:47 &#43;0100</pubDate><author>
                         <name>Nick Benton</name><uri>https://www.linkedin.com/in/ennnbeee/</uri></author><guid>https://www.oddsandendpoints.co.uk/posts/macos-custom-defender-compliance/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/posts/macos-custom-defender-compliance/featured.png" referrerpolicy="no-referrer">
-            </div>It&rsquo;s finally here, we can at least use custom compliance on macOS devices in Microsoft Intune. Time to make sure your device fleet is actually protected by Microsoft Defender.]]></description>
+            </div>It&rsquo;s finally here, we can at last use custom compliance on macOS devices in Microsoft Intune. Time to make sure your device fleet is actually protected by Microsoft Defender.]]></description>
 </item><item>
     <title>Updating Event Log Sizes with Intune and PowerShell</title>
     <link>https://www.oddsandendpoints.co.uk/posts/windows-event-log-size/</link>

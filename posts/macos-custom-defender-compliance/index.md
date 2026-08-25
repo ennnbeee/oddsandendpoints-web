@@ -1,4 +1,4 @@
-# Custom macOS Defender Antivirus Compliance
+# Custom macOS Defender Antivirus Compliance with Microsoft Intune
 
 
 This feels like it's been a long time coming, but [Custom compliance](https://learn.microsoft.com/en-us/intune/device-security/compliance/custom-settings) has finally surfaced for macOS after being available for both Windows and Linux for some time in Microsoft Intune.
