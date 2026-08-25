@@ -10,26 +10,26 @@
   crossorigin="anonymous"
 ></script>
 <meta name="Description" content="Microsoft Intune mdm firewall rule policies in Endpoint Security automatically converting to the new Settings Catalog profiles using the Firewall Migration Tool."><meta property="og:url" content="https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/">
-  <meta property="og:site_name" content="odds&#43;endpoints">
-  <meta property="og:title" content="Intune and the Curious Case of the Converting Firewall Rules">
-  <meta property="og:description" content="Microsoft Intune mdm firewall rule policies in Endpoint Security automatically converting to the new Settings Catalog profiles using the Firewall Migration Tool.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-22T21:14:28+01:00">
-    <meta property="article:modified_time" content="2024-07-22T21:14:28+01:00">
-    <meta property="article:tag" content="Intune">
-    <meta property="article:tag" content="Windows">
-    <meta property="article:tag" content="Settings Catalog">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Firewall">
-    <meta property="article:tag" content="Endpoint Security">
-    <meta property="og:image" content="https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/featured.png">
+	<meta property="og:site_name" content="odds&#43;endpoints">
+	<meta property="og:title" content="Intune and the Curious Case of the Converting Firewall Rules">
+	<meta property="og:description" content="Microsoft Intune mdm firewall rule policies in Endpoint Security automatically converting to the new Settings Catalog profiles using the Firewall Migration Tool.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2024-07-22T21:14:28+01:00">
+		<meta property="article:modified_time" content="2024-07-22T21:14:28+01:00">
+		<meta property="article:tag" content="Intune">
+		<meta property="article:tag" content="Windows">
+		<meta property="article:tag" content="Settings Catalog">
+		<meta property="article:tag" content="Security">
+		<meta property="article:tag" content="Firewall">
+		<meta property="article:tag" content="Endpoint Security">
+		<meta property="og:image" content="https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/featured.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/featured.png">
-  <meta name="twitter:title" content="Intune and the Curious Case of the Converting Firewall Rules">
-  <meta name="twitter:description" content="Microsoft Intune mdm firewall rule policies in Endpoint Security automatically converting to the new Settings Catalog profiles using the Firewall Migration Tool.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://www.oddsandendpoints.co.uk/posts/firewall-rule-policy-conversion/featured.png">
+	<meta name="twitter:title" content="Intune and the Curious Case of the Converting Firewall Rules">
+	<meta name="twitter:description" content="Microsoft Intune mdm firewall rule policies in Endpoint Security automatically converting to the new Settings Catalog profiles using the Firewall Migration Tool.">
 <meta name="application-name" content="odds&#43;endpoints">
 <meta name="apple-mobile-web-app-title" content="odds&#43;endpoints">
 
@@ -236,7 +236,7 @@
 <p>What do you do when someone reaches out on <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/issues/1" target="_blank" rel="noopener noreferrer">GitHub</a> about one of your scripts no longer working as expected?</p>
 <p>Well it&rsquo;s obvious that you just assume that they&rsquo;re doing something wrong&hellip;</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/33bpFN25l6qNW.webp"
-    alt="ridiculous giphy 1">
+			alt="ridiculous giphy 1">
 </figure>
 
 <p>&hellip;what if they&rsquo;re not wrong though?</p>
@@ -258,20 +258,20 @@
 </div>
 <p>Well you write a blog post about it&hellip;duh.</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/duh.png"
-    alt="duhhhhhh">
+			alt="duhhhhhh">
 </figure>
 
 <h2 id="the-tool" class="headerLink">
     <a href="#the-tool" class="header-mark"></a>The Tool</h2><p>First off, let&rsquo;s look at the <a href="https://learn.microsoft.com/en-us/mem/intune/protect/endpoint-security-firewall-rule-tool" target="_blank" rel="noopener noreferrer">Migration Tool</a> which I&rsquo;m pretty sure we&rsquo;ve all used in our time allowing the automatic creation of Firewall Rule policies, taking existing Group Policy applied rules from a target device and punting them straight into Microsoft Intune.</p>
 <p>Oh it&rsquo;s gone.</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/migtool.png"
-    alt="it gone">
+			alt="it gone">
 </figure>
 
 <p>Well Microsoft you are correct, the old version of the tool <em>did</em> create the old <strong>mdm</strong> Endpoint Security Profiles, and it <em>did</em> use the old authentication method, but it also <em>did</em> work.</p>
 <p>If you&rsquo;re <del>sensible</del> nice enough to follow me on LinkedIn you might have spotted that as a favour to a stranger (not the first time mind you), I updated the migration tool to support the new authentication method, and a couple of other bits as well.</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/GSE1BzJG4JVbq.webp"
-    alt="ridiculous giphy 2">
+			alt="ridiculous giphy 2">
 </figure>
 
 <h2 id="the-script" class="headerLink">
@@ -286,7 +286,7 @@
 <li>Fixed an issue when checking for profile name matching when there are no existing firewall rule policies in Microsoft Intune.</li>
 </ul>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/QJfu2a1r1Ks6OaL7WV.webp"
-    alt="ridiculous giphy 3">
+			alt="ridiculous giphy 3">
 </figure>
 
 <p>To use the script itself, you:</p>
@@ -319,7 +319,7 @@
 <p>So wtf is happening?</p>
 <p>No clue.</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/37smQpbdHrBjVsxEhM.webp"
-    alt="ridiculous giphy 89">
+			alt="ridiculous giphy 89">
 </figure>
 
 <h2 id="are-microsoft-magicians" class="headerLink">
@@ -347,7 +347,7 @@
 
 </p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/doge.webp"
-    alt="rip doge">
+			alt="rip doge">
 </figure>
 
 <p><figure><a class="lightgallery" href="/posts/firewall-rule-policy-conversion/img/zoomier_hu_77897fc7ecd8170b.png" title="Still real audit log" data-thumbnail="/posts/firewall-rule-policy-conversion/img/zoomier_hu_77897fc7ecd8170b.png" data-sub-html="<h2>Zoom and enhance.</h2><p>Still real audit log</p>"><img  loading="lazy" src='/posts/firewall-rule-policy-conversion/img/zoomier_hu_77897fc7ecd8170b.png'   alt="Still real audit log"  ></a><figcaption class="image-caption">Zoom and enhance.</figcaption>
@@ -558,18 +558,18 @@
 </div>
 <p>Either way Microsoft is doing some wizardry behind the scenes not available to see with the naked eye.</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/Sf0lxerEx2eNG.webp"
-    alt="sack magique">
+			alt="sack magique">
 </figure>
 
 <p>So go check your own Firewall Rule policies, I bet they&rsquo;ll be the new Settings Catalog ones. I&rsquo;ll wait (hint, I won&rsquo;t).</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/SWVzkIlHdEckF81gnA.webp"
-    alt="pretty sure he&#39;s used this one himself">
+			alt="pretty sure he&#39;s used this one himself">
 </figure>
 
 <p>Or if you like, use the <a href="https://github.com/ennnbeee/oddsandendpoints-scripts/tree/main/Intune/EndpointSecurity/FirewallRuleMigration" target="_blank" rel="noopener noreferrer">PowerShell script</a> to create some new old ones, then just wait a little bit and see them evolve into Settings Catalog policies.</p>
 <p>Who&rsquo;s that <del>Pokémon</del> Firewall Rule policy?</p>
 <figure><img src="/posts/firewall-rule-policy-conversion/img/pokemon.png"
-    alt="who&#39;s that pokemon">
+			alt="who&#39;s that pokemon">
 </figure>
 
 <p>It&rsquo;s a Settings Catalog policy for Firewall Rules!</p>
@@ -634,7 +634,7 @@
             <div class="footer-bottom-content">
                 <p class="copyright"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2022 - 2026<span class="author">&nbsp;<a href="https://www.linkedin.com/in/ennnbeee/" target="_blank" rel="noopener noreferrer">Nick Benton</a></span></p>
-                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.161.1">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
+                <p class="credit">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.165.0">Hugo</a>&nbsp;and&nbsp;<a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.2"><svg class="icon"
     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a></p>
             </div>
         </div>
